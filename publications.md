@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications & Awards
+full-width: true
 ---
 **Navigation**  
 **[Publications, Conferences and Presentations](#publications)**  

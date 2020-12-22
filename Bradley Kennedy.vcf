@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.15.5//EN
+N:Kennedy;Bradley;;;
+FN:Bradley Kennedy
+ORG:School of Psychology\, University of Chester;
+EMAIL;type=INTERNET;type=WORK;type=pref:hello@bradleykennedy.co.uk
+TEL;type=WORK;type=VOICE;type=pref:+441244 512752
+TEL;type=WORK;type=VOICE:+441244 512752
+ADR;type=WORK;type=pref:;;Chritchley Building\, Parkgate Road;Chester;;CH1 4BJ;
+URL;type=WORK;type=pref:https://bradleykennedy.co.uk
+END:VCARD

@@ -1,0 +1,42 @@
+---
+layout: page
+---
+<html>
+  <body>
+    <div>
+      <h2>Research Admin Emails</h2>
+      <ul id="list">
+      </ul>
+    </div>
+    
+    <script>
+      const filterFiles = (filter) => {
+        filter = filter.toLowerCase()
+        return (file) => {
+          const filePath = file.path.replace('emails/', '');
+          const fileName = file.path.replace('.html', '').replace('emails/', '').toLowerCase().replace(/-/g, '');
+          const isHTML = (/.html$/).test(filePath);
+          const isNotIndex = filePath !== 'index.html';
+          return isHTML && isNotIndex;
+        }
+      }
+      
+      const renderList = (data, filter = '') => {
+        let htmlString = '<ul>';
+        for (let file of data.filter(filterFiles(filter))) {
+          const filePath = file.path.replace('emails/', '');
+          const fileName = file.path.replace('.html', '').replace('emails/', '').toLowerCase().replace(/-/g, ' ');
+          htmlString += `<li><a href="${filePath}">${fileName}</a></li>`;
+        }
+      htmlString += '</ul>';
+        document.getElementById('list').innerHTML = htmlString;
+      }
+      
+      (async () => {
+        const response = await fetch('https://api.github.com/repos/b-kennedy0/b-kennedy0.github.io/contents/emails');
+        const data = await response.json();
+        renderList(data);
+      })()
+    </script>
+  <body>
+</html>

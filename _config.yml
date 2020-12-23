@@ -9,7 +9,7 @@ author: Bradley Kennedy
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Home: ""
+  Home: "/"
   Academia:
     - Research: "research"
     - Open Science: "open-science"

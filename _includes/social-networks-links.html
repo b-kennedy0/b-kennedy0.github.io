@@ -1,7 +1,43 @@
 <ul class="list-inline text-center footer-links">
   
 
- {%- if site.social-network-links.link -%}
+{%- if site.social-network-links.github -%}
+  <li class="list-inline-item">
+    <a href="https://github.com/{{ site.social-network-links.github }}" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li>
+{%- endif -%}
+
+{%- if site.social-network-links.twitter -%}
+  <li class="list-inline-item">
+    <a href="https://twitter.com/{{ site.social-network-links.twitter }}" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li>
+{%- endif -%}
+  
+{%- if site.social-network-links.linkedin -%}
+  <li class="list-inline-item">
+    <a href="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li>
+{%- endif -%}
+  
+  {%- if site.social-network-links.link -%}
   <li class="list-inline-item">
     <a href="https://bradleykennedy.co.uk/{{ site.social-network-links.link }}" title="Social Media & Other Profile Links">
       <span class="fa-stack fa-lg" aria-hidden="true">
@@ -15,7 +51,7 @@
   
   {%- if site.social-network-links.status -%}
   <li class="list-inline-item">
-    <a href="https://bradleykennedy.statuspage.io/{{ site.social-network-links.status }}" title="Web Service Status">
+    <a href="https://bradleykennedy.statuspage.io" title="Web Service Status">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fas fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
@@ -85,30 +121,6 @@
   </li>
 {%- endif -%}
 
-{%- if site.social-network-links.github -%}
-  <li class="list-inline-item">
-    <a href="https://github.com/{{ site.social-network-links.github }}" title="GitHub">
-      <span class="fa-stack fa-lg" aria-hidden="true">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-      <span class="sr-only">GitHub</span>
-   </a>
-  </li>
-{%- endif -%}
-
-{%- if site.social-network-links.twitter -%}
-  <li class="list-inline-item">
-    <a href="https://twitter.com/{{ site.social-network-links.twitter }}" title="Twitter">
-      <span class="fa-stack fa-lg" aria-hidden="true">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-      <span class="sr-only">Twitter</span>
-   </a>
-  </li>
-{%- endif -%}
-
 {%- if site.social-network-links.reddit -%}
   <li class="list-inline-item">
     <a href="https://reddit.com/u/{{ site.social-network-links.reddit }}" title="Reddit">
@@ -117,18 +129,6 @@
         <i class="fab fa-reddit fa-stack-1x fa-inverse"></i>
       </span>
       <span class="sr-only">Reddit</span>
-   </a>
-  </li>
-{%- endif -%}
-
-{%- if site.social-network-links.linkedin -%}
-  <li class="list-inline-item">
-    <a href="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" title="LinkedIn">
-      <span class="fa-stack fa-lg" aria-hidden="true">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-      </span>
-      <span class="sr-only">LinkedIn</span>
    </a>
   </li>
 {%- endif -%}

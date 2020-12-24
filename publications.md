@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Publications & Awards
-full-width: true
 ---
 **Navigation**  
 **[Publications, Conferences and Presentations](#publications)**  
@@ -11,7 +10,7 @@ full-width: true
 
 --- 
 
-<p><a title="My ORCID iD" href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img style="float: right;" src="/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" /></a></p>
+<p><a title="My ORCID iD" href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img style="float: right;" src="/assets/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" /></a></p>
 # Publications, Conferences and Presentations {#publications}  
 
 (OA = Open Access; OM = Open Materials; OD = Open Data and Analysis Code)  
@@ -28,7 +27,7 @@ full-width: true
 <p>Rumsey, S., Lunny, C., &amp;&nbsp;<strong>Kennedy, B. J.</strong>&nbsp;(2020). Open Access: A primer from UKRN.&nbsp;<a href="https://doi.org/10.31219/osf.io/94rsp" target="_blank" rel="noopener">https://doi.org/10.31219/osf.io/94rsp</a>&nbsp;(OA)</p>
 <p>Ashcroft, S., &amp;&nbsp;<strong>Kennedy, B. J.</strong>&nbsp;(2019).&nbsp;<em>How to write a lab report. The secret recipe for success.</em>&nbsp;UK: Amazon.&nbsp;<a href="https://www.amazon.co.uk/dp/B07QJD7TJR/ref=cm_sw_em_r_mt_dp_U_AKCTCb6X7P882" target="_blank" rel="noopener">ISBN:9781093510195</a></p>
 <p><strong>Kennedy, B. J.</strong>&nbsp;(2019). The RISC Project; Researching Intentions in Social Contexts. (oral presentation). Annual Postgraduate Conference, University of Chester (<em>June 25, 2019</em>).</p>
-<p><img style="float: right;" src="/img/ChesterDataInsights.jpg" alt="Chester Data Insights Talk" width="330" height="247" /></p>
+<p><img style="float: right;" src="/assets/img/ChesterDataInsights.jpg" alt="Chester Data Insights Talk" width="330" height="247" /></p>
 <p><strong>Kennedy, B. J.</strong>&nbsp;(2019) Open Science &amp; Utilising Open Data. (Invited Speaker). Chester Data Insights, Chester UK (<em>May 28, 2019</em>).</p>
 <p>Stewart, S. L. K., &amp;&nbsp;<strong>Kennedy, B. J.</strong>&nbsp;(2019) Becoming an Open Scientist: Lessons from the Replication Crisis. (Co-presented workshop). University of Chester annual Research Festival (<em>April 8, 2019</em>) -&nbsp;<a href="https://www.chester.ac.uk/research/festival" target="_blank" rel="noopener">https://www.chester.ac.uk/research/festival</a></p>
 <p><strong>Kennedy, B. J.</strong>, Scudds, A., Lafferty, M., &amp; Stewart, S. L. K. (2019). Knobe (2003) Replication study. (oral presentation). University of Chester PGR Symposium 2019 (<em>February 21, 2019</em>).</p>
@@ -62,11 +61,11 @@ Open Science Workshop @ University College Cork, Ireland (*31st Oct - 2nd Novemb
 
 # Awards {#awards}  
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2020  
-<p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p> <p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p>
+<p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p> <p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p>
 *Awarded*: Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) *May 2019*
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2019  
-<p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" width="240" height="320" /></p>
+<p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" width="240" height="320" /></p>
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2018
 
 *Nominated*: Outstanding Academic Support Staff, The 1839 Awards - Student Led Teaching Awards 2018
@@ -81,6 +80,6 @@ Open Science Workshop @ University College Cork, Ireland (*31st Oct - 2nd Novemb
 
 *Awarded*: Gold Scholarship for Postgraduate study, Bangor University - (£3,000). *September 2016*
 
-<img src="https://b-kennedy0.github.io/img/BPS Conference 2017.jpg" alt="BPS Welsh Branch Conference 2017" width="300" height="190" style="border-width: 10px; margin-right: auto; margin-left: auto; display: block;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/BPS Conference 2017.jpg" alt="BPS Welsh Branch Conference 2017" width="300" height="190" style="border-width: 10px; margin-right: auto; margin-left: auto; display: block;"/>  
 
 ---

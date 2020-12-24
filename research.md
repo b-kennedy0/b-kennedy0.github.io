@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-bigimg: "/img/brain_cover.jpg"
+cover-img: "/assets/img/brain_cover.jpg"
 ---
 <a name="TopOfPage"></a>
 
@@ -56,14 +56,14 @@ Recent work has suggested that when observers account for other factors such as 
 Initial stages of investigation are considering the influence of the job role of the instigator and the setting in which they are placed i.e. their sector of work. Understanding the SEE may have further implications for the jury decision process of rendering verdicts. The PhD research is fully embedded within the Open Science ethos. (See Open Science Framework link)
 
 **Click for: OSF Profile, ORCID iD, Research Gate, GitHub, RPubs & Results list sign up**  
-<p style="text-align: center;"><a href="http://osf.io/ekmyr" target="_blank" rel="noopener"><img title="Click here for Open Science Framework Profile" src="/img/osf icon circle.png" alt="Open Science Framework" width="100" height="100" />&nbsp;&nbsp;</a><a href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img title="Click here for ORCID iD" src="/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" />&nbsp;&nbsp;</a><a href="https://www.researchgate.net/profile/Bradley_Kennedy2" target="_blank" rel="noopener"><img title="Click here for Research Gate Profile" src="/img/Research_gate_icon.png" alt="Research Gate Logo" width="110" height="80" />&nbsp;&nbsp;</a><a href="https://github.com/b-kennedy0" target="_blank" rel="noopener"><img title="Click here for GitHub Profile" src="/img/github_icon.png" alt="GitHub Logo" width="110" height="100" />&nbsp;&nbsp;</a><a href="http://rpubs.com/bkennedy" target="_blank" rel="noopener"><img title="Click here for RPubs Profile" src="/img/RPubs_icon.png" alt="RPubs Logo" width="170" height="100" />&nbsp;&nbsp;</a><a href="http://link.bradleykennedy.co.uk/results" target="_blank" rel="noopener"><img title="Click here to sign up" src="/img/email_icon.gif" alt="Email icon" width="140" height="120" /></a></p>
+<p style="text-align: center;"><a href="http://osf.io/ekmyr" target="_blank" rel="noopener"><img title="Click here for Open Science Framework Profile" src="/img/osf icon circle.png" alt="Open Science Framework" width="100" height="100" />&nbsp;&nbsp;</a><a href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img title="Click here for ORCID iD" src="/assets/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" />&nbsp;&nbsp;</a><a href="https://www.researchgate.net/profile/Bradley_Kennedy2" target="_blank" rel="noopener"><img title="Click here for Research Gate Profile" src="/assets/img/Research_gate_icon.png" alt="Research Gate Logo" width="110" height="80" />&nbsp;&nbsp;</a><a href="https://github.com/b-kennedy0" target="_blank" rel="noopener"><img title="Click here for GitHub Profile" src="/assets/img/github_icon.png" alt="GitHub Logo" width="110" height="100" />&nbsp;&nbsp;</a><a href="http://rpubs.com/bkennedy" target="_blank" rel="noopener"><img title="Click here for RPubs Profile" src="/assets/img/RPubs_icon.png" alt="RPubs Logo" width="170" height="100" />&nbsp;&nbsp;</a><a href="http://link.bradleykennedy.co.uk/results" target="_blank" rel="noopener"><img title="Click here to sign up" src="/assets/img/email_icon.gif" alt="Email icon" width="140" height="120" /></a></p>
 
 ---
 # 2016-2017  
-<img style="float: left;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/img/COPYB0452_DTI_thresh35_LHem.png?raw=true" width="201" height="137" />
+<img style="float: left;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/COPYB0452_DTI_thresh35_LHem.png?raw=true" width="201" height="137" />
 Examining the asymmetry of language and the associated structural correlates.
 
-<img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
+<img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
 MSc project investigated connectivity asymmetry (using Diffusion Spectrum Imaging) in structures such as the arcuate fasciculus and frontal aslant tract in individuals with atypical language dominance.
 
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>

@@ -1,26 +1,26 @@
 ---
 layout: page
 title: Volunteering
-bigimg:
-  - "/img/bigimg/1stviking1.jpg"
-  - "/img/bigimg/1stviking2.jpg"
-  - "/img/bigimg/1stviking3.jpg"
-  - "/img/bigimg/g1testviking.jpg"
-  - "/img/bigimg/soloviking.jpg"
-  - "/img/bigimg/vikingcool.jpeg"
-  - "/img/bigimg/vikinghot.jpeg"
-  - "/img/bigimg/631sqn.jpg"
+cover-img:
+  - "/assets/img/bigimg/1stviking1.jpg"
+  - "/assets/img/bigimg/1stviking2.jpg"
+  - "/assets/img/bigimg/1stviking3.jpg"
+  - "/assets/img/bigimg/g1testviking.jpg"
+  - "/assets/img/bigimg/soloviking.jpg"
+  - "/assets/img/bigimg/vikingcool.jpeg"
+  - "/assets/img/bigimg/vikinghot.jpeg"
+  - "/assets/img/bigimg/631sqn.jpg"
 ---
 ### Civilian Gliding Instructor  
 _Current: 632 VGS (Volunteer Gliding Squadron), RAF Tern hill_  
-<img src="https://b-kennedy0.github.io/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
+<img src="https://b-kennedy0.github.io/assets/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2018 - Present)  
 [632 VGS Facebook](https://www.facebook.com/632SqnVGS/)  
 [632 VGS Website](https://632vgs.co.uk/)   
 Aircraft: [Grob 103 (Viking)](https://www.raf.mod.uk/aircraft/viking-t1/)   
 
 _Previous: 631 VGS (Volunteer Gliding Squadron), RAF Woodvale_  
-<img src="https://b-kennedy0.github.io/img/logos/631vgscrest.png" alt="631VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
+<img src="https://b-kennedy0.github.io/assets/img/logos/631vgscrest.png" alt="631VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2013 - 2018)  
 [631 VGS Website](http://631vgs.com/)   
 Aircraft: Grob 109b (Vigilant)

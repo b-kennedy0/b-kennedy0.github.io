@@ -8,23 +8,23 @@ author: Bradley Kennedy
 
 # --- List of links in the navigation bar --- #
 
-navbar-links:
-  Home: "/"
-  Academia Etc.:
-    - Research: "research"
-    - Open Science: "open-science"
-    - Projects: "projects"
-    - Teaching: "teaching"
+ navbar-links:
+#   Home: "/"
+#   Academia Etc.:
+#     - Research: "research"
+#     - Open Science: "open-science"
+#     - Projects: "projects"
+#     - Teaching: "teaching"
 #    - Qualifications: "qualifications"
-    - Publications & Awards: "publications"
-    - My Apps: "apps"
-  Employment:
-    - Current: "current-employment"
-    - Training: "training"
-    - Previous: "previous-employment"
-    - Volunteering: "volunteering"
+#     - Publications & Awards: "publications"
+#     - My Apps: "apps"
+#   Employment:
+#     - Current: "current-employment"
+#     - Training: "training"
+#     - Previous: "previous-employment"
+#     - Volunteering: "volunteering"
   #Blog: "blog"
-  Contact: "contact"
+#   Contact: "contact"
 
 # --- Logo --- #
 
@@ -47,11 +47,11 @@ round-avatar: true
 social-network-links:
 #  email: "someone@example.com"
 #  facebook: 
-  github: b-kennedy0
-  twitter: bradpsych
-  linkedin: bradleykennedy1
-  link: links/
-  status: /
+#   github: b-kennedy0
+#   twitter: bradpsych
+#   linkedin: bradleykennedy1
+#   link: links/
+#   status: /
 #  patreon: 
 #  youtube: 
 #  reddit:  

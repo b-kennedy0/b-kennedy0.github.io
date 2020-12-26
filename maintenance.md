@@ -11,7 +11,7 @@ css: /fontawesome470/css/font-awesome.min.css
 <i class="fa fa-bolt icon-yellow" aria-hidden="true"></i> **WARNING:** This should be warning box
 
 {: .box-error}
-<i class="fas fa-exclamation-triangle"></i> **WARNING:** This should be highlighted as error!
+<i class="fas fa-exclamation-triangle"></i> **ERROR:** This should be highlighted as error!
 
 {: .box-success}
 <i class="fas fa-check-circle"></i> **SUCCESS:** This should be success box!

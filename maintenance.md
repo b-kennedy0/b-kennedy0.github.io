@@ -5,7 +5,15 @@ css:
   - /fontawesome470/css/font-awesome.min.css
   - /assets/css/box.css
 ---
-<p style="text-align: center;"><img src="/assets/img/gifs/maint.gif" alt="" width="518" height="259" /></p>  
+<div class="mobile-js-hide">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="text-center">
+          <p style="text-align: center;"><img src="/assets/img/gifs/maint.gif" alt="" width="518" height="259" /></p>  
+      </div>
+    </div>
+  </div>
+</div>
 
 {: .box-warning}
 <i class="fa fa-bolt icon-yellow" aria-hidden="true"></i> **SITE UNDER MAINTENANCE:** Sorry, the site is currently offline while it is being updated. For updates, please subscribe to status alerts by clicking the pop-up message below.   

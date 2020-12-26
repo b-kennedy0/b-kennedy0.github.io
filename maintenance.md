@@ -5,15 +5,6 @@ css:
   - /fontawesome470/css/font-awesome.min.css
   - /assets/css/box.css
 ---
-
-<!--- 
-{: .box-note}
-<i class="fa fa-commenting icon-blue" aria-hidden="true"></i> **NOTE:** This should be rendered as a note
-{: .box-error}
-<i class="fas fa-exclamation-triangle" aria-hidden="true"></i> **ERROR:** This should be highlighted as error!
-{: .box-success}
-<i class="fas fa-check-circle" aria-hidden="true"></i> **SUCCESS:** This should be success box!
---->
 <p style="text-align: center;"><img src="/assets/img/gifs/maint.gif" alt="" width="518" height="259" /></p>  
 
 {: .box-warning}
@@ -23,3 +14,12 @@ css:
 
 
 <script src="https://wtf6p02lxp1q.statuspage.io/embed/script.js"></script>
+
+<!--- 
+{: .box-note}
+<i class="fa fa-commenting icon-blue" aria-hidden="true"></i> **NOTE:** This should be rendered as a note
+{: .box-error}
+<i class="fas fa-exclamation-triangle" aria-hidden="true"></i> **ERROR:** This should be highlighted as error!
+{: .box-success}
+<i class="fas fa-check-circle" aria-hidden="true"></i> **SUCCESS:** This should be success box!
+--->

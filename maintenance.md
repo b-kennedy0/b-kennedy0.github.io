@@ -5,10 +5,10 @@ css: /fontawesome470/css/font-awesome.min.css
 ---
 
 {: .box-note}
-**NOTE:** This should be rendered as a note
+<i class="fa fa-commenting icon-blue" aria-hidden="true"></i> **NOTE:** This should be rendered as a note
 
 {: .box-warning}
-**WARNING:** This should be warning box
+<i class="fa fa-bolt icon-yellow" aria-hidden="true"></i> **WARNING:** This should be warning box
 
 {: .box-error}
 **WARNING:** This should be highlighted as error!

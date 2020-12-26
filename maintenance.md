@@ -5,7 +5,7 @@ css:
   - /fontawesome470/css/font-awesome.min.css
   - /assets/css/box.css
 ---
-<div class="mobile-js-hide">
+<div id="content-desktop">
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">

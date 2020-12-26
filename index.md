@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Site Under Maintenance
+subtitle: Site Under Maintenance
 show-avatar: false
 css: 
   - /fontawesome470/css/font-awesome.min.css

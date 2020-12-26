@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Site Under Maintenance
+css: /fontawesome470/css/font-awesome.min.css
 ---
 
 {: .box-note}

@@ -2,6 +2,8 @@
 layout: null
 ---
 
+#content-mobile {display: none;}
+
 /* --- Notification boxes --- */
 .box-note,
 .box-warning,

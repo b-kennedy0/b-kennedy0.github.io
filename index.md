@@ -1,6 +1,7 @@
 ---
-layout: minimal
+layout: page
 title: Site Under Maintenance
+show-avatar: false
 css: 
   - /fontawesome470/css/font-awesome.min.css
   - /assets/css/box.css

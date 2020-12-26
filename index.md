@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page.nav-short
 title: Site Under Maintenance
 show-avatar: false
 css: 

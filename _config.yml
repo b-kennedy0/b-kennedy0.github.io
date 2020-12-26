@@ -10,12 +10,12 @@ author: Bradley Kennedy
 
 navbar-links:
   Home: "/"
-  Academia:
+  Academia Etc.:
     - Research: "research"
     - Open Science: "open-science"
     - Projects: "projects"
     - Teaching: "teaching"
-    - Qualifications: "qualifications"
+#    - Qualifications: "qualifications"
     - Publications & Awards: "publications"
     - My Apps: "apps"
   Employment:

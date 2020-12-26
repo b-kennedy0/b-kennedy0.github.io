@@ -1,7 +1,9 @@
 ---
 layout: minimal
 title: Site Under Maintenance
-css: /fontawesome470/css/font-awesome.min.css
+css: 
+  - /fontawesome470/css/font-awesome.min.css
+  - /assets/css/box.css
 ---
 
 <!--- 

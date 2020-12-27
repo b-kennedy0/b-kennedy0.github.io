@@ -23,14 +23,15 @@ cover-img:
 <h3><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/bigimg/grouse_mountain.jpg" alt="" width="278" height="185" /></h3>
 <h1>Itinerary Progress</h1>
 <input type="button"
-               id="btn" 
+               id="btn1" 
                value="Refresh Chart" /> 
   
         <script> 
-            function reload() { 
+            function reload1() { 
                 document.getElementById('itinerary').src += ''; 
             } 
-            btn.onclick = reload; 
+            btn1.onclick = reload1; 
+            btn1.onclick = console.log("Reload1");
         </script> 
 <div><iframe id="itinerary" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQiaSQpe8dDYDW11U3P6yIiQdD3LwFNixKoz0oxUWtU4IzxjSjovkyP-gT3-Pb7uyUxDkcRb-QCkPy/pubchart?oid=283182079&amp;format=interactive" width="747" height="371" frameborder="0" scrolling="no" seamless=""></iframe></div>
 <p>If you'd like to help out, you can support by clicking below. You can choose to have your name and message appear in the supporters section below. You may also support anonymously if you wish.</p>
@@ -39,14 +40,15 @@ cover-img:
 </div>
 <h1>Supporters</h1>
 <input type="button"
-               id="btn" 
+               id="btn2" 
                value="Refresh Supporters" /> 
   
         <script> 
-            function reload() { 
+            function reload2() { 
                 document.getElementById('supporters').src += ''; 
             } 
-            btn.onclick = reload; 
+            btn2.onclick = reload2; 
+            btn2.onclick = console.log("Reload2");
         </script> 
 <p>The following <strong>amazing</strong> people have helped to support me so far:</p>
 <div><iframe id="supporters" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQiaSQpe8dDYDW11U3P6yIiQdD3LwFNixKoz0oxUWtU4IzxjSjovkyP-gT3-Pb7uyUxDkcRb-QCkPy/pubchart?oid=469516581&amp;format=interactive" width="714" height="371" frameborder="0" scrolling="no" seamless=""></iframe></div>

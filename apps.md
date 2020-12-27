@@ -7,24 +7,6 @@ layout: page
 
 ---
 
-<a title="Open App" href="http://apps.bradk.co.uk/covid19" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/covid.png?raw=true" alt="" width="135" height="136" /></a>
-# COVID-19 App  
-#### Click/Tap icon to run >>  
-This app plots the latest Cases & Deaths data for the COVID-19 Pandemic. Data is automatically updated daily from the [ECDC](https://www.ecdc.europa.eu/en).  
-
-Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/covid-app" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
-
----
-
-<a title="Open App" href="https://twitter.com/OpenResearchCal" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/ORC-badge.png?raw=true" alt="" width="165" height="160" /></a>
-# Open Research Calendar (Twitter)  
-#### Click/Tap icon to run >>  
-The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. This translates onto a Google Calendar :calendar: which can be synced into a person’s own personal calendar (updating as new events get added). Read more [here.](https://openresearchcalendar.github.io/)  
-
-Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/openresearchcalendar/Open-Research-Calendar" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
-
----
-
 <a title="Open App" href="http://apps.bradk.co.uk/pilotdata" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/pilotdataicon.png?raw=true" alt="Pilotdataicon" width="160" height="160" /></a>
 # Pilot Data Explorer  
 #### Click/Tap icon to run >>  
@@ -42,3 +24,10 @@ This app was created to assist glider pilots with weight and balance calculation
 Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/632vgs" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
 
 ---
+
+<a title="Open App" href="https://twitter.com/OpenResearchCal" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/ORC-badge.png?raw=true" alt="" width="165" height="160" /></a>
+# Open Research Calendar (Twitter)  
+#### Click/Tap icon to run >>  
+The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. This translates onto a Google Calendar :calendar: which can be synced into a person’s own personal calendar (updating as new events get added). Read more [here.](https://openresearchcalendar.github.io/)  
+
+Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/openresearchcalendar/Open-Research-Calendar" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  

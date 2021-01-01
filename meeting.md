@@ -11,7 +11,7 @@ head-extra: buttonstyle_code.html
 function webhook() {
         console.log('Started Function');
         fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');
-        window.location.href = 'meeting-click';
+        window.location.href = "https://bradleykennedy.co.uk/meeting-click";
         console.log('Fin');
 }
 </script>

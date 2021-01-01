@@ -9,7 +9,6 @@ head-extra: buttonstyle_code.html
         
     <script>
 function webhook() {
-        console.log('Started Function');
         fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');
         window.location.href = "https://bradleykennedy.co.uk/meeting-click";
         console.log('Fin');
@@ -22,13 +21,12 @@ function webhook() {
 <p>&nbsp;</p>
 <div class="text-center">
   <div class="btn-group">
-    <button class="button" onclick="webhook();">ARRIVED1</button>
-<!--  <a href="https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting" target="_self" onclick="window.open('https://bradleykennedy.co.uk/meeting-click/');" class="button" id="myButton">ARRIVED</a>
--->
-</div>
+    <button class="button" onclick="webhook();">ARRIVED</button>
   </div>
+</div>
 <hr />
-<!-- <div class="text-center">
+<!-- WILL NEED TO UPDATE THIS IF I USE THE PARTICIPANT LINK AGAIN - USE THE JAVASCRIPT ABOVE AND MODIFY FOR PPWEBHOOK. 
+<div class="text-center">
   <div class="btn-group">
   <a href="https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=participant" onclick="window.open('https://bradleykennedy.co.uk/meeting-click/');" class="button">Participant</a>
 </div>

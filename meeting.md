@@ -3,7 +3,10 @@ layout: minimal
 title: Meet with...
 head-extra: buttonstyle_code.html
 ---
-<script>
+
+<html>
+    <body>
+    <script>
 var doAjax = function() {
     $.ajax({
        url: 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting',
@@ -34,3 +37,5 @@ $('#myButton').click(function() {
 </div>
   </div>
 -->
+</body>
+</html>

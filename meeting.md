@@ -18,7 +18,7 @@ $('#myButton').click(function() {
     doAjax();
     window.open('https://bradleykennedy.co.uk/meeting-click/');
 });
-</scipt>
+</script>
 <h1 style="text-align: center;"><span style="text-decoration: underline; font-size:50px"><strong>Meeting with Brad?</strong></span></h1>
 <h1 id="title" style="text-align: center; font-size:30px"><em>Click to notify of your arrival </em></h1>
 <!-- <h2 style="text-align: center;">Are you here for a Meeting or as a Participant?</h2> -->

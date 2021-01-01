@@ -3,7 +3,7 @@ layout: minimal
 title: Connor
 ---
 <html>
-<body>
+  <body>
 
 <h1 style="text-align: center;"><span style="text-decoration: underline; font-size:50px"><strong>Page for Connor</strong></span></h1>
 <h1 id="title" style="text-align: center; font-size:30px"><em>Enter room code (e.g. CCR001)</em></h1>
@@ -21,9 +21,21 @@ function room() {
   var value = encodeURIComponent(text.value); //encode special characters
   let newHref = 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=' + value 
   console.log(newHref)
+  fetch(newHref);
+  window.location.href = "https://bradleykennedy.co.uk/meeting-click";
+  console.log('Fin');
+}
+
+<!--
+function room() {
+  var text = document.getElementById('textInput');
+  var value = encodeURIComponent(text.value); //encode special characters
+  let newHref = 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=' + value 
+  console.log(newHref)
   window.location.href = newHref
 }
+-->
 </script>
 
-</body>
+  </body>
 </html>

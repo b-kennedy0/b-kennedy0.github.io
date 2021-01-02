@@ -12,7 +12,7 @@ head-extra: buttonstyle_code.html
 <p>&nbsp;</p>
 <div class="text-center">
   <div class="btn-group">
-    <a class="button" href="https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting">ARRIVED</button>
+    <a class="button" href="https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting">ARRIVED</a>
   </div>
 </div>
 <hr />

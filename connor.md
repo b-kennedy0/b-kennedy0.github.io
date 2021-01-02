@@ -21,8 +21,7 @@ function room() {
   var value = encodeURIComponent(text.value); //encode special characters
   let newHref = 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=' + value 
   console.log(newHref)
-  fetch(newHref);
-  window.location.href = "https://bradleykennedy.co.uk/meeting-click";
+  window.location.href = newHref
   console.log('Fin');
 }
 

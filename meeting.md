@@ -14,7 +14,7 @@ function webhook() {
             if(response.text == 'Accepted') {
             console.log('Request successful', text);
             window.location.href('https://bradleykennedy.co.uk/meeting-click/');
-            })
+            }})
             .catch(function(error){
             log('Request failed', error)
             });

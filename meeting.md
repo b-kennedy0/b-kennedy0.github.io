@@ -12,8 +12,8 @@ function webhook() {
         fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
         .then(res => res.json())
         .then(json => {
-        console.log(json)
-        console.log(res)
+        console.log(json);
+        console.log(res);
         });
         console.log('Fin');
 }

@@ -9,8 +9,9 @@ title: Success
 <p>&nbsp;</p>
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/animate-walk.gif" alt="" width="189" height="147" /></p>
 <hr />
-<button type="button" 
-        onclick="window.open('', '_self', ''); window.close();">Close Window</button>
+<div style="text-align: center;">
+  <input type="button" value="Close Window" onclick="window.open('', '_self', ''); window.close();" />        
+</div>
 <p style="text-align: center;">Triggered at:&nbsp;<span id="datetime"></span></p>
 <script>
 var dt = new Date();

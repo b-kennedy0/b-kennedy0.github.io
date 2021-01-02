@@ -6,18 +6,13 @@ head-extra: buttonstyle_code.html
 
 <html>
     <body>
-        
-    <script>
+        <script>
 function webhook() {
-        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
-        .then(res => res.json())
-        .then(json => {
-        console.log(json);
-        console.log(res);
-        });
+        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');
+        window.location.href = "https://bradleykennedy.co.uk/meeting-click";
         console.log('Fin');
 }
-</script>
+        </script>
         
 <h1 style="text-align: center;"><span style="text-decoration: underline; font-size:50px"><strong>Meeting with Brad?</strong></span></h1>
 <h1 id="title" style="text-align: center; font-size:30px"><em>Click to notify of your arrival </em></h1>
@@ -25,7 +20,7 @@ function webhook() {
 <p>&nbsp;</p>
 <div class="text-center">
   <div class="btn-group">
-    <button class="button" onclick="webhook();">ARRIVED</button>
+    <button class="button" onclick="window.open('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');">
   </div>
 </div>
 <hr />

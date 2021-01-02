@@ -26,15 +26,6 @@ function room() {
   console.log('Fin');
 }
 
-<!--
-function room() {
-  var text = document.getElementById('textInput');
-  var value = encodeURIComponent(text.value); //encode special characters
-  let newHref = 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=' + value 
-  console.log(newHref)
-  window.location.href = newHref
-}
--->
 </script>
 
   </body>

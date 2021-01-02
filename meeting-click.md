@@ -10,7 +10,7 @@ title: Success
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/animate-walk.gif" alt="" width="189" height="147" /></p>
 <hr />
 <div style="text-align: center;">
-  <input type="button" value="Close Window" onclick="window.open('', '_parent', ''); window.close();" />        
+  <input type="button" value="Close Window" onclick="window.open(location, '_self').close();" />        
 </div>
 <p style="text-align: center;">Triggered at:&nbsp;<span id="datetime"></span></p>
 <script>

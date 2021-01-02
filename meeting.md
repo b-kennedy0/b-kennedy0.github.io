@@ -11,9 +11,9 @@ function webhook() {
         fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
             .then(function(response){
             return response.text();
-            })
-            .then(function(text){
+            if(response.text == 'Accepted') {
             console.log('Request successful', text);
+            window.location.href('https://bradleykennedy.co.uk/meeting-click/');
             })
             .catch(function(error){
             log('Request failed', error)

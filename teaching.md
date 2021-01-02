@@ -2,6 +2,7 @@
 title: Teaching
 layout: page
 cover-img: "/assets/img/lecture_room.jpg"
+show-avatar: false
 ---
 | Teaching: | Marking/ Draft Reading: |
 | ----------- | ----------- |

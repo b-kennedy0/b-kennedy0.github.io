@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Previous Employment
+show-avatar: false
 ---
 <img src="https://b-kennedy0.github.io/assets/img/logos/app.jpg" alt="Phone App" width="170" height="150" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>
 #### Application development - Halls of Residence, Bangor University  

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Training
+show-avatar: false
 ---
 <img src="https://b-kennedy0.github.io/assets/img/logos/UoC School of Psychology 2.jpg" alt="School Logo" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### School of Psychology - University of Chester:

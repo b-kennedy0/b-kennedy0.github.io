@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications & Awards
+show-avatar: false
 ---
 **Navigation**  
 **[Publications, Conferences and Presentations](#publications)**  

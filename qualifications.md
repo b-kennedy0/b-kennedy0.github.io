@@ -2,6 +2,7 @@
 layout: page
 title: Academic Qualifications
 cover-img: "/assets/img/library.jpg"
+show-avatar: false
 ---
 # Current:  
 <img style="float: right; border-width: 20px; margin: 10px;" src="/assets/img/graduation 2017.jpg" alt="Graduation 2017" width="120" height="210">  

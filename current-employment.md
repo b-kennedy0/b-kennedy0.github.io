@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Current Employment
+show-avatar: false
 ---
 <p align="center"><img style="float: right; border-width: 20px; margin: 10px;" src="/assets/img/gtas 2018.jpg" alt="Graduate Teaching Assistants 2018" width="280" height="220" /></p>
 <h4 align="center">Graduate Teaching Assistant</h4>

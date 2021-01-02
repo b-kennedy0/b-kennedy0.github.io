@@ -2,6 +2,7 @@
 layout: page
 title: Research
 cover-img: "/assets/img/brain_cover.jpg"
+show-avatar: false
 ---
 <a name="TopOfPage"></a>
 

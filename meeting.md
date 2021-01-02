@@ -20,7 +20,7 @@ function webhook() {
 <p>&nbsp;</p>
 <div class="text-center">
   <div class="btn-group">
-    <button class="button" onclick="window.open('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');">
+    <button class="button" onclick="window.open('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');">ARRIVED</button>
   </div>
 </div>
 <hr />

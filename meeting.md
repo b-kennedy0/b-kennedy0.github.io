@@ -8,8 +8,16 @@ head-extra: buttonstyle_code.html
     <body>
         <script>
 function webhook() {
-        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');
-        window.location.href = "https://bradleykennedy.co.uk/meeting-click";
+        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
+            .then(function(response){
+            return response.text();
+            })
+            .then(function(text){
+            console.log('Request successful', text);
+            })
+            .catch(function(error){
+            log('Request failed', error)
+            });
         console.log('Fin');
 }
         </script>
@@ -20,11 +28,12 @@ function webhook() {
 <p>&nbsp;</p>
 <div class="text-center">
   <div class="btn-group">
-    <button class="button" onclick="window.open('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');">ARRIVED</button>
+    <button class="button" onclick="webhook();">ARRIVED</button>
   </div>
 </div>
 <hr />
 <!-- WILL NEED TO UPDATE THIS IF I USE THE PARTICIPANT LINK AGAIN - USE THE JAVASCRIPT ABOVE AND MODIFY FOR PPWEBHOOK. 
+window.location.href('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
 <div class="text-center">
   <div class="btn-group">
   <a href="https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=participant" onclick="window.open('https://bradleykennedy.co.uk/meeting-click/');" class="button">Participant</a>

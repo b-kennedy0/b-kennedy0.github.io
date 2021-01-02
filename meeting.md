@@ -9,8 +9,23 @@ head-extra: buttonstyle_code.html
         
     <script>
 function webhook() {
-        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting');
-        window.location.href = "https://bradleykennedy.co.uk/meeting-click";
+        fetch('https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=meeting')
+        .then(
+        function(response) {
+            if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status code: ' + response.status);
+          return;
+          }
+          
+          response.json().then(function(data){
+          console.log(data);
+          });
+       }
+    )
+  .catch(function(err){
+    console.log('Fetch Error', err);
+    });
+        
         console.log('Fin');
 }
 </script>

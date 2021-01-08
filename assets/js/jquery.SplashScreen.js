@@ -22,9 +22,9 @@
             mobile: true,
             forceLoader: false,
             queryParameter: 'loader',
-            progressCount: false,
+            progressCount: true,
             progressCountId: 'status',
-            progressBar: false,
+            progressBar: true,
             progressBarId: 'progress',
             fadeEffect: true,
             timeToFade: 1000, // in milliseconds (eg: 1000 = 1sec)

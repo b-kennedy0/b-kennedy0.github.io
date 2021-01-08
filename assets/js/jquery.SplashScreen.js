@@ -12,9 +12,9 @@
  *
  */
 
-(function (window, document, undefined) {
+(function (window, document) {
 
-    $.SplashScreen = function (options) {
+    SplashScreen = function (options) {
 
         var settings = $.extend({
             id: 'splashscreen',
@@ -39,11 +39,11 @@
             var qstring = getQueryStringVars(window.location.href);
 
             if (settings.forceLoader) {
-                settings.forceLoader = qstring[settings.queryParameter] != null
-								&& qstring[settings.queryParameter] != ""
-								&& (qstring[settings.queryParameter] == "true" ||
-									qstring[settings.queryParameter] == "t" ||
-									qstring[settings.queryParameter] == "1") ? true : false;
+                settings.forceLoader = qstring[settings.queryParameter] !== null
+								&& qstring[settings.queryParameter] !== ""
+								&& (qstring[settings.queryParameter] === "true" ||
+									qstring[settings.queryParameter] === "t" ||
+									qstring[settings.queryParameter] === "1") ? true : false;
             }
 
             if (settings.mobile) {

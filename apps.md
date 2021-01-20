@@ -7,6 +7,15 @@ layout: page
 
 ---
 
+<a title="Open App" href="http://apps.bradk.co.uk/covid" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/COVID19-Vaccine-App/blob/master/www/img/Corona_Vaccine.jpg?raw=true" alt="Pilotdataicon" width="160" height="160" /></a>
+# COVID-19 Vaccination Progress  
+#### Click/Tap icon to run >>  
+The app was created to enable the centralised sharing of UK-wide vaccination progress. Each NHS service (England, Wales, Scotland, Northern Ireland) are each publishing their vaccination data and this is collated into the <a href="https://coronavirus.data.gov.uk" target="_blank">Government Dashboard</a>. The Government Dashboard isn't the clearest at presenting the vaccine data so this app was created to do that. Created using R and RStudio.  
+
+Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/COVID19-Vaccine-App" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
+
+---
+
 <a title="Open App" href="http://apps.bradk.co.uk/pilotdata" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/pilotdataicon.png?raw=true" alt="Pilotdataicon" width="160" height="160" /></a>
 # Pilot Data Explorer  
 #### Click/Tap icon to run >>  

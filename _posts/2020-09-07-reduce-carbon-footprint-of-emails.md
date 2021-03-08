@@ -35,9 +35,9 @@ So, how to:
 
 3.	In the Insert Picture window, go to the File name section and paste in the URL of the image. _Then click the arrow next to_ the **Insert** button and choose **Link to File** from the drop-down.
 
-![](/assets/img/blog/email-footprint/insert-pic-screenshot.png)  
+    ![](/assets/img/blog/email-footprint/insert-pic-screenshot.png)  
 
-Done! Save your email signature and no more pesky attachments and you save the environment with each email. :smile:
+    Done! Save your email signature and no more pesky attachments and you save the environment with each email. :smile:
 
 
 # Tip #2 - Links Instead of Files

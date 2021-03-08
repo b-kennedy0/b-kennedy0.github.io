@@ -239,8 +239,6 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  
-gems:
   - jemoji
   - jekyll-redirect-from
   

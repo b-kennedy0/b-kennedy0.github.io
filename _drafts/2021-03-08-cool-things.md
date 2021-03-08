@@ -17,15 +17,11 @@ layout: post
 
 ---
 
-Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.
-
-
-NOTE TO SELF -- OTHER HINTS/TIPS DOCS FROM DROPBOX?
-
+Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020). I wanted a place to keep track of all the cool things I use and the things I hope to be using at some point. I hope that by having this page, you might also find something useful. 
 
 ## Computer setup
 
-Apple M1 Macbook Air 2020. The new Apple silicon chip makes this super quick! No problems running multiple programmes and lots of browser tabs. In fact, many apps are getting silicon-specific updates.  
+I currently have an Apple M1 Macbook Air 2020. The new Apple silicon chip makes this super quick! No problems running multiple programmes and lots of browser tabs. In fact, many apps are getting silicon-specific updates.  
 
 
 ## Analysis
@@ -45,15 +41,24 @@ For those who are still wary of writing code for analysis, [JASP](https://jasp-s
 I share my code on [Open Science Framework](http://www.osf.io/) or [Github](https://github.com/).
 
 
-## Figures, illustrations, apps
+## Sharing Code & ShinyApps
 
-<http://www.cookbook-r.com/Graphs/>
+**Sharing snippets of code:** 
 
-Sharing snippets of code: <https://carbon.now.sh/>
+There are a few choices and you ought to pick depending on your audience. 
 
-<https://www.shinyapps.io/>
+* The visually pleasing way - e.g. for Twitter: [Carbon](https://carbon.now.sh/)  
+* The user-friendly way - e.g. for helping solve an issue:  [GitHub Gists](https://gist.github.com/discover)  
 
-I do all my figures in [ggplot](https://ggplot2.tidyverse.org/) (using R). Even if you're not fully converted to R for your analysis, you can still easily use it for your figures. Once you learn how to [load your data into R](https://r4ds.had.co.nz/data-import.html), there are a lot of resources for easily making plots; here are some great one for [scatterplots](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization), [histograms](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization), [or violin plots.](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization) A super fun way to learn how to plot is taking part in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) and for extra motivation and fun, you can choose to make your plots using colour palettes from [Harry Potter](https://github.com/aljrico/harrypotter) or [Game of Thrones](https://github.com/aljrico/gameofthrones) (or any others you can find - the world is your oyster).
+**Sharing full length code:**
+
+* Create a repository on [GitHub](https://github.com/)  
+
+**Sharing Apps**
+
+Once you are familiar with R and RStudio, you might want to try creating your own app! I use [ShinyApps](https://www.shinyapps.io/) to publish and share mine. 
+
+For each of my research studies, I aim to produce an app so that colleagues and the general public may interact with the data alongside the manuscript. 
 
 My own apps - 
 
@@ -66,13 +71,19 @@ My own apps -
 
 ## Writing
 
-I typically write my manuscripts in Word, and email them around to my collaborators, but it's not ideal and very time-consuming (especially when getting feedback on a paper with 5+ coauthors). I tried to use Google Docs, but the conversion from word doc to google doc and back can be a bit iffy and cause you to loose formatting. I'm still looking for the ideal solution (planning to give [Simul](https://www.simuldocs.com/) a try, as it's supposedly good for version control).
+**Microsoft Word combined with:**
 
-Citation manager and keeping up with literature
+* [Simul](https://www.simuldocs.com/) - To share with collaborators and for version control.
+* [Zotero](https://www.zotero.org/) - An open source citation and literature manager. Useful for generating formatted reference list.
+* [Grammarly](link) - Checking for spelling, grammar and excess words. 
+* In-text comments - To have a chat to myself e.g. can't think of the right word or the paragraph could be phrased better, but not right now.
+* AutoCorrect - Replacing text with formatted text to make it easier to find when finalising the document. E.g. Replacing (REF) with highlighted (<mark>REF</mark>).
 
-[Zotero](https://www.zotero.org/)
+![](/assets/img/blog/cool-things/autocorrect.png)
 
-<https://www.connectedpapers.com/>, produces a visual graph for all papers that are related to one initial paper (i.e. citations etc)
+**Searching for related articles:**
+
+[Connected Papers](https://www.connectedpapers.com/) - produces a visual graph for all articles that are related to one article paper.
 
 ## Communication
 

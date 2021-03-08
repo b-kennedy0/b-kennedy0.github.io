@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/b-kennedy0/b-kennedy0/master/UoC_Psych.gif
 3.	In the Insert Picture window, go to the File name section and paste in the URL of the image. _Then click the arrow next to_ the **Insert** button and choose **Link to File** from the drop-down. 
  
 
-![](/assets/img/greentick.png)Done! Save your email signature and no more pesky attachments and you save the environment with each email. :smile:
+![](/assets/img/greentick.png =50x)Done! Save your email signature and no more pesky attachments and you save the environment with each email. :smile:
 
 
 # Tip #2 - Links Instead of Files

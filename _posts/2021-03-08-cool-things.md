@@ -8,7 +8,8 @@ permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things-icon.png
 layout: post
 ---
-{% include toc.html html=content %}
+
+{% include toc.html html=content class="inline_toc" id="my_toc" h_min=1 h_max=3 %}
 
 Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.
 

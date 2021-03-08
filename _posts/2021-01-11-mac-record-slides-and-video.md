@@ -6,8 +6,6 @@ readtime: true
 last-updated: 11/01/2021
 permalink: /blog/slides-video/
 thumbnail-img: /assets/img/blog/slides-video/presentation-icon.jpg
-show-avatar: false
-nav-short: true
 layout: post
 ---
 # Steps:

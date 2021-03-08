@@ -10,8 +10,10 @@ show-avatar: false
 nav-short: true
 layout: post
 ---
+# Contents header
+{:.no_toc}
 
-{% include toc.html html=content class="inline_toc" id="my_toc" h_min=1 h_max=3 %}
+{:toc}
 
 Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.
 

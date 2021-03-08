@@ -8,7 +8,7 @@ permalink: /blog/email-footprint/
 thumbnail-img: /assets/img/blog/email-footprint/email-icon.webp
 show-avatar: false
 nav-short: true
-cover-img: assets/img/blog/trees-forest.jpg
+cover-img: /assets/img/blog/email-footprint/trees-forest.jpg
 layout: post
 ---
 ### Contents

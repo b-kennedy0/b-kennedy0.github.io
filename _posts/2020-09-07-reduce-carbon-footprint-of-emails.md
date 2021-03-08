@@ -20,19 +20,23 @@ layout: post
 
 # Tip #1 - Signature Images
 
-Your email has a carbon footprint. Each time you click ‘send’ your PC communicates with a server and the size of your email has a big impact on its carbon footprint (more server power required). One easy step to take is to think about your email signature (yes, really!). If you include an image (logo) this takes more space in your email. Email clients also treat these images in a funny way, they convert them to attachments before sending. This can confuse your recipient as they spend a moment trying to figure out if you really included an attachment (and even more confusion if you did also send a real attachment). 
+Your email has a carbon footprint. Each time you click ‘send’ your device communicates with a server and the size of your email has a big impact on its carbon footprint (more server power required). 
 
-Instead, you can insert your logo from a web URL instead. This way, it doesn’t get sent as a pesky attachment and takes much less email space. 
+One easy step to take is to think about your email signature (yes, really!). If you include an image (e.g. logo) this takes more space in your email. Email clients also treat these images in a funny way, they convert them to attachments before sending. This can confuse your recipient as they spend a moment trying to figure out if you really included an attachment (and even more confusion if you did also send a real attachment). 
+
+Instead, you can insert your logo from a **web URL** instead. This way, it doesn’t get sent as a pesky attachment and takes much less email space. 
+
 So, how to: 
 
-1.	Ensure your image/logo is stored online and is publicly accessible through a link. You can do this with Dropbox etc. For simplicity, here is the School of Psych logo in URL form (feel free to use): 
-https://raw.githubusercontent.com/b-kennedy0/b-kennedy0/master/UoC_Psych.gif
+1.	Ensure your image/logo is stored online and is publicly accessible through a link. You can do this with Dropbox etc.
 
 2.	In Outlook, edit your email signature. Then, position your cursor where you want to insert the image and click the **Insert Picture** button. 
- 
 
-3.	In the Insert Picture window, go to the File name section and paste in the URL of the image. _Then click the arrow next to_ the **Insert** button and choose **Link to File** from the drop-down. 
- 
+![](/assets/img/blog/email-footprint/signature-screenshot.png)  
+
+3.	In the Insert Picture window, go to the File name section and paste in the URL of the image. _Then click the arrow next to_ the **Insert** button and choose **Link to File** from the drop-down.
+
+![](/assets/img/blog/email-footprint/insert-pic-screenshot.png)  
 
 Done! Save your email signature and no more pesky attachments and you save the environment with each email. :smile:
 

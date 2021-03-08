@@ -17,7 +17,7 @@ layout: post
 
 ---
 
-> Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020). I wanted a place to keep track of all the cool things I use and the things I hope to be using at some point. I hope that by having this page, you might also find something useful. 
+Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020). I wanted a place to keep track of all the cool things I use and the things I hope to be using at some point. I hope that by having this page, you might also find something useful. 
 
 ## Computer setup
 
@@ -28,9 +28,9 @@ I currently have an Apple M1 Macbook Air 2020. The new Apple silicon chip makes 
 
 During my undergraduate and masters I conducted analyses through SPSS, but since starting my PhD I have learned to use [R](https://www.r-project.org/) (and [RStudio](https://rstudio.com/products/rstudio/download/)). The resources that I used to get started are:
 
-* <https://ismayc.github.io/rbasics-book/index.html>
-* <https://r4ds.had.co.nz/>
-* <https://rstudio.com/resources/cheatsheets/>
+* [Getting Used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/index.html)
+* [R for Data Science](https://r4ds.had.co.nz/)
+* [R Studio CHeatsheets](https://rstudio.com/resources/cheatsheets/)
 
 I mostly use [RMarkdown](https://rmarkdown.rstudio.com/), which is great for compiling all your code and results into a PDF that you can then share with your collaborators (<https://bookdown.org/yihui/rmarkdown/>).
 
@@ -42,18 +42,27 @@ I share my code on [Open Science Framework](http://www.osf.io/) or [Github](http
 
 
 ## Coding
-[MacDown](https://macdown.uranusjr.com/) -- Open-Source Markdown editor for macOS
 
-[Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/) -- Convert text into Markdown, useful for converting Word-written pieces to Markdown (including links and heading formatting etc). 
+I use [MacDown](https://macdown.uranusjr.com/)(an open-source markdown editor for macOS) for writing and previewing markdown files. In fact, this blog post was written up in MacDown!
 
-[Brackets](http://brackets.io/) -- Open-Source HTML & CSS (and other languages) text editor
+A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
 
-[Parsehub](https://www.parsehub.com/) -- Free web scraping service
+[Brackets](http://brackets.io/) is an open-source HTML & CSS (plus other languages) text editor, very useful for catching simple errors or syntax errors such as missing brackets. 
+
+
 
 <https://jsonlint.com/> - JSON Validator
 
 ## Automating
 [Integromat](https://www.integromat.com/en/) -- SUPER powerful process automater
+
+[Parsehub](https://www.parsehub.com/) is a free web scraping service. I tend to use this as part of an automation cycle to scrape new data from website to make comparisons to feed into a data dashboard. An example might be:
+
+1. Integromat uses a webhook to trigger Parsehub
+2. Parsehub scrapes a participant sign-up page
+3. Parsehub scrapes the ID numbers of those who have completed the study
+4. A Shinyapp uses Parsehub API to pull the latest data, comparing both lists
+5. Shinyapp presents a dashboard indicating which participants completed the study and now require awarding credits
 
 [Otter.ai](https://otter.ai/) -- Live transcription
 

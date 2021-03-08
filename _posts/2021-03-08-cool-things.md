@@ -13,6 +13,7 @@ layout: post
 # Contents header
 {:.no_toc}
 
+* A markdown unordered list
 {:toc}
 
 Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.

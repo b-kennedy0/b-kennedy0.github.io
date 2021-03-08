@@ -5,6 +5,7 @@ tags: [tech, tips, cool-things]
 readtime: true
 last-updated: 08/03/2021
 permalink: /blog/cool-things/
+thumbnail-img: /assets/img/blog/cool-things-icon.png
 layout: post
 ---
 

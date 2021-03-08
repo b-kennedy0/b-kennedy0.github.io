@@ -10,7 +10,7 @@ show-avatar: false
 nav-short: true
 layout: post
 ---
-# Contents header
+### Contents
 {:.no_toc}
 
 * A markdown unordered list

@@ -52,6 +52,8 @@ social-network-links:
   linkedin: bradleykennedy1
   link: links/
   status: /
+  calendar: calendar
+  blog: blog/
 #  patreon: 
 #  youtube: 
 #  reddit:  
@@ -91,10 +93,10 @@ url-pretty: "bradleykennedy.co.uk"
 excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
+feed_show_excerpt: false
 
 # Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
+feed_show_tags: false
 
 # The keywords to associate with your website, for SEO purposes
 keywords: "Bradley,Kennedy,Psychology"
@@ -198,7 +200,8 @@ timezone: "Europe/London"
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:title/
-paginate: 5
+paginate: 10
+paginate_path: "/page:num/"
 
 kramdown:
   input: GFM

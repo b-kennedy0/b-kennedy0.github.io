@@ -1,7 +1,7 @@
 ---
 title: Cool things
 subtitle: Awesome things I use / plan to use
-tags: [tech, tips, cool-things]
+tags: [cool-things]
 readtime: true
 last-updated: 08/03/2021
 permalink: /blog/cool-things/

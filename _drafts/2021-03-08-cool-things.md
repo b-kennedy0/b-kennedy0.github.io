@@ -17,7 +17,7 @@ layout: post
 
 ---
 
-Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020). I wanted a place to keep track of all the cool things I use and the things I hope to be using at some point. I hope that by having this page, you might also find something useful. 
+> Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020). I wanted a place to keep track of all the cool things I use and the things I hope to be using at some point. I hope that by having this page, you might also find something useful. 
 
 ## Computer setup
 
@@ -40,6 +40,22 @@ For those who are still wary of writing code for analysis, [JASP](https://jasp-s
 
 I share my code on [Open Science Framework](http://www.osf.io/) or [Github](https://github.com/).
 
+
+## Coding
+[MacDown](https://macdown.uranusjr.com/) -- Open-Source Markdown editor for macOS
+
+[Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/) -- Convert text into Markdown, useful for converting Word-written pieces to Markdown (including links and heading formatting etc). 
+
+[Brackets](http://brackets.io/) -- Open-Source HTML & CSS (and other languages) text editor
+
+[Parsehub](https://www.parsehub.com/) -- Free web scraping service
+
+<https://jsonlint.com/> - JSON Validator
+
+## Automating
+[Integromat](https://www.integromat.com/en/) -- SUPER powerful process automater
+
+[Otter.ai](https://otter.ai/) -- Live transcription
 
 ## Sharing Code & ShinyApps
 
@@ -153,9 +169,9 @@ To send emails to multiple people I use Yet Another Mail Merge from Gmail. See h
 
 Chrome add-on to open multiple URLs (handy for marking and opening multiple Turnitin pages simultaneously): <https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh>
 
-## Tech Things
 
-### General tech-y things
+## General tech-y things
+
 [Google Remote Desktop](https://remotedesktop.google.com/home) -- Connect to other computers easily
 
 [Caffeine](https://www.macupdate.com/app/mac/24120/caffeine) -- Keep mac screen awake
@@ -165,29 +181,15 @@ Chrome add-on to open multiple URLs (handy for marking and opening multiple Turn
 [Pym](https://apps.apple.com/gb/app/pym/id1451733095?mt=12) -- Image compressor and format converter (Mac only)
 
 
-### Coding
-[MacDown](https://macdown.uranusjr.com/) -- Open-Source Markdown editor for macOS
 
-[Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/) -- Convert text into Markdown, useful for converting Word-written pieces to Markdown (including links and heading formatting etc). 
-
-[Brackets](http://brackets.io/) -- Open-Source HTML & CSS (and other languages) text editor
-
-[Parsehub](https://www.parsehub.com/) -- Free web scraping service
-
-<https://jsonlint.com/> - JSON Validator
-
-### Automating
-[Integromat](https://www.integromat.com/en/) -- SUPER powerful process automater
-
-[Otter.ai](https://otter.ai/) -- Live transcription
-
-### Online Teaching / Video
+## Online Teaching / Video
 
 [OBS](https://obsproject.com/) -- live stream video control
 
 StreamDeck
 
-### Storage
+
+## Storage
 [Dropbox](https://www.dropbox.com/plans) -- Plus plan for 2Tb storage and making file requests securely
 
 Github used with...
@@ -195,8 +197,7 @@ Github used with...
 [Github Desktop](https://desktop.github.com/) -- Keeping local copies of repos updated, making changes using above programmes and pushing commits.
 
 
-
-### Collab
+## Collab
 
 
 

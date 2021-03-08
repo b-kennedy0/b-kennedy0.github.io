@@ -61,6 +61,30 @@
   </li>
 {%- endif -%}
   
+  {%- if site.social-network-links.calendar -%}
+  <li class="list-inline-item">
+    <a href="https://bradleykennedy.co.uk/{{ site.social-network-links.calendar }}" title="Schedule a meeting with me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-calendar-check fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Schedule a meeting with me</span>
+   </a>
+  </li>
+{%- endif -%}
+  
+  {%- if site.social-network-links.blog -%}
+  <li class="list-inline-item">
+    <a href="https://bradleykennedy.co.uk/{{ site.social-network-links.blog }}" title="View my blog pages">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-blog fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">View my blog pages</span>
+   </a>
+  </li>
+{%- endif -%}
+  
   {%- if site.rss-description -%}
   <li class="list-inline-item">
     <a href="{{ '/feed.xml' | relative_url }}" title="RSS">

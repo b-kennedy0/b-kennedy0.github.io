@@ -16,65 +16,35 @@ layout: post
 * A markdown unordered list
 {:toc}
 
-Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.
+---
+
+Inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd) (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020), I needed a place to keep track of all the cool things I find, some of which I actually use. Hopefully some of these you might find useful yourself.
+
 
 NOTE TO SELF -- OTHER HINTS/TIPS DOCS FROM DROPBOX?
 
-Last updated: DATE HERE
-
-Alex's [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020)
-
-[MacDown](https://macdown.uranusjr.com/) -- Open-Source Markdown editor for macOS
-
-[Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/) -- Convert text into Markdown, useful for converting Word-written pieces to Markdown (including links and heading formatting etc). 
-
-[Parsehub](https://www.parsehub.com/) -- Free web scraping service
-
-[Google Remote Desktop](https://remotedesktop.google.com/home) -- Connect to other computers easily
-
-[Integromat](https://www.integromat.com/en/) -- SUPER powerful process automater
-
-[Caffeine](https://www.macupdate.com/app/mac/24120/caffeine) -- Keep mac screen awake
-
-[OpenVPN](https://openvpn.net/) -- connect to Campus network
-
-[Dropbox](https://www.dropbox.com/plans) -- Plus plan for 2Tb storage and making file requests securely
-
-[Github Desktop](https://desktop.github.com/) -- Keeping local copies of repos updated, making changes using above programmes and pushing commits.
-
-[Pym](https://apps.apple.com/gb/app/pym/id1451733095?mt=12) -- Image compressor and format converter (Mac only)
-
-[Brackets](http://brackets.io/) -- Open-Source HTML & CSS (and other languages) text editor
-
-[OBS](https://obsproject.com/) -- live stream video control
-
-[Otter.ai](https://otter.ai/) -- Live transcription
-
-[X.ai](https://x.ai/) -- Meeting scheduler AI
 
 ## Computer setup
 
 Apple M1 Macbook Air 2020. The new Apple silicon chip makes this super quick! No problems running multiple programmes and lots of browser tabs. In fact, many apps are getting silicon-specific updates.  
 
+
 ## Analysis
 
-In undergraduate and masters I did analyses through SPSS, but since starting my PhD I have learned to use [R](https://www.r-project.org/) (and [RStudio](https://rstudio.com/products/rstudio/download/)). The resources that I used to get started are:
+During my undergraduate and masters I conducted analyses through SPSS, but since starting my PhD I have learned to use [R](https://www.r-project.org/) (and [RStudio](https://rstudio.com/products/rstudio/download/)). The resources that I used to get started are:
 
-<https://ismayc.github.io/rbasics-book/index.html>
+* <https://ismayc.github.io/rbasics-book/index.html>
+* <https://r4ds.had.co.nz/>
+* <https://rstudio.com/resources/cheatsheets/>
 
-<https://r4ds.had.co.nz/>
+I mostly use [RMarkdown](https://rmarkdown.rstudio.com/), which is great for compiling all your code and results into a PDF that you can then share with your collaborators (<https://bookdown.org/yihui/rmarkdown/>).
 
-<https://rstudio.com/resources/cheatsheets/>
+I haven't yet gotten to it, but I'm planning to learn to use [Binder](https://mybinder.org/), so I can share my code in an interactive, reproducible way for each of my studies.
 
-I mostly use [RMarkdown](https://rmarkdown.rstudio.com/), which is great for compiling all your code and results into a PDF that you can then share with your collaborators.
-
-<https://bookdown.org/yihui/rmarkdown/>
-
-I haven't yet gotten to that, but I'm planning to learn to use [Binder](https://mybinder.org/), so I can share my code in an interactive, reproducible way.
-
-For those who are still wary of making the plunge to R, [JASP](https://jasp-stats.org/) and [Jamovi](https://www.jamovi.org/) are great alternatives (with user interface similar to SPSS).
+For those who are still wary of writing code for analysis, [JASP](https://jasp-stats.org/) and [Jamovi](https://www.jamovi.org/) are great alternatives (with user interface similar to SPSS).
 
 I share my code on [Open Science Framework](http://www.osf.io/) or [Github](https://github.com/).
+
 
 ## Figures, illustrations, apps
 
@@ -88,10 +58,11 @@ I do all my figures in [ggplot](https://ggplot2.tidyverse.org/) (using R). Even 
 
 My own apps - 
 
-Pilot data explorer
-COVID Vaccine
-632 VGS Weight Calculator
-Open Research Calendar
+* Pilot data explorer
+* COVID Vaccine
+* 632 VGS Weight Calculator
+* Open Research Calendar
+
 
 
 ## Writing
@@ -116,7 +87,7 @@ Citation manager and keeping up with literature
 
 <https://htmlemail.io/inline/>
 
-<https://jsonlint.com/> - JSON Validator
+
 
 ## Organisation
 
@@ -125,6 +96,8 @@ Citation manager and keeping up with literature
 Tracking conferences / publications etc -- Github Pages portfolio.
 
 Google Drive
+
+[X.ai](https://x.ai/) -- Meeting scheduler AI
 
 ## Statistics
 
@@ -169,3 +142,51 @@ To send emails to multiple people I use Yet Another Mail Merge from Gmail. See h
 <https://passwordsgenerator.net/>
 
 Chrome add-on to open multiple URLs (handy for marking and opening multiple Turnitin pages simultaneously): <https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh>
+
+## Tech Things
+
+### General tech-y things
+[Google Remote Desktop](https://remotedesktop.google.com/home) -- Connect to other computers easily
+
+[Caffeine](https://www.macupdate.com/app/mac/24120/caffeine) -- Keep mac screen awake
+
+[OpenVPN](https://openvpn.net/) -- connect to Campus network
+
+[Pym](https://apps.apple.com/gb/app/pym/id1451733095?mt=12) -- Image compressor and format converter (Mac only)
+
+
+### Coding
+[MacDown](https://macdown.uranusjr.com/) -- Open-Source Markdown editor for macOS
+
+[Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/) -- Convert text into Markdown, useful for converting Word-written pieces to Markdown (including links and heading formatting etc). 
+
+[Brackets](http://brackets.io/) -- Open-Source HTML & CSS (and other languages) text editor
+
+[Parsehub](https://www.parsehub.com/) -- Free web scraping service
+
+<https://jsonlint.com/> - JSON Validator
+
+### Automating
+[Integromat](https://www.integromat.com/en/) -- SUPER powerful process automater
+
+[Otter.ai](https://otter.ai/) -- Live transcription
+
+### Online Teaching / Video
+
+[OBS](https://obsproject.com/) -- live stream video control
+
+StreamDeck
+
+### Storage
+[Dropbox](https://www.dropbox.com/plans) -- Plus plan for 2Tb storage and making file requests securely
+
+Github used with...
+
+[Github Desktop](https://desktop.github.com/) -- Keeping local copies of repos updated, making changes using above programmes and pushing commits.
+
+
+
+### Collab
+
+
+

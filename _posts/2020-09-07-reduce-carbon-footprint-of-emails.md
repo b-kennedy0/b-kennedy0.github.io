@@ -5,9 +5,10 @@ tags: [tech, tips]
 readtime: true
 last-updated: 07/09/2020
 permalink: /blog/email-footprint/
-thumbnail-img: /assets/img/blog/email-icon.webp
+thumbnail-img: /assets/img/blog/email-footprint/email-icon.webp
 show-avatar: false
 nav-short: true
+cover-img: assets/img/blog/trees-forest.jpg
 layout: post
 ---
 ### Contents

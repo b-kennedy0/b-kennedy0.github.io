@@ -5,9 +5,10 @@ tags: [cool-things]
 readtime: true
 last-updated: 08/03/2021
 permalink: /blog/cool-things/
-thumbnail-img: /assets/img/blog/cool-things-icon.png
+thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 show-avatar: false
 nav-short: true
+cover-img: /assets/img/blog/cool-things/tech.jpg
 layout: post
 ---
 ### Contents

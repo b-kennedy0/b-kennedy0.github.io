@@ -84,5 +84,3 @@ Open Science Workshop @ University College Cork, Ireland (*31st Oct - 2nd Novemb
 *Awarded*: Gold Scholarship for Postgraduate study, Bangor University - (£3,000). *September 2016*
 
 <img src="https://b-kennedy0.github.io/assets/img/BPS Conference 2017.jpg" alt="BPS Welsh Branch Conference 2017" width="300" height="190" style="border-width: 10px; margin-right: auto; margin-left: auto; display: block;"/>  
-
----

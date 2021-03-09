@@ -2,51 +2,9 @@
 layout: page
 title: Research
 cover-img: "/assets/img/brain_cover.jpg"
+css: /assets/css/box.css
 show-avatar: false
 ---
-<a name="TopOfPage"></a>
-
-<!-- <script>
-  var div = document.createElement('div');
-  div.className = 'fb-customerchat';
-  div.setAttribute('page_id', '421258858310082');
-  div.setAttribute('ref', 'b64:cGVyc193ZWJzaXRl');
-  div.setAttribute('theme_color', '#082954');
-  div.setAttribute('logged_in_greeting', 'Hey! Want to get involved in this research?');
-  document.body.appendChild(div);
-  window.fbMessengerPlugins = window.fbMessengerPlugins || {
-    init: function () {
-      FB.init({
-        appId            : '1678638095724206',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v3.3'
-      });
-    }, callable: []
-  };
-  window.fbAsyncInit = window.fbAsyncInit || function () {
-    window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
-    window.fbMessengerPlugins.init();
-  };
-  setTimeout(function () {
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  }, 0);
-</script> --->
-
-<!--- <h3 style="text-align: center;"><strong>Want to get involved?</strong></h3>
-<h3 style="text-align: center;">Click below to chat in Messenger</h3>
-
-<!--- <script> window.fbMessengerPlugins = window.fbMessengerPlugins || { init : function() { FB.init({ appId: "1678638095724206", xfbml: true, version: "v3.0" }); }, callable : [] }; window.fbAsyncInit = window.fbAsyncInit || function() { window.fbMessengerPlugins.callable.forEach( function( item ) { item(); } ); window.fbMessengerPlugins.init(); }; setTimeout( function() { (function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); }, 0); </script> <div class="fb-send-to-messenger test-fb-send-to-messenger" messenger_app_id="1678638095724206" page_id="421258858310082" data-ref="" color="White" size="xlarge" cta_text="GET_STARTED"> </div>
-
-<!--- <p><em>*(requires Faceboook log-in)</em></p> --->
-
 # 2018 - Present
 Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect
 
@@ -67,7 +25,9 @@ Examining the asymmetry of language and the associated structural correlates.
 <img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
 MSc project investigated connectivity asymmetry (using Diffusion Spectrum Imaging) in structures such as the arcuate fasciculus and frontal aslant tract in individuals with atypical language dominance.
 
+<div id="content-desktop">
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
 
 ---
 # 2015-2016
@@ -78,6 +38,4 @@ Undergraduate BSc project 'Psychology with Neuropsychology'
 ---
 
 <h3 style="text-align: center;">Got a question?</h3>
-<h3 style="text-align: center;"><a href="mailto:research@bradleykennedy.co.uk">research@bradleykennedy.co.uk</a></h3>
-
-[Back to Top](#TopOfPage)
+<h3 style="text-align: center;"><a href="/contact">Get in touch!</a></h3>

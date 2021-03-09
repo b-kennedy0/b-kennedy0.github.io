@@ -16,7 +16,7 @@ show-avatar: false
 
 (OA = Open Access; OM = Open Materials; OD = Open Data and Analysis Code)  
 
-<div style="padding-left: 36px; text-indent: -36px; line-height: 1.8;">
+<div style="padding-left: 36px; text-indent: -36px; line-height: 1.8; overflow-wrap: break-word; word-wrap: break-word; -webkit-hypens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;">
 <p><strong>Kennedy, B. J.</strong> (2021, March 5). UKRN Initiatives, The Open Research Calendar (Invited Speaker), UKRN Annual Meeting 2021 <a href="https://www.ukrn.org/initiatives/" target="_blank" rel="noopener">https://www.ukrn.org/initiatives</a></p>
 <p>Gould van Praag, C.D.,&nbsp;<strong>Kennedy, B. J.</strong> , Lautarescu, A., &amp; Plomp, E. (2021, February 17). Poster Presentation of the Open Research Calendar, Open Science Conference 2021 (<a href="https://osc2021.cventevents.com/event/edaaff56-a01b-4d78-8041-ac2b1aab00be/summary" target="_blank" rel="noopener">Online</a>). <a href="https://doi.org/10.5281/zenodo.4256613" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.4256613</a>&nbsp;(OA)</p>
 <p><strong>Kennedy, B. J.</strong>&nbsp;(2020) Lead Editor of Issue 117 (December 2020), PsyPAG Quarterly Journal (ISSN: 1746-6016).&nbsp;<a href="http://www.psypag.co.uk/wp-content/uploads/2020/12/PsyPag-117-WEB.pdf" target="_blank" rel="noopener">Link to Issue</a>&nbsp;(OA)</p>

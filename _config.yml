@@ -200,7 +200,7 @@ timezone: "Europe/London"
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:title/
-paginate: 3
+paginate: 5
 paginate_path: "blog/page:num/"
 
 kramdown:

@@ -57,7 +57,7 @@ A useful tool for converting Microsoft Word-written pieces into markdown (includ
 {: .box-warning}
 <i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> **NOTE:** On September 1, 2021, Adobe will end support for Brackets. :sob:   
 
-[VS Code](https://code.visualstudio.com/) - Replacement to Brackets. It contains a lot of powerful tools and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
+[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Replacement to Brackets. It contains a lot of powerful tools and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
 
 If writing code for a script then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super useful as I can never keep track of the [brackets].
 

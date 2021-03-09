@@ -57,6 +57,8 @@ A useful tool for converting Microsoft Word-written pieces into markdown (includ
 {: .box-warning}
 <i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> **NOTE:** On September 1, 2021, Adobe will end support for Brackets. :sob:   
 
+[VS Code](https://code.visualstudio.com/) - Replacement to Brackets. It contains a lot of powerful tools and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
+
 If writing code for a script then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super useful as I can never keep track of the [brackets].
 
 ## Automating
@@ -136,8 +138,10 @@ Collaborative group workspaces - [Slack](https://slack.com/intl/en-gb/){:target=
 Social messenger (Encrypted) - [Signal](https://signal.org/en/){:target="_blank" rel="noopener"}  
 
 Social Platforms:  
-- [Gathertown](https://gather.town/){:target="_blank" rel="noopener"} is great for hosting a virtual space with a controllable avatar. As you walk towards a person/people, they become visible and audible.   
-- [Backyard](https://backyard.co/){:target="_blank" rel="noopener"} is a fairly new platform that allows you and your friends to play online collab games whilst also being able to see each player in circles around the game. Features a few versions of well-known games.
+
+* [Gathertown](https://gather.town/){:target="_blank" rel="noopener"} is great for hosting a virtual space with a controllable avatar. As you walk towards a person/people, they become visible and audible.
+
+* [Backyard](https://backyard.co/){:target="_blank" rel="noopener"} is a fairly new platform that allows you and your friends to play online collab games whilst also being able to see each player in circles around the game. Features a few versions of well-known games.
 
 Setting expectations RE: emails, use [The Email Charter](https://email-charter.github.io/){:target="_blank" rel="noopener"} in your email signature. This webpages sets out 10 tips to avoid email overload.
 
@@ -212,5 +216,4 @@ I use GitHub used with [Github Desktop](https://desktop.github.com/){:target="_b
 ---
 
 # If you found this article useful, please share on social media using the icons below - Thank you :smiley:
-
-
+{:.no_toc}

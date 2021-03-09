@@ -18,6 +18,8 @@ navbar-links:
 #    - Qualifications: "qualifications"
     - Publications & Awards: "publications"
     - My Apps: "apps"
+    - Book Meeting: "calendar"
+    - Blog: "blog"
   Employment:
     - Current: "current-employment"
     - Training: "training"

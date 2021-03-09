@@ -84,5 +84,3 @@ Student Nomination for Teaching Award (2018)
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentavf1.png?raw=true" alt="Female Avatar 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 Student Nomination for Teaching Award (2018)
 >"Every lab class Brad is completely full of happiness and I can't help but enjoy his sessions. He doesn't speak down to you and proper sees you as a friend it feels."
-
----

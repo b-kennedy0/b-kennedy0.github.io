@@ -28,5 +28,3 @@ Stewart, S. L. K., **Kennedy, B. J.**, & Haigh, M. (2018, September 25). Valence
 *Click OSF Logo below for Profile Page*  
 
 <a href="http://osf.io/ekmyr" target="_blank" rel="noopener"><img src="/assets/img/osf icon circle.png" title="Click here for Open Science Framework Profile" alt="Open Science Framework" width="100" height="100"/>
-
----

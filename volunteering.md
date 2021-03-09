@@ -32,5 +32,3 @@ _Gliding scholarship & Advanced training from Oct 2011 - Sep 2012_
 Based at Royal Air Force Woodvale in the North West, 631 VGS was tasked to provide gliding training to affiliated cadets of the Air Training Corps (ATC) and Combined Cadet Force (CCF) in addition to training and developing our own staff to help us achieve this. Achieved Grade 1 Pilot status.
 
 > In May of 2018, 631 VGS became 631 AGS (Aviation Ground School) following the RAF decision for the Vigilant fleet to cease operating. Now, 631 AGS provides ground based aviation training, including classroom based ground school and experience in the PTT (part task trainer).
-
----

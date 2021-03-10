@@ -1,4 +1,4 @@
-body {
+sub.body {
   margin: 0;
   height: 100vh;
   display: flex;
@@ -37,7 +37,7 @@ body {
   top: 260px;
 }
 
-h1 {
+sub.h1 {
   font-family: "Pacifico", Helvetica, sans-serif;
   color: #E96F8C;
   font-weight: 300;
@@ -47,7 +47,7 @@ h1 {
   pointer-events: none;
 }
 
-input {
+sub.input {
   position: absolute;
   top: -43px;
   font-family: "Open Sans", sans-serif;
@@ -99,7 +99,7 @@ input {
   width: 190px;
 }
 
-button {
+sub.button {
   background: transparent;
   padding: 27px;
   border-radius: 100%;

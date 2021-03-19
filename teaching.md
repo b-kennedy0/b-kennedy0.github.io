@@ -21,7 +21,7 @@ show-avatar: false
 
 [See recent Teaching Awards here!](/publications#awards)  
 
-[Click for most recent feedback report](https://bradley-kennedy.shinyapps.io/Teaching_feedback/)  
+<!-- [Click for most recent feedback report](https://bradley-kennedy.shinyapps.io/Teaching_feedback/)  -->
 
 ## 2020 {#student-feedback-2020}
 

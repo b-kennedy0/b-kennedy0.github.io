@@ -1,19 +1,27 @@
----
-layout: minimal
-title: Calendar Page - Brad Kennedy
-redirect_to: https://calendar.x.ai/bradleykennedy
----
-<!--- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Calendar Page - Brad Kennedy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  </head>
+<head>
+  <title>Arrange a Meeting</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
 <body>
-<div><input type="button" onclick="location.href='https://bradleykennedy.co.uk';" value="Main Homepage" /> <input type="button" onclick="location.href='https://bradleykennedy.co.uk/calendar';" value="Calendar Homepage" /></div>
-  <p style="text-align:center">
-  <iframe src="https://calendar.x.ai/bradleykennedy?header=1" style="width:80%;min-height:100vh;border:none;" scrolling="auto"></iframe>
-  </p>
+<script src="https://unpkg.com/tripetto-runner-foundation"></script>
+<script src="https://unpkg.com/tripetto-runner-chat"></script>
+<script src="https://unpkg.com/tripetto-services"></script>
+<script>
+var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTFQ1V2JpNWZ3b0t2VkxMZWJqZ0dBVlZJMXY5K2MrazI0N3d5VjNRK2t6WT0iLCJkZWZpbml0aW9uIjoic2tLbGZmQjhhdnRJV3k3MThBMXRGZTBIaUZvbHFpTkozTlNVL0JGTHo3WT0iLCJ0eXBlIjoiY29sbGVjdCJ9.wRIp1CVSJ-8wo3W4-C44F7cxySgcRLNtpE_2Am-BnBA" });
+
+TripettoChat.run({
+    element: document.body,
+    definition: tripetto.definition,
+    styles: tripetto.styles,
+    l10n: tripetto.l10n,
+    locale: tripetto.locale,
+    translations: tripetto.translations,
+    attachments: tripetto.attachments,
+    onSubmit: tripetto.onSubmit
+});
+</script>
 </body>
 </html>
---->

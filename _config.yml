@@ -18,7 +18,7 @@ navbar-links:
 #    - Qualifications: "qualifications"
     - Publications & Awards: "publications"
     - My Apps: "apps"
-    - Book Meeting: "calendar"
+    - Book Meeting: "meeting"
     - Blog: "blog"
   Employment:
     - Current: "current-employment"
@@ -54,7 +54,7 @@ social-network-links:
   linkedin: bradleykennedy1
   link: links/
   status: /
-  calendar: calendar
+  calendar: meeting
   blog: blog/
 #  patreon: 
 #  youtube: 

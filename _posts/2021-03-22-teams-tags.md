@@ -31,4 +31,4 @@ Creating 'Tags' for a Team
 
 When you post your message/annoucnement only those who are part of the tag will recieve the notification. 
 
-    <img src="/assets/img/blog/teams-tags/usetag.png" />
+<img src="/assets/img/blog/teams-tags/usetag.png" />

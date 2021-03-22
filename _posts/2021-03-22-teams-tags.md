@@ -9,9 +9,9 @@ thumbnail-img: /assets/img/blog/teams-tags/icon-tags.jpeg
 cover-img: /assets/img/blog/teams-tags/cover-tags.jpg
 layout: post
 ---
-# Got a Team with lots of users and only need to notify a select few? I've got the answer!
+# Got a Team with lots of users and only need to notify a select few? Here is the answer!
 
-Creating 'Tags' for a Team
+## Creating 'Tags' for a Team
 
 1. On your team, choose the elipses 'More Options' then select 'Manage tags'
 

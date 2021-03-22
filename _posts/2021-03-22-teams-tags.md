@@ -14,17 +14,21 @@ layout: post
 Creating 'Tags' for a Team
 
 1. On your team, choose the elipses 'More Options' then select 'Manage tags'
-<img src="/assets/img/blog/teams-tags/menudropdown.png" />
+
+    <img src="/assets/img/blog/teams-tags/menudropdown.png" />
 
 2. You can then create a new tag. Choose 'Create Tag'
-<img src="/assets/img/blog/teams-tags/newtag.png" />
+
+    <img src="/assets/img/blog/teams-tags/newtag.png" />
 
 3. Give your tag a name. This is what you will use to tag in a conversation/announcement. 
 
 4. Add the relevant people to the tag by searching by name or email. When finished click 'Create'.
-<img src="/assets/img/blog/teams-tags/nametag.png" />
+
+    <img src="/assets/img/blog/teams-tags/nametag.png" />
 
 5. When you are ready to use the tag, simply type the '@' symbol and begin typing the name of your tag, it will come up with a suggestion and you can click that, or press enter. 
 
 When you post your message/annoucnement only those who are part of the tag will recieve the notification. 
-<img src="/assets/img/blog/teams-tags/usetag.png" />
+
+    <img src="/assets/img/blog/teams-tags/usetag.png" />

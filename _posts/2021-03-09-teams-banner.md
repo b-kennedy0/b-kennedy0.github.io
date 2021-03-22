@@ -17,11 +17,11 @@ In the new window, in the 'Slide sized for' dropdown, choose 'Custom'. For width
 
 2. Design your slide for how you want your banner to look. Consider the background colour etc. Be mindful that on smaller devices, e.g. Phone, the sides are likely to be cropped. Try to keep your content central and large. 
 
-<img src="/assets/img/blog/teams-banner/export-dropdown.png" />
+<img src="/assets/img/blog/teams-banner/teams-banner-example.png" />
 
 3. Once your design is final, choose File < Export. In the export window, make sure to change the file format from PDF to an image file, e.g. PNG (Ensure that the Width and Height are the same as we entered earlier). Choose a location and give your file a name, then export.
 
-<img src="/assets/img/blog/teams-banner/teams-banner-example.png" />
+<img src="/assets/img/blog/teams-banner/export-dropdown.png" />
 
 You are now ready to create the Announcement post in Teams. 
 

@@ -29,6 +29,6 @@ Creating 'Tags' for a Team
 
 5. When you are ready to use the tag, simply type the '@' symbol and begin typing the name of your tag, it will come up with a suggestion and you can click that, or press enter. 
 
-When you post your message/annoucnement only those who are part of the tag will recieve the notification. 
+    <img src="/assets/img/blog/teams-tags/usetag.png" />
 
-<img src="/assets/img/blog/teams-tags/usetag.png" />
+    When you post your message/annoucnement only those who are part of the tag will recieve the notification. 

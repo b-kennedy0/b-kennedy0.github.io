@@ -13,7 +13,7 @@ layout: post
 
 1. Open PowerPoint and start a new Blank Presentation. On the Menu at the top, select 'Design' and then 'Slide Size' and 'Page Setup'. 
 
-In the new window, in the 'Slide sized for' dropdown, choose 'Custom'. For width, type in "918 px" (yes, including the px). For height, type in "120 px". Note that your computer may convert that back into cm when you click away, that is ok.
+    In the new window, in the 'Slide sized for' dropdown, choose 'Custom'. For width, type in "918 px" (yes, including the px). For height, type in "120 px". Note that your computer may convert that back into cm when you click away, that is ok.
 
 2. Design your slide for how you want your banner to look. Consider the background colour etc. Be mindful that on smaller devices, e.g. Phone, the sides are likely to be cropped. Try to keep your content central and large. 
 
@@ -23,7 +23,7 @@ In the new window, in the 'Slide sized for' dropdown, choose 'Custom'. For width
 
     <img src="/assets/img/blog/teams-banner/export-dropdown.png" />
 
-You are now ready to create the Announcement post in Teams. 
+    You are now ready to create the Announcement post in Teams. 
 
 4. In the channel where you'd like to post, click the formatting icon just below the “Start an new conversation” input.
 
@@ -41,6 +41,6 @@ You are now ready to create the Announcement post in Teams.
 
 7. Once you have selected your image, drag and position the image within the window to the area that will be cropped for the announcement banner area. You can zoom in or out to help get the right selection.
 
-After you have added your image, click on the “Headline” area and start typing to add the header text for your announcement. Also fill out the subhead and the body of you message. You can @ mention a channel, person, team or a tag in your message.
+    After you have added your image, click on the “Headline” area and start typing to add the header text for your announcement. Also fill out the subhead and the body of you message. You can @ mention a channel, person, team or a tag in your message.
 
 Want to learn how to only notify a small group of people within your team? Check out my [post about Tags.](https://bradleykennedy.co.uk/blog/teams-tags/)

@@ -214,7 +214,7 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 ## Storage
 [Dropbox](https://www.dropbox.com/plans){:target="_blank" rel="noopener"} - The plus plan for 2Tb storage is amazing. Combined with the ability to make and monitor file requests securely is priceless. Dropbox has a feature to SmartSync the files on my Mac which means that it is never using up excess space on files that I don't regularly access. However, those files are there and available should I wish to use them (it just takes a second to redownload it to the local machine).
 
-I use GitHub used with [Github Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} to keep local copies of repositorys updated. I make changes using the software I listed in the [Coding](#coding) section and then make commits and pushes using the desktop app.
+I use GitHub with [Github Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} to keep local copies of repositorys updated. I make changes using the software I listed in the [Coding](#coding) section and then make commits and pushes using the desktop app.
 
 ---
 

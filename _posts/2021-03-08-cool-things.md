@@ -1,9 +1,9 @@
 ---
 title: Cool things
 subtitle: Awesome things I use / plan to use
-tags: [cool-things]
+tags: [tech, advice]
 readtime: true
-last-updated: 08/03/2021
+last-updated: 30/03/2021
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
@@ -11,6 +11,8 @@ layout: post
 ---
 {: .box-note}
 <i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).   
+
+I am continuously inspired by tech and amazing things. Forever impressed by stuff that makes life easier.
 
 **AIM**: To keep track of all the cool things I use and the things I think look cool and might start to use at some point. 
 
@@ -121,6 +123,7 @@ Check out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 
 * [Simul](https://www.simuldocs.com/){:target="_blank" rel="noopener"} - To share with collaborators and for version control.
 * [Zotero](https://www.zotero.org/){:target="_blank" rel="noopener"} - An open source citation and literature manager. Useful for generating formatted reference list.
+* [Recite](https://reciteworks.com/login){:target="_blank" rel="noopener"} - Recite checks that your in text citations match the reference list at the end of your work.
 * [Grammarly](https://www.grammarly.com/){:target="_blank" rel="noopener"} - Checking for spelling, grammar and excess words. 
 * In-text comments - To have a chat to myself e.g. can't think of the right word or the paragraph could be phrased better, but not right now.
 * AutoCorrect - Replacing text with formatted text to make it easier to find when finalising the document. E.g. Replacing (REF) with highlighted (<mark>REF</mark>).

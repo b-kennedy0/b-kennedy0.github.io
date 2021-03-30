@@ -218,5 +218,5 @@ I use GitHub with [Github Desktop](https://desktop.github.com/){:target="_blank"
 
 ---
 
-# If you found this article useful, please share on social media using the icons below - Thank you :smiley:
+# If you found this article useful, feel free to using the icons below :smiley:
 {:.no_toc}

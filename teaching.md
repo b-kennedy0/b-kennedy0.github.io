@@ -26,15 +26,15 @@ show-avatar: false
 ## 2020 {#student-feedback-2020}
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav1.png?raw=true" alt="Male Avatar 1" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-Student Feedback (2020)
+Student Nomination for Teaching Award (2020)
 >“Brad is an amazing lecturer, providing quality lectures and having so much time to support students. Brad never finds anything too much and will help students as best as he can applying his experience to ours. Brad also tries to recognise us all around campus, never not smiling or saying hi. Such an inspiration.”
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentavf1.png?raw=true" alt="Female Avatar 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-Student Feedback (2020)
+Student Nomination for Teaching Award (2020)
 >“For someone who teaches Research Methods - a topic that is really hard to wrap my head around, he does a brilliant job at making it fun and relatable. He also is patient and sacrifices time to help us to understand.”  
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav2.png?raw=true" alt="Male Avatar 2" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-Student Feedback (2020)
+Student Nomination for Teaching Award (2020)
 >“Brad is always so helpful and friendly, he’s so understanding if you have an issue and will always go above and beyond to help!”  
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  

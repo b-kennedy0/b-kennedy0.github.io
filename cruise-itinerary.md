@@ -9,6 +9,7 @@ full-width: true
 show-avatar: false
 nav-short: true
 ---
+<p style="text-align: center;"><strong><a href="https://bradleykennedy.co.uk/cruise">&larr; Go back to Cruise page</a></strong></p>
 # Holiday Overview
 Discover the wildlife of Canada on this wonderful Canada holiday experience as you discover Vancouver Island and take an Alaskan Cruise. With a whale watching trip from Victoria and a bear viewing opportunity in Tofino, this itinerary has it all.
 

@@ -6,6 +6,8 @@ head-extra:
   - "imagecolumn.html"
 css: /assets/css/box.css
 full-width: true
+show-avatar: false
+nav-short: true
 ---
 # Holiday Overview
 

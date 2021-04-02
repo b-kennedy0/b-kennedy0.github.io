@@ -1,29 +1,29 @@
 ---
-title: Alaska Cruise - Itinerary
-subtitle: Sailing in Aug, 2022
+title: Cruise Itinerary
 layout: page
 head-extra: 
   - "buttonstyle_code.html"
   - "imagecolumn.html"
 css: /assets/css/box.css
-cover-img: 
-  - "/assets/img/bigimg/kon_canada.jpg"
-  - "/assets/img/bigimg/MS_Koningsdam_.jpg"
+full-width: true
 ---
 # Holiday Overview
 
+NEEDS TO BE UPDATED: 
+_____________
 Discover the wildlife of Canada on this wonderful Canada holiday experience as you discover Vancouver Island and take an Alaskan Cruise. With a whale watching trip from Victoria and a bear viewing opportunity in Tofino, this itinerary has it all.
 
 You will start your trip with a 2-night stay in Vancouver, explore the city with the popular Hop on Hop off sightseeing bus before taking a scenic ferry ride over to Vancouver Island for your 2-night stay in picturesque Victoria. We have included a 3 hour whale watching trip during your stay in Victoria. Continue your journey on Vancouver Island to Tofino, part of the Pacific Rim National Park. Discover Tofino's beaches, rainforest, walking/hiking trails and wildlife, head off on a coastal bear viewing adventure and indulge on a floatplane experience from Tofino to Vancouver. End this trip on a high with a 7-night Alaska cruise with Celebrity. Your cruise includes gratuities, wifi and a classic drinks package.
 
 Discover glaciers, whales and more breath-taking scenery on your Alaska sailing!
+__________________
 
 # Includes:
 - Return flights from the UK
 - 7 night hotel accommodation
 - Coach & Ferry transfer from Vancouver to Victoria
 - Vancouver Hop on Hop off
-- 7 night Celebrity Eclipse Alaska Cruise with classic drinks package, gratuities and wifi
+- 7 night Alaska Cruise with special drinks package
 - Floatplane transfer from Tofino to Vancouver
 - Coastal bear viewing excursion in Tofino
 - Whale watching excursion in Victoria

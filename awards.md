@@ -8,24 +8,24 @@ head-extra: imagecolumn.html
 --- 
 <div class="row">
   <div class="column">
-    <img src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" style="width:45%">
-    <div class="caption" style="text-align:center;">2021</div>
+    <img src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" style="width:40%">
+    <div class="caption" style="width:40%; text-align:center;">2021</div>
   </div>
   <div class="column">
-    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" style="width:45%">
-    <div class="caption" style="text-align:center;">2020</div>
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" style="width:40%">
+    <div class="caption" style="width:40%; text-align:center;">2020</div>
   </div>
   <div class="column">
-    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" style="width:45%">
-    <div class="caption" style="text-align:center;">2019</div>
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" style="width:40%">
+    <div class="caption" style="width:40%; text-align:center;">2019</div>
   </div>
   <div class="column">
-    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" style="width:45%">
-    <div class="caption" style="text-align:center;">2018</div>
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" style="width:40%">
+    <div class="caption" style="width:40%; text-align:center;">2018</div>
   </div>
   <div class="column">
-    <img src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" style="width:45%">
-    <div class="caption" style="text-align:center;">2018</div>
+    <img src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" style="width:40%">
+    <div class="caption" style="width:40%; text-align:center;">2018</div>
   </div>  
 </div>
 

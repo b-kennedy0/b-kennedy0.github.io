@@ -21,8 +21,6 @@ show-avatar: false
 
 ## [See recent Teaching Awards here!](/awards)  
 
-<!-- [Click for most recent feedback report](https://bradley-kennedy.shinyapps.io/Teaching_feedback/)  -->
-
 ## 2020 {#student-feedback-2020}
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav1.png?raw=true" alt="Male Avatar 1" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  

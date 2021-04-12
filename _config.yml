@@ -12,12 +12,12 @@ navbar-links:
   Home: "/"
   Academia Etc.:
     - Teaching: "teaching"
-    - Awards: "awards"
     - Research: "research"
     - Open Science: "open-science"
     - Projects: "projects"
 #    - Qualifications: "qualifications"
     - Publications: "publications"
+    - Awards: "awards"
     - My Apps: "apps"
     - Book Meeting: "book-meeting"
     - Blog: "blog"

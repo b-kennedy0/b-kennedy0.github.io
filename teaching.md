@@ -19,7 +19,7 @@ show-avatar: false
 
 <h1 style="text-align: center;"><strong>Student Feedback</strong></h1>  
 
-[See recent Teaching Awards here!](/publications#awards)  
+## [See recent Teaching Awards here!](/awards)  
 
 <!-- [Click for most recent feedback report](https://bradley-kennedy.shinyapps.io/Teaching_feedback/)  -->
 

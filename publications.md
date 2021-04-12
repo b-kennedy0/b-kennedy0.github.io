@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Publications & Awards
+title: Publications
 show-avatar: false
 ---
 **Navigation**  
 **[Publications, Conferences and Presentations](#publications)**  
 **[Conferences / Workshop Attended (not presented)](#conferences)**  
-**[Awards](#awards)**  
+**[Awards](/awards)**  
 **[Open Science Projects](https://bradleykennedy.co.uk/open-science/#OSF)**  
 
 --- 
@@ -59,28 +59,3 @@ Advanced Methods for Reproducible Science 2020 - Winter School @ Cumberland Lodg
 Chairing Sessions - PGR Symposium, University of Chester (*21st-22nd February 2019*)
 
 Open Science Workshop @ University College Cork, Ireland (*31st Oct - 2nd November 2018*)  
-
---- 
-
-# Awards {#awards}  
-*Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2020  
-<p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p> <p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p>
-*Awarded*: Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) *May 2019*
-
-*Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2019  
-<p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" width="240" height="320" /></p>
-*Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards 2018
-
-*Nominated*: Outstanding Academic Support Staff, The 1839 Awards - Student Led Teaching Awards 2018
-
-*Awarded*: Training Grant (QR Funding): R Training, University of Manchester. Feb-Mar 2018 - (£36) *January 2018*
-
-*Awarded*: Best Student (Highest dissertation grade) MSc Neuroimaging, Bangor University. *September 2017*
-
-*Awarded*: Student Warden Development Scholarship - Awarded for developing a kitchen check administration application for iOS and Android. The app was then sold to Bangor University Halls of Residence for use from September 2017 with the Residential Warden team. *May 2017*
-
-*Awarded*: Best Oral Presentation (runner-up) cash prize @ BPS Welsh Branch Annual Student Conference *April 2017* (Image below)
-
-*Awarded*: Gold Scholarship for Postgraduate study, Bangor University - (£3,000). *September 2016*
-
-<img src="https://b-kennedy0.github.io/assets/img/BPS Conference 2017.jpg" alt="BPS Welsh Branch Conference 2017" width="300" height="190" style="border-width: 10px; margin-right: auto; margin-left: auto; display: block;"/>  

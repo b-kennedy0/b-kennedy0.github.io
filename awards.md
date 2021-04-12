@@ -3,19 +3,38 @@ layout: page
 title: Awards
 show-avatar: false
 full-width: true
+head-extra: imagecolumn.html
 --- 
-<p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" width="240" height="320" /></p>
+<div class="row">
+  <div class="column">
+    <img src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" style="width:100%">
+    <div class="caption" style="width: 200px">2021</div>
+  </div>
+  <div class="column">
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" style="width:100%">
+    <div class="caption" style="width: 200px">2020</div>
+  </div>
+  <div class="column">
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" style="width:100%">
+    <div class="caption" style="width: 200px">2019</div>
+  </div>
+  <div class="column">
+    <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" style="width:100%">
+    <div class="caption" style="width: 200px">2018</div>
+  </div>
+  <div class="column">
+    <img src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" style="width:100%">
+    <div class="caption" style="width: 200px">2018</div>
+  </div>  
+</div>
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2021**  
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2020**  
-<p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p>
 
 *Awarded*: Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) **May 2019**
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2019**
-
-<p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 1.5px; margin-left: 12.5px;" src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" width="240" height="320" /></p>
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2018**
 

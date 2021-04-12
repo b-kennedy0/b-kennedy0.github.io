@@ -2,8 +2,8 @@
 layout: page
 title: Awards
 show-avatar: false
----
-# Awards {#awards}  
+full-width: true
+--- 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2021**  
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2020**  

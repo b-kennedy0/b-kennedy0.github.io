@@ -2,7 +2,6 @@
 layout: page
 title: Awards
 show-avatar: false
-full-width: true
 nav-short: true
 head-extra: imagecolumn.html
 --- 

@@ -4,10 +4,12 @@ title: Awards
 show-avatar: false
 full-width: true
 --- 
+<p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" width="240" height="320" /></p>
+
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2021**  
 
 *Nominated*: Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2020**  
-<p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p> <p><img style="float: left; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p>
+<p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" width="240" height="320" /></p> <p><img style="float: right; border-width: 25px; margin-right: 12.5px; margin-left: 1.5px;" src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" width="240" height="320" /></p>
 
 *Awarded*: Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) **May 2019**
 

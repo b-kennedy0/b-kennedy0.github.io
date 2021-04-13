@@ -24,13 +24,13 @@ head-extra: imagecolumn.html
   </div>  
 </div>
 
-*Nominated*:  
+<p style="color:black"><em>Nominated:</em></p>  
 Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2021**  
 
 *Nominated*:  
 Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2020**  
 
-*Awarded*:  
+<p style="color:green"><strong>Nominated:</strong></p>  *Awarded*:  
 Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) **May 2019**
 
 *Nominated*:  

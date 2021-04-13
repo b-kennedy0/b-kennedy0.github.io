@@ -24,7 +24,7 @@ head-extra: imagecolumn.html
   </div>  
 </div>
 
-:mortar_board: *Nominated:*
+:mortar_board: *Nominated:*  
 Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2021**  
 
 :mortar_board: *Nominated*:  

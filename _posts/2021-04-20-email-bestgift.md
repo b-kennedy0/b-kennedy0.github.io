@@ -9,7 +9,9 @@ thumbnail-img: /assets/img/blog/email-bestgift/gift-outlook.png
 layout: post
 ---
 ## Mac
-![](/assets/img/blog/email-bestgift/respond-withoutcomments.png)
+
+![Do not send outlook response - Mac version](/assets/img/blog/email-bestgift/respond-withoutcomments.png)
 
 ## PC
-![](/assets/img/blog/email-bestgift/pc-withoutcomments.png)
+
+![Do not send outlook response - PC version](/assets/img/blog/email-bestgift/pc-withoutcomments.png)

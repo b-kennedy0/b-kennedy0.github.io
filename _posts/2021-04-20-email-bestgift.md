@@ -9,4 +9,8 @@ layout: post
 ---
 # The best gift you can give somebody:
 
+## Mac
 ![](/assets/img/blog/email-bestgift/respond-withoutcomments.png)
+
+## PC
+![](/assets/img/blog/email-bestgift/pc-withoutcomments.png)

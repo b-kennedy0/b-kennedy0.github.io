@@ -1,6 +1,6 @@
 ---
 title: Outlook - The Best Gift
-subtitle: The best gift you can give somebody
+subtitle: Treat your favourite colleague to something nice
 tags: [tech, tips]
 readtime: true
 last-updated: 20/04/2021

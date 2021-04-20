@@ -4,7 +4,7 @@ subtitle: Treat your favourite colleague to something nice
 tags: [tech, tips]
 readtime: true
 last-updated: 20/04/2021
-permalink: /blog/email-bestgift/
+permalink: /blog/bestgift/
 thumbnail-img: /assets/img/blog/email-bestgift/gift-outlook.png
 layout: post
 ---

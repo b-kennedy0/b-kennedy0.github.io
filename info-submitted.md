@@ -2,7 +2,7 @@
 layout: super-minimal
 title: Information Sent
 ---
-<script>
+<script type="text/javascript">
 $(window).bind("load", function() {
   var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
 for(var i = 0; i < hashParams.length; i++){

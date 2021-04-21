@@ -3,11 +3,13 @@ layout: super-minimal
 title: Information Sent
 ---
 <script>
-var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+$( document ).ready(function() {
+  var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
 for(var i = 0; i < hashParams.length; i++){
     var p = hashParams[i].split('=');
     document.getElementById(p[0]).textContent = decodeURIComponent(p[1]);
 }
+});
 </script>
 
 <div class="text-center">

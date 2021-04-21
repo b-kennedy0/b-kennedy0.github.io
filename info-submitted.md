@@ -3,7 +3,7 @@ layout: super-minimal
 title: Information Sent
 ---
 <script>
-$(window).load(function() {
+$(window).bind("load", function() {
   var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
 for(var i = 0; i < hashParams.length; i++){
     var p = hashParams[i].split('=');

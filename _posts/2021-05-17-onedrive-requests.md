@@ -22,9 +22,9 @@ Give the file request a title and click 'Next'
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/title.png)
 
 # Step 4
-Copy link and share with those who need to submit the file. Send in an email / Post it in Teams / Create a 'submission link' on Moodle  
+Copy the link and share with those who need to submit the file. You can Send in an email / Post it in Teams / Create a 'submission link' on Moodle.  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/link.png)
 
 # Done!
-This is how it looks to the submitter
+This is how it looks to the submitter. You will receive an email notification for each new submission - I would recommend setting up an Outlook Rule to automatically move those notifications to a separate folder so as to not fill your inbox!  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/preview.png)

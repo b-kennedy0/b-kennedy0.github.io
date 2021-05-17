@@ -10,19 +10,19 @@ cover-img: /assets/img/blog/onedrive-requests/shelves.jpeg
 layout: post
 ---
 # Step 1
-Create new folder in OneDrive
+Create new folder in OneDrive  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/folder.png)
 
 # Step 2
-Hover over the folder and click the three dots by the side of the name
+Hover over the folder and click the three dots by the side of the name  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/newrequest.png)
 
 # Step 3
-Give the file request a title and click 
+Give the file request a title and click 'Next'  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/title.png)
 
 # Step 4
-Copy link and share with those who need to submit the file
+Copy link and share with those who need to submit the file. Send in an email / Post it in Teams / Create a 'submission link' on Moodle  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/link.png)
 
 # Done!

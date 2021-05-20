@@ -19,7 +19,7 @@ show-avatar: false
 
 <h1 id="student-feedback" style="text-align: center;"><strong>Student Feedback</strong></h1>  
 
-## [View ALL Teaching Feedback here](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)
+## [View ALL Teaching Feedback here](/teaching-feedback)
 
 ## [See recent Teaching Awards here!](/awards)  
 

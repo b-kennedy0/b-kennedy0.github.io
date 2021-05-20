@@ -19,9 +19,9 @@ show-avatar: false
 
 <h1 id="student-feedback" style="text-align: center;"><strong>Student Feedback</strong></h1>  
 
-## [View ALL Teaching Feedback here](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)
+## [:bar_chart: View full Teaching Feedback Report here](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)
 
-## [See recent Teaching Awards here!](/awards)  
+## [:trophy: See Teaching Awards here!](/awards)  
 
 ## 2020 {#student-feedback-2020}
 

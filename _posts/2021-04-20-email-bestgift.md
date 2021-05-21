@@ -10,8 +10,8 @@ layout: post
 ---
 ## Mac
 
-![Do not send outlook response - Mac version](/assets/img/blog/email-bestgift/respond-withoutcomments.png)
+![Do not send outlook response - Mac version](/assets/img/blog/email-bestgift/mac-noresponse.png)
 
 ## PC
 
-![Do not send outlook response - PC version](/assets/img/blog/email-bestgift/pc-withoutcomments.png)
+![Do not send outlook response - PC version](/assets/img/blog/email-bestgift/pc-noresponse.png)

@@ -104,6 +104,9 @@ feed_show_tags: true
 # The keywords to associate with your website, for SEO purposes
 keywords: "Bradley,Kennedy,Psychology"
 
+# Add a search button to the navbar
+post_search: true
+
 # --- Colours / background image --- #
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour

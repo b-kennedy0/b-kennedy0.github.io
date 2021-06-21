@@ -15,9 +15,9 @@ show-avatar: false
 
 # Extracurricular activity & Representative roles
 
-**Chair -**
-School of Psychology PhD Support Group
-University of Chester
+**Chair -**  
+School of Psychology PhD Support Group  
+University of Chester  
 _June 2021 - Present_  
 
 **Editor -**  

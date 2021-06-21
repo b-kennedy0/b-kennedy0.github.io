@@ -15,6 +15,11 @@ show-avatar: false
 
 # Extracurricular activity & Representative roles
 
+**Chair -**
+School of Psychology PhD Support Group
+University of Chester
+_June 2021 - Present_  
+
 **Editor -**  
 [The Quarterly](https://www.bps.org.uk/publications/psypag-quarterly) (ISSN: 1746-6016)  
 PsyPAG UK  

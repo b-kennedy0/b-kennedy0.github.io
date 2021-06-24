@@ -6,7 +6,7 @@ title: Information Sent
 <script type="text/javascript">
 $( document ).ready(function() {
       // Parse the URL parameter
-    function getParameterByName(name, url) {
+    function getParameterByName(name, option, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
         var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -18,6 +18,8 @@ $( document ).ready(function() {
     // Give the parameter a variable name
     var urlVar = getParameterByName('name');
     document.getElementById('name').textContent = urlVar;
+      var urlVar2 = getParameterByName('option');
+    document.getElementById('option').textContent = urlVar2;
 });
 </script>
 

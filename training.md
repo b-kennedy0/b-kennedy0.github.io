@@ -3,6 +3,12 @@ layout: page
 title: Training
 show-avatar: false
 ---
+<img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+#### Mental Health First Aid England:
+- Mental Health First Aider _19 May 2021_ 
+
+---
+
 <img src="https://b-kennedy0.github.io/assets/img/logos/UoC School of Psychology 2.jpg" alt="School Logo" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### School of Psychology - University of Chester:
 - Preparing for your PhD upgrade Workshop, _Student Futures, UoC_  

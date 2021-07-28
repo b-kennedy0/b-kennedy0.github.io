@@ -1,5 +1,4 @@
 ---
-title: Book new meeting
 layout: page
 full-width: true
 show-avatar: false

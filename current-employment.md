@@ -15,25 +15,29 @@ show-avatar: false
 
 # Extracurricular activity & Representative roles
 
+## Current  
+
 **Chair -**  
 School of Psychology PhD Support Group  
 University of Chester  
 _June 2021 - Present_  
 
-**Editor -**  
-[The Quarterly](https://www.bps.org.uk/publications/psypag-quarterly) (ISSN: 1746-6016)  
-PsyPAG UK  
-_August 2019 - Present_  
-
-**Communications Officer -**  
-[Data Science Society](https://www.chestersu.com/activities/societies/society/11037/)  
-University of Chester  
-_September 2018 - Present_  
-
 **Representative for the University Postgraduate Student body -**  
 Research & Knowledge Transfer Office Committee  
 University of Chester  
 _November 2018 - Present_  
+
+## Previous  
+
+**Editor -**  
+[The Quarterly](https://www.bps.org.uk/publications/psypag-quarterly) (ISSN: 1746-6016)  
+PsyPAG UK  
+_August 2019 - July 2021_  
+
+**Communications Officer -**  
+[Data Science Society](https://www.chestersu.com/activities/societies/society/11037/)  
+University of Chester  
+_September 2018 - September 2021_  
 
 **Member -**  
 Postgraduate Research Symposium 2019 Committee  

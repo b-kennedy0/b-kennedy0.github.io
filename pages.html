@@ -29,7 +29,7 @@ layout: page
         for (let file of data.filter(filterFiles1(filter))) {
           const filePath = file.path.replace('.md', '');
           const fileName = file.path.replace('.md', '').toLowerCase().replace(/-/g, ' ');
-          htmlString += `<li><a href="https://bradleykennedy.co.uk/${filePath}">${fileName}</a></li>`;
+          htmlString += `<li><a href="https://bradleykennedy.co.uk/${filePath}" target="_blank" rel="noopener noreferrer">${fileName}</a></li>`;
         }
       htmlString += '</ul>';
         document.getElementById('md_list').innerHTML = htmlString;
@@ -50,7 +50,7 @@ layout: page
         for (let file of data.filter(filterFiles2(filter))) {
           const filePath = file.path.replace('.html', '');
           const fileName = file.path.replace('.html', '').toLowerCase().replace(/-/g, ' ');
-          htmlString += `<li><a href="https://bradleykennedy.co.uk/${filePath}">${fileName}</a></li>`;
+          htmlString += `<li><a href="https://bradleykennedy.co.uk/${filePath}" target="_blank" rel="noopener noreferrer">${fileName}</a></li>`;
         }
       htmlString += '</ul>';
         document.getElementById('html_list').innerHTML = htmlString;

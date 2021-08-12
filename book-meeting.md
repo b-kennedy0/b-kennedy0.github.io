@@ -2,5 +2,7 @@
 layout: super-minimal
 full-width: true
 ---
-<div class="zoomai-inline-directory-widget" data-url="https://meeting.calendarhero.com/directory/610179ae21034a002091e210/b5a0d49b-8a7a-4945-b4d7-b1c12c909bb6" style="min-width:320px; height:630px;"></div>
-<script type="text/javascript" src="https://app.calendarhero.com/assets/directory-widget.js"></script>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/bradkennedy?hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->

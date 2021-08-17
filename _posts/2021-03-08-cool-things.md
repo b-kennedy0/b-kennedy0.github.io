@@ -12,7 +12,7 @@ layout: post
 {: .box-note}
 <i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).
 
-I am continuously inspired by tech and amazing things. Forever impressed by stuff that makes life easier.
+I am continuously inspired by tech and amazing things. Forever impressed by things that makes life easier.
 
 **AIM**: To keep track of all the cool things I use and the things I think look cool and might start to use at some point.
 

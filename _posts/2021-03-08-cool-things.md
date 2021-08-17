@@ -54,7 +54,7 @@ I use [MacDown](https://macdown.uranusjr.com/){:target="_blank" rel="noopener"} 
 
 A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}  
 
-[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Replacement to Brackets. It contains a lot of powerful tools and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
+[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Environment for writing, editing code. It contains a lot of powerful tools such as debugging the code and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
 
 If writing code for a script then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super useful as I can never keep track of the [brackets].
 

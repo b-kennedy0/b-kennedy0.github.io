@@ -10,13 +10,13 @@ cover-img: /assets/img/blog/cool-things/tech.jpg
 layout: post
 ---
 {: .box-note}
-<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).   
+<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).
 
 I am continuously inspired by tech and amazing things. Forever impressed by stuff that makes life easier.
 
-**AIM**: To keep track of all the cool things I use and the things I think look cool and might start to use at some point. 
+**AIM**: To keep track of all the cool things I use and the things I think look cool and might start to use at some point.
 
-I hope that by having this page, you might also find something useful. 
+I hope that by having this page, you might also find something useful.
 
 ### Contents
 {:.no_toc}
@@ -29,7 +29,6 @@ I hope that by having this page, you might also find something useful.
 ## Computer setup
 
 I currently have an Apple M1 Macbook Air 2020. The new Apple silicon chip makes this super quick! No problems running multiple programmes and lots of browser tabs. In fact, many apps are getting silicon-specific updates.  
-
 
 ## Analysis
 
@@ -47,14 +46,13 @@ For those who are still wary of writing code for analysis, [JASP](https://jasp-s
 
 I share my code on [Open Science Framework](https://osf.io/ekmyr/){:target="_blank" rel="noopener"} or [Github](https://github.com/BradKennedy-PhD){:target="_blank" rel="noopener"}.
 
-
 ## Coding
 
 I use [MacDown](https://macdown.uranusjr.com/){:target="_blank" rel="noopener"} (an open-source markdown editor for macOS) for writing and previewing markdown files. In fact, this blog post was written up in MacDown!
 
 A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}  
 
-[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Environment for writing, editing code. It contains a lot of powerful tools such as debugging the code and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
+[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Environment for writing, editing code. It contains a lot of powerful tools such as debugging the code and can even synchronise with Git. It takes a little bit of getting used to but is worth the investment.
 
 If writing code for a script then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super useful as I can never keep track of the [brackets].
 
@@ -64,10 +62,10 @@ One of my greatest desires, across both my personal and professional life, is to
 
 \* *It is still fairly easy to make a mistake in the automation programming!*
 
-[Integromat](https://www.integromat.com/en/){:target="_blank" rel="noopener"} is a **SUPER** powerful online automation platform. I cannot recommend Integromat enough! I use it for so much across my professional and personal life. Integromat can connect to a large number of other services (and even if the service you use isn't listed, they have a powerful API and web-hook service so that practically anything can be linked!). Linking together services you can create a process, thing A triggers process B which passes information to service C etc. The process that you create can be as long/short complex/simple as you require - take a look at just two examples below. 
+[Integromat](https://www.integromat.com/en/){:target="_blank" rel="noopener"} is a **SUPER** powerful online automation platform. I cannot recommend Integromat enough! I use it for so much across my professional and personal life. Integromat can connect to a large number of other services (and even if the service you use isn't listed, they have a powerful API and web-hook service so that practically anything can be linked!). Linking together services you can create a process, thing A triggers process B which passes information to service C etc. The process that you create can be as long/short complex/simple as you require - take a look at just two examples below.
 
 ![Integromat Example 1](/assets/img/blog/cool-things/Integromat1.png)
-*Example 1 - Automating voucher sending and mailing list signup*
+*Example 1 - Automating voucher sending and mailing list sign up*
 
 ![Integromat Example 2](/assets/img/blog/cool-things/Integromat2.png)
 *Example 2 - Inventory management*
@@ -86,7 +84,7 @@ One of my greatest desires, across both my personal and professional life, is to
 
 ## Sharing Code & ShinyApps
 
-**Sharing snippets of code:** 
+**Sharing snippets of code:**
 
 There are a few choices and you ought to pick depending on your audience. 
 
@@ -131,9 +129,9 @@ Check out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 
 ## Communication
 
-Mailing Groups - If you need a custom space for your lab groups or reading clubs, check out [Gaggle Mail](https://gaggle.email){:target="_blank" rel="noopener"}. Free for groups with up to 20 members. Allows you to: (1) manage when you receive your emails (immediately, daily digest etc) (2) easy sign-ups for new members and (3) easy unsubscribes. 
+Mailing Groups - If you need a custom space for your lab groups or reading clubs, check out [Gaggle Mail](https://gaggle.email){:target="_blank" rel="noopener"}. Free for groups with up to 20 members. Allows you to: (1) manage when you receive your emails (immediately, daily digest etc) (2) easy sign-ups for new members and (3) easy unsubscribes.
 
-Collaborative group workspaces - [Slack](https://slack.com/intl/en-gb/){:target="_blank" rel="noopener"} 
+Collaborative group workspaces - [Slack](https://slack.com/intl/en-gb/){:target="_blank" rel="noopener"}
 
 Social messenger (Encrypted) - [Signal](https://signal.org/en/){:target="_blank" rel="noopener"}  
 
@@ -147,7 +145,7 @@ Setting expectations RE: emails, use [The Email Charter](https://email-charter.g
 
 When designing emails for research studies I will often use HTML and CSS to make sure it looks nice. [HTML Email.io](https://htmlemail.io/inline/){:target="_blank" rel="noopener"} is a great website to check that you have done this properly and that the CSS is embedded inline with your code. Some email clients will strip styling that is not inline so this is a great way to make sure your email looks great no matter which email client opens it.  
 
-[Yet Another Mail Merge](https://yamm.com/){:target="_blank" rel="noopener"} - (Integrated with Google) Used for sending batch emails. This is also useful for sending personalised emails with individual attachments. I use this as part of my research automation to help with sending out vouchers or study updates. 
+[Yet Another Mail Merge](https://yamm.com/){:target="_blank" rel="noopener"} - (Integrated with Google) Used for sending batch emails. This is also useful for sending personalised emails with individual attachments. I use this as part of my research automation to help with sending out vouchers or study updates.
 
 ## Organisation
 
@@ -157,9 +155,9 @@ Trying to keep track of all the amazing Open Research events taking place all th
 
 [Google Drive](https://www.google.com/intl/en_in/drive/){:target="_blank" rel="noopener"} - Quite a few of my automation processes use a Google Sheet to store information for me. I find this useful as you can view the spreadsheet to view a history of your data that has been processed. I use folders in Drive to keep the spreadsheets sorted into categories (usually by study, e.g. Study 1, Study 2).
 
-To organise meetings (both in-person and virtual) I use [X.ai](https://x.ai/){:target="_blank" rel="noopener"} a smart meeting scheduler that uses AI to process requests. You get your usual calendar pages which you can link to, but the great thing about X.ai is that you can CC the AI in your email to the person you are meeting with and give them 'plain-English' instructions e.g. "Scheduler, please find a 2-hour slot for a Zoom meeting at the end of next week with John, Mary and Anna. Call the meeting "Session 1" and make Anna optional."
+To organise meetings (both in-person and virtual) I use [Calendly](https://calendly.com){:target="_blank" rel="noopener"} a smart meeting scheduler which is aesthetically pleasing and easy to use. To view mine, check out [this page.](https://bradleykennedy.co.uk/book-meeting/){:target="_blank" rel="noopener"}
 
-[Are We Meeting Yet?](https://arewemeetingyet.com/#form){:target="_blank" rel="noopener"} - To organise meetings across different timezones 
+[Are We Meeting Yet?](https://arewemeetingyet.com/#form){:target="_blank" rel="noopener"} - To organise meetings across different timezones.
 
 ## Statistics
 
@@ -176,7 +174,6 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 [Tripetto](https://tripetto.com/){:target="_blank" rel="noopener"} is a conversational form builder that is similar to Typeform but allows for much more customisation and various data validation/calculation processes. Plus, it looks super pretty!
 
 [Qualtrics](https://www.qualtrics.com/uk/){:target="_blank" rel="noopener"} is my favourite survey software for research. Do note that it is not free and requires a licence!
-
 
 ## General tech-y things
 
@@ -206,12 +203,12 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 
 [OBS](https://obsproject.com/){:target="_blank" rel="noopener"} - Live streaming video control. This is super powerful if used alongside video software such as MS Teams or Zoom. Combined with a green screen, the possibilities are endless.
 
-[StreamDeck](https://www.elgato.com/en/gaming/stream-deck){:target="_blank" rel="noopener"} - Originally designed for gaming streamers, this is a super useful customisable control pad that includes a number of LCD keys. I think this is great for teachers too. Controlling scenes in OBS or making convenient keyboard shortcuts in other programs. I have used mine to quick mute/unmute in Teams, insert predefined paragraphs of text in marking comments and even control lights in my room! The software allows for endless customisation. 
+[StreamDeck](https://www.elgato.com/en/gaming/stream-deck){:target="_blank" rel="noopener"} - Originally designed for gaming streamers, this is a super useful customisable control pad that includes a number of LCD keys. I think this is great for teachers too. Controlling scenes in OBS or making convenient keyboard shortcuts in other programs. I have used mine to quick mute/unmute in Teams, insert predefined paragraphs of text in marking comments and even control lights in my room! The software allows for endless customisation.
 
 ## Storage
 [Dropbox](https://www.dropbox.com/plans){:target="_blank" rel="noopener"} - The plus plan for 2Tb storage is amazing. Combined with the ability to make and monitor file requests securely is priceless. Dropbox has a feature to SmartSync the files on my Mac which means that it is never using up excess space on files that I don't regularly access. However, those files are there and available should I wish to use them (it just takes a second to redownload it to the local machine).
 
-I use GitHub with [Github Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} to keep local copies of repositorys updated. I make changes using the software I listed in the [Coding](#coding) section and then make commits and pushes using the desktop app.
+I use GitHub with [Github Desktop](https://desktop.github.com/){:target="_blank" rel="noopener"} to keep local copies of repositories updated. I make changes using the software I listed in the [Coding](#coding) section and then make commits and pushes using the desktop app.
 
 ---
 

@@ -3,7 +3,7 @@ title: Cool things
 subtitle: Awesome things I use / plan to use
 tags: [tech, advice]
 readtime: true
-last-updated: 30/03/2021
+last-updated: 17/08/2021
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
@@ -52,12 +52,7 @@ I share my code on [Open Science Framework](https://osf.io/ekmyr/){:target="_bla
 
 I use [MacDown](https://macdown.uranusjr.com/){:target="_blank" rel="noopener"} (an open-source markdown editor for macOS) for writing and previewing markdown files. In fact, this blog post was written up in MacDown!
 
-A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}
-
-[Brackets](http://brackets.io/){:target="_blank" rel="noopener"} is an open-source HTML & CSS (plus other languages) text editor, very useful for catching simple errors or syntax errors such as missing brackets. 
-
-{: .box-warning}
-<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> **NOTE:** On September 1, 2021, Adobe will end support for Brackets. :sob:   
+A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}  
 
 [VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Replacement to Brackets. It contains a lot of powerful tools and can even syncronise with Git. It takes a little bit of getting used to but is worth the investment.
 
@@ -135,6 +130,8 @@ Check out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 [Connected Papers](https://www.connectedpapers.com/){:target="_blank" rel="noopener"} this website can produces a visual graph for all articles that are related to one article paper.
 
 ## Communication
+
+Mailing Groups - If you need a custom space for your lab groups or reading clubs, check out [Gaggle Mail](https://gaggle.email){:target="_blank" rel="noopener"}. Free for groups with up to 20 members. Allows you to: (1) manage when you receive your emails (immediately, daily digest etc) (2) easy sign-ups for new members and (3) easy unsubscribes. 
 
 Collaborative group workspaces - [Slack](https://slack.com/intl/en-gb/){:target="_blank" rel="noopener"} 
 

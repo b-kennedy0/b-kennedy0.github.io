@@ -27,7 +27,6 @@ $( document ).ready(function() {
 <h1 style="text-align: center;"><img src="https://raw.githubusercontent.com/b-kennedy0/632vgs/master/www/632logo.png" alt="" width="364" height="93" /></h1>
 <h1 style="text-align: center;"><img style="font-size: 14px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/greentick.png?raw=true" alt="" width="39" height="41" />&nbsp;<em>Registration submitted!</em></h1>
   <h3>Thank you <span id="name"></span><br><br>The information has been sent through.</h3>
-  <p>&nbsp;</p>
-  <h3>You will receive an email confirmation with your selected choices.<br><br></h3>
+      <br>
   <h3>You may now close this page</h3>
 </div>

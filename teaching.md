@@ -37,7 +37,7 @@ Student Nomination for Teaching Award (2021)
 Student Nomination for Teaching Award (2021)
 >“He creates a warm and friendly atmosphere for every seminar or online lecture, he’s very easy to talk to and gives great advice about the teaching material. If anyone is struggling he makes sure that they understand by the time the lecture is up. I also quite like research methods now because i now understand it thanks to Brad.”  
 
-<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male3.png?raw=true" alt="Male 3" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-right: 20px;"/>  
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male3.png?raw=true" alt="Male 3" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 Student Nomination for Teaching Award (2021)
 >"[...] he’s a very supportive and helpful lecturer."  
 

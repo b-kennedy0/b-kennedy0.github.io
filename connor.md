@@ -31,6 +31,7 @@ function room() {
 
 if(response.length == 0)
     //reCaptcha not verified
+    alert("Confirm that you are not a robot! Please");
 
 else
     //reCaptch verified

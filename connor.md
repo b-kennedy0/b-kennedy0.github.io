@@ -27,6 +27,13 @@ for(var i = 0; i < hashParams.length; i++){
 }
 
 function room() {
+  var response = grecaptcha.getResponse();
+
+if(response.length == 0)
+    //reCaptcha not verified
+
+else
+    //reCaptch verified
   var text = document.getElementById('room');
   var value = encodeURIComponent(text.value); //encode special characters
   let newHref = 'https://hook.integromat.com/veirohloph4r49a9txd3npz741acr5ln?action=' + value 

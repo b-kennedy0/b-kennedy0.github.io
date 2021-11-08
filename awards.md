@@ -25,7 +25,7 @@ head-extra: imagecolumn.html
 </div>
 
 :mortar_board: *Nominated:*  
-'Young Person (18-25)' category of the OpenUK 2021 Awards **July 2021**
+'Young Person (Under 25)' category of the OpenUK 2021 Awards **July 2021**
 
 :mortar_board: *Nominated:*  
 4x Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2018 | 2019 | 2020 | 2021**  

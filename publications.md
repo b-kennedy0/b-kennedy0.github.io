@@ -14,9 +14,10 @@ show-avatar: false
 <p><a title="My ORCID iD" href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img style="float: right;" src="/assets/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" /></a></p>
 # Publications, Conferences and Presentations {#publications}  
 
-(OA = Open Access; OM = Open Materials; OD = Open Data and Analysis Code)  
+(PR = Preregistered, RR = Registered Report, OA = Open Access; OM = Open Materials; OD = Open Data and Analysis Code)  
 
 <div style="padding-left: 36px; text-indent: -36px; line-height: 1.8; overflow-wrap: break-word; word-wrap: break-word; -webkit-hypens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;">
+<p>Bago, B., Aczel, B., Kekecs, Z., Protzko, J., Kovacs, M., Nagy, T., ...&nbsp;<strong>Kennedy, B. J.</strong>, ... Dutra, N. B. (2021 Stage II Accepted). Moral thinking across the world: Exploring the influence of personal force and intention in moral dilemma judgments. <em>Nature Human Behaviour</em>, In Press, <a href="https://doi.org/10.31234/osf.io/9uaqm" target="_blank" rel="noopener">https://doi.org/10.31234/osf.io/9uaqm</a> (RR, OM, OD)</p>
 <p>Stewart, S. L. K.,&nbsp;<strong>Kennedy, B. J.</strong>, &amp; Haigh, M. (2021). Valence of agents and recipients moderates the side-effect effect: two within-subjects, multi-item conceptual replications. <em>Journal of Cognitive Psychology,</em> 1-18,&nbsp; <a href="https://doi.org/10.1080/20445911.2021.1971234" target="_blank" rel="noopener">https://doi.org/10.1080/20445911.2021.1971234</a> (OM, OD)</p>
 <p><strong>Kennedy, B. J.</strong> (2021, March 5). UKRN Initiatives, The Open Research Calendar (Invited Speaker), UKRN Annual Meeting 2021 <a href="https://www.ukrn.org/initiatives/" target="_blank" rel="noopener">https://www.ukrn.org/initiatives</a></p>
 <p>Gould van Praag, C.D.,&nbsp;<strong>Kennedy, B. J.</strong> , Lautarescu, A., &amp; Plomp, E. (2021, February 17). Poster Presentation of the Open Research Calendar, Open Science Conference 2021 (<a href="https://osc2021.cventevents.com/event/edaaff56-a01b-4d78-8041-ac2b1aab00be/summary" target="_blank" rel="noopener">Online</a>). <a href="https://doi.org/10.5281/zenodo.4256613" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.4256613</a>&nbsp;(OA)</p>

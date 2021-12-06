@@ -12,7 +12,8 @@ cover-img:
   - "/assets/img/bigimg/vikinghot.jpeg"
   - "/assets/img/bigimg/631sqn.jpg"
 ---
-### Civilian Gliding Instructor  
+### Acting Pilot Officer  30 Sep 2021 - Present  
+### Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
 _Current: 632 VGS (Volunteer Gliding Squadron), RAF Tern hill_  
 <img src="https://b-kennedy0.github.io/assets/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2018 - Present)  

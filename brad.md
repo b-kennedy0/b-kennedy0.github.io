@@ -21,6 +21,7 @@ Contact card - [/contact-card.md](/contact-card)
 Connor help page - [/connor.md](/connor)  
 Give teaching feedback - [/feedback.html](/feedback)  
 Teaching feedback page - [Link](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)  
+Lab feedback - [/lab.html](/lab)  
 
 # Research 
 Redirect to osf page - [/osf.md](/osf)  

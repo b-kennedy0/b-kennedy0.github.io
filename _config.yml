@@ -10,22 +10,23 @@ author: Bradley Kennedy
 
 navbar-links:
   Home: "/"
-  Academia Etc.:
+  Academia:
     - Teaching: "teaching"
     - Research: "research"
     - Open Science: "open-science"
     - Projects: "projects"
-#    - Qualifications: "qualifications"
+    #- Qualifications: "qualifications"
     - Publications: "publications"
     - Awards: "awards"
-    - My Apps: "apps"
-    - Book Meeting: "book-meeting"
-    - Blog: "blog"
   Employment:
     - Current: "current-employment"
     - Training: "training"
     - Previous: "previous-employment"
     - Volunteering: "volunteering"
+  Other:
+    - My Apps: "apps"
+    - Book Meeting: "book-meeting"
+    - Blog: "blog"
   #Blog: "blog"
   Contact: "contact"
 

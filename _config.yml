@@ -10,7 +10,7 @@ author: Bradley Kennedy
 
 navbar-links:
   Home: "/"
-  Academia:
+  Academia :
     - Teaching: "teaching"
     - Research: "research"
     - Open Science: "open-science"

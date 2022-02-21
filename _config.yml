@@ -16,7 +16,7 @@ navbar-links:
     - Open Science: "open-science"
     - Projects: "projects"
     #- Qualifications: "qualifications"
-    - Publications: "publications"
+    - Published Work: "publications"
     - Awards: "awards"
   Employment:
     - Current: "current-employment"

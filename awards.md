@@ -7,24 +7,24 @@ head-extra: imagecolumn.html
 --- 
 
 <div class="row" style="text-align: center;">
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/mostinspiringlecturer2022.JPG" alt="Most Inspiring Lecturer 2022" style="width:100%">
   </div>
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" style="width:100%">
   </div>
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" style="width:100%">
   </div>
 </div>
 <div class="row" style="text-align: center;">
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" style="width:100%">
   </div>
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2018.jpg" alt="Most Inspiring Lecturer 2018" style="width:100%">
   </div>
-  <div class="column" style="width:20%">
+  <div class="column" style="width:33.3%">
     <img src="/assets/img/certificates/OUTSTANDING_ACADEMIC_SUPPORT_STAFF_2018.jpg" alt="Outstanding Academic Award 2018" style="width:100%">
   </div>  
 </div>

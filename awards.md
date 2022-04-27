@@ -8,6 +8,9 @@ head-extra: imagecolumn.html
 
 <div class="row">
   <div class="column" style="width:20%">
+    <img src="/assets/img/certificates/mostinspiringlecturer2022.JPG" alt="Most Inspiring Lecturer 2022" style="width:100%">
+  </div>
+  <div class="column" style="width:20%">
     <img src="/assets/img/certificates/mostinspiringlecturer2021.jpg" alt="Most Inspiring Lecturer 2021" style="width:100%">
   </div>
   <div class="column" style="width:20%">
@@ -28,7 +31,7 @@ head-extra: imagecolumn.html
 'Young Person (Under 25)' category of the OpenUK 2021 Awards **July 2021**
 
 :mortar_board: *Nominated:*  
-4x Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2018 | 2019 | 2020 | 2021**  
+5x Most Inspiring Lecturer, The 1839 Awards - Student Led Teaching Awards **2018 | 2019 | 2020 | 2021 | 2022**  
 
 :trophy: *Awarded*: :trophy:  
 Training Grant (QR Funding) - "Future-proofing your research – Moving towards open and reproducible research practices" Workshop, Lancaster University. 4th June 2019 - (£60) **May 2019**

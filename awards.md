@@ -6,7 +6,7 @@ nav-short: true
 head-extra: imagecolumn.html
 --- 
 
-<div class="row">
+<div class="row" style="text-align: center;">
   <div class="column" style="width:20%">
     <img src="/assets/img/certificates/mostinspiringlecturer2022.JPG" alt="Most Inspiring Lecturer 2022" style="width:100%">
   </div>
@@ -17,7 +17,7 @@ head-extra: imagecolumn.html
     <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2020.jpg" alt="Most Inspiring Lecturer 2020" style="width:100%">
   </div>
 </div>
-<div class="row">
+<div class="row" style="text-align: center;">
   <div class="column" style="width:20%">
     <img src="/assets/img/certificates/MOST_INSPIRING_LECTURER_2019.jpg" alt="Most Inspiring Lecturer 2019" style="width:100%">
   </div>

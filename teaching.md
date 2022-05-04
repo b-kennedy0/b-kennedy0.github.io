@@ -4,6 +4,8 @@ layout: page
 cover-img: "/assets/img/lecture_room.jpg"
 show-avatar: false
 ---
+<script src="{{ site.baseurl }}/assets/js/expandcollapse.js" type="text/javascript"></script>
+
 | Teaching: | Marking/ Draft Reading: |
 | ----------- | ----------- |
 | Research Methods and Skills (PS4005) | Research Methods and Skills (PS4005)  |

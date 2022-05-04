@@ -22,11 +22,6 @@ School of Psychology PhD Support Group
 University of Chester  
 _June 2021 - Present_  
 
-**Representative for the University Postgraduate Student body -**  
-Research & Knowledge Transfer Office Committee  
-University of Chester  
-_November 2018 - Present_  
-
 ## Previous  
 
 **Editor -**  
@@ -34,13 +29,18 @@ _November 2018 - Present_
 PsyPAG UK  
 _August 2019 - July 2021_  
 
+**Representative for the University Postgraduate Student body -**  
+Research & Knowledge Transfer Office Committee  
+University of Chester  
+_November 2018 - July 2021_  
+
 **Communications Officer -**  
-[Data Science Society](https://www.chestersu.com/activities/societies/society/11037/)  
+Data Science Society  
 University of Chester  
 _September 2018 - September 2021_  
 
 **Member -**  
-Postgraduate Research Symposium 2019 Committee  
+Postgraduate Research Symposium 2019 Organising Committee  
 University of Chester  
 _2018 - 2019_  
 

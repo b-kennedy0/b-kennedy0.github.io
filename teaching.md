@@ -32,16 +32,31 @@ show-avatar: false
 <details><summary><b><u>2022</u></b></summary>
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-<div>Student mid-year Evaluation (2020)</div>
+<div>Student Nomination for Teaching Award (2022)</div>
 <blockquote>"This lecturer is very helpful and understanding. He always makes his lectures fun and his personality makes it fun too and allows you to feel comfortable in lecture and ask any questions. It makes you want to learn the material and never miss a lecture."</blockquote>
 <br>
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male1.png?raw=true" alt="Male 1" width="120" height="120" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-<div>Student mid-year Evaluation (2020)</div> 
+<div>Student Nomination for Teaching Award (2022)</div> 
 <blockquote>"He gives all the students time and explains things really well."</blockquote>
 <br>
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female2.png?raw=true" alt="Female 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
-<div>Student mid-year Evaluation (2020)</div>
+<div>Student Nomination for Teaching Award (2022)</div>
 <blockquote>"He’s the main reason I love going to my Research Methods lectures, because of him I'm considering going into research psychology."</blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentavf3.png?raw=true" alt="Female Avatar 3" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2022)</div>
+<blockquote>"I’ve been taught by Brad since my first year in undergrad, and he has always without fail managed to teach and explain very thoroughly, clearly and patiently. He always has the time of the day for you whether that’s in class or after class. I truly do not think I would’ve got as good as a grade during my undergraduate years without Brads guidance, and that still holds true during postgrad."  </blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentavf2.png?raw=true" alt="Female Avatar 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2022)</div>
+<blockquote>"Brad's sense of humour. The way he carries out his lectures, it makes you feel involved and excited to learn. When I came to uni I don't know what I expected, maybe a large lecture room with the lecturers being distant and not really stopping to check if everyone has understood everything and that we as students needed to keep up. Some of that is true, but at the same time Brad, for example, is really helpful and supportive. I feel excited for my lectures when I know Brad will be carrying them out."</blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav2.png?raw=true" alt="Male Avatar 2" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2022)</div>
+<blockquote>"Brad was extremely positive and knowledgeable. It was an open and friendly environment, where we could all learn and share together. It was easy to express if we were unsure of anything and that are questions would be answered and our minds put at ease."</blockquote>
 <br>
 </details>
 

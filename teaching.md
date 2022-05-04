@@ -23,7 +23,10 @@ show-avatar: false
 
 ## [:trophy: View Awards](/awards)  
 
-## 2022 {#student-feedback-2022}
+### Click/Tap to open feedback for each year
+
+<details>
+  <summary><h2>2022</h2></summary>
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 Student mid-year Evaluation (2020) 
@@ -36,6 +39,7 @@ Student mid-year Evaluation (2020)
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female2.png?raw=true" alt="Female 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 Student mid-year Evaluation (2020) 
 >"He’s the main reason I love going to my Research Methods lectures, because of him I'm considering going into research psychology."
+</details>
 
 ## 2021 {#student-feedback-2021}
 

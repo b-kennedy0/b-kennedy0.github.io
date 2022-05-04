@@ -33,9 +33,11 @@ show-avatar: false
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 
+
 Student mid-year Evaluation (2020) 
 
 >"This lecturer is very helpful and understanding. He always makes his lectures fun and his personality makes it fun too and allows you to feel comfortable in lecture and ask any questions. It makes you want to learn the material and never miss a lecture."  
+
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male1.png?raw=true" alt="Male 1" width="120" height="120" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 

@@ -5,6 +5,7 @@ layout: page
 <h3 style="text-align: center;">If you like these apps, please consider <a href="https://monzo.me/bradleykennedy5/5?d=Support%20for%20Apps" target="_blank" rel="noopener">supporting me</a> to cover the cost of the server.</h3>
 <h3 style="text-align: center;">Thank you!</h3>
 
+<!--- 
 ---
 
 <a title="Open App" href="http://bradk.co.uk/covid" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://raw.githubusercontent.com/b-kennedy0/COVID19-Vaccine-App/main/www/images/Corona_Vaccine.png" alt="COVID-Vaccine-Logo" width="160" height="160" /></a>
@@ -15,6 +16,7 @@ The app was created to enable the centralised sharing of UK-wide vaccination pro
 Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/COVID19-Vaccine-App" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
 
 ---
+--->
 
 <a title="Open App" href="http://apps.bradk.co.uk/pilotdata" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/pilotdataicon.png?raw=true" alt="Pilotdataicon" width="160" height="160" /></a>
 # Pilot Data Explorer  

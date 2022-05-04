@@ -23,6 +23,20 @@ show-avatar: false
 
 ## [:trophy: View Awards](/awards)  
 
+## 2022 {#student-feedback-2022}
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+Student mid-year Evaluation (2020) 
+>"This lecturer is very helpful and understanding. He always makes his lectures fun and his personality makes it fun too and allows you to feel comfortable in lecture and ask any questions. It makes you want to learn the material and never miss a lecture."  
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male1.png?raw=true" alt="Male 1" width="120" height="120" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+Student mid-year Evaluation (2020) 
+>"He gives all the students time and explains things really well."  
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female2.png?raw=true" alt="Female 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+Student mid-year Evaluation (2020) 
+>"He’s the main reason I love going to my Research Methods lectures, because of him I'm considering going into research psychology."
+
 ## 2021 {#student-feedback-2021}
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male2.png?raw=true" alt="Male Avatar 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  

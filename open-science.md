@@ -14,5 +14,8 @@ _Figure 1._ Promoting openness at different stages of the research process ([Ope
 
 # Open Science Framework {#OSF}  
 
-<a href="http://osf.io/ekmyr" target="_blank" rel="noopener"><img src="/assets/img/osf icon circle.png" title="Click here for Open Science Framework Profile" alt="Open Science Framework" width="150" height="150" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>
-Take a look at my OSF Projects by clicking on the logo >>
+<a href="http://osf.io/ekmyr" target="_blank" rel="noopener"><img src="/assets/img/osf icon circle.png" title="Click here for Open Science Framework Profile" alt="Open Science Framework" width="150" height="150" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/></a>
+
+The research I conduct is recorded (and timestamped) on the OSF. For my studies, they are preregistered and where appropriate, the data and materials are shared openly.  
+
+Browse through my OSF Projects by clicking on the logo >>

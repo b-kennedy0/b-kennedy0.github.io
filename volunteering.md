@@ -12,16 +12,34 @@ cover-img:
   - "/assets/img/bigimg/vikinghot.jpeg"
   - "/assets/img/bigimg/631sqn.jpg"
 ---
-### Acting Pilot Officer  30 Sep 2021 - Present  
-### Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
-_Current: 632 VGS (Volunteer Gliding Squadron), RAF Tern hill_  
+## Rank/Role:
+Acting Pilot Officer  30 Sep 2021 - Present  
+> Role: Chief Ground Instructor & Flight Safety Officer
+
+Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
+
+## Qualification:
+Qualified Gliding Instructor (QGI) - DATE
+Grade 1 Pilot (Viking) - DATE
+Grade 1 Pilot (Vigilant) - DATE
+Grade 2 Pilot (Vigilant) - DATE
+Advanced Glider Training (Gold Wings, Vigilant) - DATE
+Gliding Scholarship (Silver Wings) - DATE
+
+
+## Unit History:
+_Supernumerary to 644 VGS (Volunteer Gliding Squadron), RAF Syerston_  
+<img src="https://b-kennedy0.github.io/assets/img/logos/644vgscrest.png" alt="644VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
+(2022 - Present)  
+<br><br><br>
+_632 VGS (Volunteer Gliding Squadron), RAF Tern hill_  
 <img src="https://b-kennedy0.github.io/assets/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2018 - Present)  
 [632 VGS Facebook](https://www.facebook.com/632SqnVGS/)  
 [632 VGS Website](https://632vgs.co.uk/)   
 Aircraft: [Grob 103 (Viking)](https://www.raf.mod.uk/aircraft/viking-t1/)   
-
-_Previous: 631 VGS (Volunteer Gliding Squadron), RAF Woodvale_  
+<br>
+_631 VGS (Volunteer Gliding Squadron), RAF Woodvale_  
 <img src="https://b-kennedy0.github.io/assets/img/logos/631vgscrest.png" alt="631VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2013 - 2018)  
 [631 VGS Website](http://631vgs.com/)   

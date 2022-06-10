@@ -28,7 +28,7 @@ Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021
 :bangbang: COVID19 Pause - Mar 20 to May 21  
 :airplane: Grade 1 Pilot (Viking) - 30 Mar 19  
 :tada: Viking First Solo - 29 Sep 18  
-Started Convex to Viking - 4 Aug 18  
+:twisted_rightwards_arrows: Started Convex to Viking - 4 Aug 18  
 :house: Move to 632VGS,  - 15 Jul 18  
 :bangbang: RAFAC GLIDING PAUSE 2014-2016  
 :airplane: Grade 1 Pilot (Vigilant) - 15 Mar 14  

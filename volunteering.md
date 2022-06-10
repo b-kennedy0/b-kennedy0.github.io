@@ -25,16 +25,16 @@ Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021
 
 ## Qualification:
 :page_with_curl: Qualified Gliding Instructor (QGI) B2 - 21 Apr 22  
-:bangbang: COVID19 Pause - Mar 20 to May 21
+:bangbang: COVID19 Pause - Mar 20 to May 21  
 :airplane: Grade 1 Pilot (Viking) - 30 Mar 19  
 :tada: Viking First Solo - 29 Sep 18  
 Started Convex to Viking - 4 Aug 18  
-:house: Move to 632VGS,  - 15 Jul 18
-:bangbang: RAFAC GLIDING PAUSE 2014-2016
+:house: Move to 632VGS,  - 15 Jul 18  
+:bangbang: RAFAC GLIDING PAUSE 2014-2016  
 :airplane: Grade 1 Pilot (Vigilant) - 15 Mar 14  
 :airplane: Grade 2 Pilot (Vigilant) - 28 Aug 13  
 :mortar_board: Advanced Glider Training (Gold Wings, Vigilant) - 12 Jan 13  
-:tada: Vigilant First Solo - 29 Aug 12
+:tada: Vigilant First Solo - 29 Aug 12  
 :school_satchel: Gliding Scholarship (Silver Wings, Vigilant) - 14 Jan 12  
 
 ## Unit History:

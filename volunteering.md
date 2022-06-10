@@ -20,8 +20,9 @@ Acting Pilot Officer  30 Sep 2021 - Present
 > - Treasurer, 632VGS Social Committee
 
 Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
-> Roles: 
+> Roles:
 > - Treasurer, 632VGS Social Committee
+> - Aircrew Publications (AP) Custodian
 
 ## Qualification:
 :page_with_curl: Qualified Gliding Instructor (QGI) B2 - 21 Apr 22  

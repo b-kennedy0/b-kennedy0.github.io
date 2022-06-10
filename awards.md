@@ -46,7 +46,7 @@ Outstanding Academic Support Staff, The 1839 Awards - Student Led Teaching Award
 **2018**
 
 :trophy: *Awarded*: :trophy:    
-Training Grant (QR Funding): R Training, University of Manchester. Feb-Mar 2018 - (£36)  
+Training Grant (QR Funding): R Training, University of Manchester. Feb-Mar 2018  
 **January 2018**
 
 :trophy: *Awarded*: :trophy:    

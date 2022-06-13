@@ -20,12 +20,13 @@ Contact card - [/contact-card.md](/contact-card)
 # GTA 
 Connor help page - [/connor.md](/connor)  
 Give teaching feedback - [/feedback.html](/feedback)  
-Teaching feedback page - [Link](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)  
-Lab feedback - [/lab.html](/lab)  
+Teaching feedback report - [Link](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)  
+Lab Session feedback - [/lab.html](/lab)  
+Padlet forward - [/padlet.md](/lab)  
 
 # Research 
-Redirect to osf page - [/osf.md](/osf)  
-Redirect to PhD Github Pages - [/phd.md](/phd)
-Research Portal closed down, results mailing list alt - account.bradleykennedy.co.uk > [bradleykennedy.co.uk/portal](/portal)  
+Redirect to OSF page - [/osf.md](/osf)  
+Redirect to PhD Github Pages - [/phd.md](/phd) OR  [/see.md](/see)  
+Research Portal closed, results mailing list alt - account.bradleykennedy.co.uk > [bradleykennedy.co.uk/portal](/portal)  
 Research emails - [/emails](/emails)  
 

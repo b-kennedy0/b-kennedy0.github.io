@@ -23,7 +23,7 @@ Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.
 #### Click/Tap icon to run >>  
 This app allows you to interact with data from the pilot study conducted as part of my PhD research. You can select two job roles and compare their characteristic ratings.  
 
-Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/pilotstudy" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
+Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/BradKennedy-PhD/bradkennedy-phd.github.io/tree/main/studies/pilot/ShinyApp" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
 
 ---
 

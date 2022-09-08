@@ -2,6 +2,8 @@
 title: Brads Page
 layout: page
 ---
+<meta name="robots" content="noindex">
+
 # 632 
 Weight app - [/632.md](/632)  
 Info sent page - [/632info-sent.md](/632info-sent)  

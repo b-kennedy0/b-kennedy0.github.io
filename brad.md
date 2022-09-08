@@ -1,8 +1,8 @@
 ---
 title: Brads Page
 layout: page
+head-extra: noindex.html
 ---
-<meta name="robots" content="noindex">
 
 # 632 
 Weight app - [/632.md](/632)  

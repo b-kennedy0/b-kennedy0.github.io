@@ -23,10 +23,10 @@ navbar-links:
     - Training: "training"
     - Previous: "previous-employment"
     - Volunteering: "volunteering"
-  Other:
-    - My Apps: "apps"
-    - Book Meeting: "book-meeting"
-    - Blog: "blog"
+#  Other:
+#    - My Apps: "apps"
+#    - Book Meeting: "book-meeting"
+#    - Blog: "blog"
   #Blog: "blog"
   Contact: "contact"
 

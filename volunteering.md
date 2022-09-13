@@ -13,7 +13,7 @@ cover-img:
   - "/assets/img/bigimg/631sqn.jpg"
 ---
 ## Rank/Role:
-Acting Pilot Officer  30 Sep 2021 - Present  
+Pilot Officer  30 Sep 2021 - Present  
 > Roles:
 > - Chief Ground Instructor 
 > - Flight Safety Officer

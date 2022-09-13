@@ -25,6 +25,7 @@ Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021
 > - Aircrew Publications (AP) Custodian
 
 ## Qualification:
+:bangbang: RAF Ternhill Infrastructure Issues Apr 22 - Present  
 :page_with_curl: Qualified Gliding Instructor (QGI) B2 - 21 Apr 22  
 :bangbang: COVID19 Pause - Mar 20 to May 21  
 :airplane: Grade 1 Pilot (Viking) - 30 Mar 19  

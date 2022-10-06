@@ -9,6 +9,9 @@ thumbnail-img: /assets/img/blog/onedrive-requests/fileicon.png
 cover-img: /assets/img/blog/onedrive-requests/shelves.jpeg
 layout: post
 ---
+{: .box-warning}
+<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> It seems that this feature needs to be enabled by your Administrator. This will not be available on all OneDrive accounts. See [microsoft support](https://support.microsoft.com/en-us/office/create-a-file-request-f54aa7f8-2589-4421-b351-d415fc3b83af){:target="_blank" rel="noopener"} for more info.
+
 # Step 1
 Create new folder in OneDrive  
 ![Do not send outlook response - PC version](/assets/img/blog/onedrive-requests/folder.png)

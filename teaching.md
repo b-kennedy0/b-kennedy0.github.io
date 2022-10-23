@@ -27,7 +27,7 @@ show-avatar: false
 
 ### Click/Tap to open feedback for each year or click the button below to open all
 
-<button id="btnExpandHideAllDetails" onclick="openAll()" style="color:white;background-color:green;">Expand All Sections</button>
+<button id="btnExpandHideAllDetails" onclick="openAll()" style="color:white;background-color:green;">Open All Sections</button>
 
 <details><summary><b><u>2022</u></b></summary>
 

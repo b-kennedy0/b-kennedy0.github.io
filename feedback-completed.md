@@ -1,6 +1,7 @@
 ---
 layout: minimal
 title: Teaching/Marking Feedback Completed
+head-extra: noindex.html
 ---
 <div class="text-center">
 <br>

@@ -1,6 +1,7 @@
 ---
 layout: minimal
 title: Connor
+head-extra: noindex.html
 ---
 <html>
   <body>

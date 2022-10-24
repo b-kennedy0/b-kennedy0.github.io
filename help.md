@@ -1,6 +1,8 @@
 ---
 layout: minimal
-head-extra: buttonstyle_code.html
+head-extra: 
+  - "buttonstyle_code.html"
+  - "noindex.html"
 ---
 <h1 style="text-align: center;"><span style="text-decoration: underline; font-size:50px"><strong>Select support type</strong></span></h1>
 <p>&nbsp;</p>

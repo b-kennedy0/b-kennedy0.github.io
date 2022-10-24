@@ -4,6 +4,7 @@ layout: page
 head-extra: 
   - "buttonstyle_code.html"
   - "imagecolumn.html"
+  - "noindex.html"
 css: /assets/css/box.css
 full-width: true
 show-avatar: false

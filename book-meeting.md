@@ -2,7 +2,7 @@
 layout: super-minimal
 full-width: true
 ---
-<!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/bradkennedy?hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
+<!-- TidyCal inline widget begin -->
+<script src="https://asset-tidycal.b-cdn.net//js/embed.js"></script>
+<div id="tidycal-embed" data-path="bradkennedy"></div>
+<!-- TidyCal inline widget end -->

@@ -19,6 +19,9 @@ Pilot Officer  30 Sep 2021 - Present
 > - Flight Safety Officer
 > - Treasurer, 632VGS Social Committee
 
+### Awards:
+- Commanding Officer's Trophy 2021
+
 Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
 > Roles:
 > - Treasurer, 632VGS Social Committee

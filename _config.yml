@@ -109,7 +109,7 @@ keywords: "Bradley,Kennedy,Psychology"
 post_search: false
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+edit_page_button: false
 
 # --- Colours / background image --- #
 

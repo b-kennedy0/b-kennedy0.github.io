@@ -2,6 +2,7 @@
 layout: page
 title: Training
 show-avatar: false
+nav-short: true
 ---
 <img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="140" height="140" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Mental Health First Aid England:

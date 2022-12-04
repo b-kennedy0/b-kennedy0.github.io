@@ -3,6 +3,7 @@ title: Open Science
 layout: page
 cover-img: "/assets/img/osf-circles.png"
 show-avatar: false
+nav-short: true
 ---
 # What is Open Science? 
 Open Science represents a new approach to the scientific process based on cooperative work and new ways of diffusing knowledge by using digital technologies and new collaborative tools.  

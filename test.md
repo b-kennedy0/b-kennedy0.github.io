@@ -1,6 +1,8 @@
 ---
 title: Testing
 layout: page
+show-avatar: false
+nav-short: true
 ---
 
 {: .box-warning}

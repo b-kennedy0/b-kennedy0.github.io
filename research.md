@@ -4,6 +4,7 @@ title: Research
 cover-img: "/assets/img/brain_cover.jpg"
 css: /assets/css/box.css
 show-avatar: false
+nav-short: true
 ---
 # 2018 - Present
 

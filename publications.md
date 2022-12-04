@@ -2,6 +2,7 @@
 layout: page
 title: Publications
 show-avatar: false
+nav-short: true
 ---
 **Navigation**  
 **[Publications, Conferences and Presentations](#publications)**  
@@ -12,7 +13,7 @@ show-avatar: false
 --- 
 
 <p><a title="My ORCID iD" href="https://orcid.org/0000-0003-4636-2210" target="_blank" rel="noopener"><img style="float: right;" src="/assets/img/logos/ORCIDiD_icon.png" alt="ORCID iD" width="100" height="100" /></a></p>
-# Publications, Conferences and Presentations {#publications}  
+# Publications, Conferences, and Presentations {#publications}  
 
 (PR = Preregistered, RR = Registered Report, OA = Open Access; OM = Open Materials; OD = Open Data and Analysis Code)  
 

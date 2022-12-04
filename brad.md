@@ -2,6 +2,8 @@
 title: Brads Page
 layout: page
 head-extra: noindex.html
+nav-short: true
+show-avatar: false
 ---
 
 # 632 

@@ -2,6 +2,7 @@
 layout: page
 title: Volunteering
 show-avatar: false
+nav-short: true
 cover-img:
   - "/assets/img/bigimg/1stviking1.jpg"
   - "/assets/img/bigimg/1stviking2.jpg"

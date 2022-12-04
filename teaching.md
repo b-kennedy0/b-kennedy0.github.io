@@ -3,6 +3,7 @@ title: Teaching
 layout: page
 cover-img: "/assets/img/lecture_room.jpg"
 show-avatar: false
+nav-short: true
 ---
 <script src="{{ site.baseurl }}/assets/js/expandcollapse.js" type="text/javascript"></script>
 

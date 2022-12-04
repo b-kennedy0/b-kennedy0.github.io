@@ -3,13 +3,14 @@ layout: page
 title: Academic Qualifications
 cover-img: "/assets/img/library.jpg"
 show-avatar: false
+nav-short: true
 ---
 # Current:  
 <img style="float: right; border-width: 20px; margin: 10px;" src="/assets/img/graduation 2017.jpg" alt="Graduation 2017" width="120" height="210">  
 ### PhD Psychology 
 _2017 - Present_ ([University of Chester](https://www1.chester.ac.uk/)) - See [Research Tab](https://bradleykennedy.co.uk/research/)  
 
-_Graduate Member of the British Psychological Society_ ([MBPsS](https://www.bps.org.uk/))  
+_Graduate Member of the British Psychological Society_ ([GMBPsS](https://www.bps.org.uk/))  
 _Associate Fellow of the Higher Education Academy_ ([AFHEA](https://www.heacademy.ac.uk/); Awarded 24/04/19)  
 
 # Previous:

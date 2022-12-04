@@ -106,7 +106,10 @@ feed_show_tags: true
 keywords: "Bradley,Kennedy,Psychology"
 
 # Add a search button to the navbar
-post_search: true
+post_search: false
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+edit_page_button: true
 
 # --- Colours / background image --- #
 
@@ -122,6 +125,7 @@ hover-col: "#0085A1"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour

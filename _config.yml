@@ -18,15 +18,16 @@ navbar-links:
     #- Qualifications: "qualifications"
     - Published Work: "publications"
     - Awards: "awards"
-  Employment:
-    - Current: "current-employment"
-    - Training: "training"
-    - Previous: "previous-employment"
-    - Volunteering: "volunteering"
-#  Other:
+#  Employment:
+#    - Current: "current-employment"
+#    - Training: "training"
+#    - Previous: "previous-employment"
+#    - Volunteering: "volunteering"
+  Other:
 #    - My Apps: "apps"
-#    - Book Meeting: "book-meeting"
-#    - Blog: "blog"
+    - Book Meeting: "book-meeting"
+    - Volunteering: "volunteering"
+    - Blog: "blog"
   #Blog: "blog"
   Contact: "contact"
 

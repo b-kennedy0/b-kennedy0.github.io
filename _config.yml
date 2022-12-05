@@ -6,7 +6,9 @@ title: Bradley Kennedy
 # Your name to show in the footer
 author: Bradley Kennedy
 
+###############################################
 # --- List of links in the navigation bar --- #
+###############################################
 
 navbar-links:
   Home: "/"
@@ -31,7 +33,9 @@ navbar-links:
   #Blog: "blog"
   Contact: "contact"
 
+################
 # --- Logo --- #
+################
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
@@ -44,8 +48,9 @@ round-avatar: true
 # then specify the following parameter
 #title-img: /path/to/image
 
-
+#####################################
 # --- Footer social media links --- #
+#####################################
 
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
@@ -77,11 +82,13 @@ social-network-links:
 #  ORCID: 
 #  google-scholar: 
 
-# If you want to show a link to an RSS in the footer, add the site description here.
-# If you don't want to show an RSS link, remove the following line.
+# If you want your website to generate an RSS feed, provide a description
+# The URL for the feed will be https://<your_website>/feed.xml
 #rss-description: This website is a virtual proof that I'm awesome
 
+###########################
 # --- General options --- #
+###########################
 
 # Select which social network share links to show in posts
 share-links-active:
@@ -103,16 +110,23 @@ feed_show_excerpt: false
 # Whether or not to show a list of tags below each post preview in the feed page
 feed_show_tags: true
 
-# The keywords to associate with your website, for SEO purposes
-keywords: "Bradley,Kennedy,Psychology"
-
 # Add a search button to the navbar
 post_search: false
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
 edit_page_button: false
 
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
+
+# The keywords to associate with your website, for SEO purposes
+keywords: "Bradley,Kennedy,Psychology"
+
+######################################
 # --- Colours / background image --- #
+######################################
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
@@ -146,7 +160,9 @@ footer-hover-col: "#0085A1"
 #site-js:
 #  - "/assets/js/custom-script.js"
 
+#################################
 # --- Web Analytics Section --- #
+#################################
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 gtag: "G-WN3KPBXHDC"
@@ -165,7 +181,9 @@ google_analytics: "UA-119326789-2"
 #  uri: "demo.wiki.pro"
 #  opt-out: true
 
+####################
 # --- Comments --- #
+####################
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
 #disqus: ""
@@ -197,7 +215,9 @@ staticman:
     siteKey  : 6LeCO6gZAAAAAFsPMnHFBTJbdJBh0BnTOk6knRQw # Use your own site key, you need to apply for one on Google
     secret   : S8a7GjHIVxIkk2Hla3NGqyiKiok7HdpvlNm8nZvxyvq7HRHfeXQNBWrW17SzZrvaT+kAWBCq/7yQXrNUapQ4AmbC3xJfDynBuCsgaYXt57jQaZptanfajMX27+GEFJnhDtQkIYfyyFfjNJFG8GFoXH0CwlYLH1/o1sj+AfyFXIg= # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
+################
 # --- Misc --- #
+################
 
 # Ruby Date Format to show dates of posts
 date_format: "%B %-d, %Y"
@@ -205,7 +225,9 @@ date_format: "%B %-d, %Y"
 # Facebook App ID
 #fb_app_id: ""
 
+#################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
+#################################################################################
 
 # Output options (more information on Jekyll's site)
 timezone: "Europe/London"

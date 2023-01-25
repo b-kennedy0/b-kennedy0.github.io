@@ -4,6 +4,11 @@ title: Training
 show-avatar: false
 nav-short: true
 ---
+#### Oxford University Press:  
+- Epigeum Ethical Research Course _25 Jan 2023_
+
+---
+
 <img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="140" height="140" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Mental Health First Aid England:
 - Mental Health First Aider _19 May 2021_ 

@@ -5,20 +5,19 @@ show-avatar: false
 nav-short: true
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/OxfordUniPress-logo.png" alt="OxfordUniPress" width="100" height="100" style="float:left; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/OxfordUniPress-logo.png" alt="OxfordUniPress" width="100" height="100" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
 #### Oxford University Press:  
 - Epigeum Ethical Research Course _25 Jan 2023_
 
 ---
 
 <img src="https://b-kennedy0.github.io/assets/img/logos/ZSA-logo.png" alt="ZSA" width="120" height="100" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
-<br>
 #### Zero Suicide Alliance:  
 - Suicide Awareness Training _8 Nov 2022_
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="120" height="120" style="float:left; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="120" height="120" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
 #### Mental Health First Aid England:
 - Mental Health First Aider _19 May 2021_ 
 
@@ -36,7 +35,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/UOC-Logo_2010.jpg" alt="UoC Logo" width="147" height="45" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/UOC-Logo_2010.jpg" alt="UoC Logo" width="147" height="45" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 #### General - University of Chester:  
 - AQSS Academic Integrity training  
 - Preventing unconscious biases workshop  
@@ -56,7 +55,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/Bangor_Logo_A1.png" alt="Bangor Logo" width="130" height="90" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/Bangor_Logo_A1.png" alt="Bangor Logo" width="130" height="90" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 #### Bangor University:  
 - Sensitivity and Awareness Training  
 - Basic First Aid  
@@ -74,7 +73,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/Halls picture.jpg" alt="Hall picture" width="175" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/Halls picture.jpg" alt="Hall picture" width="175" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
 #### Halls of residence - 6 Days Student Warden Training (2015 & 2016 - 2 Training sessions) 
 - Health & Safety  
 - Fire marshalling  

@@ -4,8 +4,16 @@ title: Training
 show-avatar: false
 nav-short: true
 ---
+
+<img src="https://b-kennedy0.github.io/assets/img/logos/OxfordUniPress-logo.png" alt="OxfordUniPress" width="140" height="140" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Oxford University Press:  
 - Epigeum Ethical Research Course _25 Jan 2023_
+
+---
+
+<img src="https://b-kennedy0.github.io/assets/img/logos/ZSA-logo.png" alt="ZSA" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+#### Zero Suicide Alliance:  
+- Suicide Awareness Training _8 Nov 2022_
 
 ---
 

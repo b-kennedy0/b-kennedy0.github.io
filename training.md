@@ -8,18 +8,21 @@ nav-short: true
 <img src="https://b-kennedy0.github.io/assets/img/logos/OxfordUniPress-logo.png" alt="OxfordUniPress" width="100" height="100" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
 #### Oxford University Press:  
 - Epigeum Ethical Research Course _25 Jan 2023_
+<br>
 
 ---
 
 <img src="https://b-kennedy0.github.io/assets/img/logos/ZSA-logo.png" alt="ZSA" width="120" height="100" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
 #### Zero Suicide Alliance:  
 - Suicide Awareness Training _8 Nov 2022_
+<br>
 
 ---
 
 <img src="https://b-kennedy0.github.io/assets/img/logos/mhfa.png" alt="MHFA" width="120" height="120" style="float:right; border-width: 20px; margin-right: 20px; margin-left: 20px;"/>  
 #### Mental Health First Aid England:
 - Mental Health First Aider _19 May 2021_ 
+<br>
 
 ---
 
@@ -32,6 +35,7 @@ nav-short: true
 - TALENT - Teaching and Learning Essentials for New Teachers, _Learning and Teaching Institue, UoC_  
 - Marking and Feedback Training - _Learning and Teaching Institute, UoC_  
 - Dignity and Respect Workshop - _Human Resources, UoC_  
+<br>
 
 ---
 
@@ -44,6 +48,7 @@ nav-short: true
 - Anti-bribery training  
 - Data protection  
 - Prevent in Higher Education  
+<br>
 
 ---
 
@@ -52,6 +57,7 @@ nav-short: true
 - Safe Guarding Training
 - PREVENT
 - St Johns Ambulance Activity First Aid   
+<br>
 
 ---
 
@@ -61,6 +67,7 @@ nav-short: true
 - Basic First Aid  
 - EpiPen Training  
 - Specific Student Support Training for students with anxiety   
+<br>
 
 ---
 
@@ -70,6 +77,7 @@ nav-short: true
 - Safe Food Handling  
 - Control of Substances Hazardous to Health (COSHH) training  
 - Communicating effectively workshop  
+<br>
 
 ---
 

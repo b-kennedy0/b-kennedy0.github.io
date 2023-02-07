@@ -11,7 +11,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/ZSA-logo.png" alt="ZSA" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/ZSA-logo.png" alt="ZSA" width="140" height="140" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Zero Suicide Alliance:  
 - Suicide Awareness Training _8 Nov 2022_
 
@@ -23,7 +23,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/UoC School of Psychology 2.jpg" alt="School Logo" width="140" height="140" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/UoC School of Psychology 2.jpg" alt="School Logo" width="140" height="140" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### School of Psychology - University of Chester:
 - Preparing for your PhD upgrade Workshop, _Student Futures, UoC_  
 - Getting Published Workshop, _Internal Staff Development, School of Psychology_  
@@ -47,7 +47,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/632vgscrest.png" alt="632VGS Logo" width="85" height="110" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Royal Air Force Air Cadet Organisation - Volunteer Gliding Squadron:  
 - Safe Guarding Training
 - PREVENT
@@ -64,7 +64,7 @@ nav-short: true
 
 ---
 
-<img src="https://b-kennedy0.github.io/assets/img/logos/restaurant.jpg" alt="Restaurant" width="190" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
+<img src="https://b-kennedy0.github.io/assets/img/logos/restaurant.jpg" alt="Restaurant" width="190" height="110" style="float:right; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>  
 #### Bevris Ltd:  
 - Health & Safety in the Workplace  
 - Safe Food Handling  

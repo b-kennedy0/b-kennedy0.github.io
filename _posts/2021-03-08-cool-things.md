@@ -3,7 +3,7 @@ title: Cool things
 subtitle: Awesome things I use/plan to use
 tags: [tech, advice]
 readtime: true
-last-updated: 05/12/2022
+last-updated: 16/02/2023
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
@@ -12,9 +12,7 @@ layout: post
 {: .box-note}
 <i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).
 
-I am continuously inspired by tech and amazing things. Forever impressed by things that make life easier.
-
-**AIM**: To keep track of all the cool things I use and the things I think look cool and might start to use at some point.
+I am continuously inspired by tech and amazing things that make life easier. Here I'm attempting to keep track of them.
 
 I hope that by having this page, you might also find something useful.
 
@@ -28,11 +26,11 @@ I hope that by having this page, you might also find something useful.
 
 ## Computer setup
 
-I currently have an Apple M1 Macbook Air 2020. The new Apple silicon chip makes this super quick! No problems running multiple programmes and lots of browser tabs. In fact, many apps are getting silicon-specific updates.  
+I have an Apple M1 Macbook Air 2020. The silicon chip makes this very quick! I have no problems running multiple programmes and lots of browser tabs. Many apps are getting silicon-specific updates.  
 
 ## Analysis
 
-During my undergraduate and masters I conducted analyses through SPSS, but since starting my PhD, I have learned to use [R](https://www.r-project.org/){:target="_blank" rel="noopener"} (and [RStudio](https://rstudio.com/products/rstudio/download/){:target="_blank" rel="noopener"}). The resources that I used to get started are:
+During my undergraduate and master's degrees, I conducted analyses through SPSS, but since starting my PhD, I have learned to use [R](https://www.r-project.org/){:target="_blank" rel="noopener"} (and [RStudio](https://rstudio.com/products/rstudio/download/){:target="_blank" rel="noopener"}). The resources that I used to get started are:
 
 * [Getting Used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/index.html){:target="_blank" rel="noopener"}
 * [R for Data Science](https://r4ds.had.co.nz/){:target="_blank" rel="noopener"}
@@ -48,17 +46,15 @@ I share my code on [Open Science Framework](https://osf.io/ekmyr/){:target="_bla
 
 ## Coding
 
-I use [MacDown](https://macdown.uranusjr.com/){:target="_blank" rel="noopener"} (an open-source markdown editor for macOS) for writing and previewing markdown files. In fact, this blog post was written up in MacDown!
+For coding, I primarily use [VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - It is a comprehensive environment for writing and editing code. It contains many powerful tools, such as debugging, synchronising with Git, and even AI code checking! It takes a little bit of getting used to, but it is worth the investment.
 
 A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc.) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}  
 
-[VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - Environment for writing, editing code. It contains a lot of powerful tools, such as debugging the code and can even synchronise with Git. It takes a little bit of getting used to, but it is worth the investment.
-
-If writing code for a script, then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super useful as I can never keep track of the [brackets].
+If writing code for a script, then this [JSON Validator](https://jsonlint.com/){:target="_blank" rel="noopener"} is super helpful as I can never keep track of all the [{brackets}].
 
 ## Automating
 
-One of my greatest desires, across both my personal and professional life, is to automate as much as possible. For a couple of reasons. First, it reduces error. Automating some of the boring data entry or manual administration removes nearly all* of the human error. Secondly, I'm lazy. I don't **want** to do any of the boring administration/data entry/formatting/checking. The more of these tasks I can fully automate, the more time I will have to do other things!
+One of my greatest desires, across both my personal and professional life, is to automate as much as possible. For a couple of reasons. First, it reduces error, and automating the boring data entry or manual administration removes nearly all* of the human error. Secondly, I'm busy! I don't **want** to do any of the administration/data entry/formatting/checking. The more of these tasks I can fully automate, the more time I will have to do other things!
 
 \* *It is still fairly easy to make a mistake in the automation programming!*
 
@@ -86,7 +82,7 @@ One of my greatest desires, across both my personal and professional life, is to
 
 **Sharing snippets of code:**
 
-There are a few choices, and you ought to pick depending on your audience. 
+There are a few choices, and you ought to pick them depending on your audience. 
 
 * The visually pleasing way - e.g. for Twitter: [Carbon](https://carbon.now.sh/){:target="_blank" rel="noopener"}  
 * The user-friendly way - e.g. for helping solve an issue:  [GitHub Gists](https://gist.github.com/discover){:target="_blank" rel="noopener"}  
@@ -97,33 +93,27 @@ There are a few choices, and you ought to pick depending on your audience.
 
 **Sharing Apps**
 
-Once you are familiar with R and RStudio, you might want to try creating your own app! I use [ShinyApps](https://www.shinyapps.io/){:target="_blank" rel="noopener"} to publish and share mine. 
+Once you are familiar with R and RStudio, you might want to try creating your own app! I use [ShinyApps](https://www.shinyapps.io/){:target="_blank" rel="noopener"} to publish and share mine.
 
-For each of my research studies, I aim to produce an app so that colleagues and the general public may interact with the data alongside the manuscript. 
+For each research study, I aim to produce an app so that people can interact with the data alongside the manuscript. This is a great way to share your data and findings with the world!
 
-My own apps - 
-
-* Pilot data explorer
-* COVID Vaccine
-* 632 VGS Weight Calculator
-* Open Research Calendar
-
-Check out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
+Check some out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 
 ## Writing
 
 **Microsoft Word combined with:**
 
-* [Simul](https://www.simuldocs.com/){:target="_blank" rel="noopener"} - To share with collaborators and for version control.
-* [Zotero](https://www.zotero.org/){:target="_blank" rel="noopener"} - An open source citation and literature manager. Useful for generating formatted reference list.
-* [Recite](https://reciteworks.com/login){:target="_blank" rel="noopener"} - Recite checks that your in text citations match the reference list at the end of your work.
-* [Grammarly](https://www.grammarly.com/){:target="_blank" rel="noopener"} - Checking for spelling, grammar and excess words. 
-* In-text comments - To have a chat with myself, e.g. can't think of the right word or the paragraph could be phrased better, but not right now.
-* AutoCorrect - Replacing text with formatted text to make it easier to find when finalising the document. E.g. Replacing (REF) with highlighted (<mark>REF</mark>).
+* [Zotero](https://www.zotero.org/){:target="_blank" rel="noopener"} - An open-source citation and literature manager. Helpful in generating formatted reference list.
+* [Recite](https://reciteworks.com/login){:target="_blank" rel="noopener"} - Recite checks that your in-text citations match the reference list at the end of your work.
+* [Grammarly](https://www.grammarly.com/){:target="_blank" rel="noopener"} - Checking for spelling, grammar, and excess words. 
+* In-text comments - To chat with myself, e.g., "can't think of the right word or the paragraph could be phrased better, but not right now."
+* AutoCorrect - Replacing text with formatted text to make it easier to find when finalising the document. E.g., Replacing (REF) with highlighted (<mark>REF</mark>).
 
 <img style="display: block; margin-left: auto; margin-right: auto;" src="/assets/img/blog/cool-things/autocorrect.png" alt="" width="319" height="143" />
 
 **Searching for related articles:**
+
+[Research Rabbit](https://www.researchrabbit.ai){:target="_blank" rel="noopener"} is like Spotify for academic articles! You add a few that you are interested in, and it will use AI to make intelligent suggestions for other related articles. You can also use it to find works that cite a particular paper.
 
 [Connected Papers](https://www.connectedpapers.com/){:target="_blank" rel="noopener"} this website can produce a visual graph for all articles that are related to one article paper.
 
@@ -143,7 +133,7 @@ Social Platforms:
 
 Setting expectations RE: emails, use [The Email Charter](https://email-charter.github.io/){:target="_blank" rel="noopener"} in your email signature. This webpage sets out 10 tips to avoid email overload.
 
-When designing emails for research studies, I will often use HTML and CSS to make sure it looks nice. [HTML Email.io](https://htmlemail.io/inline/){:target="_blank" rel="noopener"} is a great website to check that you have done this properly and that the CSS is embedded inline with your code. Some email clients will strip styling that is not inline, so this is a great way to make sure your email looks great no matter which email client opens it.  
+When designing emails for research studies, I will often use HTML and CSS to make sure it looks nice. [HTML Email.io](https://htmlemail.io/inline/){:target="_blank" rel="noopener"} is a great website to check that you have done this correctly and that the CSS is embedded inline with your code. Some email clients will strip styling that is not inline, so this is a great way to ensure your email looks great no matter which email client is used.  
 
 [Yet Another Mail Merge](https://yamm.com/){:target="_blank" rel="noopener"} - (Integrated with Google) Used for sending batch emails. This is also useful for sending personalised emails with individual attachments. I use this as part of my research automation to help with sending out vouchers or study updates.
 
@@ -155,9 +145,9 @@ Trying to keep track of all the amazing Open Research events happening all the t
 
 [Google Drive](https://www.google.com/intl/en_in/drive/){:target="_blank" rel="noopener"} - Quite a few of my automation processes use a Google Sheet to store information for me. I find this useful as you can view the spreadsheet to view a history of your data that has been processed. I use folders in Drive to keep the spreadsheets sorted into categories (usually by study, e.g. Study 1, Study 2).
 
-To organise meetings (both in-person and virtual), I use [Calendly](https://calendly.com){:target="_blank" rel="noopener"} a smart meeting scheduler which is aesthetically pleasing and easy to use. To view mine, check out [this page.](https://bradleykennedy.co.uk/book-meeting/){:target="_blank" rel="noopener"}
+To organise meetings (both in-person and virtual), I use [Calendly](https://calendly.com){:target="_blank" rel="noopener"} and [TidyCal](https://tidycal.com){:target="_blank" rel="noopener"}, which are smart meeting schedulers. They are super easy to use. To view mine, check out [this page.](https://bradleykennedy.co.uk/book-meeting/){:target="_blank" rel="noopener"}
 
-[Are We Meeting Yet?](https://arewemeetingyet.com/#form){:target="_blank" rel="noopener"} - To organise meetings across different timezones.
+[Are We Meeting Yet?](https://arewemeetingyet.com/#form){:target="_blank" rel="noopener"} - To organise meetings across different time zones.
 
 ## Statistics
 
@@ -188,6 +178,8 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 [Password Generator](https://passwordsgenerator.net/){:target="_blank" rel="noopener"} - Secure password generator.
 
 [Chrome Multi-tab opener](https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh){:target="_blank" rel="noopener"} - Chrome add-on to open multiple URLs (handy for marking and opening multiple Turnitin pages simultaneously).
+
+[URLOpener](https://urlopener.net){target="_blank" rel="noopener"} - An alternative to the above website for those who would like to use a browser other than Chrome.
 
 ## Teaching
 

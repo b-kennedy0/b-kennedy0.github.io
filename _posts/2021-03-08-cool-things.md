@@ -179,7 +179,7 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 
 [Chrome Multi-tab opener](https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh){:target="_blank" rel="noopener"} - Chrome add-on to open multiple URLs (handy for marking and opening multiple Turnitin pages simultaneously).
 
-[URLOpener](https://urlopener.net){target="_blank" rel="noopener"} - An alternative to the above website for those who would like to use a browser other than Chrome.
+[URLOpener](https://urlopener.net){:target="_blank" rel="noopener"} - An alternative to the above website for those who would like to use a browser other than Chrome.
 
 ## Teaching
 

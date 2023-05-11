@@ -96,6 +96,7 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   if (Number(position) === 1) {
     const next = document.createElement("p");
     next.textContent = "Up Next!";
+    next.style.fontWeight = "bold"; // Add this line to make the text bold
     card.appendChild(next);
 
     card.classList.add("up-next"); // Add the 'up-next' class to the card

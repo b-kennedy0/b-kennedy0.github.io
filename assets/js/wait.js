@@ -123,10 +123,10 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   return card;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Your JavaScript code here
   // ...
-  
+
   // Call the initial rendering functions
   renderQueue();
   renderInMeeting();
@@ -288,4 +288,30 @@ document.addEventListener("DOMContentLoaded", function () {
   checkinButton.addEventListener("click", function () {
     showCheckinForm(); // Show the check-in form
   });
+});
+
+const nextButton = document.getElementById("next-button");
+
+// Next button
+nextButton.addEventListener("click", function () {
+  const tickIcon = document.getElementById("tick-icon");
+  fetch("https://hook.eu1.make.com/g711q88jr1cjdyrfyl1g9vt3lmm65ri3", {
+    method: "GET"
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log(
+          "Next button clicked. GET request sent to webhook successfully."
+        );
+        tickIcon.classList.remove("hidden");
+        setTimeout(function () {
+          tickIcon.classList.add("hidden");
+        }, 3000);
+      } else {
+        console.error("Failed to send GET request to webhook.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
 });

@@ -122,9 +122,16 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   return card;
 }
 
-// Initial rendering
-renderQueue();
-renderInMeeting();
+document.addEventListener("DOMContentLoaded", function() {
+  // Your JavaScript code here
+  // ...
+  
+  // Call the initial rendering functions
+  renderQueue();
+  renderInMeeting();
+
+  // ...
+});
 
 // Initial update
 updateTime();

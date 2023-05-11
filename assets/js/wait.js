@@ -238,6 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popupContent.id = "message-popup-content";
 
     const tickIcon = document.createElement("span");
+    tickIcon.classList.add("confirmation-tick-icon"); // Add a unique class name
     tickIcon.innerHTML = "&#10004;"; // HTML entity for a green tick
 
     const messageText = document.createElement("p");
@@ -265,6 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popupContent.id = "message-popup-content";
 
     const crossIcon = document.createElement("span");
+    crossIcon.classList.add("error-cross-icon"); // Add a unique class name
     crossIcon.innerHTML = "&#10008;"; // HTML entity for a red cross
 
     const messageText = document.createElement("p");
@@ -290,19 +292,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Next button
 const nextButton = document.getElementById("next-button");
+
+// Next button
 const tickIcon = document.getElementById("tick-icon");
 
-nextButton.addEventListener("click", function() {
+nextButton.addEventListener("click", function () {
   fetch("https://hook.eu1.make.com/g711q88jr1cjdyrfyl1g9vt3lmm65ri3", {
     method: "GET"
   })
     .then((response) => {
       if (response.ok) {
-        console.log("Next button clicked. GET request sent to webhook successfully.");
+        console.log(
+          "Next button clicked. GET request sent to webhook successfully."
+        );
         tickIcon.classList.remove("hidden");
-        setTimeout(function() {
+        setTimeout(function () {
           tickIcon.classList.add("hidden");
         }, 3000);
       } else {

@@ -290,21 +290,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const nextButton = document.getElementById("next-button");
-
 // Next button
-nextButton.addEventListener("click", function () {
-  const tickIcon = document.getElementById("tick-icon");
+const nextButton = document.getElementById("next-button");
+const tickIcon = document.getElementById("tick-icon");
+
+nextButton.addEventListener("click", function() {
   fetch("https://hook.eu1.make.com/g711q88jr1cjdyrfyl1g9vt3lmm65ri3", {
     method: "GET"
   })
     .then((response) => {
       if (response.ok) {
-        console.log(
-          "Next button clicked. GET request sent to webhook successfully."
-        );
+        console.log("Next button clicked. GET request sent to webhook successfully.");
         tickIcon.classList.remove("hidden");
-        setTimeout(function () {
+        setTimeout(function() {
           tickIcon.classList.add("hidden");
         }, 3000);
       } else {

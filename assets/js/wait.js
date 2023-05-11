@@ -255,6 +255,10 @@ document.addEventListener("DOMContentLoaded", function () {
     popupContent.appendChild(closeButton);
     popupContainer.appendChild(popupContent);
     document.body.appendChild(popupContainer);
+
+    setTimeout(function () {
+      popupContainer.remove(); // Remove the pop-up container after 3 seconds
+    }, 3000);
   }
 
   // Function to display an error message with a red cross icon
@@ -306,10 +310,7 @@ nextButton.addEventListener("click", function () {
         console.log(
           "Next button clicked. GET request sent to webhook successfully."
         );
-        tickIcon.classList.remove("hidden");
-        setTimeout(function () {
-          tickIcon.classList.add("hidden");
-        }, 3000);
+        displayConfirmationMessage("Webhook request successful!"); // Display confirmation message
       } else {
         console.error("Failed to send GET request to webhook.");
       }

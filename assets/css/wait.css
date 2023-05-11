@@ -191,12 +191,6 @@ h2 {
   background-color: darkblue;
 }
 
-#tick-icon {
-  color: green;
-  margin-left: 10px;
-  display: none;
-}
-
 .confirmation-tick-icon {
   color: green;
   /* Additional styles for the confirmation tick icon */

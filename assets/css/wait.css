@@ -197,10 +197,12 @@ h2 {
   display: none;
 }
 
-#tick-icon.hidden {
-  display: none;
+.confirmation-tick-icon {
+  color: green;
+  /* Additional styles for the confirmation tick icon */
 }
 
-.hidden {
-  display: none;
+.error-cross-icon {
+  color: red;
+  /* Additional styles for the error cross icon */
 }

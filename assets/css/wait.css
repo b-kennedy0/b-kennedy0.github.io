@@ -200,3 +200,7 @@ h2 {
 #tick-icon.hidden {
   display: none;
 }
+
+.hidden {
+  display: none;
+}

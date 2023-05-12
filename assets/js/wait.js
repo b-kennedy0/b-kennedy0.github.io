@@ -159,6 +159,26 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   return card;
 }
 
+let lastMeetingStatus = "";
+
+function pollData() {
+  // Fetch data and update cards
+
+  // Check if meeting status has changed
+  const currentMeetingStatus = inMeetingNow();
+  if (currentMeetingStatus !== lastMeetingStatus) {
+    // Meeting status has changed, play beep sound
+    const beep = new Audio('assets/mp3/double-beep.mp3');
+    beep.play();
+
+    // Update lastMeetingStatus variable
+    lastMeetingStatus = currentMeetingStatus;
+  }
+
+  // Schedule next poll
+  setTimeout(pollData, pollingInterval);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   renderQueue();
   renderInMeeting();

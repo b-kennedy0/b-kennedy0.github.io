@@ -143,17 +143,24 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   }
 
   if (cardClass === "queue-card") {
-    const elapsedMinutes = Math.floor(
-      (new Date() - Date.parse(addedTime)) / (1000 * 60)
-    );
-
-    const elapsedMinutesElement = document.createElement("p");
-    elapsedMinutesElement.textContent = `Waiting: ${elapsedMinutes} mins`;
-    card.appendChild(elapsedMinutesElement);
+    const now = new Date();
+    const timeDiffMs = addedTime - now;
+    let timeDiffStr = "";
+    if (timeDiffMs < 0) {
+      timeDiffStr = "Time until appointment:";
+      timeDiffMs = -timeDiffMs;
+    } else {
+      const timeDiffMin = Math.floor(timeDiffMs / (1000 * 60));
+      timeDiffStr = `${timeDiffMin} minutes`;
+    }
+    const timeElem = document.createElement("p");
+    timeElem.textContent = timeDiffStr;
+    card.appendChild(timeElem);
   }
 
   return card;
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   renderQueue();

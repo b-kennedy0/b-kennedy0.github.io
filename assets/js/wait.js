@@ -27,7 +27,7 @@ function fetchData() {
 }
 
 // Function to display a message with an icon
-function displayMessage(message, iconHTML) {
+function displayMessage(message, iconHTML, iconClass) {
   const popupContainer = document.createElement("div");
   popupContainer.id = "message-popup-container";
 
@@ -36,6 +36,7 @@ function displayMessage(message, iconHTML) {
 
   const icon = document.createElement("span");
   icon.innerHTML = iconHTML; // Use the provided HTML entity for the icon
+  icon.classList.add(iconClass); // Add the CSS class for the specific icon color
 
   const messageText = document.createElement("p");
   messageText.textContent = message;
@@ -60,13 +61,15 @@ function displayMessage(message, iconHTML) {
 // Display a confirmation message with a green tick
 function displayConfirmationMessage(message) {
   const tickIconHTML = "&#10004;"; // HTML entity for a green tick
-  displayMessage(message, tickIconHTML);
+  const tickIconClass = "icon-green"; // CSS class for the green tick icon
+  displayMessage(message, tickIconHTML, tickIconClass);
 }
 
 // Display an error message with a red cross
 function displayErrorMessage(message) {
   const crossIconHTML = "&#10008;"; // HTML entity for a red cross
-  displayMessage(message, crossIconHTML);
+  const crossIconClass = "icon-red"; // CSS class for the red cross icon
+  displayMessage(message, crossIconHTML, crossIconClass);
 }
 
 // Render waiting list
@@ -208,16 +211,16 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         if (response.ok) {
           console.log("Student number sent to webhook successfully.");
-          displayMessage("Check-in Successful", "confirmation-tick-icon");
+          displayConfirmationMessage("Check-in Successful");
           setTimeout(fetchData, 5000);
         } else {
           console.error("Failed to send student number to webhook.");
-          displayMessage("Error Checking-in", "error-cross-icon");
+          displayErrorMessage("Error Checking-in");
         }
       })
       .catch((error) => {
         console.error("Error sending student number to webhook:", error);
-        displayMessage("Error Checking-in", "error-cross-icon");
+        displayErrorMessage("Error Checking-in");
       });
   }
 

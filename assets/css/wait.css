@@ -191,12 +191,10 @@ h2 {
   background-color: darkblue;
 }
 
-.confirmation-tick-icon {
+.icon-green {
   color: green;
-  /* Additional styles for the confirmation tick icon */
 }
 
-.error-cross-icon {
+.icon-red {
   color: red;
-  /* Additional styles for the error cross icon */
 }

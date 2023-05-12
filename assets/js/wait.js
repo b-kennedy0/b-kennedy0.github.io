@@ -1,39 +1,60 @@
 const queueSection = document.getElementById("queue-section");
 const meetingSection = document.getElementById("meeting-section");
+const waitingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/waitingList";
+const inMeetingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/inMeetingList";
+const pollingInterval = 3000;
 let waitingList = [];
 let inMeetingList = [];
 
 // Function to fetch the latest data from the Google Sheet
 function fetchData() {
-  // Make an AJAX request to fetch the data from the Google Sheet
-  fetch(
-    "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/inMeetingList"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      // Extract the inMeetingList from the fetched data
-      inMeetingList = data;
-
-      // Render the updated list
+  Promise.all([
+    fetch(inMeetingListURL),
+    fetch(waitingListURL)
+  ])
+    .then(([inMeetingResponse, waitingResponse]) =>
+      Promise.all([inMeetingResponse.json(), waitingResponse.json()])
+    )
+    .then(([inMeetingData, waitingData]) => {
+      inMeetingList = inMeetingData;
+      waitingList = waitingData;
       renderInMeeting();
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
-  fetch(
-    "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/waitingList"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      // Extract the waitingList from the fetched data
-      waitingList = data;
-
-      // Render the updated list
       renderQueue();
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
+}
+
+// Function to display a message with an icon
+function displayMessage(message, iconClass) {
+  const popupContainer = document.createElement("div");
+  popupContainer.id = "message-popup-container";
+
+  const popupContent = document.createElement("div");
+  popupContent.id = "message-popup-content";
+
+  const icon = document.createElement("span");
+  icon.classList.add(iconClass);
+  popupContent.appendChild(icon);
+
+  const messageText = document.createElement("p");
+  messageText.textContent = message;
+  popupContent.appendChild(messageText);
+
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "Close";
+  closeButton.addEventListener("click", () => {
+    popupContainer.remove();
+  });
+  popupContent.appendChild(closeButton);
+
+  popupContainer.appendChild(popupContent);
+  document.body.appendChild(popupContainer);
+
+  setTimeout(() => {
+    popupContainer.remove();
+  }, 3000);
 }
 
 // Render waiting list
@@ -63,22 +84,20 @@ function renderInMeeting() {
 function updateTime() {
   const now = new Date();
 
-  // Format the current date
   const options = {
     weekday: "long",
     day: "numeric",
     month: "short",
-    year: "numeric"
+    year: "numeric",
   };
   const currentDate = now.toLocaleDateString("en-US", options);
 
-  // Format the current time
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
-  const currentTime = `${hours}:${minutes}:${seconds}`;
+  const currentTime = now.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
 
-  // Update the page title element
   const pageTitle = document.getElementById("page-title");
   pageTitle.innerHTML = `${currentDate} -- ${currentTime}<br> Brad K - Virtual Appointments Waiting List`;
 }
@@ -96,10 +115,10 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   if (Number(position) === 1) {
     const next = document.createElement("p");
     next.textContent = "Up Next!";
-    next.style.fontWeight = "bold"; // Add this line to make the text bold
+    next.style.fontWeight = "bold";
     card.appendChild(next);
 
-    card.classList.add("up-next"); // Add the 'up-next' class to the card
+    card.classList.add("up-next");
   }
 
   if (position !== null) {
@@ -109,12 +128,10 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   }
 
   if (cardClass === "queue-card") {
-    // Calculate the minutes elapsed
     const elapsedMinutes = Math.floor(
       (new Date() - Date.parse(addedTime)) / (1000 * 60)
     );
 
-    // Display the elapsed minutes on the card
     const elapsedMinutesElement = document.createElement("p");
     elapsedMinutesElement.textContent = `Waiting: ${elapsedMinutes} mins`;
     card.appendChild(elapsedMinutesElement);
@@ -124,39 +141,20 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Your JavaScript code here
-  // ...
-
-  // Call the initial rendering functions
   renderQueue();
   renderInMeeting();
-
-  // ...
 });
 
-// Initial update
 updateTime();
-
-// Update time every second
 setInterval(updateTime, 1000);
 
-// Fetch data immediately
 fetchData();
-
-// Polling interval in milliseconds (e.g., poll every 5 seconds)
-const pollingInterval = 3000;
-
-// Start polling
 setInterval(fetchData, pollingInterval);
 
-// Check-in Button
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the check-in form and close button
   const checkinForm = document.getElementById("checkin-form");
   const closeButton = document.getElementById("close-button");
 
-  // Function to show form
   function showCheckinForm() {
     const checkinFormPopup = document.getElementById("checkin-form-popup");
     const checkinFormOverlay = document.getElementById("checkin-form-overlay");
@@ -164,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
     checkinFormOverlay.style.display = "block";
   }
 
-  // Function to hide form
   function hideCheckinForm() {
     const checkinFormPopup = document.getElementById("checkin-form-popup");
     const checkinFormOverlay = document.getElementById("checkin-form-overlay");
@@ -172,150 +169,70 @@ document.addEventListener("DOMContentLoaded", function () {
     checkinFormOverlay.style.display = "none";
   }
 
-  // Event listener for close button
   closeButton.addEventListener("click", function () {
-    hideCheckinForm(); // Hide the check-in form
+    hideCheckinForm();
   });
 
-  // Event listener for check-in form submit
   checkinForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    // Get the student number value
     const studentNumber = document.getElementById("student-number").value;
 
-    // Perform the check-in process (you can customize this part according to your needs)
     if (studentNumber) {
       console.log("Checking in student with number:", studentNumber);
-
-      // Clear the student number field
       document.getElementById("student-number").value = "";
-
-      // Hide the check-in form after submission
-      hideCheckinForm(); // Hide the check-in form
-
-      // Send the student number to the webhook
+      hideCheckinForm();
       sendStudentNumberToWebhook(studentNumber);
     }
   });
 
-  // Function to send the student number to the webhook
   function sendStudentNumberToWebhook(studentNumber) {
     const webhookURL =
       "https://hook.eu1.make.com/wxhmb96glgblw7xwbrngp4usei7acdbv?number=" +
       studentNumber;
 
-    // Make an AJAX request to the webhook URL
     fetch(webhookURL, {
-      method: "POST"
-      // Add any necessary headers or body payload to the request
-      // For example, if the webhook requires a specific content type or data format
+      method: "POST",
     })
       .then((response) => {
-        // Handle the response from the webhook
-        // For example, you can check the response status and display a success message
         if (response.ok) {
           console.log("Student number sent to webhook successfully.");
-          displayConfirmationMessage("Check-in Successful");
-          setTimeout(fetchData, 5000); // Wait for 5 seconds before calling fetchData()
+          displayMessage("Check-in Successful", "confirmation-tick-icon");
+          setTimeout(fetchData, 5000);
         } else {
           console.error("Failed to send student number to webhook.");
-          displayErrorMessage("Error Checking-in");
+          displayMessage("Error Checking-in", "error-cross-icon");
         }
       })
       .catch((error) => {
         console.error("Error sending student number to webhook:", error);
-        displayErrorMessage("Error Checking-in");
+        displayMessage("Error Checking-in", "error-cross-icon");
       });
   }
 
-  // Function to display a confirmation message with a green tick icon
-  function displayConfirmationMessage(message) {
-    const popupContainer = document.createElement("div");
-    popupContainer.id = "message-popup-container";
-
-    const popupContent = document.createElement("div");
-    popupContent.id = "message-popup-content";
-
-    const tickIcon = document.createElement("span");
-    tickIcon.classList.add("confirmation-tick-icon"); // Add a unique class name
-    tickIcon.innerHTML = "&#10004;"; // HTML entity for a green tick
-
-    const messageText = document.createElement("p");
-    messageText.textContent = message;
-
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.addEventListener("click", () => {
-      popupContainer.remove();
-    });
-
-    popupContent.appendChild(tickIcon);
-    popupContent.appendChild(messageText);
-    popupContent.appendChild(closeButton);
-    popupContainer.appendChild(popupContent);
-    document.body.appendChild(popupContainer);
-
-    setTimeout(function () {
-      popupContainer.remove(); // Remove the pop-up container after 3 seconds
-    }, 3000);
-  }
-
-  // Function to display an error message with a red cross icon
-  function displayErrorMessage(message) {
-    const popupContainer = document.createElement("div");
-    popupContainer.id = "message-popup-container";
-
-    const popupContent = document.createElement("div");
-    popupContent.id = "message-popup-content";
-
-    const crossIcon = document.createElement("span");
-    crossIcon.classList.add("error-cross-icon"); // Add a unique class name
-    crossIcon.innerHTML = "&#10008;"; // HTML entity for a red cross
-
-    const messageText = document.createElement("p");
-    messageText.textContent = message;
-
-    const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.addEventListener("click", () => {
-      popupContainer.remove();
-    });
-
-    popupContent.appendChild(crossIcon);
-    popupContent.appendChild(messageText);
-    popupContent.appendChild(closeButton);
-    popupContainer.appendChild(popupContent);
-    document.body.appendChild(popupContainer);
-  }
-
-  // Check-in Button event listener
   const checkinButton = document.getElementById("checkin-button");
   checkinButton.addEventListener("click", function () {
-    showCheckinForm(); // Show the check-in form
+    showCheckinForm();
   });
 });
 
 const nextButton = document.getElementById("next-button");
 
-// Next button
-const tickIcon = document.getElementById("tick-icon");
-
 nextButton.addEventListener("click", function () {
   fetch("https://hook.eu1.make.com/g711q88jr1cjdyrfyl1g9vt3lmm65ri3", {
-    method: "GET"
+    method: "GET",
   })
-    .then((response) => {
-      if (response.ok) {
-        console.log(
-          "Next button clicked. GET request sent to webhook successfully."
-        );
-        displayConfirmationMessage("Webhook request successful!"); // Display confirmation message
-      } else {
-        console.error("Failed to send GET request to webhook.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  .then((response) => {
+    if (response.ok) {
+      console.log("Next student called successfully.");
+      displayMessage("Next Student Called", "confirmation-tick-icon");
+      setTimeout(fetchData, 5000);
+    } else {
+      console.error("Failed to call next student.");
+      displayMessage("Error Calling Next Student", "error-cross-icon");
+    }
+  })
+  .catch((error) => {
+    console.error("Error calling next student:", error);
+    displayMessage("Error Calling Next Student", "error-cross-icon");
+  });
 });

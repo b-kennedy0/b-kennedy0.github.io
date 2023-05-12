@@ -27,7 +27,7 @@ function fetchData() {
 }
 
 // Function to display a message with an icon
-function displayMessage(message, iconClass) {
+function displayMessage(message, iconHTML) {
   const popupContainer = document.createElement("div");
   popupContainer.id = "message-popup-container";
 
@@ -35,8 +35,7 @@ function displayMessage(message, iconClass) {
   popupContent.id = "message-popup-content";
 
   const icon = document.createElement("span");
-  icon.classList.add(iconClass);
-  popupContent.appendChild(icon);
+  icon.innerHTML = iconHTML; // Use the provided HTML entity for the icon
 
   const messageText = document.createElement("p");
   messageText.textContent = message;
@@ -47,14 +46,27 @@ function displayMessage(message, iconClass) {
   closeButton.addEventListener("click", () => {
     popupContainer.remove();
   });
+  popupContent.appendChild(icon);
+  popupContent.appendChild(messageText);
   popupContent.appendChild(closeButton);
-
   popupContainer.appendChild(popupContent);
   document.body.appendChild(popupContainer);
 
   setTimeout(() => {
     popupContainer.remove();
   }, 3000);
+}
+
+// Display a confirmation message with a green tick
+function displayConfirmationMessage(message) {
+  const tickIconHTML = "&#10004;"; // HTML entity for a green tick
+  displayMessage(message, tickIconHTML);
+}
+
+// Display an error message with a red cross
+function displayErrorMessage(message) {
+  const crossIconHTML = "&#10008;"; // HTML entity for a red cross
+  displayMessage(message, crossIconHTML);
 }
 
 // Render waiting list
@@ -224,15 +236,15 @@ nextButton.addEventListener("click", function () {
   .then((response) => {
     if (response.ok) {
       console.log("Next student called successfully.");
-      displayMessage("Next Student Called", "confirmation-tick-icon");
+      displayConfirmationMessage("Next Student Called");
       setTimeout(fetchData, 5000);
     } else {
       console.error("Failed to call next student.");
-      displayMessage("Error Calling Next Student", "error-cross-icon");
+      displayErrorMessage("Error Calling Next Student", "error-cross-icon");
     }
   })
   .catch((error) => {
     console.error("Error calling next student:", error);
-    displayMessage("Error Calling Next Student", "error-cross-icon");
+    displayErrorMessage("Error Calling Next Student", "error-cross-icon");
   });
 });

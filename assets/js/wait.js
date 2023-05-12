@@ -2,7 +2,7 @@ const queueSection = document.getElementById("queue-section");
 const meetingSection = document.getElementById("meeting-section");
 const waitingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/waitingList";
 const inMeetingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/inMeetingList";
-const pollingInterval = 10000;
+const pollingInterval = 30000;
 let waitingList = [];
 let inMeetingList = [];
 

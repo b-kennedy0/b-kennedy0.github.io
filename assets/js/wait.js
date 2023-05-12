@@ -146,10 +146,14 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
     const elapsedMinutes = Math.floor(
       (new Date() - Date.parse(addedTime)) / (1000 * 60)
     );
-
+    console.log("elapsedMinutes:", elapsedMinutes);
+  
     const timeText = elapsedMinutes >= 0 ? "Waiting" : "Time until appointment";
+    console.log("timeText:", timeText);
+  
     const minutes = Math.abs(elapsedMinutes);
-
+    console.log("minutes:", minutes);
+  
     const elapsedMinutesElement = document.createElement("p");
     elapsedMinutesElement.textContent = `${timeText}: ${minutes} mins`;
     card.appendChild(elapsedMinutesElement);

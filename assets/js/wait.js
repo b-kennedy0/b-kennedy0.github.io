@@ -2,7 +2,7 @@ const queueSection = document.getElementById("queue-section");
 const meetingSection = document.getElementById("meeting-section");
 const waitingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/waitingList";
 const inMeetingListURL = "https://opensheet.elk.sh/1cg3rOzKUCB3tG3p0TERC1KhXAzYX55Kydg-JWmO9LhI/inMeetingList";
-const pollingInterval = 5000;
+const pollingInterval = 10000;
 let waitingList = [];
 let inMeetingList = [];
 
@@ -157,26 +157,6 @@ function createCard(ticketNumber, position, cardClass, addedTime) {
   }
 
   return card;
-}
-
-let lastMeetingStatus = "";
-
-function pollData() {
-  // Fetch data and update cards
-
-  // Check if meeting status has changed
-  const currentMeetingStatus = inMeetingNow();
-  if (currentMeetingStatus !== lastMeetingStatus) {
-    // Meeting status has changed, play beep sound
-    const beep = new Audio('assets/mp3/double-beep.mp3');
-    beep.play();
-
-    // Update lastMeetingStatus variable
-    lastMeetingStatus = currentMeetingStatus;
-  }
-
-  // Schedule next poll
-  setTimeout(pollData, pollingInterval);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

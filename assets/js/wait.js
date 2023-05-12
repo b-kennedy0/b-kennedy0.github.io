@@ -111,7 +111,7 @@ function updateTime() {
   });
 
   const pageTitle = document.getElementById("page-title");
-  pageTitle.innerHTML = `${currentDate} -- ${currentTime}<br> Brad K - Virtual Appointments Waiting List`;
+  pageTitle.innerHTML = `${currentDate} -- ${currentTime}<br> Brad K - Appointment Waiting List`;
 }
 
 // Create card element

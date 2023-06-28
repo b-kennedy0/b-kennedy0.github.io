@@ -30,7 +30,7 @@ Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.
 
 ---
 
-<a title="Open App" href="https://bradley-kennedy.shinyapps.io/632VGS_Weight_App/" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/632vgscrest.png?raw=true" alt="632vgs-crest" width="120" height="159" /></a>
+<a title="Open App" href="https://bradley-kennedy.shinyapps.io/632VGS/" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/632vgscrest.png?raw=true" alt="632vgs-crest" width="120" height="159" /></a>
 # 632VGS Weight App  
 #### Click/Tap icon to run >>  
 This app was created to assist glider pilots with weight and balance calculations for the aircraft at [632 VGS](https://632vgs.co.uk/) RAF Ternhill.  

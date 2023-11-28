@@ -3,7 +3,7 @@ title: Cool things
 subtitle: Awesome things I use/plan to use
 tags: [tech, advice]
 readtime: true
-last-updated: 16/02/2023
+last-updated: 28/11/2023
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg

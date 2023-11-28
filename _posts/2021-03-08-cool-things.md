@@ -113,7 +113,7 @@ Check some out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 
 **Searching for related articles:**
 
-[Research Rabbit](https://www.researchrabbit.ai){:target="_blank" rel="noopener"} is like Spotify for academic articles! You add a few that you are interested in, and it will use AI to make intelligent suggestions for other related articles. You can also use it to find works that cite a particular paper.
+[Research Rabbit](https://researchrabbitapp.com/){:target="_blank" rel="noopener"} is like Spotify for academic articles! You add a few that you are interested in, and it will use AI to make intelligent suggestions for other related articles. You can also use it to find works that cite a particular paper.
 
 [Connected Papers](https://www.connectedpapers.com/){:target="_blank" rel="noopener"} this website can produce a visual graph for all articles that are related to one article paper.
 

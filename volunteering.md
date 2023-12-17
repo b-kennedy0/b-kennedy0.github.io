@@ -14,7 +14,8 @@ cover-img:
   - "/assets/img/bigimg/631sqn.jpg"
 ---
 ## Rank/Role:
-Pilot Officer  30 Sep 2021 - Present  
+Flying Officer 30 Sep 2023 - Present  
+Pilot Officer  30 Sep 2021 - 30 Sep 2023  
 > Roles:
 > - Chief Ground Instructor 
 > - Flight Safety Officer
@@ -28,7 +29,8 @@ Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021
 > - Treasurer, 632VGS Social Committee
 > - Aircrew Publications (AP) Custodian
 
-## Qualification:
+## Personal History:
+:house: 632VGS move to RAF Woodvale,  - 2 Dec 23  
 :bangbang: RAF Ternhill Infrastructure Issues Apr 22 - Present  
 :page_with_curl: Qualified Gliding Instructor (QGI) B2 - 21 Apr 22  
 :bangbang: COVID19 Pause - Mar 20 to May 21  

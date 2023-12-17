@@ -21,8 +21,8 @@ Pilot Officer  30 Sep 2021 - 30 Sep 2023
 > - Flight Safety Officer
 > - Treasurer, 632VGS Social Committee
 
-### Awards:
-- Commanding Officer's Trophy 2021
+> Awards:
+> - Commanding Officer's Trophy 2021
 
 Civilian Gliding Instructor  21 July 2016 - 30 Sep 2021  
 > Roles:
@@ -55,17 +55,10 @@ _632 VGS (Volunteer Gliding Squadron), RAF Tern hill_
 (2018 - Present)  
 [632 VGS Facebook](https://www.facebook.com/632SqnVGS/)  
 [632 VGS Website](https://632vgs.co.uk/)   
-Aircraft: [Grob 103 (Viking)](https://www.raf.mod.uk/aircraft/viking-t1/)   
+Aircraft: [Grob 103 (Viking)](https://www.raf.mod.uk/aircraft/viking-t1/)  
 <br>
 _631 VGS (Volunteer Gliding Squadron), RAF Woodvale_  
 <img src="https://b-kennedy0.github.io/assets/img/logos/631vgscrest.png" alt="631VGS Logo" width="85" height="110" style="float:left; border-width: 25px; margin-right: 20px; margin-left: 20px;"/>
 (2013 - 2018)  
-[631 VGS Website](http://631vgs.com/)   
+[631 VGS Website](http://631vgs.com/)  
 Aircraft: Grob 109b (Vigilant)
-
----
-
-_Gliding scholarship & Advanced training from Oct 2011 - Sep 2012_  
-Based at Royal Air Force Woodvale in the North West, 631 VGS was tasked to provide gliding training to affiliated cadets of the Air Training Corps (ATC) and Combined Cadet Force (CCF) in addition to training and developing our own staff to help us achieve this. Achieved Grade 1 Pilot status.
-
-> In May of 2018, 631 VGS became 631 AGS (Aviation Ground School) following the RAF decision for the Vigilant fleet to cease operating. Now, 631 AGS provides ground based aviation training, including classroom based ground school and experience in the PTT (part task trainer).

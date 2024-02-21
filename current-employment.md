@@ -18,12 +18,14 @@ nav-short: true
 
 ## Current  
 
+Nil.
+
+## Previous  
+
 **Chair -**  
 School of Psychology PhD Support Group  
 University of Chester  
-_June 2021 - Present_  
-
-## Previous  
+_June 2021 - February 2024_  
 
 **Editor -**  
 [The Quarterly](https://www.bps.org.uk/publications/psypag-quarterly) (ISSN: 1746-6016)  

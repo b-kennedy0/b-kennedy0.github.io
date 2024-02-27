@@ -29,6 +29,7 @@ Lab Session feedback - [/lab.html](/lab)
 Waiting List - [/wait.html](/wait)  
 WaitWhile QR - [/assets/img/WaitWhile_QR.png]
 WaitWhile - [Link](https://waitwhile.com/locations/brad/waitlist)  
+Shortlink to WaitWhile - [bradk.co.uk/q](https://bradk.co.uk/q)  
 
 # Research 
 Redirect to OSF page - [/osf.md](/osf)  

@@ -27,6 +27,8 @@ Give teaching feedback - [/feedback.html](/feedback)
 Teaching feedback report - [Link](https://datastudio.google.com/reporting/2538d5c2-e58c-4652-9c30-3a66c5b61947)  
 Lab Session feedback - [/lab.html](/lab)  
 Waiting List - [/wait.html](/wait)  
+WaitWhile QR - [/assets/img/WaitWhile_QR.png]
+WaitWhile - [Link](https://waitwhile.com/locations/brad/waitlist)  
 
 # Research 
 Redirect to OSF page - [/osf.md](/osf)  

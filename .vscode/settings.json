@@ -1,9 +1,11 @@
 {
-    "cSpell.ignoreWords": [
-        "bestgift",
-        "withoutcomments"
+    "spellright.language": [
+        "en"
     ],
-    "cSpell.words": [
-        "favourite"
-    ]
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "grammarly.config.documentDialect": "british"
 }

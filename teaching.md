@@ -30,6 +30,54 @@ nav-short: true
 
 <button id="btnExpandHideAllDetails" onclick="openAll()" style="color:white;background-color:green;">Open All Sections</button>
 
+<details><summary><b><u>2024</u></b></summary>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav1.png?raw=true" alt="Male Avatar 1" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student Nomination for Teaching Award (2024) - Best Lecturer</div>
+<blockquote>“In level 4 I struggled so much with research methods, I felt lost and had no idea what I was doing with statistics. In level 5 since having Brad I feel so confident in doing statistics and I actually understand why I’m doing what I’m doing. Brad has been so helpful and explained quantitative research so well and everyone in the class has been happy and well informed.”</blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentavf1.png?raw=true" alt="Female Avatar 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student Nomination for Teaching Award (2024) - Best Lecturer</div>
+<blockquote>“Brad has been my lab tutor for my first year of studying Psychology, and he has made a sometimes dull and tricky module like Research Methods engaging and interactive. He always is happy to answer any questions our lab class has and he has explained concepts that I didn’t understand in lectures very clearly and simply so that I feel more confident in them after leaving his class. Brad is also very approachable, friendly and funny, and all I have ever heard about Brad from my course mates is praise. I have really appreciated his demonstrations on how to carry out statistical tests on SPSS as this has helped my learning significantly, and his positive, uplifting demeanour has made presenting and doing assignments a less stressful experience. Brad is definitely the best lecturer I have had this year and I feel really lucky to have had him as my first year lab tutor.”  </blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/studentav2.png?raw=true" alt="Male Avatar 2" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student Nomination for Teaching Award (2024) - Best Lecturer</div>
+<blockquote>“1. Actually passionate about the subject 2. Really interesting engaging lecture 3. Really good feedback in terms of detail on assignment 4. Easy to book appointments with 5. Answers questions with a lot of depth. 6. Responds to emails quickly 7. I really hope he wins because he deserves it. 8. There are engaging and less engaging lectures, Brad lectures had the highest engagement in terms of people involved in group chats saying that the lecture was high quality. The first one about deception and ethics was especially well structured with the bathroom recording twist which led to people's engagement and interest in the topic even if the topic was relatively boring which is a really hard skill to have”  </blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student Nomination for Teaching Award (2024) - Best Professional Mentor</div>
+<blockquote>"I am honoured to nominate Brad for the prestigious title of the Best Professional Mentor. Brad's dedication and commitment to his role as a teacher and mentor have left an unforgettable mark on all of us, especially myself. His unwavering support, invaluable insights and generous investment of time have made a significant difference not only in my academics but in my personal life as well.  Brad exemplifies the qualities of an exceptional mentor by consistently meeting and exceeding the criteria set forth for this award. Brad constantly demonstrates his commitment to our well-being by providing invaluable personal and academic support. His door is always open and he has always welcomed me, along with my many queries and worries, with a warm smile and a listening ear. He is incredibly easy to approach and contact.  Brad goes above and beyond by not only offering support but also actively signposting us to appropriate departments and contacts. His proactive approach has ensured that I have been able to receive the assistance I needed. He has also followed up afterwards to ensure that I have received the support needed. As a newly diagnosed ADHD and ASD-er, my diagnosis would have been a major obstacle to my academics without Brad’s support.  Brad's understanding of the diverse and ever-changing needs of individual students is truly remarkable. He embraces inclusivity and diversity, adapting his approach to accommodate the unique circumstances of each student, something I can personally attest to. He empowers us to navigate certain challenges and seize opportunities, raising awareness of the myriad of possibilities available to us for skill development.  Moreover, Brad encourages us to participate in extracurricular activities, further showing his understanding of holistic importance and well-rounded education. His efforts to build strong relationships with us foster a sense of belonging and community, which creates a supportive environment where we can thrive.  In addition to all these qualities, Brad regularly checks in with us, ensuring that we are on track and addressing any concerns or obstacles we may face along the way.  This past year has been extremely tough for me, there have been points I have thought about giving up on my dream and my degree. But Brad has always been there to listen, support, and motivate me. Brad is a credit to our university and a shining example of a professional mentor, his support and guidance this year have been life-changing for me and I will always be incredibly grateful for everything Brad has given me this past academic year. So it is an absolute honour to be able to nominate him for this award."  </blockquote>
+<br>
+
+</details>
+
+<details><summary><b><u>2023</u></b></summary>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male2.png?raw=true" alt="Male Avatar 2" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2023)</div>
+<blockquote>“Super clear about what we were expected to do and always willing to expand/simplify when we didn’t understand.”</blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female5.png?raw=true" alt="Female Avatar 5" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2023)</div>
+<blockquote>“Brad explained everything very well and listened to any questions people had, no matter how silly they may have sounded. It was refreshing to see someone really eager to help and clearly knowledgeable with their subject, as well as making tough topics much easier with his teaching style and general contagious cheerful mood!” </blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female6.png?raw=true" alt="Female Avatar 6" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2023)</div>
+<blockquote>“Seeing how Brad helps all of us and is very kind. Brad made me feel quite comfortable. I never felt that he was being judgmental. He is full of positive vibes!” </blockquote>
+<br>
+
+<img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/male3.png?raw=true" alt="Male 3" width="100" height="100" style="float:right; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  
+<div>Student End-of-Year Evaluation (2023)</div>
+<blockquote>"MARKING - The feedback was always clear so the improvements that needed to be made were always clear and actually helpful/informative"  </blockquote>
+<br>
+
+</details>
+
 <details><summary><b><u>2022</u></b></summary>
 
 <img src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/avatar/female1.png?raw=true" alt="Female 1" width="100" height="100" style="float:left; border-width: 10px; margin-right: 20px; margin-left: 20px;"/>  

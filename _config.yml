@@ -57,6 +57,7 @@ round-avatar: true
 social-network-links:
 #  email: "someone@example.com"
 #  facebook: 
+  ORCID: 0000-0003-4636-2210
   github: b-kennedy0
   twitter: bradpsych
   linkedin: bradleykennedy1
@@ -79,7 +80,6 @@ social-network-links:
 #  telegram: 
 #  calendly: 
 #  mastodon: 
-#  ORCID: 
 #  google-scholar: 
 
 # If you want your website to generate an RSS feed, provide a description

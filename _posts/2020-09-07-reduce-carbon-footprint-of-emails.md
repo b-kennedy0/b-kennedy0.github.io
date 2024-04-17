@@ -7,6 +7,7 @@ last-updated: 07/09/2020
 permalink: /blog/email-footprint/
 thumbnail-img: /assets/img/blog/email-footprint/email-icon.webp
 cover-img: /assets/img/blog/email-footprint/trees-forest.jpg
+author: Bradley J. Kennedy
 layout: post
 ---
 ### Contents

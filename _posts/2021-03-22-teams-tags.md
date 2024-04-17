@@ -7,6 +7,7 @@ last-updated: 22/03/2021
 permalink: /blog/teams-tags/
 thumbnail-img: /assets/img/blog/teams-tags/icon-tags.jpeg
 cover-img: /assets/img/blog/teams-tags/cover-tags.jpg
+author: Bradley J. Kennedy
 layout: post
 ---
 # Got a Team with lots of users and only need to notify a select few? Here is the answer!

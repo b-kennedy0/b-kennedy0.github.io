@@ -7,6 +7,7 @@ last-updated: 09/03/2021
 permalink: /blog/teams-banner/
 thumbnail-img: /assets/img/blog/teams-banner/announcement.png
 cover-img: /assets/img/blog/teams-banner/cat-teams.jpg
+author: Bradley J. Kennedy
 layout: post
 ---
 # If you would like to create a custom banner for a Teams announcement, use this quick guide!

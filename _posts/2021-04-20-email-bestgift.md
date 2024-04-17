@@ -6,6 +6,7 @@ readtime: true
 last-updated: 20/04/2021
 permalink: /blog/bestgift/
 thumbnail-img: /assets/img/blog/email-bestgift/gift-outlook.png
+author: Bradley J. Kennedy
 layout: post
 ---
 ## Mac

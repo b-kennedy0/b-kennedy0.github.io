@@ -7,6 +7,7 @@ last-updated: 28/11/2023
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
+author: Bradley J. Kennedy
 layout: post
 ---
 {: .box-note}

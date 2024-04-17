@@ -6,6 +6,7 @@ readtime: true
 last-updated: 11/01/2021
 permalink: /blog/slides-video/
 thumbnail-img: /assets/img/blog/slides-video/presentation-icon.jpg
+author: Bradley J. Kennedy
 layout: post
 ---
 # Steps:

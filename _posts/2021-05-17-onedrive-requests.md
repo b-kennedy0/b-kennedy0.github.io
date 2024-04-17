@@ -7,6 +7,7 @@ last-updated: 17/05/2021
 permalink: /blog/onedrive-requests/
 thumbnail-img: /assets/img/blog/onedrive-requests/fileicon.png
 cover-img: /assets/img/blog/onedrive-requests/shelves.jpeg
+author: Bradley J. Kennedy
 layout: post
 ---
 {: .box-warning}

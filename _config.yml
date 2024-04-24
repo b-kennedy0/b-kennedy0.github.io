@@ -19,7 +19,8 @@ navbar-links:
     #- Open Science: "open-science"
     #- Projects: "projects"
     #- Qualifications: "qualifications"
-    #- Published Work: "publications"
+    - Published Work: "https://cv.bradleykennedy.co.uk/#Scholarly%20Activity"
+    - Training: "https://cv.bradleykennedy.co.uk/#Training"
     - Awards: "awards"
 #  Employment:
 #    - Current: "current-employment"

@@ -13,12 +13,13 @@ author: Bradley Kennedy
 navbar-links:
   Home: "/"
   Academia :
+    - CV: "cv"
     - Teaching: "teaching"
     - Research: "research"
-    - Open Science: "open-science"
-    - Projects: "projects"
+    #- Open Science: "open-science"
+    #- Projects: "projects"
     #- Qualifications: "qualifications"
-    - Published Work: "publications"
+    #- Published Work: "publications"
     - Awards: "awards"
 #  Employment:
 #    - Current: "current-employment"

@@ -14,7 +14,7 @@ nav-short: true
 | Core Topics in Psychology (PS4010) | Core Topics in Psychology (PS4010) |
 | Work Based Learning (WBL5101) | Work Based Learning (WBL5101)  |
 | Understanding the Mind (PS5017) | Understanding the Mind (PS5017) |
-| Level 5 Seminars | Psychology of the Unusal (PS4011) |
+| Level 5 Seminars | Psychology of the Unusual (PS4011) |
 | Level 6 Seminars | Applications of Psychology in Education (PS4016) |
 | Observing Dissertation Supervision (Level 6) | Forensic Psychology (PS4019)  |
 | Researching Thought and Behaviour (Level 7 - Masters) | Understanding the Mind (PS5017) |

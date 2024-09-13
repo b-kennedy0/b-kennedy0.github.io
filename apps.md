@@ -21,9 +21,9 @@ Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.
 ---
 --->
 
-<a><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/UOC-Logo_2010.jpg?raw=true" alt="UOCLogo" width="160" height="50" /></a>
+<a title="Open App" href="http://apps.bradk.co.uk/timetable" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/UOC-Logo_2010.jpg?raw=true" alt="UOCLogo" width="160" height="50" /></a>
 # Chester Timetable convert to Calendar (ics) file
-#### * Not publicly accessible
+#### Click/Tap icon to run >>  Note* Not publicly accessible, password required
 This app loads staff timetables from the University of Chester and converts them to an ics file which can be imported into a Calendar.
 
 Contact me directly for access >> <a title="Contact" href="https://bradleykennedy.co.uk/contact" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/email-icon.png?raw=true" alt="Email-icon" width="63" height="63" /></a>  

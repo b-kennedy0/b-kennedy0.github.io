@@ -11,7 +11,7 @@ author: Bradley J. Kennedy
 layout: post
 ---
 {: .box-note}
-<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> I don't update this post often, some links may no longer work, sorry!.
+<i class="fas fa-exclamation-circle icon-yellow" aria-hidden="true"></i> I don't update this post often, some links may no longer work, sorry!
 
 I am continuously inspired by tech and amazing things that make life easier. Here I'm attempting to keep track of them. I hope that by having this page, you might also find something useful.
 
@@ -121,7 +121,7 @@ To set this up:
 See Scite.ai above
 
 {: .box-note}
-<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Turns out I haven't used Research Rabbit and Connected Papers as much as I thought I would. I'm leaving them here just in case other people find them useful.
+<i class="fas fa-exclamation-circle icon-yellow" aria-hidden="true"></i> Turns out I haven't used Research Rabbit and Connected Papers as much as I thought I would. I'm leaving them here just in case other people find them useful.
 
 [Research Rabbit](https://researchrabbitapp.com/){:target="_blank" rel="noopener"} is like Spotify for academic articles! You add a few that you are interested in, and it will use AI to make intelligent suggestions for other related articles. You can also use it to find works that cite a particular paper.
 

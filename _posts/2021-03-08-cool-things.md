@@ -3,7 +3,7 @@ title: Cool things
 subtitle: Awesome things I use/plan to use
 tags: [tech, advice]
 readtime: true
-last-updated: 28/11/2023
+last-updated: 23/10/2024
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
@@ -11,11 +11,9 @@ author: Bradley J. Kennedy
 layout: post
 ---
 {: .box-note}
-<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Directly inspired by Alexandra Lautarescu's [blog post](https://www.alautarescu.com/post/what-i-use-during-my-phd){:target="_blank" rel="noopener"} (also see amazing [blog on Repro2020](https://www.alautarescu.com/post/advanced-methods-in-reproducible-science-2020){:target="_blank" rel="noopener"}).
+<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> I don't update this post often, some links may no longer work, sorry!.
 
-I am continuously inspired by tech and amazing things that make life easier. Here I'm attempting to keep track of them.
-
-I hope that by having this page, you might also find something useful.
+I am continuously inspired by tech and amazing things that make life easier. Here I'm attempting to keep track of them. I hope that by having this page, you might also find something useful.
 
 ### Contents
 {:.no_toc}
@@ -27,11 +25,11 @@ I hope that by having this page, you might also find something useful.
 
 ## Computer setup
 
-I have an Apple M1 Macbook Air 2020. The silicon chip makes this very quick! I have no problems running multiple programmes and lots of browser tabs. Many apps are getting silicon-specific updates.  
+I currently have an Apple M1 Macbook Air 2020. The silicon chip makes this very quick! I have no problems running multiple programmes and lots of browser tabs. Many apps are getting silicon-specific updates.  
 
 ## Analysis
 
-During my undergraduate and master's degrees, I conducted analyses through SPSS, but since starting my PhD, I have learned to use [R](https://www.r-project.org/){:target="_blank" rel="noopener"} (and [RStudio](https://rstudio.com/products/rstudio/download/){:target="_blank" rel="noopener"}). The resources that I used to get started are:
+During my undergraduate and master's degrees, I conducted analyses through SPSS, but during my PhD, I learned to use [R](https://www.r-project.org/){:target="_blank" rel="noopener"} (and [RStudio](https://rstudio.com/products/rstudio/download/){:target="_blank" rel="noopener"}). Some resources to get started:
 
 * [Getting Used to R, RStudio, and R Markdown](https://ismayc.github.io/rbasics-book/index.html){:target="_blank" rel="noopener"}
 * [R for Data Science](https://r4ds.had.co.nz/){:target="_blank" rel="noopener"}
@@ -47,7 +45,7 @@ I share my code on [Open Science Framework](https://osf.io/ekmyr/){:target="_bla
 
 ## Coding
 
-For coding, I primarily use [VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - It is a comprehensive environment for writing and editing code. It contains many powerful tools, such as debugging, synchronising with Git, and even AI code checking! It takes a little bit of getting used to, but it is worth the investment.
+For coding, I use [VS Code](https://code.visualstudio.com/){:target="_blank" rel="noopener"} - It is a comprehensive environment for writing and editing code. It contains many powerful tools, such as debugging, synchronising with Git, and even AI code checking! It takes a little bit of getting used to, but it is worth the investment.
 
 A useful tool for converting Microsoft Word-written pieces into markdown (including links and heading formatting etc.) - [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/){:target="_blank" rel="noopener"}  
 
@@ -59,7 +57,8 @@ One of my greatest desires, across both my personal and professional life, is to
 
 \* *It is still fairly easy to make a mistake in the automation programming!*
 
-[Make](https://www.make.com/en){:target="_blank" rel="noopener"} is a **SUPER** powerful online automation platform. I cannot recommend Make enough! I use it so much in my professional and personal life. Make can connect to a large number of other services (and even if the service you use isn't listed, they have a powerful API and web-hook service so that practically anything can be linked!). By linking together services, you can create a process. For example, Thing A triggers process B, which passes information to service C etc. The process you make can be as long/short, complex/simple as you require - take a look at just two examples below.
+[Make](https://www.make.com/en){:target="_blank" rel="noopener"} is a **SUPER** powerful online automation platform. I cannot recommend Make enough! I use it in my professional and personal life. Make can connect to a large number of other services (and even if the service you use isn't listed, they have a powerful API and web-hook service so that practically anything can be linked!). By linking together services, you can create a process. 
+For example, Thing A triggers process B, which passes information to service C etc. The process you make can be as long/short, complex/simple as you require - take a look at just two examples below.
 
 ![Make Example 1](/assets/img/blog/cool-things/Make1.png)
 *Example 1 - Automating voucher sending and mailing list sign-up*
@@ -67,7 +66,7 @@ One of my greatest desires, across both my personal and professional life, is to
 ![Make Example 2](/assets/img/blog/cool-things/Make2.png)
 *Example 2 - Inventory management*
 
-[Parsehub](https://www.parsehub.com/){:target="_blank" rel="noopener"} is a free web scraping service. I tend to use this as part of an automation cycle to scrape new data from websites to make comparisons to feed into a data dashboard. An example might be:
+[Parsehub](https://www.parsehub.com/){:target="_blank" rel="noopener"} is a free web scraping service. I use this as part of an automation cycle to scrape new data from websites to make comparisons to feed into data dashboards. An example might be:
 
 1. Make uses a webhook to trigger Parsehub
 2. Parsehub scrapes a participant sign-up page
@@ -85,7 +84,7 @@ One of my greatest desires, across both my personal and professional life, is to
 
 There are a few choices, and you ought to pick them depending on your audience. 
 
-* The visually pleasing way - e.g. for Twitter: [Carbon](https://carbon.now.sh/){:target="_blank" rel="noopener"}  
+* The visually pleasing way - e.g. for Twitter/X: [Carbon](https://carbon.now.sh/){:target="_blank" rel="noopener"}  
 * The user-friendly way - e.g. for helping solve an issue:  [GitHub Gists](https://gist.github.com/discover){:target="_blank" rel="noopener"}  
 
 **Sharing full-length code:**
@@ -104,15 +103,25 @@ Check some out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 
 **Microsoft Word combined with:**
 
+* [Scite.ai](https://scite.ai){:target="_blank" rel="noopener"} - *NOTE: This is a paid app*. Finding and evaluating research. Scite uses an AI assistant to search the literature and transform the way you discover, evaluate, and understand research on any topic.
 * [Zotero](https://www.zotero.org/){:target="_blank" rel="noopener"} - An open-source citation and literature manager. Helpful in generating formatted reference list.
 * [Recite](https://reciteworks.com/login){:target="_blank" rel="noopener"} - Recite checks that your in-text citations match the reference list at the end of your work.
 * [Grammarly](https://www.grammarly.com/){:target="_blank" rel="noopener"} - Checking for spelling, grammar, and excess words. 
-* In-text comments - To chat with myself, e.g., "can't think of the right word or the paragraph could be phrased better, but not right now."
-* AutoCorrect - Replacing text with formatted text to make it easier to find when finalising the document. E.g., Replacing (REF) with highlighted (<mark>REF</mark>).
+* AutoCorrect (Mac: Tools < AutoCorrect Options) - Replacing text with formatted text to make it easier to find when finalising the document. E.g., Replacing (REF) with highlighted and bolded (<mark><strong>REF</strong></mark>). 
+To set this up: 
+(1) Create the highlighted/bold version of (REF) on the page of a normal word document 
+(2) Highlight that text and go to Tools < AutoCorrection Options
+(3) That text should already appear in the 'With' both (you may have to toggle 'Formatted text' to see it with the highlight)
+(4) You need to enter the text you'd like to "trigger" it with in the 'Replace' box. 
 
 <img style="display: block; margin-left: auto; margin-right: auto;" src="/assets/img/blog/cool-things/autocorrect.png" alt="" width="319" height="143" />
 
-**Searching for related articles:**
+**Searching for literature:**
+
+See Scite.ai above
+
+{: .box-note}
+<i class="fas fa-exclamation icon-yellow" aria-hidden="true"></i> Turns out I haven't used Research Rabbit and Connected Papers as much as I thought I would. I'm leaving them here just in case other people find them useful.
 
 [Research Rabbit](https://researchrabbitapp.com/){:target="_blank" rel="noopener"} is like Spotify for academic articles! You add a few that you are interested in, and it will use AI to make intelligent suggestions for other related articles. You can also use it to find works that cite a particular paper.
 
@@ -175,8 +184,6 @@ Lots of great visualisations from [R Psychologist](https://rpsychologist.com/viz
 [OpenVPN](https://openvpn.net/){:target="_blank" rel="noopener"} - I use this to make a secure connection to my campus network to safely transfer files etc.
 
 [Pym](https://apps.apple.com/gb/app/pym/id1451733095?mt=12){:target="_blank" rel="noopener"} - A super light-weight image compressor and format converter (Mac only).
-
-[Password Generator](https://passwordsgenerator.net/){:target="_blank" rel="noopener"} - Secure password generator.
 
 [Chrome Multi-tab opener](https://chrome.google.com/webstore/detail/open-multiple-urls/oifijhaokejakekmnjmphonojcfkpbbh){:target="_blank" rel="noopener"} - Chrome add-on to open multiple URLs (handy for marking and opening multiple Turnitin pages simultaneously).
 

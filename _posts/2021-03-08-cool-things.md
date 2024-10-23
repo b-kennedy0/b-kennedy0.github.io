@@ -108,11 +108,11 @@ Check some out [here](https://apps.bradk.co.uk){:target="_blank" rel="noopener"}
 * [Recite](https://reciteworks.com/login){:target="_blank" rel="noopener"} - Recite checks that your in-text citations match the reference list at the end of your work.
 * [Grammarly](https://www.grammarly.com/){:target="_blank" rel="noopener"} - Checking for spelling, grammar, and excess words. 
 * AutoCorrect (Mac: Tools < AutoCorrect Options) - Replacing text with formatted text to make it easier to find when finalising the document. E.g., Replacing (REF) with highlighted and bolded (<mark><strong>REF</strong></mark>). 
-To set this up: 
-(1) Create the highlighted/bold version of (REF) on the page of a normal word document 
-(2) Highlight that text and go to Tools < AutoCorrection Options
-(3) That text should already appear in the 'With' both (you may have to toggle 'Formatted text' to see it with the highlight)
-(4) You need to enter the text you'd like to "trigger" it with in the 'Replace' box. 
+To set this up:
+(1) Create the highlighted/bold version of (REF) on the page of a normal word document  
+(2) Highlight that text and go to Tools < AutoCorrection Options  
+(3) That text should already appear in the 'With' both (you may have to toggle 'Formatted text' to see it with the highlight)  
+(4) You need to enter the text you'd like to "trigger" it with in the 'Replace' box.  
 
 <img style="display: block; margin-left: auto; margin-right: auto;" src="/assets/img/blog/cool-things/autocorrect.png" alt="" width="319" height="143" />
 

@@ -35,13 +35,11 @@ nav-short: true
     Open Science Framework
 </a>
 
-## Projects
+## Projects:
 
-#### Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003). 
-[More details](https://bradk.co.uk/see)
+#### Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003). - [More details](https://bradk.co.uk/see)
 
 #### Examining the asymmetry of language and the associated structural correlates.
-<img style="float: left;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/COPYB0452_DTI_thresh35_LHem.png?raw=true" width="201" height="137" />
 <img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
 
 Investigated connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance.

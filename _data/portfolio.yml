@@ -15,6 +15,6 @@
   img: wait.png
   url: https://bradley-kennedy.shinyapps.io/WaitDashboard/
 - title: 632VGS Weight App
-  description: "This app was created to assist glider pilots with weight and balance calculations for the aircraft at [632 VGS](https://632vgs.co.uk/) RAF Ternhill & RAF Woodvale."
+  description: "This app was created to assist glider pilots with weight and balance calculations for the aircraft at 632 VGS RAF Ternhill & RAF Woodvale."
   img: vgs.png
   url: https://bradley-kennedy.shinyapps.io/632VGS/

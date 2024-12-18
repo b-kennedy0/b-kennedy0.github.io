@@ -4,9 +4,25 @@ layout: page
 head-extra: noindex.html
 nav-short: true
 show-avatar: false
+css:
+  - /assets/css/portfolio.css
 ---
 <h3 style="text-align: center;">If you like these apps, please consider <a href="https://monzo.me/bradleykennedy5/5?d=Support%20for%20Apps" target="_blank" rel="noopener">supporting me</a> to cover the cost of the server.</h3>
 <h3 style="text-align: center;">Thank you!</h3>
+
+<div id="portfolio">
+    <div id="shinyapps-big">
+      {% for app in site.data.portfolio %}
+	    <div class="shinyapp">
+          <a class="applink" href="{{ app.url }}">
+            <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
+            <div class="apptitle">{{ app.title }}</div>
+            <div class="appdesc">{{ app.description }}</div>
+          </a>
+        </div>
+	  {% endfor %}
+    </div>
+</div>
 
 <!--- 
 ---
@@ -20,6 +36,14 @@ Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.
 
 ---
 --->
+
+<a title="Open App" href="https://openresearchcalendar.org" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/ORC-badge.png?raw=true" alt="" width="165" height="160" /></a>
+# Open Research Calendar  
+#### Click/Tap icon to run >>  
+The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. This translates onto a Google Calendar :calendar: which can be synced into a person’s own personal calendar (updating as new events get added). The tool is open source and is available to use for free.
+
+Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/openresearchcalendar/Open-Research-Calendar" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
+
 
 <a title="Open App" href="http://apps.bradk.co.uk/timetable" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/UOC-Logo_2010.jpg?raw=true" alt="UOCLogo" width="160" height="50" /></a>
 # Chester Timetable convert to Calendar (ics) file
@@ -42,15 +66,6 @@ Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.
 <a title="Open App" href="https://bradley-kennedy.shinyapps.io/632VGS/" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/632vgscrest.png?raw=true" alt="632vgs-crest" width="120" height="159" /></a>
 # 632VGS Weight App  
 #### Click/Tap icon to run >>  
-This app was created to assist glider pilots with weight and balance calculations for the aircraft at [632 VGS](https://632vgs.co.uk/) RAF Ternhill.  
+This app was created to assist glider pilots with weight and balance calculations for the aircraft at [632 VGS](https://632vgs.co.uk/) RAF Ternhill & RAF Woodvale.  
 
-Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/632vgs" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
-
----
-
-<a title="Open App" href="https://twitter.com/OpenResearchCal" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px; float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/logos/ORC-badge.png?raw=true" alt="" width="165" height="160" /></a>
-# Open Research Calendar (Twitter)  
-#### Click/Tap icon to run >>  
-The tool was created to serve the open research community in collating worldwide :earth_africa: open research events into one database. This translates onto a Google Calendar :calendar: which can be synced into a person’s own personal calendar (updating as new events get added). Read more [here.](https://openresearchcalendar.github.io/)  
-
-Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/openresearchcalendar/Open-Research-Calendar" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>  
+Click/Tap icon to view on Github >> <a title="Open Github" href="https://github.com/b-kennedy0/632vgs" target="_blank" rel="noopener"><img style="border-width: 10px; margin-right: 20px; margin-left: 20px;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Github-icon" width="74" height="63" /></a>

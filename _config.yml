@@ -19,14 +19,14 @@ navbar-links:
     #- Open Science: "open-science"
     #- Projects: "projects"
     #- Qualifications: "qualifications"
-    - Awards: "awards"
+    #- Awards: "awards"
 #  Employment:
 #    - Current: "current-employment"
 #    - Training: "training"
 #    - Previous: "previous-employment"
 #    - Volunteering: "volunteering"
   Other:
-#    - My Apps: "apps"
+    - My Apps: "apps"
     - Book Meeting: "book-meeting"
     - Volunteering: "volunteering"
     - Blog: "blog"

@@ -1,0 +1,16 @@
+- title: Open Research Calendar
+  description: "Open source tool to serve the open research community in collating worldwide :earth_africa: open research events into one database."
+  img: ORC-badge.png
+  url: https://openresearchcalendar.org/
+- title: Chester Timetable to Calendar App
+  description: "Note* Not publicly accessible, password required. This app loads staff timetables from the University of Chester and converts them to an ics file which can be imported into a Calendar."
+  img: UOC-Logo_2010.jpg
+  url: http://apps.bradk.co.uk/timetable
+- title: Pilot Data Explorer
+  description: "This app allows you to interact with data from the pilot study conducted as part of my PhD research. You can select two job roles and compare their characteristic ratings."
+  img: pilotdataicon.png
+  url: http://apps.bradk.co.uk/pilotdata
+- title: 632VGS Weight App
+  description: "This app was created to assist glider pilots with weight and balance calculations for the aircraft at [632 VGS](https://632vgs.co.uk/) RAF Ternhill & RAF Woodvale."
+  img: 632vgscrest.png
+  url: https://bradley-kennedy.shinyapps.io/632VGS/

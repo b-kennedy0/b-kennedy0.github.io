@@ -7,32 +7,12 @@ nav-short: true
 ---
 <script src="{{ site.baseurl }}/assets/js/expandcollapse.js" type="text/javascript"></script>
 
-<script>
-// Calculate the number of years since 2017
-const currentYear = new Date().getFullYear();
-const yearsSince2017 = currentYear - 2017;
-
-// Function to convert numbers to words (basic example for small numbers)
-function numberToWords(num) {
-    const words = [
-        "zero", "one", "two", "three", "four", "five", "six", "seven", 
-        "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", 
-        "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"
-    ];
-    return words[num] || num.toString(); // Fallback to numeral if not in the range
-}
-
-// Convert the result into a word
-const yearsInWords = numberToWords(yearsSince2017);
-
-// Display the word in the sentence
-document.getElementById('years-since').textContent = yearsInWords;
-</script>
+<script src="{{ site.baseurl }}/assets/js/yearssince.js" type="text/javascript"></script>
 
 <h4>Overview:</h4>
-<div>I have over <p id="years-since">Loading...</p> years of experience teaching in Higher Education. My portfolio includes the teaching of small and large groups (e.g., lectures, seminars, and lab classes), both face-to-face and online. I have taught various core and elective modules at Levels 4, 5 and 7. I have delivered experiential lab classes on research methods (quantitative and qualitative) to undergraduate and postgraduate students, I have also led seminars on core topics and have tutored students on work placements. Furthermore, I have designed and delivered large-group lectures on core psychology topics, including questionable research ethics and the history of experimental psychology. I also have experience observing the supervision of undergraduate research projects. I have extensive knowledge of assessment, having marked on more than ten different modules in formats including lab reports, essays, and presentations.</div>
-
-A selection of the modules I have taught on are listed below:
+<div>I have over <p id="years-since">Loading...</p> years of experience teaching in Higher Education. My portfolio includes the teaching of small and large groups (e.g., lectures, seminars, and lab classes), both face-to-face and online. I have taught various core and elective modules at Levels 4, 5 and 7. I have delivered experiential lab classes on research methods (quantitative and qualitative) to undergraduate and postgraduate students, I have also led seminars on core topics and have tutored students on work placements. Furthermore, I have designed and delivered large-group lectures on core psychology topics, including questionable research ethics and the history of experimental psychology. I also have experience observing the supervision of undergraduate research projects. I have extensive knowledge of assessment, having marked on more than ten different modules in formats including lab reports, essays, and presentations.
+<br>
+A selection of the modules I have taught on are listed below:</div>
 
 | Teaching: | Marking/ Draft Reading: |
 | ----------- | ----------- |

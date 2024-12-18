@@ -18,7 +18,7 @@ css:
       <div id="shinyapps-big">
         {% for app in site.data.portfolio %}
         <div class="shinyapp">
-            <a class="applink" href="{{ app.url }}">
+            <a class="applink" href="{{ app.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
               <div class="apptitle">{{ app.title }}</div>
               <div class="appdesc">{{ app.description }}</div>

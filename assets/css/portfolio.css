@@ -59,8 +59,6 @@ body, html {
   color: inherit;
   display: block;
   text-decoration: none !important;
-  target: _blank;
-  rel: noopener noreferrer;
 }
 #shinyapps-big .shinyapp .appdesc {
   padding: 0 0.9375rem 0.9375rem;

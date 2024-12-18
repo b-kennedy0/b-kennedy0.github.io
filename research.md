@@ -6,49 +6,48 @@ css: /assets/css/box.css
 show-avatar: false
 nav-short: true
 ---
-<a
-id="cy-effective-orcid-url"
-class="underline"
-    href="https://orcid.org/0000-0003-4636-2210"
-    target="orcid.widget"
-    rel="me noopener noreferrer"
-    style="vertical-align: top">
-    <img
-    src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-    style="width: 1em; margin-inline-start: 0.5em"
-    alt="ORCID iD icon"/>
-    https://orcid.org/0000-0003-4636-2210
+## Researcher Profiles:
+<a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record">
+<img
+    src="/assets/img/logos/ORCIDiD_icon.png"
+    alt="ORCID iD"/>
+    0000-0003-4636-2210
 </a>
 
-# 2018 - Present
+<a href="https://scholar.google.co.uk/citations?user=5GAAfKoAAAAJ&hl=en" aria-label="Google Scholar Profile">
+<img
+    src="/assets/img/Google_Scholar_logo.png"
+    alt="Google Scholar Profile"/>
+    Google Scholar Profile
+</a>
 
-##  To view these projects check out my [PhD Page](https://bradk.co.uk/phd)  
+<a href="https://www.scopus.com/authid/detail.uri?authorId=57233351700" aria-label="Scopus Profile">
+<img
+    src="/assets/img/logos/scopus-logo.png"
+    alt="Scopus Profile"/>
+    Scopus Profile 57233351700
+</a>
 
-Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003).
+<a href="https://osf.io/ekmyr" aria-label="Open Science Framework">
+<img
+    src="/assets/img/logos/osf-logo-small.png"
+    alt="Open Science Framework"/>
+    Open Science Framework
+</a>
 
----
-# 2016-2017  
-Postgraduate MSc project 'Neuroimaging'
+## Projects
 
+#### Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003). 
+[More details](https://bradk.co.uk/see)
+
+#### Examining the asymmetry of language and the associated structural correlates.
 <img style="float: left;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/COPYB0452_DTI_thresh35_LHem.png?raw=true" width="201" height="137" />
-
-Examining the asymmetry of language and the associated structural correlates.
-
 <img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
 
-MSc project investigated connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance.
+Investigated connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance.
 
 <div id="content-desktop">
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </div>
 
----
-# 2015-2016
-Undergraduate BSc project 'Psychology with Neuropsychology'
-
-Hand preference for gesturing and the link to hemispheric language asymmetry in the neurodevelopmentally typical population.
-
----
-
-<h3 style="text-align: center;">Got a question?</h3>
-<h3 style="text-align: center;"><a href="/contact">Get in touch!</a></h3>
+#### Hand preference for gesturing and the link to hemispheric language asymmetry in the neurodevelopmentally typical population.

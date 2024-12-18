@@ -1,6 +1,6 @@
 ---
 title: My Apps
-layout: page
+layout: base
 head-extra: noindex.html
 nav-short: true
 show-avatar: false

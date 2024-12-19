@@ -42,7 +42,7 @@ css:
 <div id="shinyapps-big">
         {% for project in site.data.projects %}
         <div class="shinyapp">
-            {if project.url != "" %}
+            {% if project.url != "" %}
               <a class="applink" href="{{ project.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
               <div class="apptitle">{{ project.title }}</div>

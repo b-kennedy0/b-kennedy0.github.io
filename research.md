@@ -11,33 +11,27 @@ css:
 
 ## Researcher Profiles:
 
-<a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record" target="_blank" rel="noopener noreferrer">
-<img
-    src="/assets/img/logos/ORCIDiD_icon.png"
-    alt="ORCID iD"/>
-    0000-0003-4636-2210
+<div class="researcher-profiles">
+  <a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record" target="_blank" rel="noopener noreferrer" class="profile-card">
+  <img src="/assets/img/logos/ORCIDiD_icon.png" alt="ORCID iD"/>
+  <span>0000-0003-4636-2210</span>
 </a>
 
-<a href="https://scholar.google.co.uk/citations?user=5GAAfKoAAAAJ&hl=en" aria-label="Google Scholar Profile" target="_blank" rel="noopener noreferrer">
-<img
-    src="/assets/img/Google_Scholar_logo.png"
-    alt="Google Scholar Profile"/>
-    Google Scholar Profile
+<a href="https://scholar.google.co.uk/citations?user=5GAAfKoAAAAJ&hl=en" aria-label="Google Scholar Profile" target="_blank" rel="noopener noreferrer" class="profile-card">
+  <img src="/assets/img/Google_Scholar_logo.png" alt="Google Scholar Profile"/>
+  <span>Google Scholar Profile</span>
 </a>
 
-<a href="https://www.scopus.com/authid/detail.uri?authorId=57233351700" aria-label="Scopus Profile" target="_blank" rel="noopener noreferrer">
-<img
-    src="/assets/img/logos/scopus-logo.png"
-    alt="Scopus Profile"/>
-    Scopus Profile 57233351700
+<a href="https://www.scopus.com/authid/detail.uri?authorId=57233351700" aria-label="Scopus Profile" target="_blank" rel="noopener noreferrer" class="profile-card">
+  <img src="/assets/img/logos/scopus-logo.png" alt="Scopus Profile"/>
+  <span>Scopus Profile 57233351700</span>
 </a>
 
-<a href="https://osf.io/ekmyr" aria-label="Open Science Framework" target="_blank" rel="noopener noreferrer">
-<img
-    src="/assets/img/osf-logo-small.png"
-    alt="Open Science Framework"/>
-    Open Science Framework
+<a href="https://osf.io/ekmyr" aria-label="Open Science Framework" target="_blank" rel="noopener noreferrer" class="profile-card">
+<img src="/assets/img/osf-logo-small.png" alt="Open Science Framework"/>
+  <span>Open Science Framework</span>
 </a>
+</div>
 
 ## Projects:
 

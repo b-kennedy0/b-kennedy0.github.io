@@ -92,7 +92,9 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
 }
 .profile-card {

@@ -37,6 +37,19 @@ nav-short: true
 
 ## Projects:
 
+<div id="shinyapps-big">
+        {% for project in site.data.projects %}
+        <div class="shinyapp">
+            <a class="applink" href="{{ project.url }}" target="_blank" rel="noopener">
+              <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
+              <div class="apptitle">{{ project.title }}</div>
+              <div class="appdesc">{{ project.description }}</div>
+            </a>
+        </div>
+      {% endfor %}
+</div>
+
+
 #### Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003). - [More details](https://bradk.co.uk/see)
 
 #### Examining the asymmetry of language and the associated structural correlates.

@@ -6,7 +6,12 @@
         {
             "label": "Build Drafts",
             "type": "shell",
-            "command": "bundle exec jekyll serve --drafts"
+            "command": "bundle exec jekyll serve --drafts",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

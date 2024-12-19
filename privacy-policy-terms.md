@@ -6,7 +6,7 @@ nav-short: true
 ---
 <a href="#" onclick="document.cookie='cookiebar=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; setupCookieBar(); return false;">Click here to revoke the Cookie consent</a>
 
-# Effective date: January 01, 2025
+# Last Updated: January 01, 2025
 *Bradley Kennedy Mobile* ("us", "we", or "our") operates the www.bradleykennedy.co.uk website and the Bradley Kennedy Mobile mobile application (the "Service").  
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
 We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms.  
@@ -30,7 +30,7 @@ When you access the Service by or through a mobile device, this Usage Data may i
 *Tracking & Cookies Data*  
 We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.  
 Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyse our Service.  
-You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.  
+You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. We use a cookie consent banner to obtain user consent as required under UK law. For more details, visit our Cookie Policy.  
 
 Examples of Cookies we use:  
 Session Cookies: We use Session Cookies to operate our Service.  
@@ -63,7 +63,7 @@ To protect the personal safety of users of the Service or the public
 To protect against legal liability  
 
 **Security Of Data**  
-The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.  
+The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security. We use measures such as encryption, firewalls, and access controls to protect Personal Data against unauthorised access or disclosure.  
 
 **Service Providers**  
 We may employ third party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analysing how our Service is used.  

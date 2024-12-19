@@ -1,11 +1,12 @@
 {
     "spellright.language": [
-        "en"
+        "en_GB"
     ],
     "spellright.documentTypes": [
         "markdown",
         "latex",
         "plaintext"
     ],
-    "grammarly.config.documentDialect": "british"
+    "grammarly.config.documentDialect": "british",
+    "cSpell.language": "en-GB"
 }

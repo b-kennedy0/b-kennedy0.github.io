@@ -8,7 +8,9 @@ nav-short: true
 css:
   - /assets/css/portfolio.css
 ---
+
 ## Researcher Profiles:
+
 <a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record" target="_blank" rel="noopener noreferrer">
 <img
     src="/assets/img/logos/ORCIDiD_icon.png"
@@ -41,21 +43,23 @@ css:
 
 <div id="shinyapps-big">
         {% for project in site.data.projects %}
-        <div class="shinyapp">
-            {% if project.url != "" %}
+        {% if project.url %}
+          <div class="shinyapp">
               <a class="applink" href="{{ project.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
               <div class="apptitle">{{ project.title }}</div>
               <div class="appdesc">{{ project.description }}</div>
             </a>
-            {% else %}
-              <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
-              <div class="apptitle">{{ project.title }}</div>
-              <div class="appdesc">{{ project.description }}</div>
-            {% endif %}
-        </div>
-      {% endfor %}
-</div>
+          </div>
+        {% else %}
+          <div class="shinyapp">
+            <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
+            <div class="apptitle">{{ project.title }}</div>
+            <div class="appdesc">{{ project.description }}</div>
+          </div>
+        {% endif %}
+        {% endfor %}
+  </div>
 
 <div id="content-desktop">
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>

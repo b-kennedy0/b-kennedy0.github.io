@@ -5,6 +5,8 @@ cover-img: "/assets/img/brain_cover.jpg"
 css: /assets/css/box.css
 show-avatar: false
 nav-short: true
+css:
+  - /assets/css/portfolio.css
 ---
 ## Researcher Profiles:
 <a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record" target="_blank" rel="noopener noreferrer">

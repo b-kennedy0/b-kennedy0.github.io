@@ -42,25 +42,21 @@ css:
 <div id="shinyapps-big">
         {% for project in site.data.projects %}
         <div class="shinyapp">
-            <a class="applink" href="{{ project.url }}" target="_blank" rel="noopener">
+            {if project.url != "" %}
+              <a class="applink" href="{{ project.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
               <div class="apptitle">{{ project.title }}</div>
               <div class="appdesc">{{ project.description }}</div>
             </a>
+            {% else %}
+              <img class="appimg" src="/assets/img/screenshots/{{ project.img }}" />
+              <div class="apptitle">{{ project.title }}</div>
+              <div class="appdesc">{{ project.description }}</div>
+            {% endif %}
         </div>
       {% endfor %}
 </div>
 
-
-#### Exploring the Parameters of Intentionality Judgements Utilising the Side-Effect Effect (SEE; Knobe, 2003). - [More details](https://bradk.co.uk/see)
-
-#### Examining the asymmetry of language and the associated structural correlates.
-<img style="float: right;" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/brain1.jpg?raw=true" alt="" width="327" height="245" />
-
-Investigated connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance.
-
 <div id="content-desktop">
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </div>
-
-#### Hand preference for gesturing and the link to hemispheric language asymmetry in the neurodevelopmentally typical population.

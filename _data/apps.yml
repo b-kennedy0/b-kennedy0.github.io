@@ -3,7 +3,7 @@
   img: orc.png
   url: https://openresearchcalendar.org/
 - title: Timetable to Calendar App
-  description: "Not publicly accessible, password required. This app converts University of Chester staff timetable to an ics file which can be imported into a personal Calendar."
+  description: "Not publicly accessible, password required. This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
   img: timetable.png
   url: http://apps.bradk.co.uk/timetable
 - title: Pilot Data Explorer

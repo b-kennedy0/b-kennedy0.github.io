@@ -80,4 +80,5 @@ You can press 'Remove Macros and Save'.
 
 {: .box-note}
 :computer: Windows users: You just need to press 'Yes' to the message that pops up.
+
 ![Save message](/assets/img/blog/remove-notes/SaveMessage.png)

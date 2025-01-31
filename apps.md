@@ -17,7 +17,7 @@ css:
 <h3 style="text-align: center;">Thank you!</h3>
       <div id="shinyapps-big">
         {% for app in site.data.apps %}
-        {if app.url %}
+        {% if app.url %}
         <div class="shinyapp">
             <a class="applink" href="{{ app.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />

@@ -17,6 +17,7 @@ css:
 <h3 style="text-align: center;">Thank you!</h3>
       <div id="shinyapps-big">
         {% for app in site.data.apps %}
+        {if app.url %}
         <div class="shinyapp">
             <a class="applink" href="{{ app.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
@@ -24,6 +25,13 @@ css:
               <div class="appdesc">{{ app.description }}</div>
             </a>
           </div>
+        {% else %}
+          <div class="shinyapp">
+            <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
+            <div class="apptitle">{{ app.title }}</div>
+            <div class="appdesc">{{ app.description }}</div>
+          </div>
+        {% endif %}
       {% endfor %}
       </div>
     </div>

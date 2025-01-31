@@ -1,9 +1,13 @@
+- title: Kennedy Marking Tracker (UoC Only)
+  description: "[Not publicly accessible, request access.] An Excel app to speed up and track the administration of marking assessments on Turnitin."
+  img: marking-tracker.png
+  url: https://bradleykennedy.co.uk/assets/Kennedy_Marking_Tracker_V1.xlsx
 - title: Open Research Calendar
   description: "Open source tool to serve the open research community in collating worldwide :earth_africa: open research events into one database."
   img: orc.png
   url: https://openresearchcalendar.org/
 - title: Timetable to Calendar App
-  description: "Not publicly accessible, password required. This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
+  description: "[Not publicly accessible, password required.] This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
   img: timetable.png
   url: http://apps.bradk.co.uk/timetable
 - title: Pilot Data Explorer

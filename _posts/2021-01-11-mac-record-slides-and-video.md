@@ -1,7 +1,7 @@
 ---
-title: How to record PowerPoint with video in corner (Mac only)
+title: PowerPoint - How to record with video in the corner (Mac only)
 subtitle: Useful for recording your slides with your face in the corner
-tags: [tech, tips]
+tags: [tech, tips, PowerPoint]
 readtime: true
 last-updated: 11/01/2021
 permalink: /blog/slides-video/

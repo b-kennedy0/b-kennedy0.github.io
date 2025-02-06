@@ -1,7 +1,7 @@
 ---
 title: PowerPoint - Remove presenter notes quickly from multiple slides
 subtitle: Need to get rid of notes from your slide deck? Here's how to do it in 3 simple steps!
-tags: [tech, tips]
+tags: [tech, tips, PowerPoint]
 readtime: true
 last-updated: 21/01/2025
 permalink: /blog/remove-notes/

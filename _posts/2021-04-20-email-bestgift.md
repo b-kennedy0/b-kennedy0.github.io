@@ -1,7 +1,7 @@
 ---
 title: Outlook - The Best Gift
 subtitle: Treat your favourite colleague to something nice
-tags: [tech, tips]
+tags: [tech, tips, Outlook]
 readtime: true
 last-updated: 20/04/2021
 permalink: /blog/bestgift/

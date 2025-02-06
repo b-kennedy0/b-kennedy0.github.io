@@ -1,7 +1,7 @@
 ---
-title: Custom Banner for Teams Announcements
+title: Teams - Custom Banner for Teams Announcements
 subtitle: How to create an engaging customised banner for a Teams Announcement post
-tags: [tech, tips]
+tags: [tech, tips, Teams]
 readtime: true
 last-updated: 09/03/2021
 permalink: /blog/teams-banner/

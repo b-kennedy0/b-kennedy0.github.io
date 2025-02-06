@@ -1,7 +1,7 @@
 ---
-title: Use the Microsoft Teams 'Tags' feature
+title: Teams - Using the 'Tags' feature
 subtitle: How to create tags for groups of people in a Team
-tags: [tech, tips]
+tags: [tech, tips, Teams]
 readtime: true
 last-updated: 22/03/2021
 permalink: /blog/teams-tags/

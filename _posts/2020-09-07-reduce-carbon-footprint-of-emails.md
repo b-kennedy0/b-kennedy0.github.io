@@ -1,7 +1,7 @@
 ---
 title: How to save the planet by email … well, sort of (3 quick tips)
 subtitle: Emails have carbon footprints! Here's how to reduce yours
-tags: [tech, tips]
+tags: [tech, tips, Outlook, email]
 readtime: true
 last-updated: 07/09/2020
 permalink: /blog/email-footprint/

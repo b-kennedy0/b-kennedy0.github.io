@@ -1,7 +1,7 @@
 ---
 title: OneDrive - How to make file requests
 subtitle: Useful for creating assignment submissions
-tags: [tech, tips]
+tags: [tech, tips, OneDrive]
 readtime: true
 last-updated: 17/05/2021
 permalink: /blog/onedrive-requests/

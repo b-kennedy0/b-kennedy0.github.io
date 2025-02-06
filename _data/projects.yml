@@ -3,24 +3,6 @@
   img: see.png
   url: https://bradk.co.uk/see
 
-- title: "Open Access: A primer for the UK Reproducibility Network (UKRN)."
-  description: "A primer on Open Access publishing. Designed to introduce a broad audience to important topics in open and reproducible scholarship. CLICK FOR MORE DETAILS"
-  img: open-access.png
-  url: https://doi.org/10.31219/osf.io/94rsp
-
-- title: Examining the asymmetry of language and the associated structural correlates.
-  description: "Investigating connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in brain structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance."
-  img: brain.png
-
-- title: Open Research Calendar - Zenodo registration
-  description: "A community-powered open source tool for the sharing of world-wide open research events. CLICK FOR MORE DETAILS"
-  img: orc-zenodo.png
-  url: https://doi.org/10.5281/zenodo.4109949
-
-- title: Hand preference for gesturing and the link to hemispheric language asymmetry in the neurodevelopmentally typical population.
-  description: "Investigating handedness and gesturing in a real-world setting. Observations were made of conversing dyads in natural settings such as University campus cafes."
-  img: gesture.png
-
 - title: Situational factors shape moral judgements in the trolley dilemma in Eastern, Southern and Western countries in a culturally diverse sample. Nature Human Behaviour.
   description: "Nature Human Behaviour - Psychological Science Accelerator project examining the influence of situational factors on moral judgements in the trolley dilemma across 45 countries. CLICK FOR MORE DETAILS"
   img: trolley-problem.png
@@ -30,3 +12,21 @@
   description: "Journal of Cognitive Psychology - A within-subjects, multi-item conceptual replication of the Side-Effect Effect. CLICK FOR MORE DETAILS"
   img: SSMH.png
   url: https://doi.org/10.1080/20445911.2021.1971234
+
+- title: "Open Access: A primer for the UK Reproducibility Network (UKRN)."
+  description: "A primer on Open Access publishing. Designed to introduce a broad audience to important topics in open and reproducible scholarship. CLICK FOR MORE DETAILS"
+  img: open-access.png
+  url: https://doi.org/10.31219/osf.io/94rsp
+  
+- title: Open Research Calendar - Zenodo registration
+  description: "A community-powered open source tool for the sharing of world-wide open research events. CLICK FOR MORE DETAILS"
+  img: orc-zenodo.png
+  url: https://doi.org/10.5281/zenodo.4109949
+
+- title: Examining the asymmetry of language and the associated structural correlates.
+  description: "Investigating connectivity asymmetry (using Diffusion Spectrum Imaging, DSI) in brain structures such as the Arcuate Fasciculus and the Frontal Aslant Tract in individuals with atypical language dominance."
+  img: brain.png
+
+- title: Hand preference for gesturing and the link to hemispheric language asymmetry in the neurodevelopmentally typical population.
+  description: "Investigating handedness and gesturing in a real-world setting. Observations were made of conversing dyads in natural settings such as University campus cafes."
+  img: gesture.png

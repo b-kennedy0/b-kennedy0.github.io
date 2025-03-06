@@ -9,7 +9,7 @@ title: Information Sent
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f7ff;
+    background-color: #80AEEF;
 }
 .message-box {
     background: white;

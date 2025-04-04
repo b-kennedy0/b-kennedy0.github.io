@@ -114,7 +114,8 @@
         <br>
         <h4>Instructions:</h4>
         <b>1.</b> Whilst viewing the Turnitin submission box, change the number of entries being shown to 'All' (see red box in example below). Then click and drag to highlight all of the submission data, and either right click and select copy or use (PC: Ctl+C Mac: Cmd+C).
-        <img src="/assets/img/screenshots/turnitin-example.png" alt="Turnitin ID Extractor Example" style="width:100%; max-width:600px; display: block; margin-left: auto; margin-right: auto;">
+        <img src="/assets/img/screenshots/turnitin-example.png" alt="Turnitin ID Extractor Example" style="width:100%; max-width:600px; display: block; margin-left: auto; margin-right: auto; cursor: pointer;" onclick="openImageZoom()">
+        <p style="text-align: center; font-style: italic;">Click image to zoom</p>
         <br>
         <b>2.</b> Paste the data into the box below, either right click and select paste or use: (PC: Ctl+V Mac: Cmd+V).
         <br>
@@ -149,6 +150,14 @@
               document.getElementById('a').value = "No Turnitin IDs found.";
             }
           }
+
+          function openImageZoom() {
+            document.getElementById("imageZoomOverlay").style.display = "block";
+          }
+
+          function closeImageZoom() {
+            document.getElementById("imageZoomOverlay").style.display = "none";
+          }
         </script>
 
         <br>
@@ -162,6 +171,12 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- Image Zoom Overlay -->
+  <div id="imageZoomOverlay" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); text-align: center; z-index: 1000;">
+    <span onclick="closeImageZoom()" style="position: absolute; top: 20px; right: 30px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+    <img id="zoomedImage" src="/assets/img/screenshots/turnitin-example.png" style="max-width: 90%; max-height: 90%; margin-top: 5%;">
   </div>
 
   <!-- Footer Section -->

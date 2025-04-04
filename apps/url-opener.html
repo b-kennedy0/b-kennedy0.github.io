@@ -70,6 +70,105 @@
       background-color: white;
       border: none;
     }
+
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider .emoji {
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      font-size: 20px;
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    input:checked + .slider .emoji {
+      transform: translateX(26px);
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    body.dark-mode {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: #1f1f1f;
+    }
+    
+    .dark-mode .sidenav {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .row.content {
+      background-color: #121212 !important;
+    }
+
+    .dark-mode textarea,
+    .dark-mode .form-control {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border-color: #444;
+    }
+
+    .dark-mode .alert-success {
+      background-color: #2e7d32;
+      color: #dcedc8;
+    }
+
+    .dark-mode .alert-danger {
+      background-color: #b71c1c;
+      color: #ffcdd2;
+    }
+
+    .dark-mode .btn-primary,
+    .dark-mode .btn-success,
+    .dark-mode .btn-secondary {
+      border: none;
+    }
   </style>
 </head>
 
@@ -97,6 +196,12 @@
         <ul class="nav navbar-nav navbar-right">
           <!-- Future Login Option (Commented Out) -->
           <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+          <div class="text-right" style="margin-top: 10px;">
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+              <span class="slider round"><span class="emoji">☀️</span></span>
+            </label>
+          </div>
         </ul>
       </div>
     </div>
@@ -165,7 +270,7 @@
 
       <!-- Right Sidebar (Empty for Layout Purposes) -->
       <div class="col-sm-2 sidenav">
-        <div class="well"></div>
+        <!-- <div class="well"></div> -->
         <!-- Future Content (Commented Out) -->
         <!-- <div class="well"><p>Text on the right side of the screen.</p></div> -->
       </div>
@@ -181,6 +286,22 @@
     <a href="https://bradleykennedy.co.uk/contact"><font color="#ffffff">Contact</font></a>
   </footer>
 
+  <script>
+    function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+
+            const emojiSpan = document.querySelector(".slider .emoji");
+            emojiSpan.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+          }
+    // Check device for dark mode preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add("dark-mode");
+      const emojiSpan = document.querySelector(".slider .emoji");
+      emojiSpan.textContent = "🌙"; // Change emoji to moon
+      // Set the toggle to checked
+      document.getElementById("darkModeToggle").checked = true;
+    }
+  </script>
 </body>
 
 </html>

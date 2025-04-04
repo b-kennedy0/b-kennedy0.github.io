@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bulk URL Opener</title>
+  <meta title="description" content="URL Opener : Open Multiple URL online with our free Bulk URL Opener Tool. Just paste all URL in the below form & click "Open All URLs" button to open all web pages in a new tab.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #082954;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #082954;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+.well{
+background-color: white;
+border: none;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://bradleykennedy.co.uk/apps/url-opener">Brad K - Bulk URL Opener</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+	  <ul class="nav navbar-nav">
+        <li class="active"><a href="https://bradleykennedy.co.uk/apps/url-opener">Home</a></li>
+        <li><a href="https://bradleykennedy.co.uk/contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  -->
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">   
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    
+    <div class="col-sm-8 text-left"> 
+      </br>
+     Open multiple URLs at once in a single click! Simply paste your URLs into the box below and select 'Open All URLs'
+</br>
+</br>
+      <textarea class="form-control" rows="18" id="a" placeholder="Paste URL's Here" ></textarea>
+<br/>
+  
+<input type="button" class="btn btn-primary btn-lg" value="Open All URLs" onclick="openWindow()">
+
+<input type="button" value="Reset" class="btn btn-secondary btn-lg" onclick="document.getElementById(&#39;a&#39;).value=&#39;&#39;">
+</br>
+</br>
+
+<div class="alert alert-warning">
+  <strong>Note:</strong> Select 'Always allow popups' option in your browser to open multiple urls.
+</div>
+<br/>
+
+<div>
+    <h4>Troubleshooting</h4>
+    <h6>> Only ONE tab opened / No tabs opened?</h6>
+    <p>If you are unable to open multiple URLs, please check your browser settings. Most modern browsers have a built-in popup blocker that may prevent multiple tabs from opening at once. You can usually find this setting in the browser's privacy or security settings.</p>
+    <h4>Data Security</h4>
+    <p>The links you paste into this app are NOT saved. This app runs in your browser window, as such, the data is not collect or stored. If you'd like to verify this for yourself, click to <a href="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/url-opener.html" target="_blank" rel="noopener noreferrer">view the source code</a>.</p>
+</div>
+
+<script>
+
+    function openWindow() {
+        var x = document.getElementById('a').value.split('\n');
+        for (var i = 0; i < x.length; i++)
+            if (x[i].indexOf('.') > 0)
+                if (x[i].indexOf('://') < 0)
+                    window.open('http://' + x[i]);
+                else
+                    window.open(x[i]);
+    }
+</script>
+   </br>
+    </div> 
+    <div class="col-sm-2 sidenav">
+	 <div class="well">
+      </div>
+	 <!-- <div class="well">  
+        <p>Text on the right side of the screen.</p>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+ <font color="#ffffff">© 2025&nbsp; </font><a href="https://bradleykennedy.co.uk/apps/url-opener"><font color="#ffffff">Brad K - Bulk URL Opener</font></a><font color="#ffffff"> | </font><a href="https://bradleykennedy.co.uk/contact"><font color="#ffffff">Contact</font></a><font color="#ffffff"></font>
+</footer>
+
+</body>
+</html>

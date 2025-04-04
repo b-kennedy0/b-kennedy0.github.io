@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page Title -->
+  <title>Turnitin ID Extractor</title>
+
+  <!-- Meta Description for SEO -->
+  <meta name="description" content="Turnitin ID Extractor: Extract nine-digit Turnitin submission IDs from raw data for use with the Kennedy Marking Tracker.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <!-- Character Encoding -->
+  <meta charset="utf-8">
+
+  <!-- Responsive Design Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Navigation Bar Styling */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #082954;
+    }
+
+    /* Grid Layout Adjustments */
+    .row.content {
+      height: 450px;
+    }
+
+    /* Sidebar Styling */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #082954;
+      color: white;
+      padding: 15px;
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+
+    /* Styling for the Well Component */
+    .well {
+      background-color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- Collapsible Menu Button for Small Screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://bradleykennedy.co.uk/apps/turnitin-id-extractor">Brad K - TurnitIn ID Extractor</a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="https://bradleykennedy.co.uk/apps/turnitin-id-extractor">Home</a></li>
+          <li><a href="https://bradleykennedy.co.uk/contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Future Login Option (Commented Out) -->
+          <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container-fluid text-center">
+    <div class="row content">
+
+      <!-- Left Sidebar (Empty for Layout Purposes) -->
+      <div class="col-sm-2 sidenav"></div>
+
+      <!-- Main Content Area -->
+      <div class="col-sm-8 text-left">
+        <br>
+        <h4>Instructions:</h4>
+        <b>1.</b> Whilst viewing the Turnitin submission box, change the number of entries being shown to 'All' (see red box in example below). Then click and drag to highlight all of the submission data, and either right click and select copy or use (PC: Ctl+C Mac: Cmd+C).
+        <img src="/assets/img/screenshots/turnitin-example.png" alt="Turnitin ID Extractor Example" style="width:100%; max-width:600px; display: block; margin-left: auto; margin-right: auto;">
+        <br>
+        <b>2.</b> Paste the data into the box below, either right click and select paste or use: (PC: Ctl+V Mac: Cmd+V).
+        <br>
+        <b>3.</b> Click 'Extract Turnitin IDs' to extract only the nine-digit submission IDs. You can now copy/paste these into the <a href="https://apps.bradk.co.uk" target="_blank" rel="noopener noreferrer">Kennedy Marking Tracker</a>.</p>
+        <br>
+
+        <!-- Text Area for URLs -->
+        <textarea class="form-control" rows="18" id="a" placeholder="Paste Turnitin raw data here"></textarea>
+        <br>
+
+        <!-- Buttons for Opening URLs and Resetting the Input -->
+        <input type="button" class="btn btn-primary btn-lg" value="Extract Turnitin IDs" onclick="extractTurnitinIDs()">
+        <input type="button" value="Reset" class="btn btn-secondary btn-lg" onclick="document.getElementById('a').value=''">
+        <br><br>
+
+        <!-- Troubleshooting & Security Information -->
+        <div>
+          <h4>Data Security</h4>
+          <p>The data you paste into this app is NOT saved. This app runs in your browser window, meaning the data is not collected or stored. If you'd like to verify this for yourself, click to <a href="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/apps/turnitin-id-extractor.html" target="_blank" rel="noopener noreferrer">view the source code</a>.</p>
+        </div>
+
+        <!-- JavaScript to Open URLs in New Tabs -->
+        <script>
+          function extractTurnitinIDs() {
+            var inputText = document.getElementById('a').value;
+            var idPattern = /\b\d{9}\b/g; // Match exactly nine-digit numbers
+            var matches = inputText.match(idPattern);
+
+            if (matches) {
+              document.getElementById('a').value = matches.join('\n'); // Display IDs as a list
+            } else {
+              document.getElementById('a').value = "No Turnitin IDs found.";
+            }
+          }
+        </script>
+
+        <br>
+      </div>
+
+      <!-- Right Sidebar (Empty for Layout Purposes) -->
+      <div class="col-sm-2 sidenav">
+        <div class="well"></div>
+        <!-- Future Content (Commented Out) -->
+        <!-- <div class="well"><p>Text on the right side of the screen.</p></div> -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="container-fluid text-center">
+    <font color="#ffffff">© 2025 </font>
+    <a href="https://bradleykennedy.co.uk/apps/turnitin-id-extractor"><font color="#ffffff">Brad K - Turnitin ID Extractor</font></a>
+    <font color="#ffffff"> | </font>
+    <a href="https://bradleykennedy.co.uk/contact"><font color="#ffffff">Contact</font></a>
+  </footer>
+
+</body>
+
+</html>

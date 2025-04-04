@@ -1,3 +1,7 @@
+- title: Turnitin ID Extractor
+  description: "Extract just the Turnitin IDs from text copied from the submission inbox for use in the Marking Tracker."
+  img: turnitin-example.png
+  url: http://apps.bradk.co.uk/turnitin-id-extractor
 - title: Bulk URL Opener
   description: "Open multiple URLs at once in a single click."
   img: url-opener.png

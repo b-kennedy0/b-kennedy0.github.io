@@ -253,6 +253,7 @@ defaults:
       after-content: back2blog.html
       show-avatar: false
       nav-short: true
+      head-extra: mastodon_credit.html
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default

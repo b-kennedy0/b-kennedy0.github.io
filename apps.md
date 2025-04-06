@@ -6,6 +6,7 @@ nav-short: true
 show-avatar: false
 css:
   - /assets/css/portfolio.css
+  - /assets/css/blogtags.css
 ---
 <div id="main-sections">
   <div id="portfolio-out" class="page-section grey-section">
@@ -15,10 +16,17 @@ css:
     </div>
     <h3 style="text-align: center;">If you like these apps, please consider <a href="https://monzo.me/bradleykennedy5/5?d=Support%20for%20Apps" target="_blank" rel="noopener">supporting me</a> to cover the cost of the server.</h3>
 <h3 style="text-align: center;">Thank you!</h3>
+<div class="list-filters" id="app-filters" style="text-align: center; margin-bottom: 20px;">
+    <button class="list-filter filter-selected" data-filter="all">All Apps</button>
+    <button class="list-filter" data-filter="academia">Academia Tools</button>
+    <button class="list-filter" data-filter="uoc">UoC Only</button>
+    <button class="list-filter" data-filter="bangor">Bangor Uni Only</button>
+    <button class="list-filter" data-filter="research">Research</button>
+  </div>
       <div id="shinyapps-big">
         {% for app in site.data.apps %}
         {% if app.url %}
-        <div class="shinyapp">
+        <div class="shinyapp" data-tags="{{ app.tags | join: ',' }}">
             <a class="applink" href="{{ app.url }}" target="_blank" rel="noopener">
               <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
               <div class="apptitle">{{ app.title }}</div>
@@ -26,7 +34,7 @@ css:
             </a>
           </div>
         {% else %}
-          <div class="shinyapp">
+          <div class="shinyapp" data-tags="{{ app.tags | join: ',' }}">
             <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
             <div class="apptitle">{{ app.title }}</div>
             <div class="appdesc">{{ app.description }}</div>
@@ -34,6 +42,30 @@ css:
         {% endif %}
       {% endfor %}
       </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const buttons = document.querySelectorAll(".list-filter");
+      const apps = document.querySelectorAll(".shinyapp");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+
+          document.querySelectorAll(".list-filter").forEach(btn => btn.classList.remove("filter-selected"));
+          button.classList.add("filter-selected");
+
+          apps.forEach(app => {
+            const tags = app.getAttribute("data-tags") || "";
+            if (filter === "all" || tags.includes(filter)) {
+              app.style.display = "inline-block";
+            } else {
+              app.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
     </div>
   </div>
 </div>

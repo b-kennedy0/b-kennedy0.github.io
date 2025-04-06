@@ -18,6 +18,10 @@
   description: "[Not publicly accessible, password required.] This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
   img: timetable.png
   url: http://apps.bradk.co.uk/timetable
+- title: Stacked Plot Visualiser
+  description: "This app generates the stacked plots from the pilot study. Visualising the the top and bottom quartile ratings for a particular characteristic of a job role."
+  img: stackedplots.png
+  url: http://apps.bradk.co.uk/stackedplots
 - title: Pilot Data Explorer
   description: "This app allows you to interact with data from the pilot study conducted as part of my PhD research. You can select two job roles and compare their characteristic ratings."
   img: pilot.png

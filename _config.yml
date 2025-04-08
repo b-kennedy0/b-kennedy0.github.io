@@ -168,7 +168,7 @@ footer-hover-col: "#0085A1"
 gtag: "G-WN3KPBXHDC"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-google_analytics: "UA-119326789-2"
+# google_analytics: "UA-119326789-2"
 
 # Google Tag Manager ID
 #gtm: ""

@@ -49,8 +49,8 @@ body {
     fill: none;
     stroke: #28a745;
     stroke-width: 5;
-    stroke-dasharray: 251; /* Updated circumference */
-    stroke-dashoffset: 251; /* Updated offset */
+    stroke-dasharray: 381; /* Updated circumference */
+    stroke-dashoffset: 381; /* Updated offset */
     animation: draw 1s ease-out forwards;
 }
 @keyframes draw {
@@ -60,9 +60,10 @@ body {
 }
 .success-icon {
     position: relative;
-    width: 65px; /* Reduced size */
-    height: 68px; /* Reduced size */
+    width: 45px; /* Reduced size */
+    height: 48px; /* Reduced size */
     z-index: 1;
+    top: 16px
 }
 .title {
     color: #2c3e50;
@@ -84,7 +85,7 @@ body {
   <div class="bg-white p-5 rounded shadow text-center" style="max-width: 600px; width: 90%;">
     <div class="icon-wrapper">
       <svg width="80" height="80" viewBox="-10 -10 120 120"> <!-- Updated viewBox -->
-        <circle class="circle" cx="50" cy="50" r="40" /> <!-- Updated cx, cy, and r -->
+        <circle class="circle" cx="50" cy="50" r="55" /> <!-- Updated cx, cy, and r -->
       </svg>
       <img class="success-icon" src="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/assets/img/greentick.png?raw=true" alt="Success" />
     </div>

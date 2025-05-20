@@ -30,11 +30,15 @@ head-extra: imagecolumn.html
 </div>
 
 :mortar_board: *Nominated:*  
-1x Best Lecturer, The 1839 Awards - Student Led Teaching Awards  
+Lecturer of the Year, The 1839 Awards - Student Led Teaching Awards  
+**2025** 
+
+:mortar_board: *Nominated:*  
+Best Lecturer, The 1839 Awards - Student Led Teaching Awards  
 **2024** 
 
 :mortar_board: *Nominated:*  
-1x Best Professional Mentor, The 1839 Awards - Student Led Teaching Awards  
+Best Professional Mentor, The 1839 Awards - Student Led Teaching Awards  
 **2024** 
 
 :mortar_board: *Nominated:*  

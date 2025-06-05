@@ -13,7 +13,7 @@ author: Bradley Kennedy
 navbar-links:
   Home: "/"
   Academia :
-    - CV: "https://cv.bradleykennedy.co.uk/academic-cv.pdf"
+    - CV: "https://cv.bradleykennedy.co.uk/"
     - Teaching: "teaching"
     - Research: "research"
     #- Open Science: "open-science"

@@ -50,7 +50,7 @@
     .bunting div:nth-child(5) { border-top-color: #bdb2ff; }
     .bunting div:nth-child(6) { border-top-color: #ffc6ff; }
     .bunting div:nth-child(7) { border-top-color: #ffd6a5; }
-    }
+    
     textarea {
       width: 100%;
       height: 100px;
@@ -143,12 +143,14 @@
     }
   </style>
 </head>
-<body>
+<header>
   <h1>Bake-off Randomiser</h1>
-    <div class="bunting">
-      <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div>
-    </div>
+  <div class="bunting">
+    <div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div>
+  </div>
+</header>
+<body>
   <textarea id="nameInput">Aaron
 Hassan
 Jessika
@@ -222,6 +224,14 @@ Toby</textarea><br>
         shuffleArea.appendChild(div);
       });
     }
+    
+    function highlightCards(a, b) {
+  const cards = shuffleArea.children;
+  // remove previous highlights
+  for (let c of cards) c.classList.remove("highlight");
+  cards[a].classList.add("highlight");
+  cards[b].classList.add("highlight");
+}
 
     function randomise() {
       let names = nameInput.value.split(/\r?\n/).map(n => n.trim()).filter(n => n);
@@ -242,9 +252,7 @@ Toby</textarea><br>
           let b = Math.floor(Math.random() * currentNames.length);
           [currentNames[a], currentNames[b]] = [currentNames[b], currentNames[a]];
           displayNames(currentNames);
-          const cards = shuffleArea.children;
-          cards[a].classList.add("highlight");
-          cards[b].classList.add("highlight");
+          highlightCards(a, b);
           i++;
           shuffleCountDisplay.textContent = "Shuffles completed: " + i;
           let delay = 600 - (shuffleTimes * 12);

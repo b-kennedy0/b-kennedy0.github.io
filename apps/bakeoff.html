@@ -387,7 +387,8 @@ function allocateGroups() {
   groups.forEach((group, gi) => {
     const groupBox = document.createElement('div');
     groupBox.className = 'group-box';
-    groupBox.innerHTML = `<h3>Group ${gi + 1}</h3>`;
+    groupBox.style.backgroundColor = colours[gi]; // pastel background for box
+    groupBox.innerHTML = `<h3>🧁 Group ${gi + 1}</h3>`;
     group.forEach(member => {
       const p = document.createElement('p');
       p.textContent = member;
@@ -402,7 +403,7 @@ function allocateGroups() {
     const gi = Math.floor(i / 4); // group index
     const card = cards[i];
     card.style.backgroundColor = colours[gi];
-    card.style.transition = 'background-color 0.6s ease';
+    card.style.transition = 'background-color 0.8s ease';
   });
 }
 

@@ -374,17 +374,37 @@ Toby</textarea><br>
     doShuffle();
   }
 
-    function allocateGroups() {
-      for (let g = 1; g <= 3; g++) {
-        document.getElementById('group' + g).innerHTML = '';
-      }
-      for (let i = 0; i < currentNames.length; i++) {
-        let g = Math.floor(i / 4) + 1;
-        let li = document.createElement('li');
-        li.textContent = currentNames[i];
-        document.getElementById('group' + g).appendChild(li);
-      }
-    }
+function allocateGroups() {
+  groupsDiv.innerHTML = '';
+
+  const colours = ["#a8d8f0", "#b9e6b1", "#f9d1a7"]; // pastel blue, green, orange
+  const groups = [[], [], []];
+
+  currentNames.forEach((name, i) => {
+    groups[Math.floor(i / 4)].push(name);
+  });
+
+  groups.forEach((group, gi) => {
+    const groupBox = document.createElement('div');
+    groupBox.className = 'group-box';
+    groupBox.innerHTML = `<h3>Group ${gi + 1}</h3>`;
+    group.forEach(member => {
+      const p = document.createElement('p');
+      p.textContent = member;
+      groupBox.appendChild(p);
+    });
+    groupsDiv.appendChild(groupBox);
+  });
+
+  // Colour the shuffle area cards by their group
+  const cards = Array.from(shuffleArea.children);
+  currentNames.forEach((name, i) => {
+    const gi = Math.floor(i / 4); // group index
+    const card = cards[i];
+    card.style.backgroundColor = colours[gi];
+    card.style.transition = 'background-color 0.6s ease';
+  });
+}
 
     function fadeInGroups() {
       groupsDiv.style.display = "flex";

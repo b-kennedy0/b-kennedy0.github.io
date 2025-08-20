@@ -12,7 +12,17 @@
       color: #444;
       overflow-x: hidden;
     }
-    h1 {
+    
+    header {
+      background: #ffe3e3;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
       color: #d17b88;
       margin-bottom: 10px;
     }
@@ -86,7 +96,13 @@
       padding: 6px 10px;
       background: #fde2e4;
       border-radius: 8px;
-      transition: transform 0.4s;
+      transition: transform 0.4s ease, background 0.4s ease;
+      font-weight: bold;
+      color: #a64c59;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+      .highlight {
+      background: #ffe3e3;
     }
     #groups {
       display: none;
@@ -155,7 +171,7 @@ Toby</textarea><br>
   </div>
 
   <div id="shuffleArea"></div>
-  <div id="shuffleCount">Shuffles done: 0</div>
+  <div id="shuffleCount">Shuffles completed: 0</div>
 
   <div id="groups">
     <div class="group"><h3>Group 1</h3><ul id="group1"></ul></div>
@@ -216,7 +232,7 @@ Toby</textarea><br>
       currentNames = [...names];
       let shuffleTimes = parseInt(shuffleSlider.value);
       let i = 0;
-      shuffleCountDisplay.textContent = "Shuffles done: 0";
+      shuffleCountDisplay.textContent = "Shuffles completed: 0";
       groupsDiv.style.opacity = 0;
       groupsDiv.style.display = "none";
 
@@ -226,8 +242,11 @@ Toby</textarea><br>
           let b = Math.floor(Math.random() * currentNames.length);
           [currentNames[a], currentNames[b]] = [currentNames[b], currentNames[a]];
           displayNames(currentNames);
+          const cards = shuffleArea.children;
+          cards[a].classList.add("highlight");
+          cards[b].classList.add("highlight");
           i++;
-          shuffleCountDisplay.textContent = "Shuffles done: " + i;
+          shuffleCountDisplay.textContent = "Shuffles completed: " + i;
           let delay = 600 - (shuffleTimes * 12);
           if (delay < 200) delay = 200;
           setTimeout(doShuffle, delay);

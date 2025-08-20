@@ -5,72 +5,148 @@
   <title>Bake-off Randomiser</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f8f9fa;
-      color: #333;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      margin: 0;
+      background: #fff8f5;
+      color: #444;
     }
-    h1 {
+
+    header {
+      background: #ffe3e3;
+      padding: 20px;
       text-align: center;
+      position: relative;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #a64c59;
+    }
+
+    /* Bunting */
+    .bunting {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .bunting div {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid;
+    }
+
+    .bunting div:nth-child(1) { border-top-color: #ffd6a5; }
+    .bunting div:nth-child(2) { border-top-color: #fdffb6; }
+    .bunting div:nth-child(3) { border-top-color: #caffbf; }
+    .bunting div:nth-child(4) { border-top-color: #9bf6ff; }
+    .bunting div:nth-child(5) { border-top-color: #bdb2ff; }
+    .bunting div:nth-child(6) { border-top-color: #ffc6ff; }
+    .bunting div:nth-child(7) { border-top-color: #ffd6a5; }
+
     .controls, .groups, .shuffle-area {
       margin: 20px auto;
-      max-width: 600px;
+      max-width: 700px;
       text-align: center;
     }
+
     textarea {
       width: 100%;
       height: 100px;
       font-size: 14px;
       padding: 8px;
+      border: 2px solid #f8cdda;
+      border-radius: 6px;
+      background: #fff;
     }
+
     button {
       margin: 5px;
-      padding: 8px 14px;
+      padding: 10px 16px;
       font-size: 14px;
       cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background: #f8cdda;
+      color: #333;
+      transition: background 0.3s ease;
     }
+
+    button:hover {
+      background: #f5a6c4;
+    }
+
     .shuffle-area {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
       margin-top: 30px;
-      min-height: 100px;
+      min-height: 120px;
     }
+
     .name-card {
-      background: white;
-      border: 1px solid #ccc;
-      padding: 6px 10px;
-      border-radius: 5px;
+      background: #fff;
+      border: 2px solid #f5a6c4;
+      padding: 8px 12px;
+      border-radius: 8px;
       transition: transform 0.4s ease, background 0.4s ease;
+      font-weight: bold;
+      color: #a64c59;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
+
     .highlight {
-      background: #d1ecf1;
+      background: #ffe3e3;
     }
+
     .groups {
       display: flex;
       justify-content: space-around;
       margin-top: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
     }
+
     .group-box {
       flex: 1;
+      min-width: 180px;
       margin: 0 5px;
       background: #fff;
-      border: 2px solid #007bff;
-      border-radius: 8px;
+      border: 3px dashed #f5a6c4;
+      border-radius: 12px;
       padding: 10px;
-      min-height: 120px;
+      min-height: 140px;
+      box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
     }
+
     .group-box h3 {
       margin-top: 0;
       text-align: center;
-      color: #007bff;
+      color: #a64c59;
+    }
+
+    /* Decorative cupcake icon for group headers */
+    .group-box h3::before {
+      content: "🧁 ";
     }
   </style>
 </head>
 <body>
-  <h1>Bake-off Randomiser</h1>
+  <header>
+    <h1>Bake-off Randomiser</h1>
+    <div class="bunting">
+      <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+  </header>
 
   <div class="controls">
     <textarea id="nameInput">Aaron
@@ -96,9 +172,7 @@ Toby</textarea><br>
 
   <div class="shuffle-area" id="shuffleArea"></div>
 
-  <div class="groups" id="groupsOutput">
-    <!-- Groups will appear here -->
-  </div>
+  <div class="groups" id="groupsOutput"></div>
 
   <script>
     const defaultNames = [
@@ -122,12 +196,15 @@ Toby</textarea><br>
     });
 
     resetBtn.addEventListener("click", () => {
-      nameInput.value = defaultNames.join("\\n");
+      nameInput.value = defaultNames.join("\n");
       renderNames(defaultNames);
     });
 
     function getNames() {
-      let names = nameInput.value.split(/\\n|,/).map(n => n.trim()).filter(n => n);
+      let names = nameInput.value
+        .split(/\r?\n|,/)
+        .map(n => n.trim())
+        .filter(n => n);
       if (names.length > 12) {
         names = names.slice(0, 12);
       }
@@ -150,20 +227,17 @@ Toby</textarea><br>
 
     async function shuffleNames(names, times) {
       renderNames(names);
-      const cards = shuffleArea.children;
 
       for (let i = 0; i < times; i++) {
         const idx1 = Math.floor(Math.random() * names.length);
         const idx2 = Math.floor(Math.random() * names.length);
         if (idx1 !== idx2) {
           [names[idx1], names[idx2]] = [names[idx2], names[idx1]];
-          // Highlight swapped names
+          renderNames(names);
+          const cards = shuffleArea.children;
           cards[idx1].classList.add("highlight");
           cards[idx2].classList.add("highlight");
-          renderNames(names);
-          await sleep(Math.max(200, 600 - (times * 10))); // Speed scaling
-          cards[idx1]?.classList.remove("highlight");
-          cards[idx2]?.classList.remove("highlight");
+          await sleep(Math.max(200, 600 - (times * 10))); // speed scaling
         }
       }
       return names;
@@ -204,11 +278,11 @@ Toby</textarea><br>
       let text = "";
       const groups = groupsOutput.querySelectorAll(".group-box");
       groups.forEach(g => {
-        text += g.querySelector("h3").textContent + "\\n";
+        text += g.querySelector("h3").textContent + "\n";
         g.querySelectorAll("div:not(h3)").forEach(n => {
-          text += "- " + n.textContent + "\\n";
+          text += "- " + n.textContent + "\n";
         });
-        text += "\\n";
+        text += "\n";
       });
       navigator.clipboard.writeText(text).then(() => {
         alert("Groups copied to clipboard!");

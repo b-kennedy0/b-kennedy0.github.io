@@ -105,17 +105,18 @@
     .highlight {
       background: #ff8f8f;
     }
-    .groups {
+    
+.groups {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  flex-wrap: wrap; /* still allows wrapping on small screens */
   margin-top: 30px;
 }
 
 .group-box {
-  flex: 1 1 250px; /* flexible, but at least 250px wide */
+  flex: 0 1 28%; /* use a percentage width instead of min-width */
   max-width: 300px;
   padding: 20px;
   border-radius: 12px;
@@ -123,6 +124,13 @@
   color: #333;
   text-align: center;
   transition: transform 0.3s ease, background-color 0.8s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .group-box {
+    flex: 1 1 100%; /* on smaller screens, stack vertically */
+    max-width: 90%;
+  }
 }
 
 .group-box h3 {
@@ -243,7 +251,7 @@ Toby</textarea><br>
   <div id="shuffleArea"></div>
   <div id="shuffleCount">Shuffles completed: 0</div>
 
-  <div id="groups">
+  <div id="groups" class="groups">
     <div class="group"><h3>Group 1</h3><ul id="group1"></ul></div>
     <div class="group"><h3>Group 2</h3><ul id="group2"></ul></div>
     <div class="group"><h3>Group 3</h3><ul id="group3"></ul></div>

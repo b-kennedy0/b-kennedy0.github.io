@@ -282,57 +282,97 @@ Toby</textarea><br>
       shuffleValue.textContent = shuffleSlider.value;
     });
 
-    function displayNames(names) {
-      shuffleArea.innerHTML = '';
-      names.forEach(n => {
-        const div = document.createElement('div');
-        div.className = 'name';
-        div.textContent = n;
-        shuffleArea.appendChild(div);
+  // Display names with absolute positioning for animation
+  function displayNames(names) {
+    shuffleArea.innerHTML = '';
+    names.forEach((n, i) => {
+      const div = document.createElement('div');
+      div.className = 'name';
+      div.textContent = n;
+      shuffleArea.appendChild(div);
+    });
+
+    // Use flex for layout, but switch to absolute positioning when animating
+    const cards = Array.from(shuffleArea.children);
+    cards.forEach(card => {
+      card.style.position = 'relative';
+      card.style.transform = 'translate(0,0)';
+    });
+  }
+
+  function thoroughShuffle(arr) {
+    let newArr;
+    do {
+      newArr = [...arr].sort(() => Math.random() - 0.5);
+    } while (
+      newArr.filter((name, i) => name === arr[i]).length > arr.length * 0.25
+    );
+    return newArr;
+  }
+
+  function animateShuffle(newNames) {
+    const cards = Array.from(shuffleArea.children);
+    const oldPositions = cards.map(card => card.getBoundingClientRect());
+
+    // Update text content order
+    newNames.forEach((name, i) => {
+      cards[i].textContent = name;
+    });
+
+    const newPositions = cards.map(card => card.getBoundingClientRect());
+
+    // Animate each card
+    cards.forEach((card, i) => {
+      const dx = oldPositions[i].left - newPositions[i].left;
+      const dy = oldPositions[i].top - newPositions[i].top;
+      card.style.transform = `translate(${dx}px, ${dy}px)`;
+      requestAnimationFrame(() => {
+        card.style.transition = 'transform 0.6s ease';
+        card.style.transform = 'translate(0,0)';
       });
-    }
-    
-    function highlightCards(a, b) {
-  const cards = shuffleArea.children;
-  // remove previous highlights
-  for (let c of cards) c.classList.remove("highlight");
-  cards[a].classList.add("highlight");
-  cards[b].classList.add("highlight");
-}
+    });
 
-    function randomise() {
-      let names = nameInput.value.split(/\r?\n/).map(n => n.trim()).filter(n => n);
-      if (names.length !== 12) {
-        alert("Please enter exactly 12 names.");
-        return;
-      }
-      currentNames = [...names];
-      let shuffleTimes = parseInt(shuffleSlider.value);
-      let i = 0;
-      shuffleCountDisplay.textContent = "Shuffles completed: 0";
-      groupsDiv.style.opacity = 0;
-      groupsDiv.style.display = "none";
+    // After animation, clean up
+    setTimeout(() => {
+      cards.forEach(card => {
+        card.style.transition = '';
+        card.style.transform = 'translate(0,0)';
+      });
+    }, 650);
+  }
 
-      function doShuffle() {
-        if (i < shuffleTimes) {
-          let a = Math.floor(Math.random() * currentNames.length);
-          let b = Math.floor(Math.random() * currentNames.length);
-          [currentNames[a], currentNames[b]] = [currentNames[b], currentNames[a]];
-          displayNames(currentNames);
-          highlightCards(a, b);
-          i++;
-          shuffleCountDisplay.textContent = "Shuffles completed: " + i;
-          let delay = 600 - (shuffleTimes * 12);
-          if (delay < 200) delay = 200;
-          setTimeout(doShuffle, delay);
-        } else {
-          allocateGroups();
-          fadeInGroups();
-          startConfetti();
-        }
-      }
-      doShuffle();
+  function randomise() {
+    let names = nameInput.value.split(/\r?\n/).map(n => n.trim()).filter(n => n);
+    if (names.length !== 12) {
+      alert("Please enter exactly 12 names.");
+      return;
     }
+    currentNames = [...names];
+    let shuffleTimes = parseInt(shuffleSlider.value);
+    let i = 0;
+    shuffleCountDisplay.textContent = "Shuffles completed: 0";
+    groupsDiv.style.opacity = 0;
+    groupsDiv.style.display = "none";
+
+    function doShuffle() {
+      if (i < shuffleTimes) {
+        const newNames = thoroughShuffle(currentNames);
+        animateShuffle(newNames);
+        currentNames = newNames;
+        i++;
+        shuffleCountDisplay.textContent = "Shuffles completed: " + i;
+
+        let delay = 700 - (shuffleTimes * 10);
+        if (delay < 300) delay = 300;
+        setTimeout(doShuffle, delay);
+      } else {
+        allocateGroups();
+        fadeInGroups();
+        startConfetti();
+      }
+    }
+    doShuffle();
+  }
 
     function allocateGroups() {
       for (let g = 1; g <= 3; g++) {

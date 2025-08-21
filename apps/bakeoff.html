@@ -167,7 +167,7 @@
     }
 
     /* Mobile responsive design */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       body {
         padding: 10px;
       }
@@ -214,17 +214,6 @@
         max-width: 320px;
         margin: 15px auto;
         padding: 10px;
-      }
-
-      .groups {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-      }
-
-      .group-box {
-        width: calc(100% - 20px);
-        max-width: 280px;
       }
 
       #shuffleCount {
@@ -376,6 +365,7 @@ Toby</textarea><br>
     shuffleCountDisplay.textContent = "Shuffles completed: 0";
     groupsDiv.style.opacity = 0;
     groupsDiv.style.display = "none";
+    nameInput.style.display = "none";
 
     function doShuffle() {
       if (i < shuffleTimes) {
@@ -444,6 +434,7 @@ function allocateGroups() {
       groupsDiv.style.display = "none";
       groupsDiv.style.opacity = 0;
       shuffleCountDisplay.textContent = "Shuffles completed: 0";
+      nameInput.style.display = "block";
     }
 
     function copyGroups() {

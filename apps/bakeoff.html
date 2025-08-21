@@ -256,9 +256,6 @@ Toby</textarea><br>
   <div id="shuffleCount">Shuffles completed: 0</div>
 
   <div id="groups" class="groups">
-      <div class="group-box"><h3>Group 1</h3><ul id="group1"></ul></div>
-      <div class="group-box"><h3>Group 2</h3><ul id="group2"></ul></div>
-      <div class="group-box"><h3>Group 3</h3><ul id="group3"></ul></div>
   </div>
 
   <canvas id="confettiCanvas"></canvas>
@@ -447,7 +444,7 @@ function allocateGroups() {
 
   let text = "";
   groups.forEach((group, index) => {
-    const nameItems = Array.from(group.querySelectorAll("li")).map(li => li.textContent);
+    const nameItems = Array.from(group.querySelectorAll("p")).map(p => p.textContent);
     text += `Group ${index + 1}\n` + nameItems.map(name => `- ${name}`).join("\n") + "\n\n";
   });
 

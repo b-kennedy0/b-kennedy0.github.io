@@ -1,3 +1,8 @@
+- title: GBBO Randomiser
+  description: "Randomises the contestants from the Great British Bake Off and allocates them into three groups."
+  img: bakeoff.png
+  url: http://apps.bradk.co.uk/bakeoff
+  tags: [fun]
 - title: Turnitin ID Extractor
   description: "Extract just the Turnitin IDs from text copied from the submission inbox for use in the Marking Tracker."
   img: turnitin-example.png

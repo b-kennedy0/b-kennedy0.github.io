@@ -1,3 +1,8 @@
+- title: ProjectDesk App
+  description: "ProjectDesk helps Academics to keep track of multiple projects simultaneously and accurately. Centralise tasks and set deadlines to focus on progress."
+  img: projectdesk.png
+  url: https://projectdesk.app
+  tags: [academia]
 - title: GBBO Randomiser
   description: "Randomises the contestants from the Great British Bake Off and allocates them into three groups."
   img: bakeoff.png

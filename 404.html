@@ -8,3 +8,13 @@ permalink: /404.html
   <h3><a href="/index.html">Click to return to Homepage</a></h3>
   <img src="{{ site.baseurl }}/assets/img/404 error screen.png" width="500" height="378"/>
 </div>
+
+<script>
+  const missingUrl = window.location.href;
+  const referrerUrl = document.referrer || '(none)';
+
+  gtag('event', '404_error', {
+    broken_url: missingUrl,
+    broken_referrer: referrerUrl
+  });
+</script>

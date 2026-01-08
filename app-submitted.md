@@ -90,7 +90,7 @@ body {
     </div>
     <h1 class="title">Submitted!</h1>
     <h3 class="subtitle">Like this app? Feel free to </h3>
-    <p><a href="https://pay.bradleykennedy.co.uk" target="_blank"><img style="margin-right: auto; margin-left: auto; display: block;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/bmc-button.png" width="309" height="80" /></a></p>
+    <p><a href="https://bradleykennedy.co.uk/pay" target="_blank"><img style="margin-right: auto; margin-left: auto; display: block;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/bmc-button.png" width="309" height="80" /></a></p>
 <br>
   <p class="close-message"><a href="https://bradleykennedy.co.uk/apps" target="_blank">Return to Apps page</a></p>
     <p class="close-message">or, you may close this page :wave:</p>

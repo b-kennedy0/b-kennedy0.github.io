@@ -3,7 +3,7 @@ title: Cool things
 subtitle: Awesome things I use/plan to use
 tags: [tech, advice]
 readtime: true
-last-updated: 23/10/2024
+last-updated: 26/01/2026
 permalink: /blog/cool-things/
 thumbnail-img: /assets/img/blog/cool-things/cool-things-icon.png
 cover-img: /assets/img/blog/cool-things/tech.jpg
@@ -22,10 +22,6 @@ I am continuously inspired by tech and amazing things that make life easier. Her
 {:toc}
 
 ---
-
-## Computer setup
-
-I currently have an Apple M1 Macbook Air 2020. The silicon chip makes this very quick! I have no problems running multiple programmes and lots of browser tabs. Many apps are getting silicon-specific updates.  
 
 ## Analysis
 
@@ -75,8 +71,6 @@ For example, Thing A triggers process B, which passes information to service C e
 5. Shinyapp presents a dashboard indicating which participants completed the study and now require awarding credits
 
 [Otter.ai](https://otter.ai/){:target="_blank" rel="noopener"} is a live transcription service. They offer 600 minutes per month (this may not be correct anymore, be sure to check!) on their free plan! You can live record a session with multiple speakers, and Otter will use AI technology to process the recording to determine who is speaking. You give it the names using the first few sentences, and it will process the remainder of the interviews. It also has many other powerful features, such as being able to highlight and add notes while still recording. It has some good playback features, too, such as clicking on the script to jump to that position and playback that particular part.
-
-[Yet Another Mail Merge](https://yamm.com/){:target="_blank" rel="noopener"} - See [Communication](#communication)
 
 ## Sharing Code & ShinyApps
 
@@ -144,8 +138,6 @@ Social Platforms:
 Setting expectations RE: emails, use [The Email Charter](https://email-charter.github.io/){:target="_blank" rel="noopener"} in your email signature. This webpage sets out 10 tips to avoid email overload.
 
 When designing emails for research studies, I will often use HTML and CSS to make sure it looks nice. [HTML Email.io](https://htmlemail.io/inline/){:target="_blank" rel="noopener"} is a great website to check that you have done this correctly and that the CSS is embedded inline with your code. Some email clients will strip styling that is not inline, so this is a great way to ensure your email looks great no matter which email client is used.  
-
-[Yet Another Mail Merge](https://yamm.com/){:target="_blank" rel="noopener"} - (Integrated with Google) Used for sending batch emails. This is also useful for sending personalised emails with individual attachments. I use this as part of my research automation to help with sending out vouchers or study updates.
 
 ## Organisation
 

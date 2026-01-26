@@ -104,6 +104,7 @@ cover-img:
 </table>
 
 ## Personal History:
+:page_with_curl: Qualified Gliding Instructor (QGI) B1 - 27 Nov 25  
 :house: 632VGS move to RAF Woodvale,  - 2 Dec 23  
 :bangbang: RAF Ternhill Infrastructure Issues Apr 22 - Present  
 :page_with_curl: Qualified Gliding Instructor (QGI) B2 - 21 Apr 22  

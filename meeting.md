@@ -12,7 +12,7 @@ head-extra: buttonstyle_code.html
   <div class="meeting-spacer" aria-hidden="true"></div>
   <div class="text-center">
     <div class="btn-group">
-      <a class="button" href="https://hook.eu1.make.com/iokdgnmxeyqba2ngdl1iqjyxmcttxs58?action=meeting">ARRIVED</a>
+      <a class="button" href="#" id="meeting-arrived" rel="nofollow">ARRIVED</a>
     </div>
   </div>
   <hr class="meeting-divider" />
@@ -25,3 +25,16 @@ head-extra: buttonstyle_code.html
   -->
 </main>
 </div>
+<script>
+  (function () {
+    var btn = document.getElementById("meeting-arrived");
+    if (!btn) return;
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var base = "https://hook.eu1.make.com/";
+      var path = "iokdgnmxeyqba2ngdl1iqjyxmcttxs58";
+      var query = "?action=meeting";
+      window.location.href = base + path + query;
+    });
+  })();
+</script>

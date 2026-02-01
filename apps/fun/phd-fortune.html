@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PhD Fortune Cookies</title>
+
+  <style>
+    :root {
+      --bg-a: #f4efe7;
+      --bg-b: #f9f7f2;
+      --ink: #1a1a1a;
+      --accent: #c9782a;
+      --cookie: #f3d2a7;
+      --cookie-mid: #e7b982;
+      --cookie-dark: #c4874a;
+      --cookie-edge: #b26a33;
+      --paper: #fff2cf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      color: var(--ink);
+      background: radial-gradient(circle at top, var(--bg-b), var(--bg-a));
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 48px 20px 12px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 600;
+    }
+
+    .sub {
+      margin: 0;
+      font-size: clamp(16px, 2.4vw, 22px);
+      opacity: 0.8;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 10px 18px 24px;
+    }
+
+    .cookie-field {
+      position: relative;
+      width: min(1100px, 92vw);
+      height: min(60vh, 520px);
+      border-radius: 24px;
+      background: radial-gradient(circle at 20% 10%, #fff, transparent 55%),
+                  radial-gradient(circle at 80% 0%, #fff, transparent 50%);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .cookie {
+      position: absolute;
+      width: 190px;
+      height: 160px;
+      color: var(--cookie-mid);
+      background: transparent;
+      transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) translateY(var(--lift, 0)) rotate(var(--rot)) scale(var(--scale, 1));
+      transition: transform 0.45s ease;
+      cursor: pointer;
+      outline: none;
+      filter: drop-shadow(0 8px 12px rgba(0,0,0,0.12));
+    }
+
+    .cookie.selected {
+      --lift: -16px;
+      --scale: 1.12;
+      z-index: 4;
+    }
+
+    .cookie.opened {
+      --lift: -24px;
+      --scale: 1.18;
+      z-index: 5;
+    }
+
+    .cookie-half {
+      position: absolute;
+      top: -6px;
+      width: 86px;
+      height: 170px;
+      background: currentColor;
+      color: var(--cookie-mid);
+      box-shadow:
+        0.35em 0 0 inset,
+        0.35em 0.18em 0 inset,
+        0.7em 0.18em 0 #fff4 inset,
+        -0.5em 0 0 #0002 inset;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 2;
+    }
+
+    .cookie-half.left {
+      left: calc(50% - 62px);
+      border-radius: 70px 12px 12px 70px / 50%;
+      clip-path: polygon(0% 0%, 70% 0%, 100% 32%, 100% 100%, 0% 100%);
+      transform: rotate(25deg);
+      transform-origin: 68% 0;
+    }
+
+    .cookie-half.right {
+      right: calc(50% - 62px);
+      border-radius: 12px 70px 70px 12px / 50%;
+      clip-path: polygon(0% 32%, 30% 0%, 100% 0, 100% 100%, 0% 100%);
+      transform: rotate(-25deg);
+      transform-origin: 32% 0;
+    }
+
+    .cookie-crumbs {
+      position: absolute;
+      top: 12%;
+      left: calc(50% - 6px);
+      width: 12px;
+      height: 90px;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .cookie-crumb {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e8bf85;
+      opacity: 0.9;
+    }
+
+    .cookie-crumb:nth-child(1) { top: 6%; left: 2px; }
+    .cookie-crumb:nth-child(2) { top: 20%; right: 1px; }
+    .cookie-crumb:nth-child(3) { top: 32%; left: 3px; }
+    .cookie-crumb:nth-child(4) { top: 46%; right: 2px; }
+    .cookie-crumb:nth-child(5) { top: 60%; left: 1px; }
+    .cookie-crumb:nth-child(6) { top: 74%; right: 2px; }
+    .cookie-crumb:nth-child(7) { top: 86%; left: 3px; }
+
+    .cookie.opened .cookie-half.left {
+      animation: cookieBreakLeft 0.7s ease-in forwards;
+    }
+
+    .cookie.opened .cookie-half.right {
+      animation: cookieBreakRight 0.7s ease-in forwards;
+    }
+
+    .cookie.opened .cookie-crumbs {
+      opacity: 1;
+      animation: cookieCrumbs 0.7s ease-in forwards;
+    }
+
+    .fortune-strip {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) translateY(8px) scaleX(0.7);
+      width: 210px;
+      min-height: 54px;
+      padding: 10px 16px;
+      background: linear-gradient(90deg, #fff6dc, var(--paper), #fff6dc);
+      border: 1px solid rgba(0,0,0,0.18);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.3;
+      color: #2c1c0f;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .fortune-strip::before,
+    .fortune-strip::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      bottom: 6px;
+      width: 14px;
+      pointer-events: none;
+      background:
+        linear-gradient(#1d4ed8, #1d4ed8) left top / 14px 6px no-repeat,
+        linear-gradient(#1d4ed8, #1d4ed8) left bottom / 14px 6px no-repeat;
+    }
+
+    .fortune-strip::before {
+      left: 6px;
+    }
+
+    .fortune-strip::after {
+      right: 6px;
+      width: 8px;
+      background:
+        linear-gradient(#1d4ed8, #1d4ed8) right top / 8px 8px no-repeat,
+        linear-gradient(#1d4ed8, #1d4ed8) right bottom / 8px 8px no-repeat;
+    }
+
+    .cookie.opened .fortune-strip {
+      opacity: 1;
+      transform: translate(-50%, -50%) translateY(78px) scaleX(1);
+    }
+
+    @keyframes cookieBreakLeft {
+      from { transform: translateX(0) rotate(25deg); }
+      35% { transform: translateX(0) rotate(55deg); }
+      75%, to { opacity: 0; transform: translateX(-120px) rotate(50deg); }
+    }
+
+    @keyframes cookieBreakRight {
+      from { transform: translateX(0) rotate(-25deg); }
+      35% { transform: translateX(0) rotate(-55deg); }
+      75%, to { opacity: 0; transform: translateX(120px) rotate(-50deg); }
+    }
+
+    @keyframes cookieCrumbs {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(180px) scale(1.4); }
+    }
+
+    .hint {
+      font-size: clamp(14px, 2.2vw, 18px);
+      padding: 6px 10px;
+      min-height: 28px;
+      text-align: center;
+    }
+
+    .controls {
+      padding: 16px 18px 28px;
+      text-align: center;
+    }
+
+    .shuffle {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: "Gill Sans", "Trebuchet MS", Arial, sans-serif;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    .shuffle:hover {
+      background: #b66721;
+    }
+
+    @media (max-width: 720px) {
+      .cookie { width: 170px; height: 140px; }
+      .fortune-strip { width: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pick a Fortune Cookie</h1>
+    <p class="sub">Shuffle, choose, then crack it open for your PhD fortune.</p>
+  </header>
+
+  <main>
+    <div class="cookie-field" id="field">
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+      <div class="cookie" role="button" tabindex="0" aria-pressed="false">
+        <div class="cookie-half left"></div>
+        <div class="cookie-half right"></div>
+        <div class="cookie-crumbs" aria-hidden="true">
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+          <span class="cookie-crumb"></span>
+        </div>
+        <div class="fortune-strip"><span class="fortune-text"></span></div>
+      </div>
+    </div>
+
+    <div class="hint" id="hint">Pick a cookie to begin.</div>
+  </main>
+
+  <div class="controls">
+    <button class="shuffle" id="shuffleBtn">Shuffle</button>
+  </div>
+
+  <script>
+    const field = document.getElementById("field");
+    const cookies = Array.from(document.querySelectorAll(".cookie"));
+    const hint = document.getElementById("hint");
+    const shuffleBtn = document.getElementById("shuffleBtn");
+    let fortunes = [];
+    let selectedCookie = null;
+
+    function cleanQuote(line) {
+      return line.replace(/^["“”]+|["“”]+$/g, "").trim();
+    }
+
+    async function loadFortunes() {
+      try {
+        const res = await fetch("quotes.txt");
+        const text = await res.text();
+        fortunes = text
+          .split(/\r?\n/)
+          .map(cleanQuote)
+          .filter(Boolean);
+      } catch (err) {
+        fortunes = ["Your fortune is loading... try again later."];
+      }
+    }
+
+    function randomFortune() {
+      if (!fortunes.length) return "Your fortune awaits.";
+      const idx = Math.floor(Math.random() * fortunes.length);
+      return fortunes[idx];
+    }
+
+    function resetCookie(cookie) {
+      cookie.classList.remove("selected", "opened");
+      cookie.setAttribute("aria-pressed", "false");
+      const text = cookie.querySelector(".fortune-text");
+      text.textContent = "";
+    }
+
+    function selectCookie(cookie) {
+      if (selectedCookie && selectedCookie !== cookie) {
+        resetCookie(selectedCookie);
+      }
+      selectedCookie = cookie;
+      cookie.classList.add("selected");
+      cookie.setAttribute("aria-pressed", "true");
+      hint.textContent = "To open, click on the cookie.";
+    }
+
+    function openCookie(cookie) {
+      cookie.classList.add("opened");
+      const text = cookie.querySelector(".fortune-text");
+      text.textContent = randomFortune();
+      hint.textContent = "Fortune revealed!";
+    }
+
+    function positionCookies() {
+      const rect = field.getBoundingClientRect();
+      const padding = 90;
+      cookies.forEach(cookie => {
+        if (cookie.classList.contains("opened")) return;
+        const x = padding + Math.random() * (rect.width - padding * 2);
+        const y = padding + Math.random() * (rect.height - padding * 2);
+        const rot = (Math.random() * 20 - 10).toFixed(2) + "deg";
+        cookie.style.setProperty("--tx", x + "px");
+        cookie.style.setProperty("--ty", y + "px");
+        cookie.style.setProperty("--rot", rot);
+      });
+    }
+
+    function shuffleCookies() {
+      positionCookies();
+    }
+
+    function handleCookieActivate(cookie) {
+      if (!cookie.classList.contains("selected")) {
+        selectCookie(cookie);
+        return;
+      }
+      if (!cookie.classList.contains("opened")) {
+        openCookie(cookie);
+      }
+    }
+
+    cookies.forEach(cookie => {
+      cookie.addEventListener("click", () => handleCookieActivate(cookie));
+      cookie.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          handleCookieActivate(cookie);
+        }
+      });
+    });
+
+    shuffleBtn.addEventListener("click", () => {
+      shuffleCookies();
+      if (!selectedCookie || selectedCookie.classList.contains("opened")) {
+        hint.textContent = "Pick a cookie to begin.";
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      shuffleCookies();
+    });
+
+    loadFortunes().then(() => {
+      shuffleCookies();
+    });
+  </script>
+</body>
+</html>

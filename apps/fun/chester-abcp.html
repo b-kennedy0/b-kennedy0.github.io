@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Chester Automated Bonus Programme</title>
+
+  <style>
+    :root {
+      --green: #a6ce63;
+      --green-dark: #8fba54;
+      --black: #0b0b0b;
+      --white: #ffffff;
+      --footer-h: 120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: var(--white);
+      padding-bottom: var(--footer-h);
+    }
+
+    .device-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #f8fafc;
+      text-align: center;
+      z-index: 10000;
+      padding: 24px;
+    }
+
+    .device-overlay.show {
+      display: grid;
+    }
+
+    .device-overlay .panel {
+      max-width: 520px;
+      padding: 24px 22px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    }
+
+    .device-overlay h2 {
+      margin: 0 0 8px;
+      font-size: clamp(22px, 4vw, 32px);
+    }
+
+    .device-overlay p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: clamp(14px, 2.6vw, 18px);
+    }
+
+    .page {
+      min-height: 100svh;
+      position: relative;
+    }
+
+    .screen {
+      display: none;
+      min-height: calc(100svh - var(--footer-h));
+      padding: 60px 48px;
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    .screen.dark {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .screen.light {
+      background: var(--white);
+      color: #111;
+    }
+
+    .content {
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+    }
+
+    .content.center {
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 500;
+      line-height: 1.08;
+      margin: 0 0 40px;
+      font-size: clamp(36px, 5vw, 70px);
+    }
+
+    .accent {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .accent-circle {
+      width: clamp(160px, 20vw, 220px);
+      height: clamp(160px, 20vw, 220px);
+      border-radius: 50%;
+      background: var(--green);
+      position: absolute;
+      right: 30px;
+      top: 80px;
+    }
+
+    .cta {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 18px 40px;
+      font-size: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cta:hover {
+      background: var(--green-dark);
+    }
+
+    .button-zone {
+      position: fixed;
+      inset: 0 0 var(--footer-h) 0;
+      width: 100%;
+      height: calc(100svh - var(--footer-h));
+      margin: 0;
+      z-index: 2;
+    }
+
+    .choice {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      padding: 26px 44px;
+      font-size: 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: var(--green);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .choice.no { left: 36%; }
+    .choice.yes { left: 64%; }
+
+    .result-text {
+      font-size: clamp(34px, 4.5vw, 60px);
+      line-height: 1.2;
+      margin: 30px 0 0;
+    }
+
+    .result-text .linkish {
+      text-decoration: underline;
+    }
+
+    .brand-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: var(--footer-h);
+      background: var(--green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      gap: 28px;
+      z-index: 2;
+    }
+
+    .brand-bar .school {
+      font-size: clamp(20px, 2.3vw, 32px);
+      line-height: 1.2;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+
+    .brand-divider {
+      width: 2px;
+      height: 70px;
+      background: rgba(255,255,255,0.7);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand img {
+      height: 70px;
+      width: auto;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .brand .uni {
+      font-size: clamp(22px, 2.6vw, 36px);
+      line-height: 1.1;
+      font-weight: 300;
+    }
+
+    .brand .uni span {
+      display: block;
+      font-size: clamp(30px, 3.6vw, 52px);
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .accent-circle { display: none; }
+      .brand-bar { padding: 0 20px; }
+      .brand img { height: 56px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="device-overlay" id="deviceOverlay" aria-live="polite" aria-hidden="true">
+    <div class="panel">
+      <h2>Uh oh!</h2>
+      <p>This webpage is only supposed to be used on a laptop/desktop with a mouse.</p>
+    </div>
+  </div>
+
+  <div class="page">
+    <section class="screen dark active" id="welcomeScreen">
+      <div class="content">
+        <h1>
+          Welcome to the <span class="accent">UoC Automated Bonus<br /> Compensation Programme</span>
+        </h1>
+        <button class="cta" id="startBtn">Click to Begin</button>
+        <div class="accent-circle" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="screen light" id="questionScreen">
+      <div class="content center">
+        <h1>Would you like to register for a Bonus?</h1>
+        <div class="button-zone" id="zone">
+          <button class="choice no" id="noBtn">No</button>
+          <button class="choice yes" id="yesBtn">Yes</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen light" id="resultScreen">
+      <div class="content center">
+        <h1>Decision Saved!</h1>
+        <div class="result-text">
+          Well done,<br />you made the<br />right choice.
+          <br /><br />
+          You may now close this page.
+    </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="brand-bar" role="contentinfo">
+    <div class="school">School of<br />Psychology</div>
+    <div class="brand-divider" aria-hidden="true"></div>
+    <div class="brand">
+      <img src="/assets/img/logos/University-of-Chester.png" alt="University of Chester logo" />
+    </div>
+  </footer>
+
+  <script>
+    const zone = document.getElementById("zone");
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const startBtn = document.getElementById("startBtn");
+    const welcomeScreen = document.getElementById("welcomeScreen");
+    const questionScreen = document.getElementById("questionScreen");
+    const resultScreen = document.getElementById("resultScreen");
+    const deviceOverlay = document.getElementById("deviceOverlay");
+
+    /* ---------- DEVICE OVERLAY ---------- */
+    function shouldShowOverlay() {
+      const smallScreen = window.matchMedia("(max-width: 900px)").matches;
+      const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+      return smallScreen || coarsePointer;
+    }
+
+    function updateDeviceOverlay() {
+      const show = shouldShowOverlay();
+      deviceOverlay.classList.toggle("show", show);
+      deviceOverlay.setAttribute("aria-hidden", show ? "false" : "true");
+    }
+
+    updateDeviceOverlay();
+    window.addEventListener("resize", updateDeviceOverlay);
+    window.addEventListener("orientationchange", () => setTimeout(updateDeviceOverlay, 150));
+
+    function showScreen(screen) {
+      [welcomeScreen, questionScreen, resultScreen].forEach(el => el.classList.remove("active"));
+      screen.classList.add("active");
+    }
+
+    startBtn.addEventListener("click", () => showScreen(questionScreen));
+
+    noBtn.addEventListener("click", () => showScreen(resultScreen));
+    yesBtn.addEventListener("click", e => e.preventDefault());
+
+    /* ---------- YES BUTTON RUNS AWAY ---------- */
+    let yesScale = 1;
+    let noScale = 1;
+
+    function applyScales() {
+      yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
+      noBtn.style.transform = `translate(-50%, -50%) scale(${noScale})`;
+    }
+
+    function clamp(n, min, max) {
+      return Math.max(min, Math.min(max, n));
+    }
+
+    function moveYes(px, py) {
+      const z = zone.getBoundingClientRect();
+      const b = yesBtn.getBoundingClientRect();
+
+      let dx = (b.left + b.width / 2) - px;
+      let dy = (b.top + b.height / 2) - py;
+      let mag = Math.hypot(dx, dy) || 1;
+      dx /= mag;
+      dy /= mag;
+
+      const currentX = (b.left - z.left) + b.width / 2;
+      const currentY = (b.top - z.top) + b.height / 2;
+      let newLeft = currentX + dx * 220;
+      let newTop  = currentY + dy * 220;
+
+      const minX = b.width / 2;
+      const maxX = z.width - b.width / 2;
+      const minY = b.height / 2;
+      const maxY = z.height - b.height / 2;
+
+      newLeft = clamp(newLeft, minX, maxX);
+      newTop  = clamp(newTop, minY, maxY);
+
+      const edgeSlack = 8;
+      const inLeftEdge = newLeft <= minX + edgeSlack;
+      const inRightEdge = newLeft >= maxX - edgeSlack;
+      const inTopEdge = newTop <= minY + edgeSlack;
+      const inBottomEdge = newTop >= maxY - edgeSlack;
+
+      if ((inLeftEdge || inRightEdge) && (inTopEdge || inBottomEdge)) {
+        newLeft = minX + Math.random() * (maxX - minX);
+        newTop = minY + Math.random() * (maxY - minY);
+      }
+
+      yesBtn.style.left = newLeft + "px";
+      yesBtn.style.top = newTop + "px";
+
+      yesScale = Math.max(0.55, yesScale - 0.03);
+      noScale = Math.min(1.6, noScale + 0.03);
+      applyScales();
+    }
+
+    zone.addEventListener("pointermove", e => {
+      const b = yesBtn.getBoundingClientRect();
+      const d = Math.hypot(
+        (b.left + b.width / 2) - e.clientX,
+        (b.top + b.height / 2) - e.clientY
+      );
+      if (d < 220) moveYes(e.clientX, e.clientY);
+    });
+
+    applyScales();
+  </script>
+</body>
+</html>

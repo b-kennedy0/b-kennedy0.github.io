@@ -8,6 +8,11 @@
   img: bakeoff.png
   url: http://apps.bradk.co.uk/bakeoff
   tags: [fun]
+- title: PhD Fortune Cookies
+  description: "Interactive fortune cookie app with PhD-themed fortunes. Shuffle the cookies, pick one, and crack it open for your academic fortune."
+  img: phd-fortune.png
+  url: /apps/fun/phd-fortune.html
+  tags: [fun]
 - title: Turnitin ID Extractor
   description: "Extract just the Turnitin IDs from text copied from the submission inbox for use in the Marking Tracker."
   img: turnitin-example.png

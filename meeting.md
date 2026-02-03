@@ -19,7 +19,7 @@ head-extra: buttonstyle_code.html
   <!-- WILL NEED TO UPDATE THIS IF I USE THE PARTICIPANT LINK AGAIN IN THE FUTURE. 
   <div class="text-center">
     <div class="btn-group">
-    <a class="button" href="https://hook.eu1.make.com/iokdgnmxeyqba2ngdl1iqjyxmcttxs58?action=participant">Participant</a>
+    <a class="button" href="LINK?action=participant">Participant</a>
   </div>
     </div>
   -->

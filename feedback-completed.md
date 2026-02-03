@@ -91,7 +91,7 @@ body {
     </div>
     <h1 class="title">Feedback submitted!</h1>
     <h3 class="subtitle">Thank you for taking the time to give feedback! :speech_balloon: <span id="name"></span></h3>
-    <p class="subtitle">I will make sure to reflect upon all comments and use them to improve my teaching/marking in the future.</p>
+    <p class="subtitle">I reflect on all the comments and use them to improve teaching & marking in the future.</p>
     <h3 class="subtitle"><span id="option"></span></h3>
     <p class="close-message">You may now close this page :wave:</p>
   </div>

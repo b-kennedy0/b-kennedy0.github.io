@@ -75,7 +75,11 @@ head-extra: buttonstyle_code.html
     border-radius: 6px;
   }
   .meeting-modal__actions { display: flex; gap: 10px; margin-top: 16px; }
-  .meeting-modal__submit { flex: 1; }
+  .meeting-modal__submit {
+    flex: 1;
+    background: #c8f3d2;
+    color: #0f3d1f;
+  }
   .meeting-modal__cancel { flex: 1; background: #dddddd; color: #222222; }
   .meeting-modal__error { margin: 10px 0 0; color: #b00020; font-size: 13px; min-height: 16px; }
 </style>

@@ -9,8 +9,8 @@ head-extra:
 <div class="text-center">
   <div class="btn-group">
   <a href="https://link.bradk.co.uk/google" target="_blank" rel="noopener" class="button">Support via Google Chrome</a>
+  <a href=/assets/files/bradkennedyremoteassist.exe class="button">Download Remote Assist</a>
 </div>
-  </div>
   </div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

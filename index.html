@@ -8,12 +8,31 @@ cover-img:
   - "/assets/img/bigimg/mac_code.webp"
   - "/assets/img/bigimg/mac_coffee.webp"
 ---
-<script type="text/javascript" src="https://bradleykennedy.co.uk/CookieBar/cookiebar-latest.min.js?forceLang=en?theme=flying&tracking=1&thirdparty=1&always=1&scrolling=1&remember=100&privacyPage=https%3A%2F%2Fbradleykennedy.co.uk%2Fprivacy-policy-terms"></script>
+<script>
+  (function() {
+    function loadCookieBar() {
+      if (window.__cookieBarLoaded) return;
+      window.__cookieBarLoaded = true;
+
+      var cookieBarScript = document.createElement("script");
+      cookieBarScript.src = "/CookieBar/cookiebar-latest.min.js?forceLang=en&theme=flying&tracking=1&thirdparty=1&always=1&scrolling=1&remember=100&privacyPage=https%3A%2F%2Fbradleykennedy.co.uk%2Fprivacy-policy-terms";
+      cookieBarScript.defer = true;
+      document.head.appendChild(cookieBarScript);
+    }
+
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(loadCookieBar, { timeout: 2000 });
+      return;
+    }
+
+    window.addEventListener("load", function() {
+      window.setTimeout(loadCookieBar, 350);
+    }, { once: true });
+  })();
+</script>
 
 <div class="text-center">
   <h1><img src="/assets/img/wave.png" alt="" width="50" height="50"/> Hi, I'm Brad.</h1>
-  <!-- Typed.js -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <div class="mobile-js-hide">
     <div class="row">
         <div class="col-sm-12">
@@ -30,12 +49,47 @@ cover-img:
                     </div>
 
                     <script>
-                        var typed = new Typed('#typed', {
-                            stringsElement: '#typed-strings',
-                            typeSpeed: 95,
-                            loop: true,
-                            backDelay: 1300
-                        });
+                      document.addEventListener("DOMContentLoaded", function() {
+                        var typedTarget = document.getElementById("typed");
+                        var source = document.getElementById("typed-strings");
+                        if (!typedTarget || !source) return;
+
+                        var phrases = Array.prototype.map.call(source.querySelectorAll("p"), function(node) {
+                          return node.textContent.trim();
+                        }).filter(Boolean);
+                        if (!phrases.length) return;
+
+                        var phraseIndex = 0;
+                        var charIndex = 0;
+                        var isDeleting = false;
+
+                        function tick() {
+                          var phrase = phrases[phraseIndex];
+                          var delay = 95;
+
+                          if (isDeleting) {
+                            charIndex -= 1;
+                            delay = 45;
+                          } else {
+                            charIndex += 1;
+                          }
+
+                          typedTarget.textContent = phrase.slice(0, charIndex);
+
+                          if (!isDeleting && charIndex === phrase.length) {
+                            delay = 1300;
+                            isDeleting = true;
+                          } else if (isDeleting && charIndex === 0) {
+                            isDeleting = false;
+                            phraseIndex = (phraseIndex + 1) % phrases.length;
+                            delay = 320;
+                          }
+
+                          window.setTimeout(tick, delay);
+                        }
+
+                        tick();
+                      });
                     </script>
                 </div>
             </div>
@@ -44,6 +98,10 @@ cover-img:
 </div>
 
 <style>
+  #typed-strings {
+    display: none;
+  }
+
   .home-carousel-wrap {
     margin: 1.5rem auto 2rem;
     max-width: 960px;
@@ -203,12 +261,12 @@ cover-img:
     {% for project in site.data.projects %}
       {% if project.url %}
         <a class="home-carousel-item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ project.title }}</span>
         </a>
       {% else %}
         <div class="home-carousel-item" aria-label="{{ project.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ project.title }}</span>
         </div>
       {% endif %}
@@ -216,12 +274,12 @@ cover-img:
     {% for project in site.data.projects %}
       {% if project.url %}
         <a class="home-carousel-item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ project.title }}</span>
         </a>
       {% else %}
         <div class="home-carousel-item" aria-label="{{ project.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ project.title }}</span>
         </div>
       {% endif %}
@@ -235,12 +293,12 @@ cover-img:
     {% for app in site.data.apps %}
       {% if app.url %}
         <a class="home-carousel-item" href="{{ app.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ app.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ app.title }}</span>
         </a>
       {% else %}
         <div class="home-carousel-item" aria-label="{{ app.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ app.title }}</span>
         </div>
       {% endif %}
@@ -248,12 +306,12 @@ cover-img:
     {% for app in site.data.apps %}
       {% if app.url %}
         <a class="home-carousel-item" href="{{ app.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ app.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ app.title }}</span>
         </a>
       {% else %}
         <div class="home-carousel-item" aria-label="{{ app.title | escape }}">
-          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}" loading="lazy" decoding="async">
           <span class="home-carousel-item-title">{{ app.title }}</span>
         </div>
       {% endif %}
@@ -265,29 +323,29 @@ cover-img:
   <h2 class="home-carousel-title">Supporting:</h2>
   <div class="home-carousel-track">
     <a class="home-carousel-item logo-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
-      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
+      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
-      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
+      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
-      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
+      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
-      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
+      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo" loading="lazy" decoding="async">
     </a>
 
     <a class="home-carousel-item logo-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
-      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
+      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
-      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
+      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
-      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
+      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo" loading="lazy" decoding="async">
     </a>
     <a class="home-carousel-item logo-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
-      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
+      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo" loading="lazy" decoding="async">
     </a>
   </div>
 </section>
@@ -375,4 +433,3 @@ cover-img:
   <p><a href="https://bradleykennedy.co.uk/pay" target="_blank"><img style="margin-right: auto; margin-left: auto; display: block;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/bmc-button.png" width="309" height="80" /></a></p>
 </div>
 -->
-<script title="Statuspage Popup" src="https://bradleykennedy.statuspage.io/embed/script.js"></script>

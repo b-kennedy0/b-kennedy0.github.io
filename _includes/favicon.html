@@ -9,6 +9,8 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//unpkg.com">
 <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
 <link rel="preconnect" href="https://code.jquery.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,3 +18,48 @@
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <meta name="msapplication-TileColor" content="#2d89ef">
 <meta name="theme-color" content="#ffffff">
+<script>
+  (function() {
+    function loadScript(src) {
+      return new Promise(function(resolve, reject) {
+        var script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    }
+
+    function loadStatusPageWidget() {
+      if (window.__statusWidgetLoaded) return;
+      if (!document.querySelector("statuspage-widget")) return;
+      window.__statusWidgetLoaded = true;
+
+      loadScript("https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js")
+        .then(function() {
+          return loadScript("https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js");
+        })
+        .then(function() {
+          return loadScript("https://unpkg.com/@statuspage/status-widget/dist/index.js");
+        })
+        .catch(function() {
+          window.__statusWidgetLoaded = false;
+        });
+    }
+
+    function scheduleStatusWidgetLoad() {
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(loadStatusPageWidget, { timeout: 4000 });
+      } else {
+        window.setTimeout(loadStatusPageWidget, 1200);
+      }
+    }
+
+    if (document.readyState === "complete") {
+      scheduleStatusWidgetLoad();
+    } else {
+      window.addEventListener("load", scheduleStatusWidgetLoad, { once: true });
+    }
+  })();
+</script>

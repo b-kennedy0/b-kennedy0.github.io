@@ -5,19 +5,54 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <link rel="me" href="https://mastodon.social/@bradleykennedy">
 <link rel="dns-prefetch" href="//stackpath.bootstrapcdn.com">
-<link rel="dns-prefetch" href="//code.jquery.com">
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link rel="dns-prefetch" href="//www.googletagmanager.com">
 <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link rel="dns-prefetch" href="//unpkg.com">
 <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
-<link rel="preconnect" href="https://code.jquery.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <meta name="msapplication-TileColor" content="#2d89ef">
 <meta name="theme-color" content="#ffffff">
+<style>
+  #content-desktop { display: block; }
+  #content-mobile { display: none; }
+
+  @media screen and (max-width: 768px) {
+    #content-desktop { display: none; }
+    #content-mobile { display: block; }
+  }
+
+  .box-note,
+  .box-warning,
+  .box-error,
+  .box-success {
+    padding: 0.9375rem 0.9375rem 0.9375rem 0.625rem;
+    margin: 1.25rem 1.25rem 1.25rem 0.3125rem;
+    border: 1px solid #eee;
+    border-left-width: 0.3125rem;
+    border-radius: 0.3125rem 0.1875rem 0.1875rem 0.3125rem;
+  }
+
+  .box-note {
+    background-color: #eee;
+    border-left-color: #2980b9;
+  }
+
+  .box-warning {
+    background-color: #fdf5d4;
+    border-left-color: #f1c40f;
+  }
+
+  .box-error {
+    background-color: #f4dddb;
+    border-left-color: #c0392b;
+  }
+
+  .box-success {
+    background-color: #98fb98;
+    border-left-color: #3cb371;
+  }
+</style>
 <script>
   (function() {
     function loadScript(src) {
@@ -61,5 +96,57 @@
     } else {
       window.addEventListener("load", scheduleStatusWidgetLoad, { once: true });
     }
+  })();
+</script>
+<script>
+  (function() {
+    var measurementId = "{{ site.gtag_measurement_id | default: '' }}";
+    if (!measurementId) return;
+
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+      return match ? decodeURIComponent(match[2]) : "";
+    }
+
+    function loadGtag() {
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() {
+        window.dataLayer.push(arguments);
+      };
+
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, { anonymize_ip: true });
+    }
+
+    function scheduleGtagLoad() {
+      if (getCookie("cookiebar") === "CookieDisallowed") return;
+
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(loadGtag, { timeout: 2500 });
+      } else {
+        window.setTimeout(loadGtag, 1500);
+      }
+    }
+
+    if (document.readyState === "complete") {
+      scheduleGtagLoad();
+    } else {
+      window.addEventListener("load", scheduleGtagLoad, { once: true });
+    }
+
+    document.addEventListener("click", function(event) {
+      var target = event.target;
+      if (target && target.id === "cookie-bar-button") {
+        window.setTimeout(scheduleGtagLoad, 100);
+      }
+    }, true);
   })();
 </script>

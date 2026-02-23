@@ -157,8 +157,8 @@ footer-hover-col: "#0085A1"
 #  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-site-js:
-  - "/assets/js/delayed-analytics.js"
+#site-js:
+#  - "/assets/js/custom-script.js"
 
 #################################
 # --- Web Analytics Section --- #
@@ -166,7 +166,7 @@ site-js:
 
 # Keep this empty so Beautiful Jekyll does not load gtag.js in the critical path.
 gtag: ""
-# Measurement ID consumed by assets/js/delayed-analytics.js
+# Measurement ID consumed by the delayed analytics loader in _includes/favicon.html
 gtag_measurement_id: "G-WN3KPBXHDC"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
@@ -263,9 +263,6 @@ defaults:
       layout: "page"
       head-extra: favicon.html
       footer-extra: privacylink.html
-      css: 
-            - /fontawesome470/css/font-awesome.min.css
-            - /assets/css/box.css
 
 # Exclude these files from production site
 exclude:

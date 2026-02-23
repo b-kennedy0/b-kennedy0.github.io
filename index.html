@@ -44,21 +44,21 @@ cover-img:
 </div>
 
 <style>
-  .support-carousel-wrap {
+  .home-carousel-wrap {
     margin: 1.5rem auto 2rem;
     max-width: 960px;
     overflow: hidden;
     position: relative;
   }
 
-  .support-carousel-title {
+  .home-carousel-title {
     margin-bottom: 0.85rem;
     font-size: 1.3rem;
     font-weight: 700;
   }
 
-  .support-carousel-wrap::before,
-  .support-carousel-wrap::after {
+  .home-carousel-wrap::before,
+  .home-carousel-wrap::after {
     content: "";
     position: absolute;
     top: 0;
@@ -68,43 +68,89 @@ cover-img:
     pointer-events: none;
   }
 
-  .support-carousel-wrap::before {
+  .home-carousel-wrap::before {
     left: 0;
     background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  .support-carousel-wrap::after {
+  .home-carousel-wrap::after {
     right: 0;
     background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  .support-carousel-track {
+  .home-carousel-track {
     display: flex;
     align-items: center;
     gap: 1.6rem;
     width: max-content;
-    animation: support-carousel-scroll 26s linear infinite;
+    animation: home-carousel-scroll 26s linear infinite;
     padding: 0.4rem 0;
   }
 
-  .support-carousel-wrap:hover .support-carousel-track {
+  .home-carousel-wrap:hover .home-carousel-track {
     animation-play-state: paused;
   }
 
-  .support-carousel-item {
+  .home-carousel-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-width: 250px;
+    max-width: 250px;
+    height: 200px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 0.6rem;
+    gap: 0.55rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .home-carousel-item:hover {
+    text-decoration: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .home-carousel-thumb {
+    width: 100%;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #efefef;
+  }
+
+  .home-carousel-item-title {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .home-carousel-item.logo-item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     min-width: 170px;
+    max-width: 170px;
     height: 88px;
     background: #ffffff;
     border: 1px solid #ececec;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
     padding: 0.8rem 1rem;
+    gap: 0;
   }
 
-  .support-carousel-item img {
+  .home-carousel-item.logo-item img {
     max-width: 130px;
     max-height: 58px;
     width: auto;
@@ -112,11 +158,11 @@ cover-img:
     object-fit: contain;
   }
 
-  .support-carousel-item img.logo-wbs {
+  .home-carousel-item.logo-item img.logo-wbs {
     max-height: 64px;
   }
 
-  @keyframes support-carousel-scroll {
+  @keyframes home-carousel-scroll {
     from {
       transform: translateX(0);
     }
@@ -126,45 +172,121 @@ cover-img:
   }
 
   @media (max-width: 640px) {
-    .support-carousel-wrap::before,
-    .support-carousel-wrap::after {
+    .home-carousel-wrap::before,
+    .home-carousel-wrap::after {
       width: 30px;
     }
 
-    .support-carousel-item {
+    .home-carousel-item {
+      min-width: 220px;
+      max-width: 220px;
+      height: 185px;
+      padding: 0.55rem;
+    }
+
+    .home-carousel-thumb {
+      height: 118px;
+    }
+
+    .home-carousel-item.logo-item {
       min-width: 145px;
+      max-width: 145px;
       height: 80px;
       padding: 0.65rem 0.85rem;
     }
   }
 </style>
 
-<section class="support-carousel-wrap" aria-label="Organisations I support">
-  <h2 class="support-carousel-title">Supporting:</h2>
-  <div class="support-carousel-track">
-    <a class="support-carousel-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
+<section class="home-carousel-wrap" aria-label="Research projects">
+  <h2 class="home-carousel-title">Research Projects:</h2>
+  <div class="home-carousel-track">
+    {% for project in site.data.projects %}
+      {% if project.url %}
+        <a class="home-carousel-item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <span class="home-carousel-item-title">{{ project.title }}</span>
+        </a>
+      {% else %}
+        <div class="home-carousel-item" aria-label="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <span class="home-carousel-item-title">{{ project.title }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% for project in site.data.projects %}
+      {% if project.url %}
+        <a class="home-carousel-item" href="{{ project.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <span class="home-carousel-item-title">{{ project.title }}</span>
+        </a>
+      {% else %}
+        <div class="home-carousel-item" aria-label="{{ project.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ project.img }}" alt="{{ project.title | escape }}">
+          <span class="home-carousel-item-title">{{ project.title }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-carousel-wrap" aria-label="Apps I have built">
+  <h2 class="home-carousel-title">My Apps:</h2>
+  <div class="home-carousel-track">
+    {% for app in site.data.apps %}
+      {% if app.url %}
+        <a class="home-carousel-item" href="{{ app.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <span class="home-carousel-item-title">{{ app.title }}</span>
+        </a>
+      {% else %}
+        <div class="home-carousel-item" aria-label="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <span class="home-carousel-item-title">{{ app.title }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% for app in site.data.apps %}
+      {% if app.url %}
+        <a class="home-carousel-item" href="{{ app.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <span class="home-carousel-item-title">{{ app.title }}</span>
+        </a>
+      {% else %}
+        <div class="home-carousel-item" aria-label="{{ app.title | escape }}">
+          <img class="home-carousel-thumb" src="/assets/img/screenshots/{{ app.img }}" alt="{{ app.title | escape }}">
+          <span class="home-carousel-item-title">{{ app.title }}</span>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-carousel-wrap" aria-label="Organisations I support">
+  <h2 class="home-carousel-title">Supporting:</h2>
+  <div class="home-carousel-track">
+    <a class="home-carousel-item logo-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
       <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
     </a>
-    <a class="support-carousel-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
+    <a class="home-carousel-item logo-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
       <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
     </a>
-    <a class="support-carousel-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
+    <a class="home-carousel-item logo-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
       <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
     </a>
-    <a class="support-carousel-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
+    <a class="home-carousel-item logo-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
       <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
     </a>
 
-    <a class="support-carousel-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
+    <a class="home-carousel-item logo-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
       <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
     </a>
-    <a class="support-carousel-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
+    <a class="home-carousel-item logo-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
       <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
     </a>
-    <a class="support-carousel-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
+    <a class="home-carousel-item logo-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
       <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
     </a>
-    <a class="support-carousel-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
+    <a class="home-carousel-item logo-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
       <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
     </a>
   </div>

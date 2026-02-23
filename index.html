@@ -40,8 +40,135 @@ cover-img:
                 </div>
             </div>
         </div>
-    </div>
+	</div>
 </div>
+
+<style>
+  .support-carousel-wrap {
+    margin: 1.5rem auto 2rem;
+    max-width: 960px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .support-carousel-title {
+    margin-bottom: 0.85rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .support-carousel-wrap::before,
+  .support-carousel-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 72px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .support-carousel-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .support-carousel-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .support-carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    width: max-content;
+    animation: support-carousel-scroll 26s linear infinite;
+    padding: 0.4rem 0;
+  }
+
+  .support-carousel-wrap:hover .support-carousel-track {
+    animation-play-state: paused;
+  }
+
+  .support-carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    height: 88px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 0.8rem 1rem;
+  }
+
+  .support-carousel-item img {
+    max-width: 130px;
+    max-height: 58px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .support-carousel-item img.logo-wbs {
+    max-height: 64px;
+  }
+
+  @keyframes support-carousel-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .support-carousel-wrap::before,
+    .support-carousel-wrap::after {
+      width: 30px;
+    }
+
+    .support-carousel-item {
+      min-width: 145px;
+      height: 80px;
+      padding: 0.65rem 0.85rem;
+    }
+  }
+</style>
+
+<section class="support-carousel-wrap" aria-label="Organisations I support">
+  <h2 class="support-carousel-title">Supporting:</h2>
+  <div class="support-carousel-track">
+    <a class="support-carousel-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
+      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
+    </a>
+    <a class="support-carousel-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
+      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
+    </a>
+    <a class="support-carousel-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
+      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
+    </a>
+    <a class="support-carousel-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
+      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
+    </a>
+
+    <a class="support-carousel-item" href="https://www.bhf.org.uk/" target="_blank" rel="noopener noreferrer" aria-label="British Heart Foundation">
+      <img src="/assets/img/logos/BHF-logo.png" alt="British Heart Foundation logo">
+    </a>
+    <a class="support-carousel-item" href="https://www.cancerresearchuk.org/" target="_blank" rel="noopener noreferrer" aria-label="Cancer Research UK">
+      <img src="/assets/img/logos/CRUK-logo.png" alt="Cancer Research UK logo">
+    </a>
+    <a class="support-carousel-item" href="https://wbs.wales/" target="_blank" rel="noopener noreferrer" aria-label="Welsh Blood Service">
+      <img class="logo-wbs" src="/assets/img/logos/WBS-logo.png" alt="Welsh Blood Service logo">
+    </a>
+    <a class="support-carousel-item" href="/volunteering" target="_blank" rel="noopener noreferrer" aria-label="Royal Air Force Air Cadets">
+      <img src="/assets/img/logos/RAFAC-logo.png" alt="Royal Air Force Air Cadets logo">
+    </a>
+  </div>
+</section>
 <!-- 
 <br>
   <h2>Quick Overview:</h2>
@@ -103,10 +230,10 @@ cover-img:
   </table>
 </div>
 <br>
--->
   <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
     <iframe style="border: 0; margin: 0 auto; padding: 0; display: block;" src="https://gravatar.com/bradkennedy1.card" width="340" height="440"></iframe>
 </div>
   <p><a href="https://bradleykennedy.co.uk/pay" target="_blank"><img style="margin-right: auto; margin-left: auto; display: block;" src="https://raw.githubusercontent.com/b-kennedy0/b-kennedy0.github.io/master/assets/img/bmc-button.png" width="309" height="80" /></a></p>
 </div>
+-->
 <script title="Statuspage Popup" src="https://bradleykennedy.statuspage.io/embed/script.js"></script>

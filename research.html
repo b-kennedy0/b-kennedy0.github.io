@@ -1,15 +1,21 @@
 ---
-layout: page
 title: Research
-cover-img: "/assets/img/brain_cover.jpg"
-css: /assets/css/box.css
-show-avatar: false
+layout: base
+head-extra: noindex.html
 nav-short: true
+show-avatar: false
 css:
   - /assets/css/portfolio.css
+  - /assets/css/box.css
 ---
+<div id="main-sections">
+  <div id="portfolio-out" class="page-section grey-section">
+    <div id="portfolio">
+      <div class="section-title">
+        Research
+      </div>
 
-## Researcher Profiles:
+      <h2>Researcher Profiles</h2>
 
 <div class="researcher-profiles">
   <a href="https://orcid.org/0000-0003-4636-2210" aria-label="View ORCID record" target="_blank" rel="noopener noreferrer" class="profile-card">
@@ -33,7 +39,7 @@ css:
 </a>
 </div>
 
-## Projects:
+      <h2>Projects</h2>
 
 <div id="shinyapps-big">
         {% for project in site.data.projects %}
@@ -57,4 +63,7 @@ css:
 
 <div id="content-desktop">
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6XZ54ijJYSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+    </div>
+  </div>
 </div>

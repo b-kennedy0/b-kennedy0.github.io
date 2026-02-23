@@ -83,7 +83,7 @@ cover-img:
     align-items: center;
     gap: 1.6rem;
     width: max-content;
-    animation: home-carousel-scroll 26s linear infinite;
+    animation: home-carousel-scroll var(--carousel-duration, 26s) linear infinite;
     padding: 0.4rem 0;
   }
 
@@ -291,6 +291,23 @@ cover-img:
     </a>
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const PIXELS_PER_SECOND = 55;
+
+    function setCarouselDurations() {
+      const tracks = document.querySelectorAll(".home-carousel-track");
+      tracks.forEach(track => {
+        const scrollDistance = track.scrollWidth / 2;
+        const durationSeconds = Math.max(scrollDistance / PIXELS_PER_SECOND, 8);
+        track.style.setProperty("--carousel-duration", durationSeconds + "s");
+      });
+    }
+
+    setCarouselDurations();
+    window.addEventListener("resize", setCarouselDurations);
+  });
+</script>
 <!-- 
 <br>
   <h2>Quick Overview:</h2>

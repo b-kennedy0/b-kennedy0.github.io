@@ -1,1 +1,7 @@
-{}
+{
+  "chester::cheshire::unitedkingdom": {
+    "query": "Cheshire West and Chester, UK",
+    "countryCode": "gb",
+    "displayName": "Cheshire West and Chester, England, United Kingdom"
+  }
+}

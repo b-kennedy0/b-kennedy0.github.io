@@ -3,7 +3,7 @@
 
   const CONFIG = {
     // Published CSV URL for the Google Sheet tab that powers the app.
-    // The parser supports both the richer schema from the build plan and the current compact sheet format.
+    // The parser supports both the preferred Place/Region/Country schema and the older compact sheet format.
     sheetCsvUrl:
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
     selfLabel: "Brad",
@@ -22,7 +22,8 @@
   };
 
   const PRIMARY_REQUIRED_COLUMNS = ["country", "year"];
-  const ENHANCED_SCHEMA_COLUMNS = ["name", "cityarea", "country", "year", "visitedby"];
+  const STRUCTURED_SCHEMA_COLUMNS = ["name", "place", "region", "country", "year"];
+  const VISITED_BY_SCHEMA_COLUMNS = ["name", "cityarea", "country", "year", "visitedby"];
   const LEGACY_SCHEMA_COLUMNS = ["name", "area", "country", "year"];
 
   const COUNTRY_ALIASES = {
@@ -130,8 +131,8 @@
         .filter(function findMissing(visit) {
           return !state.placeBoundaryKeys.has(visit.placeKey);
         })
-        .map(function toKey(visit) {
-          return visit.placeName + ", " + visit.countryRaw;
+        .map(function toLabel(visit) {
+          return formatPlaceLabel(visit.placeName, visit.region, visit.countryRaw);
         })
         .filter(uniqueOnly)
         .sort();
@@ -429,16 +430,10 @@
       throw new Error("The published sheet must include at least Country and Year columns.");
     }
 
-    const hasEnhancedSchema = ENHANCED_SCHEMA_COLUMNS.every(function hasColumn(column) {
-      return fields.includes(column);
-    });
-    const hasLegacySchema = LEGACY_SCHEMA_COLUMNS.every(function hasColumn(column) {
-      return fields.includes(column);
-    });
-
-    if (!hasEnhancedSchema && !hasLegacySchema) {
+    const schema = detectSchema(fields);
+    if (!schema) {
       throw new Error(
-        "The published sheet must use either the full schema (Name, City/Area, Country, Year, Visited By) or the current compact schema (Name, Area, Country, Year)."
+        "The published sheet must use either Place/Region/Country/Year/Name, Name/City-Area/Country/Year/Visited By, or the compact Area/Country/Year/Name format."
       );
     }
 
@@ -452,9 +447,9 @@
       }
 
       const countryRaw = tidyCell(rawRow.country);
-      const placeName = hasEnhancedSchema ? tidyCell(rawRow.name) : tidyCell(rawRow.area);
-      const cityArea = hasEnhancedSchema ? tidyCell(rawRow.cityarea) : "";
-      const visitedBy = normalizeVisitedBy(hasEnhancedSchema ? rawRow.visitedby : rawRow.name);
+      const placeName = getPlaceName(rawRow, schema);
+      const region = getRegion(rawRow, schema);
+      const visitedBy = normalizeVisitedBy(schema === "visitedBy" ? rawRow.visitedby : rawRow.name);
 
       if (!countryRaw || !placeName || !visitedBy) {
         skippedRows += 1;
@@ -469,13 +464,13 @@
 
       rows.push({
         name: placeName,
-        cityArea: cityArea,
+        region: region,
         countryRaw: countryRaw,
         countryCanonical: countryCanonical,
         year: tidyCell(rawRow.year),
         visitedBy: visitedBy,
         placeName: placeName,
-        placeKey: buildPlaceKey(placeName, countryCanonical),
+        placeKey: buildPlaceKey(placeName, region, countryCanonical),
       });
     });
 
@@ -549,6 +544,7 @@
         summaries.set(visit.placeKey, {
           placeKey: visit.placeKey,
           placeName: visit.placeName,
+          region: visit.region,
           countryCanonical: visit.countryCanonical,
           status: "unvisited",
           hasTogetherVisit: false,
@@ -604,8 +600,15 @@
     return match ? Number(match[0]) : -Infinity;
   }
 
-  function buildPlaceKey(placeName, countryCanonical) {
-    return normalizeLookup(placeName) + "::" + normalizeLookup(countryCanonical);
+  function buildPlaceKey(placeName, region, countryCanonical) {
+    const keyParts = [normalizeLookup(placeName)];
+    const regionKey = normalizeLookup(region);
+    const countryKey = normalizeLookup(countryCanonical);
+    if (regionKey) {
+      keyParts.push(regionKey);
+    }
+    keyParts.push(countryKey);
+    return keyParts.join("::");
   }
 
   function stylePlaceFeature(feature) {
@@ -776,7 +779,7 @@
     elements.detailChip.textContent = getChipLabel(summary.status);
     elements.detailChip.dataset.status = summary.status;
     elements.detailSubtitle.textContent =
-      summary.countryCanonical +
+      formatPlaceLocation(summary.region, summary.countryCanonical) +
       " • " +
       summary.visits.length +
       " visit" +
@@ -861,7 +864,7 @@
 
       const meta = document.createElement("p");
       meta.className = "visit-item__meta";
-      meta.textContent = visit.cityArea ? visit.cityArea + " • " + visit.countryCanonical : visit.countryCanonical;
+      meta.textContent = formatPlaceLocation(visit.region, visit.countryCanonical);
 
       const year = document.createElement("span");
       year.className = "visit-item__year";
@@ -918,5 +921,53 @@
 
   function plural(count) {
     return count === 1 ? "" : "s";
+  }
+
+  function detectSchema(fields) {
+    if (STRUCTURED_SCHEMA_COLUMNS.every(function hasColumn(column) {
+      return fields.includes(column);
+    })) {
+      return "structured";
+    }
+    if (VISITED_BY_SCHEMA_COLUMNS.every(function hasColumn(column) {
+      return fields.includes(column);
+    })) {
+      return "visitedBy";
+    }
+    if (LEGACY_SCHEMA_COLUMNS.every(function hasColumn(column) {
+      return fields.includes(column);
+    })) {
+      return "legacy";
+    }
+    return null;
+  }
+
+  function getPlaceName(row, schema) {
+    if (schema === "structured") {
+      return tidyCell(row.place);
+    }
+    if (schema === "visitedBy") {
+      return tidyCell(row.name);
+    }
+    return tidyCell(row.area);
+  }
+
+  function getRegion(row, schema) {
+    if (schema === "structured") {
+      return tidyCell(row.region);
+    }
+    if (schema === "visitedBy") {
+      return tidyCell(row.cityarea);
+    }
+    return "";
+  }
+
+  function formatPlaceLocation(region, country) {
+    return [region, country].filter(Boolean).join(" • ");
+  }
+
+  function formatPlaceLabel(placeName, region, country) {
+    const location = formatPlaceLocation(region, country);
+    return location ? placeName + ", " + location.replace(/ • /g, ", ") : placeName;
   }
 })();

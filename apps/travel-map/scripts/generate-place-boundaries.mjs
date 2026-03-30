@@ -48,6 +48,10 @@ const COUNTRY_ALIASES = {
   easttimor: "East Timor",
 };
 
+const STRUCTURED_SCHEMA_COLUMNS = ["name", "place", "region", "country", "year"];
+const VISITED_BY_SCHEMA_COLUMNS = ["name", "cityarea", "country", "year", "visitedby"];
+const LEGACY_SCHEMA_COLUMNS = ["name", "area", "country", "year"];
+
 const WORLD_COUNTRIES = JSON.parse(await fs.readFile(WORLD_GEOJSON_PATH, "utf8"));
 const COUNTRY_NAME_BY_KEY = new Map(
   WORLD_COUNTRIES.features
@@ -71,7 +75,7 @@ const features = [];
 
 for (const place of uniquePlaces) {
   const override = overrides[place.placeKey] || {};
-  const query = override.query || `${place.placeName}, ${place.countryRaw}`;
+  const query = override.query || buildQuery(place.placeName, place.region, place.countryRaw);
   const cacheKey = place.placeKey;
   const cachedFeature = cachedFeatureByKey.get(cacheKey);
   const cachedReport = cachedReportByKey.get(cacheKey);
@@ -88,6 +92,7 @@ for (const place of uniquePlaces) {
     reportEntries.push({
       placeKey: place.placeKey,
       placeName: place.placeName,
+      region: place.region,
       countryRaw: place.countryRaw,
       countryCanonical: place.countryCanonical,
       query,
@@ -104,6 +109,7 @@ for (const place of uniquePlaces) {
     properties: {
       placeKey: place.placeKey,
       placeName: place.placeName,
+      region: place.region,
       countryRaw: place.countryRaw,
       countryCanonical: place.countryCanonical,
       query,
@@ -161,7 +167,7 @@ const unmatched = reportEntries.filter((entry) => !entry.matched);
 console.log(`Generated ${features.length} place boundaries from ${uniquePlaces.length} unique places.`);
 if (unmatched.length > 0) {
   console.log("Unmatched places:");
-  unmatched.forEach((entry) => console.log(`- ${entry.placeName}, ${entry.countryRaw}`));
+  unmatched.forEach((entry) => console.log(`- ${formatPlaceLabel(entry.placeName, entry.region, entry.countryRaw)}`));
   process.exitCode = 1;
 }
 
@@ -204,9 +210,8 @@ function parseSheetRows(csvText) {
   }
 
   const fields = result.meta.fields || [];
-  const hasEnhancedSchema = ["name", "cityarea", "country", "year", "visitedby"].every((field) => fields.includes(field));
-  const hasLegacySchema = ["name", "area", "country", "year"].every((field) => fields.includes(field));
-  if (!hasEnhancedSchema && !hasLegacySchema) {
+  const schema = detectSchema(fields);
+  if (!schema) {
     throw new Error("Sheet schema did not match the supported travel-map formats.");
   }
 
@@ -214,13 +219,15 @@ function parseSheetRows(csvText) {
     .filter((row) => row && Object.values(row).some((value) => String(value || "").trim()))
     .map((row) => {
       const countryRaw = tidyCell(row.country);
-      const placeName = hasEnhancedSchema ? tidyCell(row.name) : tidyCell(row.area);
+      const placeName = getPlaceName(row, schema);
+      const region = getRegion(row, schema);
       const countryCanonical = resolveCountryName(countryRaw);
       return {
         placeName,
+        region,
         countryRaw,
         countryCanonical,
-        placeKey: buildPlaceKey(placeName, countryCanonical),
+        placeKey: buildPlaceKey(placeName, region, countryCanonical),
       };
     })
     .filter((row) => row.placeName && row.countryCanonical);
@@ -288,6 +295,7 @@ function scoreCandidate(candidate, place) {
   const displayName = normalizeLookup(candidate.display_name);
   const countryNormalized = normalizeLookup(place.countryCanonical);
   const placeNormalized = normalizeLookup(place.placeName);
+  const regionNormalized = normalizeLookup(place.region);
   const address = candidate.address || {};
 
   let score = 0;
@@ -298,6 +306,9 @@ function scoreCandidate(candidate, place) {
   if (displayName.includes(countryNormalized)) {
     score += 25;
   }
+  if (regionNormalized && displayName.includes(regionNormalized)) {
+    score += 20;
+  }
 
   const addressValues = Object.values(address).map((value) => normalizeLookup(value));
   if (addressValues.includes(placeNormalized)) {
@@ -305,6 +316,9 @@ function scoreCandidate(candidate, place) {
   }
   if (addressValues.includes(countryNormalized)) {
     score += 25;
+  }
+  if (regionNormalized && addressValues.includes(regionNormalized)) {
+    score += 20;
   }
 
   const preferredTypes = new Set(["administrative", "city", "town", "village", "borough", "municipality", "island", "suburb"]);
@@ -334,8 +348,14 @@ function hasPolygon(candidate) {
   return candidate && candidate.geojson && (candidate.geojson.type === "Polygon" || candidate.geojson.type === "MultiPolygon");
 }
 
-function buildPlaceKey(placeName, countryCanonical) {
-  return `${normalizeLookup(placeName)}::${normalizeLookup(countryCanonical)}`;
+function buildPlaceKey(placeName, region, countryCanonical) {
+  const parts = [normalizeLookup(placeName)];
+  const regionKey = normalizeLookup(region);
+  if (regionKey) {
+    parts.push(regionKey);
+  }
+  parts.push(normalizeLookup(countryCanonical));
+  return parts.join("::");
 }
 
 function resolveCountryName(rawCountry) {
@@ -364,6 +384,47 @@ function normalizeLookup(value) {
 
 function tidyCell(value) {
   return String(value == null ? "" : value).trim();
+}
+
+function detectSchema(fields) {
+  if (STRUCTURED_SCHEMA_COLUMNS.every((field) => fields.includes(field))) {
+    return "structured";
+  }
+  if (VISITED_BY_SCHEMA_COLUMNS.every((field) => fields.includes(field))) {
+    return "visitedBy";
+  }
+  if (LEGACY_SCHEMA_COLUMNS.every((field) => fields.includes(field))) {
+    return "legacy";
+  }
+  return null;
+}
+
+function getPlaceName(row, schema) {
+  if (schema === "structured") {
+    return tidyCell(row.place);
+  }
+  if (schema === "visitedBy") {
+    return tidyCell(row.name);
+  }
+  return tidyCell(row.area);
+}
+
+function getRegion(row, schema) {
+  if (schema === "structured") {
+    return tidyCell(row.region);
+  }
+  if (schema === "visitedBy") {
+    return tidyCell(row.cityarea);
+  }
+  return "";
+}
+
+function buildQuery(placeName, region, countryRaw) {
+  return [placeName, region, countryRaw].filter(Boolean).join(", ");
+}
+
+function formatPlaceLabel(placeName, region, countryRaw) {
+  return [placeName, region, countryRaw].filter(Boolean).join(", ");
 }
 
 async function readJsonFile(filePath, fallback) {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:09:03.301Z",
+  "generatedAt": "2026-03-30T21:13:40.278Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
   "placeCount": 36,
   "matchedCount": 36,
@@ -538,19 +538,19 @@
       ]
     },
     {
-      "placeKey": "isleofwhite::unitedkingdom",
-      "placeName": "Isle of White",
+      "placeKey": "isleofwight::unitedkingdom",
+      "placeName": "Isle of Wight",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
       "query": "Isle of Wight, UK",
       "matched": true,
       "selected": {
         "displayName": "Isle of Wight, England, United Kingdom",
-        "category": "boundary",
-        "type": "administrative",
+        "category": "place",
+        "type": "island",
         "osmType": "relation",
-        "osmId": 154350,
-        "geojsonType": "MultiPolygon"
+        "osmId": 3955402,
+        "geojsonType": "Polygon"
       },
       "candidates": [
         {
@@ -698,8 +698,8 @@
       ]
     },
     {
-      "placeKey": "landsend::cornwall::unitedkingdom",
-      "placeName": "Land's End",
+      "placeKey": "sennen::cornwall::unitedkingdom",
+      "placeName": "Sennen",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
       "query": "Sennen, Cornwall, UK",
@@ -1116,8 +1116,8 @@
       ]
     },
     {
-      "placeKey": "ellesmere::shropshire::unitedkingdom",
-      "placeName": "Ellesmere",
+      "placeKey": "ellesmereurban::shropshire::unitedkingdom",
+      "placeName": "Ellesmere Urban",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
       "query": "Ellesmere Urban, Shropshire, UK",

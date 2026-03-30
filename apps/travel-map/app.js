@@ -207,6 +207,17 @@
     updateMobilePanelState();
   }
 
+  function updateDetailCloseButton() {
+    if (state.isPointerMode || !state.pinnedPlaceKey) {
+      elements.detailClose.hidden = true;
+      return;
+    }
+
+    elements.detailClose.hidden = false;
+    elements.detailClose.textContent = "Back to map";
+    elements.detailClose.setAttribute("aria-label", "Clear selection and return to the map");
+  }
+
   function initializeMap(worldGeoData, placeBoundaryGeoData) {
     buildCountryIndex(worldGeoData.features);
 
@@ -733,7 +744,7 @@
     elements.detailNote.hidden = true;
     elements.detailNote.textContent = "";
     elements.detailGroups.innerHTML = "";
-    elements.detailClose.hidden = state.isPointerMode;
+    updateDetailCloseButton();
 
     if (state.pinnedPlaceKey) {
       renderPlace(state.pinnedPlaceKey);
@@ -773,7 +784,7 @@
     elements.detailNote.hidden = true;
     elements.detailNote.textContent = "";
     elements.setupPanel.hidden = Boolean(CONFIG.sheetCsvUrl);
-    elements.detailClose.hidden = state.isPointerMode;
+    updateDetailCloseButton();
 
     renderVisitGroups(summary);
     updateMobilePanelState(Boolean(!state.isPointerMode));

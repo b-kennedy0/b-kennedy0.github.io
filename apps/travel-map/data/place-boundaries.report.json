@@ -1,0 +1,223 @@
+{
+  "generatedAt": "2026-03-30T19:05:27.905Z",
+  "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
+  "placeCount": 7,
+  "matchedCount": 7,
+  "unmatchedCount": 0,
+  "places": [
+    {
+      "placeKey": "vancouver::canada",
+      "placeName": "Vancouver",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Vancouver, Canada",
+      "matched": true,
+      "selected": {
+        "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1852574,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1852574,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Vancouver Island, British Columbia, Canada",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 2249770,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "malaga::spain",
+      "placeName": "Málaga",
+      "countryRaw": "Spain",
+      "countryCanonical": "Spain",
+      "query": "Málaga, Spain",
+      "matched": true,
+      "selected": {
+        "displayName": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 340746,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 340746,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Málaga, Andalucía, España",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 5275848,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "boavista::caboverde",
+      "placeName": "Boa Vista",
+      "countryRaw": "Cabo Verde",
+      "countryCanonical": "Cabo Verde",
+      "query": "Boa Vista, Cabo Verde",
+      "matched": true,
+      "selected": {
+        "displayName": "Boa Vista, Cabo Verde",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 4635876,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Boa Vista, Cabo Verde",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 4635876,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Boa Vista, Cabo Verde",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 3830195,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "rome::italy",
+      "placeName": "Rome",
+      "countryRaw": "Italy",
+      "countryCanonical": "Italy",
+      "query": "Rome, Italy",
+      "matched": true,
+      "selected": {
+        "displayName": "Roma Capitale, Lazio, Italia",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 41313,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Roma, Roma Capitale, Lazio, Italia",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 41485,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Roma Capitale, Lazio, Italia",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 41313,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "guildford::unitedkingdom",
+      "placeName": "Guildford",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Guildford, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Guildford, Surrey, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 108787,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Guildford, Surrey, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 108787,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "edinburgh::unitedkingdom",
+      "placeName": "Edinburgh",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Edinburgh, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1920901,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1920901,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "vienna::austria",
+      "placeName": "Vienna",
+      "countryRaw": "Austria",
+      "countryCanonical": "Austria",
+      "query": "Vienna, Austria",
+      "matched": true,
+      "selected": {
+        "displayName": "Wien, Österreich",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 109166,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Wien, Österreich",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 109166,
+          "geojsonType": "Polygon"
+        }
+      ]
+    }
+  ]
+}

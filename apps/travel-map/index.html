@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Map</title>
+  <meta
+    name="description"
+    content="Interactive travel map showing places visited by me, my partner, or both of us together."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./vendor/leaflet.css" />
+  <link rel="stylesheet" href="./app.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar__title">
+        <a class="back-link" href="/apps">Back to Apps</a>
+        <p class="eyebrow">Shared Places</p>
+        <h1>Travel Map</h1>
+        <p class="subhead">Zoom, pan, and inspect the exact place boundaries we have logged so far.</p>
+        <p class="data-credit">
+          Place boundaries are derived from OpenStreetMap data via Nominatim and bundled locally for GitHub Pages.
+        </p>
+      </div>
+
+      <div class="topbar__meta">
+        <div class="legend" aria-label="Map legend">
+          <span class="legend__item"><span class="legend__swatch legend__swatch--me"></span><span id="legend-me-label">Me</span></span>
+          <span class="legend__item"><span class="legend__swatch legend__swatch--partner"></span><span id="legend-partner-label">Partner</span></span>
+          <span class="legend__item"><span class="legend__swatch legend__swatch--both"></span>Both</span>
+          <span class="legend__item"><span class="legend__swatch legend__swatch--unvisited"></span>Unvisited</span>
+        </div>
+
+        <div class="stats" aria-label="Travel statistics">
+          <div class="stat">
+            <span class="stat__value" id="stat-countries">0</span>
+            <span class="stat__label">Countries</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" id="stat-places">0</span>
+            <span class="stat__label">Places</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="map-stage">
+        <div id="map" aria-label="Interactive world travel map"></div>
+
+        <div class="map-overlay map-overlay--loading" id="map-loading" role="status">
+          Loading map data...
+        </div>
+
+        <div class="map-overlay map-overlay--status" id="status-banner" hidden></div>
+
+        <section class="warning-panel" id="warning-panel" hidden aria-live="polite">
+          <div class="warning-panel__header">
+            <p class="eyebrow">Placement Warnings</p>
+            <h2>Some places need attention</h2>
+          </div>
+          <p id="warning-summary"></p>
+          <ul id="warning-list"></ul>
+        </section>
+      </section>
+
+      <aside class="detail-panel" id="detail-panel" data-mobile-open="false" aria-live="polite">
+        <div class="detail-panel__header">
+          <div>
+            <p class="eyebrow">Place Detail</p>
+            <h2 id="detail-country">Explore the map</h2>
+          </div>
+          <button class="detail-panel__close" id="detail-close" type="button" aria-label="Close country details">
+            Close
+          </button>
+        </div>
+
+        <div class="detail-panel__chip" id="detail-chip">Waiting for travel data</div>
+        <p class="detail-panel__subtitle" id="detail-subtitle"></p>
+        <p class="detail-panel__note" id="detail-note" hidden></p>
+
+        <div class="detail-groups" id="detail-groups"></div>
+
+        <section class="setup-panel" id="setup-panel" hidden>
+          <p class="eyebrow">Setup</p>
+          <h3>Connect your published Google Sheet</h3>
+          <p>
+            Add your published CSV URL to the <code>sheetCsvUrl</code> setting in
+            <code>apps/travel-map/app.js</code>.
+          </p>
+          <p>
+            After adding or renaming places in the sheet, regenerate the local place-boundary file with
+            <code>node apps/travel-map/scripts/generate-place-boundaries.mjs</code>.
+          </p>
+          <p>The app supports either of these sheet formats:</p>
+          <p><strong>Preferred schema</strong></p>
+          <ul>
+            <li><code>Name</code></li>
+            <li><code>City/Area</code></li>
+            <li><code>Country</code></li>
+            <li><code>Year</code></li>
+            <li><code>Visited By</code></li>
+          </ul>
+          <p><strong>Current compact schema</strong></p>
+          <ul>
+            <li><code>Name</code> as visitor name, for example <code>Brad</code>, <code>Ryan</code>, or <code>Both</code></li>
+            <li><code>Area</code> as the place label</li>
+            <li><code>Country</code></li>
+            <li><code>Year</code></li>
+          </ul>
+          <p>
+            Accepted <code>Visited By</code> values are <code>Me</code>, <code>Partner</code>,
+            and <code>Both</code>.
+          </p>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="./vendor/leaflet.js"></script>
+  <script src="./vendor/papaparse.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-30T21:26:56.806Z",
+  "generatedAt": "2026-03-30T21:30:57.124Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 39,
-  "matchedCount": 39,
+  "placeCount": 40,
+  "matchedCount": 40,
   "unmatchedCount": 0,
   "places": [
     {
@@ -1223,6 +1223,32 @@
           "type": "administrative",
           "osmType": "relation",
           "osmId": 18594087,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "marmaris::turkey",
+      "placeName": "Marmaris",
+      "countryRaw": "Turkey",
+      "countryCanonical": "Turkey",
+      "query": "Marmaris, Turkey",
+      "matched": true,
+      "selected": {
+        "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1827293,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1827293,
           "geojsonType": "MultiPolygon"
         }
       ]

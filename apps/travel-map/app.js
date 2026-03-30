@@ -759,9 +759,9 @@
     elements.detailChip.dataset.status = "unvisited";
 
     if (state.isPointerMode) {
-      elements.detailSubtitle.textContent = "Hover over a highlighted place boundary to inspect who visited and when.";
+      elements.detailSubtitle.textContent = "Hover over a highlighted place to inspect who visited and when.";
     } else {
-      elements.detailSubtitle.textContent = "Tap a highlighted place boundary to pin its details here, then close the panel when you want the map back.";
+      elements.detailSubtitle.textContent = "Tap a highlighted place to pin its details here, then close the panel when you want the map back.";
     }
 
     updateMobilePanelState(Boolean(!state.isPointerMode && (!CONFIG.sheetCsvUrl || !elements.setupPanel.hidden)));

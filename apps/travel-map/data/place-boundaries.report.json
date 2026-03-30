@@ -1,66 +1,32 @@
 {
-  "generatedAt": "2026-03-30T20:16:22.969Z",
+  "generatedAt": "2026-03-30T21:09:03.301Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 25,
-  "matchedCount": 25,
+  "placeCount": 36,
+  "matchedCount": 36,
   "unmatchedCount": 0,
   "places": [
     {
-      "placeKey": "chester::cheshire::unitedkingdom",
-      "placeName": "Chester",
+      "placeKey": "bangor::gwynedd::unitedkingdom",
+      "placeName": "Bangor",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "Cheshire West and Chester, UK",
+      "query": "Bangor, Gwynedd, UK",
       "matched": true,
       "selected": {
-        "displayName": "Cheshire West and Chester, England, United Kingdom",
+        "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 153488,
+        "osmId": 11241684,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Cheshire West and Chester, England, United Kingdom",
+          "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 153488,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "vancouver::britishcolumbia::canada",
-      "placeName": "Vancouver",
-      "countryRaw": "Canada",
-      "countryCanonical": "Canada",
-      "query": "Vancouver, British Columbia, Canada",
-      "matched": true,
-      "selected": {
-        "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 1852574,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 1852574,
-          "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "Vancouver Island, British Columbia, Canada",
-          "category": "place",
-          "type": "island",
-          "osmType": "relation",
-          "osmId": 2249770,
+          "osmId": 11241684,
           "geojsonType": "Polygon"
         }
       ]
@@ -92,105 +58,27 @@
       ]
     },
     {
-      "placeKey": "edinburgh::scotland::unitedkingdom",
-      "placeName": "Edinburgh",
-      "countryRaw": "UK",
-      "countryCanonical": "United Kingdom",
-      "query": "Edinburgh, Scotland, UK",
+      "placeKey": "glacierbaynationalpark::alaska::unitedstatesofamerica",
+      "placeName": "Glacier Bay National Park",
+      "countryRaw": "USA",
+      "countryCanonical": "United States of America",
+      "query": "Glacier Bay National Park, Alaska, USA",
       "matched": true,
       "selected": {
-        "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+        "displayName": "Glacier Bay National Park, Alaska, United States",
         "category": "boundary",
-        "type": "administrative",
+        "type": "protected_area",
         "osmType": "relation",
-        "osmId": 1920901,
+        "osmId": 6077677,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+          "displayName": "Glacier Bay National Park, Alaska, United States",
           "category": "boundary",
-          "type": "administrative",
+          "type": "protected_area",
           "osmType": "relation",
-          "osmId": 1920901,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "vienna::austria",
-      "placeName": "Vienna",
-      "countryRaw": "Austria",
-      "countryCanonical": "Austria",
-      "query": "Vienna, Austria",
-      "matched": true,
-      "selected": {
-        "displayName": "Wien, Österreich",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 109166,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Wien, Österreich",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 109166,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "flintshire::wales::unitedkingdom",
-      "placeName": "Flintshire",
-      "countryRaw": "UK",
-      "countryCanonical": "United Kingdom",
-      "query": "Flintshire, Wales, UK",
-      "matched": true,
-      "selected": {
-        "displayName": "Flintshire, Cymru / Wales, United Kingdom",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 198566,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Flintshire, Cymru / Wales, United Kingdom",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 198566,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "bangor::gwynedd::unitedkingdom",
-      "placeName": "Bangor",
-      "countryRaw": "UK",
-      "countryCanonical": "United Kingdom",
-      "query": "Bangor, Gwynedd, UK",
-      "matched": true,
-      "selected": {
-        "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 11241684,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 11241684,
+          "osmId": 6077677,
           "geojsonType": "Polygon"
         }
       ]
@@ -217,66 +105,6 @@
           "type": "administrative",
           "osmType": "relation",
           "osmId": 2605281,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "victoria::britishcolumbia::canada",
-      "placeName": "Victoria",
-      "countryRaw": "Canada",
-      "countryCanonical": "Canada",
-      "query": "Victoria, British Columbia, Canada",
-      "matched": true,
-      "selected": {
-        "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 2221062,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 2221062,
-          "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "Victoria, Juan de Fuca Electoral Area, Capital Regional District, British Columbia, Canada",
-          "category": "boundary",
-          "type": "political",
-          "osmType": "relation",
-          "osmId": 13148274,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "tofino::britishcolumbia::canada",
-      "placeName": "Tofino",
-      "countryRaw": "Canada",
-      "countryCanonical": "Canada",
-      "query": "Tofino, British Columbia, Canada",
-      "matched": true,
-      "selected": {
-        "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 2221212,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 2221212,
           "geojsonType": "Polygon"
         }
       ]
@@ -350,27 +178,121 @@
       ]
     },
     {
-      "placeKey": "glacierbaynationalpark::alaska::unitedstatesofamerica",
-      "placeName": "Glacier Bay National Park",
-      "countryRaw": "USA",
-      "countryCanonical": "United States of America",
-      "query": "Glacier Bay National Park, Alaska, USA",
+      "placeKey": "tofino::britishcolumbia::canada",
+      "placeName": "Tofino",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Tofino, British Columbia, Canada",
       "matched": true,
       "selected": {
-        "displayName": "Glacier Bay National Park, Alaska, United States",
+        "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
         "category": "boundary",
-        "type": "protected_area",
+        "type": "administrative",
         "osmType": "relation",
-        "osmId": 6077677,
+        "osmId": 2221212,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Glacier Bay National Park, Alaska, United States",
+          "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
           "category": "boundary",
-          "type": "protected_area",
+          "type": "administrative",
           "osmType": "relation",
-          "osmId": 6077677,
+          "osmId": 2221212,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "vancouver::britishcolumbia::canada",
+      "placeName": "Vancouver",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Vancouver, British Columbia, Canada",
+      "matched": true,
+      "selected": {
+        "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1852574,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Vancouver, Metro Vancouver Regional District, British Columbia, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1852574,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Vancouver Island, British Columbia, Canada",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 2249770,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "victoria::britishcolumbia::canada",
+      "placeName": "Victoria",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Victoria, British Columbia, Canada",
+      "matched": true,
+      "selected": {
+        "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 2221062,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2221062,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Victoria, Juan de Fuca Electoral Area, Capital Regional District, British Columbia, Canada",
+          "category": "boundary",
+          "type": "political",
+          "osmType": "relation",
+          "osmId": 13148274,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "edinburgh::scotland::unitedkingdom",
+      "placeName": "Edinburgh",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Edinburgh, Scotland, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1920901,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1920901,
           "geojsonType": "Polygon"
         }
       ]
@@ -397,32 +319,6 @@
           "type": "administrative",
           "osmType": "relation",
           "osmId": 105870,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "sanktgeorgenamlangsee::carinthia::austria",
-      "placeName": "Sankt Georgen am Längsee",
-      "countryRaw": "Austria",
-      "countryCanonical": "Austria",
-      "query": "Sankt Georgen am Längsee, Carinthia, Austria",
-      "matched": true,
-      "selected": {
-        "displayName": "Sankt Georgen am Längsee, Bezirk St. Veit an der Glan, Kärnten, Österreich",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 105873,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Sankt Georgen am Längsee, Bezirk St. Veit an der Glan, Kärnten, Österreich",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 105873,
           "geojsonType": "Polygon"
         }
       ]
@@ -470,6 +366,58 @@
       ]
     },
     {
+      "placeKey": "sanktgeorgenamlangsee::carinthia::austria",
+      "placeName": "Sankt Georgen am Längsee",
+      "countryRaw": "Austria",
+      "countryCanonical": "Austria",
+      "query": "Sankt Georgen am Längsee, Carinthia, Austria",
+      "matched": true,
+      "selected": {
+        "displayName": "Sankt Georgen am Längsee, Bezirk St. Veit an der Glan, Kärnten, Österreich",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 105873,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Sankt Georgen am Längsee, Bezirk St. Veit an der Glan, Kärnten, Österreich",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 105873,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "vienna::austria",
+      "placeName": "Vienna",
+      "countryRaw": "Austria",
+      "countryCanonical": "Austria",
+      "query": "Vienna, Austria",
+      "matched": true,
+      "selected": {
+        "displayName": "Wien, Österreich",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 109166,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Wien, Österreich",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 109166,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
       "placeKey": "wolfsberg::carinthia::austria",
       "placeName": "Wolfsberg",
       "countryRaw": "Austria",
@@ -504,69 +452,503 @@
       ]
     },
     {
-      "placeKey": "boavista::caboverde",
-      "placeName": "Boa Vista",
-      "countryRaw": "Cabo Verde",
-      "countryCanonical": "Cabo Verde",
-      "query": "Boa Vista, Cabo Verde",
+      "placeKey": "london::england::unitedkingdom",
+      "placeName": "London",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "London, England, UK",
       "matched": true,
       "selected": {
-        "displayName": "Boa Vista, Cabo Verde",
-        "category": "place",
-        "type": "island",
+        "displayName": "Greater London, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
         "osmType": "relation",
-        "osmId": 4635876,
+        "osmId": 175342,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Boa Vista, Cabo Verde",
-          "category": "place",
-          "type": "island",
-          "osmType": "relation",
-          "osmId": 4635876,
-          "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "Boa Vista, Cabo Verde",
+          "displayName": "Greater London, England, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 3830195,
+          "osmId": 175342,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "City of London, Greater London, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 51800,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "chester::cheshire::unitedkingdom",
+      "placeName": "Chester",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Cheshire West and Chester, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Cheshire West and Chester, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 153488,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Cheshire West and Chester, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 153488,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "flintshire::wales::unitedkingdom",
+      "placeName": "Flintshire",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Flintshire, Wales, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 198566,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 198566,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "isleofwhite::unitedkingdom",
+      "placeName": "Isle of White",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Isle of Wight, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Isle of Wight, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 154350,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Isle of Wight, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 154350,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Isle of Wight, England, United Kingdom",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 3955402,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "caernarfon::gwynedd::unitedkingdom",
+      "placeName": "Caernarfon",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Caernarfon, Gwynedd, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Caernarfon, Gwynedd, Cymru / Wales, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 11256154,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Caernarfon, Gwynedd, Cymru / Wales, LL55 2AU, United Kingdom",
+          "category": "place",
+          "type": "town",
+          "osmType": "node",
+          "osmId": 29422113,
+          "geojsonType": "Point"
+        },
+        {
+          "displayName": "Castell Caernarfon, Stryd y Jêl / Shirehall Street, Caernarfon, Gwynedd, Cymru / Wales, LL55 2AY, United Kingdom",
+          "category": "tourism",
+          "type": "attraction",
+          "osmType": "way",
+          "osmId": 70264991,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Castell Caernarfon, Stryd y Jêl / Shirehall Street, Caernarfon, Gwynedd, Cymru / Wales, LL55 2AY, United Kingdom",
+          "category": "historic",
+          "type": "castle",
+          "osmType": "way",
+          "osmId": 70264991,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Caernarfon, Gwynedd, Cymru / Wales, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 11256154,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "cornwall::england::unitedkingdom",
+      "placeName": "Cornwall",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Cornwall, England, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Cornwall, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 57537,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Cornwall, England, United Kingdom",
+          "category": "boundary",
+          "type": "traditional",
+          "osmType": "relation",
+          "osmId": 8508381,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Cornwall, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 57537,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Cornwall, England, United Kingdom",
+          "category": "natural",
+          "type": "peninsula",
+          "osmType": "relation",
+          "osmId": 57537,
           "geojsonType": "MultiPolygon"
         }
       ]
     },
     {
-      "placeKey": "rome::lazio::italy",
-      "placeName": "Rome",
-      "countryRaw": "Italy",
-      "countryCanonical": "Italy",
-      "query": "Rome, Lazio, Italy",
+      "placeKey": "devon::england::unitedkingdom",
+      "placeName": "Devon",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Devon, England, UK",
       "matched": true,
       "selected": {
-        "displayName": "Roma Capitale, Lazio, Italia",
+        "displayName": "Devon, Devon and Torbay, England, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 41313,
+        "osmId": 190380,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Devon, England, United Kingdom",
+          "category": "boundary",
+          "type": "ceremonial",
+          "osmType": "relation",
+          "osmId": 57538,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Devon, Devon and Torbay, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 190380,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "landsend::cornwall::unitedkingdom",
+      "placeName": "Land's End",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Sennen, Cornwall, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Sennen, Cornwall, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 5866106,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Sennen, Cornwall, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 5866106,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "anglesey::wales::unitedkingdom",
+      "placeName": "Anglesey",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Anglesey, Wales, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Ynys Môn / Anglesey, Ynys Môn / Isle of Anglesey, Cymru / Wales, United Kingdom",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 6045326,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Roma, Roma Capitale, Lazio, Italia",
-          "category": "boundary",
-          "type": "administrative",
+          "displayName": "Ynys Môn / Anglesey, Ynys Môn / Isle of Anglesey, Cymru / Wales, United Kingdom",
+          "category": "place",
+          "type": "island",
           "osmType": "relation",
-          "osmId": 41485,
+          "osmId": 6045326,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "mallorca::balearicislands::spain",
+      "placeName": "Mallorca",
+      "countryRaw": "Spain",
+      "countryCanonical": "Spain",
+      "query": "Mallorca, Balearic Islands, Spain",
+      "matched": true,
+      "selected": {
+        "displayName": "Mallorca, Illes Balears, España",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 6803636,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Mallorca, Illes Balears, España",
+          "category": "boundary",
+          "type": "political",
+          "osmType": "relation",
+          "osmId": 2178883,
           "geojsonType": "MultiPolygon"
         },
         {
-          "displayName": "Roma Capitale, Lazio, Italia",
+          "displayName": "Mallorca, Illes Balears, España",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 6803636,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "tenerife::canaryislands::spain",
+      "placeName": "Tenerife",
+      "countryRaw": "Spain",
+      "countryCanonical": "Spain",
+      "query": "Tenerife, Canary Islands, Spain",
+      "matched": true,
+      "selected": {
+        "displayName": "Tenerife, Canarias, España",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 2108882,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Tenerife, Canarias, España",
+          "category": "boundary",
+          "type": "political",
+          "osmType": "relation",
+          "osmId": 2108882,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Tenerife, Canarias, España",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 2108882,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "larochelle::charentemaritime::france",
+      "placeName": "La Rochelle",
+      "countryRaw": "France",
+      "countryCanonical": "France",
+      "query": "La Rochelle, Charente-Maritime, France",
+      "matched": true,
+      "selected": {
+        "displayName": "La Rochelle, Charente-Maritime, Nouvelle-Aquitaine, France métropolitaine, 17000, France",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 117858,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "La Rochelle, Charente-Maritime, Nouvelle-Aquitaine, France métropolitaine, 17000, France",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 41313,
+          "osmId": 117858,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "La Rochelle, Charente-Maritime, Nouvelle-Aquitaine, France métropolitaine, France",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1661547,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "rab::primorjegorskikotar::croatia",
+      "placeName": "Rab",
+      "countryRaw": "Croatia",
+      "countryCanonical": "Croatia",
+      "query": "Rab, Primorje-Gorski Kotar, Croatia",
+      "matched": true,
+      "selected": {
+        "displayName": "Rab, Grad Rab, Općina Lopar, Primorsko-goranska županija, Hrvatska",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 6117329,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Grad Rab, Primorsko-goranska županija, 51280, Hrvatska",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 7465896,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Rab, Grad Rab, Općina Lopar, Primorsko-goranska županija, Hrvatska",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 6117329,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Rab, Grad Rab, Primorsko-goranska županija, Hrvatska",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 15968499,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "corfu::ionianislands::greece",
+      "placeName": "Corfu",
+      "countryRaw": "Greece",
+      "countryCanonical": "Greece",
+      "query": "Corfu, Ionian Islands, Greece",
+      "matched": true,
+      "selected": {
+        "displayName": "Κέρκυρα, Περιφερειακή Ενότητα Κέρκυρας, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, Ελλάς",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 966358,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Κέρκυρα, Περιφερειακή Ενότητα Κέρκυρας, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, Ελλάς",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 966358,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Κέρκυρα, Δήμος Κεντρικής Κέρκυρας και Διαποντίων Νήσων, Περιφερειακή Ενότητα Κέρκυρας, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, 491 00, Ελλάς",
+          "category": "place",
+          "type": "city",
+          "osmType": "node",
+          "osmId": 1827940532,
+          "geojsonType": "Point"
+        }
+      ]
+    },
+    {
+      "placeKey": "kusadas::aydn::turkey",
+      "placeName": "Kuşadası",
+      "countryRaw": "Turkey",
+      "countryCanonical": "Turkey",
+      "query": "Kuşadası, Aydın, Turkey",
+      "matched": true,
+      "selected": {
+        "displayName": "Kuşadası, Aydın, Ege Bölgesi, Türkiye",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1814656,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Kuşadası, Aydın, Ege Bölgesi, Türkiye",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1814656,
           "geojsonType": "Polygon"
         }
       ]
@@ -606,37 +988,11 @@
       ]
     },
     {
-      "placeKey": "cork::countycork::ireland",
-      "placeName": "Cork",
-      "countryRaw": "Ireland",
-      "countryCanonical": "Ireland",
-      "query": "Cork, County Cork, Ireland",
-      "matched": true,
-      "selected": {
-        "displayName": "Cork, County Cork, Munster, Éire / Ireland",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 11797890,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Cork, County Cork, Munster, Éire / Ireland",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 11797890,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "santorini::greece",
+      "placeKey": "santorini::southaegean::greece",
       "placeName": "Santorini",
       "countryRaw": "Greece",
       "countryCanonical": "Greece",
-      "query": "Santorini, Greece",
+      "query": "Santorini, South Aegean, Greece",
       "matched": true,
       "selected": {
         "displayName": "Σαντορίνη, Δημοτική Ενότητα Θήρας, Δήμος Θήρας, Περιφερειακή Ενότητα Θήρας, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, Ελλάς",
@@ -674,120 +1030,114 @@
       ]
     },
     {
-      "placeKey": "london::unitedkingdom",
-      "placeName": "London",
-      "countryRaw": "UK",
-      "countryCanonical": "United Kingdom",
-      "query": "London, UK",
+      "placeKey": "venice::veneto::italy",
+      "placeName": "Venice",
+      "countryRaw": "Italy",
+      "countryCanonical": "Italy",
+      "query": "Venice, Veneto, Italy",
       "matched": true,
       "selected": {
-        "displayName": "Greater London, England, United Kingdom",
+        "displayName": "Venezia, Veneto, 30121-30176, Italia",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 175342,
+        "osmId": 44741,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Greater London, England, United Kingdom",
+          "displayName": "Venezia, Veneto, 30121-30176, Italia",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 175342,
-          "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "City of London, Greater London, England, United Kingdom",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 51800,
+          "osmId": 44741,
           "geojsonType": "Polygon"
         }
       ]
     },
     {
-      "placeKey": "malaga::andalusia::spain",
-      "placeName": "Málaga",
-      "countryRaw": "Spain",
-      "countryCanonical": "Spain",
-      "query": "Málaga, Andalusia, Spain",
+      "placeKey": "boavista::caboverde",
+      "placeName": "Boa Vista",
+      "countryRaw": "Cabo Verde",
+      "countryCanonical": "Cabo Verde",
+      "query": "Boa Vista, Cabo Verde",
       "matched": true,
       "selected": {
-        "displayName": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
-        "category": "boundary",
-        "type": "administrative",
+        "displayName": "Boa Vista, Cabo Verde",
+        "category": "place",
+        "type": "island",
         "osmType": "relation",
-        "osmId": 340746,
-        "geojsonType": "MultiPolygon"
+        "osmId": 4635876,
+        "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
-          "category": "boundary",
-          "type": "administrative",
+          "displayName": "Boa Vista, Cabo Verde",
+          "category": "place",
+          "type": "island",
           "osmType": "relation",
-          "osmId": 340746,
-          "geojsonType": "MultiPolygon"
+          "osmId": 4635876,
+          "geojsonType": "Polygon"
         },
         {
-          "displayName": "Málaga, Andalucía, España",
+          "displayName": "Boa Vista, Cabo Verde",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 5275848,
+          "osmId": 3830195,
           "geojsonType": "MultiPolygon"
         }
       ]
     },
     {
-      "placeKey": "ellesmere::cheshire::unitedkingdom",
+      "placeKey": "cork::countycork::ireland",
+      "placeName": "Cork",
+      "countryRaw": "Ireland",
+      "countryCanonical": "Ireland",
+      "query": "Cork, County Cork, Ireland",
+      "matched": true,
+      "selected": {
+        "displayName": "Cork, County Cork, Munster, Éire / Ireland",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 11797890,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Cork, County Cork, Munster, Éire / Ireland",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 11797890,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "ellesmere::shropshire::unitedkingdom",
       "placeName": "Ellesmere",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "Ellesmere, Cheshire, UK",
+      "query": "Ellesmere Urban, Shropshire, UK",
       "matched": true,
       "selected": {
-        "displayName": "Ellesmere, Yew Tree Lane, Ackers Crossing, Moreton cum Alcumlow, Cheshire East, England, CW12 3GY, United Kingdom",
-        "category": "building",
-        "type": "house",
-        "osmType": "way",
-        "osmId": 979468908,
+        "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 4584340,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Ellesmere, Hurdsfield, Macclesfield, Cheshire East, England, SK10 1QH, United Kingdom",
-          "category": "highway",
-          "type": "residential",
-          "osmType": "way",
-          "osmId": 30498265,
-          "geojsonType": "LineString"
-        },
-        {
-          "displayName": "Ellesmere, Yew Tree Lane, Ackers Crossing, Moreton cum Alcumlow, Cheshire East, England, CW12 3GY, United Kingdom",
-          "category": "building",
-          "type": "house",
-          "osmType": "way",
-          "osmId": 979468908,
+          "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 4584340,
           "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "Ellesmere, 137, Brook Lane, Newton, City of Chester, Chester, Cheshire West and Chester, England, CH2 2EN, United Kingdom",
-          "category": "building",
-          "type": "detached",
-          "osmType": "way",
-          "osmId": 1016587555,
-          "geojsonType": "Polygon"
-        },
-        {
-          "displayName": "Ellesmere Port, Cheshire West and Chester, England, CH65 8DE, United Kingdom",
-          "category": "place",
-          "type": "town",
-          "osmType": "node",
-          "osmId": 21654942,
-          "geojsonType": "Point"
         }
       ]
     }

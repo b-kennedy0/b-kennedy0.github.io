@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-30T19:05:27.905Z",
+  "generatedAt": "2026-03-30T19:37:45.685Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 7,
-  "matchedCount": 7,
+  "placeCount": 12,
+  "matchedCount": 12,
   "unmatchedCount": 0,
   "places": [
     {
@@ -215,6 +215,168 @@
           "type": "administrative",
           "osmType": "relation",
           "osmId": 109166,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "flintshire::unitedkingdom",
+      "placeName": "Flintshire",
+      "countryRaw": "Wales",
+      "countryCanonical": "United Kingdom",
+      "query": "Flintshire, Wales",
+      "matched": true,
+      "selected": {
+        "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 198566,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 198566,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "bangor::unitedkingdom",
+      "placeName": "Bangor",
+      "countryRaw": "Wales",
+      "countryCanonical": "United Kingdom",
+      "query": "Bangor, Wales",
+      "matched": true,
+      "selected": {
+        "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 11241684,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Bangor, Gwynedd, Cymru / Wales, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 11241684,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "mykonos::greece",
+      "placeName": "Mykonos",
+      "countryRaw": "Greece",
+      "countryCanonical": "Greece",
+      "query": "Mykonos, Greece",
+      "matched": true,
+      "selected": {
+        "displayName": "Μύκονος, Φάρος Αρμενιστής, Δήμος Μυκόνου, Περιφερειακή Ενότητα Μυκόνου, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, 846 00, Ελλάς",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 531115,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Μύκονος, Φάρος Αρμενιστής, Δήμος Μυκόνου, Περιφερειακή Ενότητα Μυκόνου, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, 846 00, Ελλάς",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 531115,
+          "geojsonType": "MultiPolygon"
+        },
+        {
+          "displayName": "Μύκονος, Δήμος Μυκόνου, Περιφερειακή Ενότητα Μυκόνου, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, 846 00, Ελλάς",
+          "category": "place",
+          "type": "town",
+          "osmType": "node",
+          "osmId": 62009652,
+          "geojsonType": "Point"
+        }
+      ]
+    },
+    {
+      "placeKey": "victoria::canada",
+      "placeName": "Victoria",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Victoria, Canada",
+      "matched": true,
+      "selected": {
+        "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 2221062,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Victoria, Capital Regional District, British Columbia, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2221062,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Victoria County, New Brunswick / Nouveau-Brunswick, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2043815,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Rural Municipality of Victoria, Queens County, Prince Edward Island, C0A 2G0, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2256643,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Victoria, Newfoundland, Newfoundland and Labrador, A0A 4G0, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2830104,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "tofino::canada",
+      "placeName": "Tofino",
+      "countryRaw": "Canada",
+      "countryCanonical": "Canada",
+      "query": "Tofino, Canada",
+      "matched": true,
+      "selected": {
+        "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 2221212,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Tofino, Alberni-Clayoquot Regional District, British Columbia, V0R 2Z0, Canada",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2221212,
           "geojsonType": "Polygon"
         }
       ]

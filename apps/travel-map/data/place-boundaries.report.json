@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-30T21:30:57.124Z",
+  "generatedAt": "2026-03-30T21:55:03.097Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 40,
-  "matchedCount": 40,
+  "placeCount": 47,
+  "matchedCount": 47,
   "unmatchedCount": 0,
   "places": [
     {
@@ -32,27 +32,147 @@
       ]
     },
     {
-      "placeKey": "guildford::surrey::unitedkingdom",
-      "placeName": "Guildford",
+      "placeKey": "edinburgh::scotland::unitedkingdom",
+      "placeName": "Edinburgh",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "Guildford, Surrey, UK",
+      "query": "Edinburgh, Scotland, UK",
       "matched": true,
       "selected": {
-        "displayName": "Guildford, Surrey, England, United Kingdom",
+        "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 108787,
+        "osmId": 1920901,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Guildford, Surrey, England, United Kingdom",
+          "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 108787,
+          "osmId": 1920901,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "norfolkbroads::norfolk::unitedkingdom",
+      "placeName": "Norfolk Broads",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Norfolk Broads, Norfolk, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "The Broads, Norfolk, England, United Kingdom",
+        "category": "boundary",
+        "type": "protected_area",
+        "osmType": "relation",
+        "osmId": 2568322,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "The Broads, Norfolk, England, United Kingdom",
+          "category": "boundary",
+          "type": "protected_area",
+          "osmType": "relation",
+          "osmId": 2568322,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "corwen::denbighshire::unitedkingdom",
+      "placeName": "Corwen",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Corwen, Denbighshire, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Corwen, Llidiart y Parc, Denbighshire, Cymru / Wales, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 11308117,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Corwen, Denbighshire, Cymru / Wales, LL21 0DL, United Kingdom",
+          "category": "place",
+          "type": "town",
+          "osmType": "node",
+          "osmId": 29779337,
+          "geojsonType": "Point"
+        },
+        {
+          "displayName": "Corwen, Llidiart y Parc, Denbighshire, Cymru / Wales, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 11308117,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "tamworth::staffordshire::unitedkingdom",
+      "placeName": "Tamworth",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Tamworth, Staffordshire, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Tamworth, Staffordshire, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 165856,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Tamworth, Staffordshire, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 165856,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "london::england::unitedkingdom",
+      "placeName": "London",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "London, England, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Greater London, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 175342,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Greater London, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 175342,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "City of London, Greater London, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 51800,
           "geojsonType": "Polygon"
         }
       ]
@@ -272,32 +392,6 @@
       ]
     },
     {
-      "placeKey": "edinburgh::scotland::unitedkingdom",
-      "placeName": "Edinburgh",
-      "countryRaw": "UK",
-      "countryCanonical": "United Kingdom",
-      "query": "Edinburgh, Scotland, UK",
-      "matched": true,
-      "selected": {
-        "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 1920901,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "City of Edinburgh, Alba / Scotland, United Kingdom",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 1920901,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
       "placeKey": "klagenfurtamworthersee::carinthia::austria",
       "placeName": "Klagenfurt am Wörthersee",
       "countryRaw": "Austria",
@@ -452,35 +546,79 @@
       ]
     },
     {
-      "placeKey": "london::england::unitedkingdom",
-      "placeName": "London",
+      "placeKey": "manchester::greatermanchester::unitedkingdom",
+      "placeName": "Manchester",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "London, England, UK",
+      "query": "Manchester, Greater Manchester, UK",
       "matched": true,
       "selected": {
-        "displayName": "Greater London, England, United Kingdom",
+        "displayName": "Manchester, Greater Manchester, England, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 175342,
+        "osmId": 146656,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Greater London, England, United Kingdom",
+          "displayName": "Manchester, Greater Manchester, England, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 175342,
+          "osmId": 146656,
           "geojsonType": "Polygon"
-        },
+        }
+      ]
+    },
+    {
+      "placeKey": "liverpool::merseyside::unitedkingdom",
+      "placeName": "Liverpool",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Liverpool, Merseyside, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Royal Liverpool Golf Club, 30, Meols Drive, Grange, West Kirby, Wirral, Liverpool City Region, England, CH47 4AL, United Kingdom",
+        "category": "amenity",
+        "type": "social_club",
+        "osmType": "way",
+        "osmId": 203867693,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
         {
-          "displayName": "City of London, Greater London, England, United Kingdom",
+          "displayName": "Royal Liverpool Golf Club, 30, Meols Drive, Grange, West Kirby, Wirral, Liverpool City Region, England, CH47 4AL, United Kingdom",
+          "category": "amenity",
+          "type": "social_club",
+          "osmType": "way",
+          "osmId": 203867693,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "mansfield::nottinghamshire::unitedkingdom",
+      "placeName": "Mansfield",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Mansfield, Nottinghamshire, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Mansfield, Nottinghamshire, East Midlands, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 154006,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Mansfield, Nottinghamshire, East Midlands, England, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 51800,
+          "osmId": 154006,
           "geojsonType": "Polygon"
         }
       ]
@@ -512,27 +650,61 @@
       ]
     },
     {
-      "placeKey": "flintshire::wales::unitedkingdom",
-      "placeName": "Flintshire",
+      "placeKey": "connahsquay::flintshire::unitedkingdom",
+      "placeName": "Connah's Quay",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "Flintshire, Wales, UK",
+      "query": "Connah's Quay, Flintshire, UK",
       "matched": true,
       "selected": {
-        "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+        "displayName": "Connah's Quay, Flintshire, Cymru / Wales, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 198566,
+        "osmId": 11271246,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Flintshire, Cymru / Wales, United Kingdom",
+          "displayName": "Connah's Quay, Flintshire, Cymru / Wales, CH5 4AL, United Kingdom",
+          "category": "place",
+          "type": "town",
+          "osmType": "node",
+          "osmId": 27459575,
+          "geojsonType": "Point"
+        },
+        {
+          "displayName": "Connah's Quay, Flintshire, Cymru / Wales, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 198566,
+          "osmId": 11271246,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "guildford::surrey::unitedkingdom",
+      "placeName": "Guildford",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Guildford, Surrey, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Guildford, Surrey, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 108787,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Guildford, Surrey, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 108787,
           "geojsonType": "Polygon"
         }
       ]
@@ -1116,53 +1288,27 @@
       ]
     },
     {
-      "placeKey": "ellesmereurban::shropshire::unitedkingdom",
-      "placeName": "Ellesmere Urban",
+      "placeKey": "kirklees::westyorkshire::unitedkingdom",
+      "placeName": "Kirklees",
       "countryRaw": "UK",
       "countryCanonical": "United Kingdom",
-      "query": "Ellesmere Urban, Shropshire, UK",
+      "query": "Kirklees, West Yorkshire, UK",
       "matched": true,
       "selected": {
-        "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
+        "displayName": "Kirklees, West Yorkshire, England, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 4584340,
+        "osmId": 109954,
         "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
+          "displayName": "Kirklees, West Yorkshire, England, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 4584340,
-          "geojsonType": "Polygon"
-        }
-      ]
-    },
-    {
-      "placeKey": "saintjeandemonts::paysdelaloire::france",
-      "placeName": "Saint-Jean-de-Monts",
-      "countryRaw": "France",
-      "countryCanonical": "France",
-      "query": "Saint-Jean-de-Monts, Pays de la Loire, France",
-      "matched": true,
-      "selected": {
-        "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
-        "category": "boundary",
-        "type": "administrative",
-        "osmType": "relation",
-        "osmId": 156340,
-        "geojsonType": "Polygon"
-      },
-      "candidates": [
-        {
-          "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
-          "category": "boundary",
-          "type": "administrative",
-          "osmType": "relation",
-          "osmId": 156340,
+          "osmId": 109954,
           "geojsonType": "Polygon"
         }
       ]
@@ -1202,6 +1348,58 @@
       ]
     },
     {
+      "placeKey": "marmaris::turkey",
+      "placeName": "Marmaris",
+      "countryRaw": "Turkey",
+      "countryCanonical": "Turkey",
+      "query": "Marmaris, Turkey",
+      "matched": true,
+      "selected": {
+        "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 1827293,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 1827293,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "saintjeandemonts::paysdelaloire::france",
+      "placeName": "Saint-Jean-de-Monts",
+      "countryRaw": "France",
+      "countryCanonical": "France",
+      "query": "Saint-Jean-de-Monts, Pays de la Loire, France",
+      "matched": true,
+      "selected": {
+        "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 156340,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 156340,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
       "placeKey": "laganas::zakynthos::greece",
       "placeName": "Laganas",
       "countryRaw": "Greece",
@@ -1228,28 +1426,28 @@
       ]
     },
     {
-      "placeKey": "marmaris::turkey",
-      "placeName": "Marmaris",
-      "countryRaw": "Turkey",
-      "countryCanonical": "Turkey",
-      "query": "Marmaris, Turkey",
+      "placeKey": "ellesmereurban::shropshire::unitedkingdom",
+      "placeName": "Ellesmere Urban",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Ellesmere Urban, Shropshire, UK",
       "matched": true,
       "selected": {
-        "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+        "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
         "category": "boundary",
         "type": "administrative",
         "osmType": "relation",
-        "osmId": 1827293,
-        "geojsonType": "MultiPolygon"
+        "osmId": 4584340,
+        "geojsonType": "Polygon"
       },
       "candidates": [
         {
-          "displayName": "Marmaris, Muğla, Ege Bölgesi, Türkiye",
+          "displayName": "Ellesmere Urban, Ellesmere, Shropshire, England, United Kingdom",
           "category": "boundary",
           "type": "administrative",
           "osmType": "relation",
-          "osmId": 1827293,
-          "geojsonType": "MultiPolygon"
+          "osmId": 4584340,
+          "geojsonType": "Polygon"
         }
       ]
     }

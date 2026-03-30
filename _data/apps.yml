@@ -8,11 +8,6 @@
   img: bakeoff.png
   url: http://apps.bradk.co.uk/bakeoff
   tags: [fun]
-- title: Travel Map
-  description: "Interactive world map showing countries visited by me, my partner, or both of us together, with hover details for places and years."
-  img: travel-map.png
-  url: /apps/travel-map/
-  tags: [fun]
 - title: PhD Fortune Cookies
   description: "Interactive fortune cookie app with PhD-themed fortunes. Shuffle the cookies, pick one, and crack it open for your academic fortune."
   img: phd-fortune.png

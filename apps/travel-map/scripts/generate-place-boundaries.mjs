@@ -3,7 +3,7 @@ import path from "node:path";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
-const Papa = require("../vendor/papaparse.min.js");
+const Papa = require("../lib/papaparse.min.js");
 
 const APP_DIR = path.resolve(import.meta.dirname, "..");
 const DATA_DIR = path.join(APP_DIR, "data");

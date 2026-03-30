@@ -89,6 +89,13 @@
     syncInteractionMode();
     bindEvents();
 
+    if (window.location.protocol === "file:") {
+      hideLoading();
+      showBanner("Open this page through GitHub Pages or a local web server, not directly as a file:// page.", "error");
+      renderPlaceholder();
+      return;
+    }
+
     try {
       const [worldGeoData, placeBoundaryGeoData] = await Promise.all([
         fetchJson("./data/world-countries.geo.json"),
@@ -98,7 +105,7 @@
       hideLoading();
     } catch (error) {
       console.error(error);
-      showBanner("The world or place-boundary map data could not be loaded.", "error");
+      showBanner(formatLoadError(error), "error");
       hideLoading();
       return;
     }
@@ -345,6 +352,19 @@
     elements.statusBanner.hidden = true;
     elements.statusBanner.textContent = "";
     elements.statusBanner.className = "map-overlay map-overlay--status";
+  }
+
+  function formatLoadError(error) {
+    if (!error) {
+      return "The world or place-boundary map data could not be loaded.";
+    }
+
+    const message = String(error.message || error);
+    if (/failed to fetch/i.test(message)) {
+      return "A required map asset could not be fetched. If this is a local test, run the site through Jekyll or another web server instead of opening the HTML file directly.";
+    }
+
+    return message;
   }
 
   function updateStats(countryCount, placeCount) {

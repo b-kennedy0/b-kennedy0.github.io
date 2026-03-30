@@ -3,5 +3,9 @@
     "query": "Cheshire West and Chester, UK",
     "countryCode": "gb",
     "displayName": "Cheshire West and Chester, England, United Kingdom"
+  },
+  "laganas::zakynthos::greece": {
+    "query": "Laganas Municipal Unit, Zakynthos, Greece",
+    "displayName": "Δημοτική Ενότητα Λαγανά, Δήμος Ζακύνθου, Περιφερειακή Ενότητα Ζακύνθου, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, 290 92, Ελλάς"
   }
 }

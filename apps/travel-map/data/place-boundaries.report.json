@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-30T21:13:40.278Z",
+  "generatedAt": "2026-03-30T21:26:56.806Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 36,
-  "matchedCount": 36,
+  "placeCount": 39,
+  "matchedCount": 39,
   "unmatchedCount": 0,
   "places": [
     {
@@ -1138,6 +1138,92 @@
           "osmType": "relation",
           "osmId": 4584340,
           "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "saintjeandemonts::paysdelaloire::france",
+      "placeName": "Saint-Jean-de-Monts",
+      "countryRaw": "France",
+      "countryCanonical": "France",
+      "query": "Saint-Jean-de-Monts, Pays de la Loire, France",
+      "matched": true,
+      "selected": {
+        "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 156340,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Saint-Jean-de-Monts, Les Sables-d'Olonne, Vendée, Pays de la Loire, France métropolitaine, 85160, France",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 156340,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "boulognesurmer::pasdecalais::france",
+      "placeName": "Boulogne-sur-Mer",
+      "countryRaw": "France",
+      "countryCanonical": "France",
+      "query": "Boulogne-sur-Mer, Pas-de-Calais, France",
+      "matched": true,
+      "selected": {
+        "displayName": "Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France, France métropolitaine, 62200, France",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 240377,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France, France métropolitaine, 62200, France",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 240377,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France, France métropolitaine, France",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 2194320,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "laganas::zakynthos::greece",
+      "placeName": "Laganas",
+      "countryRaw": "Greece",
+      "countryCanonical": "Greece",
+      "query": "Laganas Municipal Unit, Zakynthos, Greece",
+      "matched": true,
+      "selected": {
+        "displayName": "Δημοτική Ενότητα Λαγανά, Δήμος Ζακύνθου, Περιφερειακή Ενότητα Ζακύνθου, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, 290 92, Ελλάς",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 18594087,
+        "geojsonType": "MultiPolygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Δημοτική Ενότητα Λαγανά, Δήμος Ζακύνθου, Περιφερειακή Ενότητα Ζακύνθου, Περιφέρεια Ιονίων Νήσων, Αποκεντρωμένη Διοίκηση Πελοποννήσου, Δυτικής Ελλάδας και Ιονίου, 290 92, Ελλάς",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 18594087,
+          "geojsonType": "MultiPolygon"
         }
       ]
     }

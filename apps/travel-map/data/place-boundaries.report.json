@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-03-30T20:06:53.660Z",
+  "generatedAt": "2026-03-30T20:16:22.969Z",
   "sourceSheet": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBLZhIRKXAQsMJZ6xlLaN0YdKQNeHpcR26QGYKKPkCCNhd3kAQyGqrcmbjHiOLXWXrEJppoJzinylZ/pub?output=csv",
-  "placeCount": 22,
-  "matchedCount": 22,
+  "placeCount": 25,
+  "matchedCount": 25,
   "unmatchedCount": 0,
   "places": [
     {
@@ -632,6 +632,82 @@
       ]
     },
     {
+      "placeKey": "santorini::greece",
+      "placeName": "Santorini",
+      "countryRaw": "Greece",
+      "countryCanonical": "Greece",
+      "query": "Santorini, Greece",
+      "matched": true,
+      "selected": {
+        "displayName": "Σαντορίνη, Δημοτική Ενότητα Θήρας, Δήμος Θήρας, Περιφερειακή Ενότητα Θήρας, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, Ελλάς",
+        "category": "place",
+        "type": "island",
+        "osmType": "relation",
+        "osmId": 453964,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Σαντορίνη, Δημοτική Ενότητα Θήρας, Δήμος Θήρας, Περιφερειακή Ενότητα Θήρας, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, Ελλάς",
+          "category": "place",
+          "type": "island",
+          "osmType": "relation",
+          "osmId": 453964,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Σαντορίνη, Δημοτική Ενότητα Θήρας, Δήμος Θήρας, Περιφερειακή Ενότητα Θήρας, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, 847 00, Ελλάς",
+          "category": "natural",
+          "type": "volcano",
+          "osmType": "node",
+          "osmId": 264987371,
+          "geojsonType": "Point"
+        },
+        {
+          "displayName": "Σαντορίνη, Δημοτική Ενότητα Θήρας, Δήμος Θήρας, Περιφερειακή Ενότητα Θήρας, Περιφέρεια Νοτίου Αιγαίου, Αποκεντρωμένη Διοίκηση Αιγαίου, Ελλάς",
+          "category": "place",
+          "type": "archipelago",
+          "osmType": "relation",
+          "osmId": 18766085,
+          "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "london::unitedkingdom",
+      "placeName": "London",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "London, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Greater London, England, United Kingdom",
+        "category": "boundary",
+        "type": "administrative",
+        "osmType": "relation",
+        "osmId": 175342,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Greater London, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 175342,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "City of London, Greater London, England, United Kingdom",
+          "category": "boundary",
+          "type": "administrative",
+          "osmType": "relation",
+          "osmId": 51800,
+          "geojsonType": "Polygon"
+        }
+      ]
+    },
+    {
       "placeKey": "malaga::andalusia::spain",
       "placeName": "Málaga",
       "countryRaw": "Spain",
@@ -662,6 +738,56 @@
           "osmType": "relation",
           "osmId": 5275848,
           "geojsonType": "MultiPolygon"
+        }
+      ]
+    },
+    {
+      "placeKey": "ellesmere::cheshire::unitedkingdom",
+      "placeName": "Ellesmere",
+      "countryRaw": "UK",
+      "countryCanonical": "United Kingdom",
+      "query": "Ellesmere, Cheshire, UK",
+      "matched": true,
+      "selected": {
+        "displayName": "Ellesmere, Yew Tree Lane, Ackers Crossing, Moreton cum Alcumlow, Cheshire East, England, CW12 3GY, United Kingdom",
+        "category": "building",
+        "type": "house",
+        "osmType": "way",
+        "osmId": 979468908,
+        "geojsonType": "Polygon"
+      },
+      "candidates": [
+        {
+          "displayName": "Ellesmere, Hurdsfield, Macclesfield, Cheshire East, England, SK10 1QH, United Kingdom",
+          "category": "highway",
+          "type": "residential",
+          "osmType": "way",
+          "osmId": 30498265,
+          "geojsonType": "LineString"
+        },
+        {
+          "displayName": "Ellesmere, Yew Tree Lane, Ackers Crossing, Moreton cum Alcumlow, Cheshire East, England, CW12 3GY, United Kingdom",
+          "category": "building",
+          "type": "house",
+          "osmType": "way",
+          "osmId": 979468908,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Ellesmere, 137, Brook Lane, Newton, City of Chester, Chester, Cheshire West and Chester, England, CH2 2EN, United Kingdom",
+          "category": "building",
+          "type": "detached",
+          "osmType": "way",
+          "osmId": 1016587555,
+          "geojsonType": "Polygon"
+        },
+        {
+          "displayName": "Ellesmere Port, Cheshire West and Chester, England, CH65 8DE, United Kingdom",
+          "category": "place",
+          "type": "town",
+          "osmType": "node",
+          "osmId": 21654942,
+          "geojsonType": "Point"
         }
       ]
     }

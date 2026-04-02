@@ -57,8 +57,8 @@
   description: "[Not publicly accessible.] Student accommodation inspection app created for Bangor University warden team."
   img: kitchen-check.png
   tags: [bangor]
-- title: 632VGS Weight App
-  description: "This app was created to assist glider pilots with weight and balance calculations for the aircraft at 632 VGS RAF Ternhill & RAF Woodvale."
+- title: 2 FTS Ballast Weight App
+  description: "This app was created to assist glider pilots with weight and balance calculations for the aircraft in 2 FTS."
   img: vgs.png
-  url: https://bradley-kennedy.shinyapps.io/632VGS/
+  url: https://2fts-ballast.share.connect.posit.cloud
   tags: [academia]

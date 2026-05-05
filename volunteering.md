@@ -20,13 +20,6 @@ cover-img:
 <div class="volunteering-page">
   <section class="volunteering-hero-card">
     <p class="section-kicker">Royal Air Force Air Cadets</p>
-    <h2>From cadet to instructor</h2>
-    <p class="volunteering-lead">
-      I joined the Air Cadets in 2008 and have stayed involved through cadet service,
-      civilian instructing and commissioned officer roles. Volunteering now centres on cadet
-      gliding, instructor development, flight safety and supporting unit life across
-      632 VGS.
-    </p>
 
     <div class="volunteering-stats">
       <article class="stat-card">
@@ -189,6 +182,7 @@ cover-img:
       <p class="section-kicker">Unit history</p>
     </div>
 
+    <div class="unit-grid">
       <article class="unit-card">
         <div class="unit-card-top">
           <img src="/assets/img/logos/632vgscrest.png" alt="632 VGS crest" width="85" height="110" />
@@ -213,8 +207,6 @@ cover-img:
           <a href="https://www.raf.mod.uk/aircadets/news/air-cadet-gliding-returns-to-raf-woodvale/" target="_blank" rel="noopener noreferrer">RAF Air Cadets Woodvale update</a>
         </p>
       </article>
-
-<div class="unit-grid">
       <article class="unit-card">
         <div class="unit-card-top">
           <img src="/assets/img/logos/644vgscrest.png" alt="644 VGS crest" width="85" height="110" />

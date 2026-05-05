@@ -344,23 +344,27 @@
 }
 
 .unit-card-top {
-  display: grid;
-  grid-template-columns: 7.5rem minmax(0, 1fr);
-  gap: 1.15rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
 }
 
 .unit-logo-slot {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 8rem;
+  height: 8rem;
 }
 
 .unit-card-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   min-width: 0;
-  padding-top: 0.15rem;
 }
 
 .unit-logo {
@@ -398,12 +402,15 @@
 .unit-card h3 {
   margin: 0;
   font-size: 1.4rem;
+  line-height: 1.05;
+  text-align: center;
 }
 
 .unit-period {
   margin: 0.35rem 0 0;
   color: var(--muted);
   font-weight: 600;
+  text-align: center;
 }
 
 .unit-copy {
@@ -527,14 +534,9 @@
     grid-template-columns: 1fr;
   }
 
-  .unit-card-top {
-    grid-template-columns: 6rem minmax(0, 1fr);
-    gap: 0.9rem;
-  }
-
   .unit-logo-slot {
-    width: 6rem;
-    height: 6rem;
+    width: 6.5rem;
+    height: 6.5rem;
   }
 
   .service-card,

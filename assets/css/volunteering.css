@@ -345,15 +345,45 @@
 
 .unit-card-top {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: center;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 1.15rem;
+  align-items: start;
 }
 
-.unit-card-top img {
-  width: 5.25rem;
-  height: auto;
+.unit-logo-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.unit-card-heading {
+  min-width: 0;
+  padding-top: 0.15rem;
+}
+
+.unit-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
+}
+
+.unit-logo-tall {
+  width: 95%;
+  height: 100%;
+}
+
+.unit-logo-compact {
+  width: 82%;
+  height: 82%;
+}
+
+.unit-logo-wide {
+  width: 100%;
+  height: 78%;
 }
 
 .unit-label {
@@ -495,6 +525,16 @@
   .volunteering-stats,
   .unit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .unit-card-top {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: 0.9rem;
+  }
+
+  .unit-logo-slot {
+    width: 6rem;
+    height: 6rem;
   }
 
   .service-card,

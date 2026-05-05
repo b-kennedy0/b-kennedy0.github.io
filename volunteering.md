@@ -185,8 +185,10 @@ cover-img:
     <div class="unit-grid">
       <article class="unit-card">
         <div class="unit-card-top">
-          <img src="/assets/img/logos/632vgscrest.png" alt="632 VGS crest" width="85" height="110" />
-          <div>
+          <div class="unit-logo-slot">
+            <img class="unit-logo unit-logo-tall" src="/assets/img/logos/632vgscrest.png" alt="632 VGS crest" width="85" height="110" />
+          </div>
+          <div class="unit-card-heading">
             <p class="unit-label">Current unit</p>
             <h3>632 VGS</h3>
             <p class="unit-period">2018 - Present</p>
@@ -209,8 +211,10 @@ cover-img:
       </article>
       <article class="unit-card">
         <div class="unit-card-top">
-          <img src="/assets/img/logos/644vgscrest.png" alt="644 VGS crest" width="85" height="110" />
-          <div>
+          <div class="unit-logo-slot">
+            <img class="unit-logo unit-logo-compact" src="/assets/img/logos/644vgscrest.png" alt="644 VGS crest" width="85" height="110" />
+          </div>
+          <div class="unit-card-heading">
             <p class="unit-label">Supernumerary posting</p>
             <h3>644 VGS</h3>
             <p class="unit-period">2022 - 2024</p>
@@ -233,8 +237,10 @@ cover-img:
 
       <article class="unit-card">
         <div class="unit-card-top">
-          <img src="/assets/img/logos/631vgscrest.png" alt="631 crest" width="85" height="110" />
-          <div>
+          <div class="unit-logo-slot">
+            <img class="unit-logo unit-logo-wide" src="/assets/img/logos/631vgscrest.png" alt="631 crest" width="85" height="110" />
+          </div>
+          <div class="unit-card-heading">
             <p class="unit-label">Early VGS service</p>
             <h3>631 VGS</h3>
             <p class="unit-period">2013 - 2018</p>

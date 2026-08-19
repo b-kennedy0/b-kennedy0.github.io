@@ -1,5 +1,5 @@
 ---
 layout: minimal
 title: Waiting List
-redirect_to: https://bradley-kennedy.shinyapps.io/WaitDashboard/
+redirect_to: https://bradleykennedy-waitdashboard.share.connect.posit.cloud
 ---

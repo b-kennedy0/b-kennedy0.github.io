@@ -56,7 +56,7 @@
 - title: Call Waiting Dashboard
   description: "Dashboard to display the waiting time for booked calls."
   img: wait.png
-  url: https://bradley-kennedy.shinyapps.io/WaitDashboard/
+  url: https://bradleykennedy-waitdashboard.share.connect.posit.cloud
   tags: [academia]
 - title: Kitchen Check App (Bangor University Only)
   description: "[Not publicly accessible.] Student accommodation inspection app created for Bangor University warden team."

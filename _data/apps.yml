@@ -23,21 +23,21 @@
   img: url-opener.png
   url: http://apps.bradk.co.uk/url-opener
   tags: [academia]
-- title: Kennedy Marking Tracker (UoC Only) - V1.2 (Updated 4 Apr 25)
-  description: "[Not publicly accessible, request access.] An Excel app to speed up and track the administration of marking assessments on Turnitin."
+- title: Kennedy Marking Tracker - V1.2
+  description: "An Excel app to speed up and track the administration of marking assessments on Turnitin."
   img: marking-tracker.png
-  url: http://apps.bradk.co.uk/markingapp-request
   tags: [uoc]
+  archived: true
 - title: Open Research Calendar
   description: "Open source tool to serve the open research community in collating worldwide :earth_africa: open research events into one database."
   img: orc.png
   url: https://openresearchcalendar.org/
   tags: [research]
-- title: Timetable to Calendar App (UoC Only)
-  description: "[Not publicly accessible, password required.] This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
+- title: Timetable to Calendar App
+  description: "This app converts University of Chester staff timetable to an ics file which can be imported into a personal calendar."
   img: timetable.png
-  url: http://apps.bradk.co.uk/timetable
   tags: [uoc]
+  archived: true
 - title: Stacked Plot Visualiser
   description: "This app generates the stacked plots from the pilot study. Visualising the the top and bottom quartile ratings for a particular characteristic of a job role."
   img: stackedplots.png

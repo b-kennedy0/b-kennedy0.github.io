@@ -27,7 +27,7 @@ body, html {
   margin-bottom: 4rem;
 }
 
-#shinyapps-big .shinyapp {
+.apps-grid .shinyapp {
   display: inline-block;
   vertical-align: top;
   width: 25rem;
@@ -39,22 +39,22 @@ body, html {
   box-shadow: 0 0 1.25rem #ccc;
   border: 1px solid #eee;
 }
-#shinyapps-big .shinyapp:hover {
+.apps-grid .shinyapp:hover {
   box-shadow: 0 0 1.25rem #666;
   background: #f2f6f9;
   border-color: #aaa;
   transform: translateY(-10px);
 }
-#shinyapps-big .shinyapp .apptitle {
+.apps-grid .shinyapp .apptitle {
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.625rem 0.9375rem;
 }
-#shinyapps-big .shinyapp .apptags {
+.apps-grid .shinyapp .apptags {
   padding: 0 0.9375rem 0.3125rem;
   margin: 0;
 }
-#shinyapps-big .shinyapp .apptags .tag-badge {
+.apps-grid .shinyapp .apptags .tag-badge {
   display: inline-block;
   background-color: #e9ecef;
   color: #495057;
@@ -68,36 +68,63 @@ body, html {
   border-radius: 0.375rem;
   border: 1px solid #dee2e6;
 }
-#shinyapps-big .shinyapp .appimg {
+.apps-grid .shinyapp .appimg {
   width: 100%;
-  cursor: pointer;
   border-bottom: 1px solid #eee;
 }
-#shinyapps-big .applink {
+.apps-grid .applink {
   color: inherit;
   display: block;
   text-decoration: none !important;
 }
-#shinyapps-big .shinyapp .appdesc {
+.apps-grid .applink .appimg {
+  cursor: pointer;
+}
+.apps-grid .shinyapp .appdesc {
   padding: 0 0.9375rem 0.9375rem;
   font-size: 1rem;
   line-height: 1.5em;
 }
+.archive-section {
+  margin-top: 3rem;
+}
+.archive-section h2 {
+  color: #3d3852;
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 0 0 0.75rem;
+}
+.archive-note {
+  color: #615d6d;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 auto 2rem;
+  max-width: 780px;
+}
+.apps-grid .archived-app {
+  opacity: 0.82;
+}
+.apps-grid .archived-app:hover {
+  background: #fff;
+  border-color: #eee;
+  box-shadow: 0 0 1.25rem #ccc;
+  transform: none;
+}
 @media only screen and (max-width: 1899px) {
-  #shinyapps-big .shinyapp {
+  .apps-grid .shinyapp {
     width: 20rem;
   }
 }
 @media only screen and (max-width: 999px) {
-  #shinyapps-big .shinyapp {
+  .apps-grid .shinyapp {
     width: 20rem;
   }
 }
 @media only screen and (max-width: 750px) {
-  #shinyapps-big {
+  .apps-grid {
     padding: 0 1rem;
   }
-  #shinyapps-big .shinyapp {
+  .apps-grid .shinyapp {
     display: block;
     margin: 1.75rem auto;
     max-width: 100%;

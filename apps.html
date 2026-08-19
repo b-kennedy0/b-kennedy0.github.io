@@ -25,8 +25,9 @@ css:
     <a class="list-filter" data-filter="fun">✨Fun✨</a>
 </div>
 <br>
-      <div id="shinyapps-big">
+      <div id="shinyapps-big" class="apps-grid">
         {% for app in site.data.apps %}
+        {% unless app.archived %}
         {% if app.url %}
         <div class="shinyapp" data-tags="{{ app.tags | join: ',' }}">
             <a class="applink" href="{{ app.url }}" target="_blank" rel="noopener">
@@ -52,12 +53,33 @@ css:
             <div class="appdesc">{{ app.description }}</div>
           </div>
         {% endif %}
+        {% endunless %}
       {% endfor %}
+      </div>
+      <div class="archive-section">
+        <h2>Archived</h2>
+        <p class="archive-note">This section contains a record of apps that were created but have since been decommissioned or deactivated. You cannot access these applications anymore.</p>
+        <div class="apps-grid">
+          {% for app in site.data.apps %}
+          {% if app.archived %}
+            <div class="shinyapp archived-app" data-tags="{{ app.tags | join: ',' }}">
+              <img class="appimg" src="/assets/img/screenshots/{{ app.img }}" />
+              <div class="apptitle">{{ app.title }}</div>
+              <div class="apptags">
+                {% for tag in app.tags %}
+                  <span class="tag-badge">{{ tag | capitalize }}</span>
+                {% endfor %}
+              </div>
+              <div class="appdesc">{{ app.description }}</div>
+            </div>
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
       const buttons = document.querySelectorAll(".list-filter");
-      const apps = document.querySelectorAll(".shinyapp");
+      const apps = document.querySelectorAll("#shinyapps-big .shinyapp");
 
       buttons.forEach(button => {
         button.addEventListener("click", () => {

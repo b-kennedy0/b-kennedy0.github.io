@@ -66,8 +66,6 @@ test("builds dashboard counts from cards and DONE move actions", () => {
       ["Wed", "2026-08-26", 0],
       ["Thu", "2026-08-27", 0],
       ["Fri", "2026-08-28", 1],
-      ["Sat", "2026-08-29", 0],
-      ["Sun", "2026-08-30", 0],
     ],
   );
 });

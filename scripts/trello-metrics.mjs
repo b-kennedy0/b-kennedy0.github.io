@@ -110,11 +110,11 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
   const completedThisWeekActions = doneActions.filter(
     (action) => action.localDate >= weekStart && action.localDate <= today,
   );
-  const completedByDay = Array.from({ length: 7 }, (_, index) => {
+  const completedByDay = Array.from({ length: 5 }, (_, index) => {
     const date = addDaysToLocalDate(weekStart, index);
     return {
       date,
-      label: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][index],
+      label: ["Mon", "Tue", "Wed", "Thu", "Fri"][index],
       count: completedThisWeekActions.filter((action) => action.localDate === date).length,
     };
   });

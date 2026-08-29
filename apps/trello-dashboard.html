@@ -1,6 +1,6 @@
 ---
 title: Trello To-Do Dashboard
-layout: base
+layout: super-minimal
 head-extra: noindex.html
 nav-short: true
 show-avatar: false
@@ -522,7 +522,7 @@ show-avatar: false
     const padding = { top: 18, right: 24, bottom: 20, left: 24 };
     const safeSeries = Array.isArray(series) && series.length
       ? series
-      : ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((label) => ({ label, count: 0 }));
+      : ["Mon", "Tue", "Wed", "Thu", "Fri"].map((label) => ({ label, count: 0 }));
     const maxCount = Math.max(1, ...safeSeries.map((day) => day.count || 0));
     const usableWidth = chartWidth - padding.left - padding.right;
     const usableHeight = chartHeight - padding.top - padding.bottom;
@@ -546,6 +546,7 @@ show-avatar: false
     document.getElementById("trend-points").innerHTML = points.map((point) =>
       `<circle class="trend-point" cx="${point.x}" cy="${point.y}" r="5"><title>${point.label}: ${point.count}</title></circle>`,
     ).join("");
+    document.getElementById("trend-axis").style.gridTemplateColumns = `repeat(${safeSeries.length}, minmax(0, 1fr))`;
     document.getElementById("trend-axis").innerHTML = safeSeries.map((day) =>
       `<span>${day.label}</span>`,
     ).join("");

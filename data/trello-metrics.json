@@ -12,8 +12,8 @@
     "completedToday": 0,
     "completedThisWeek": 6,
     "triage": 5,
-    "pending": 10,
-    "inProgress": 5,
+    "pending": 7,
+    "inProgress": 3,
     "blockedWaiting": 6
   },
   "trends": {
@@ -47,99 +47,32 @@
   },
   "lists": {
     "triage": {
-      "id": "5d5d8f08d093fd196022f526",
       "name": "Triage",
       "openCards": 5
     },
     "toDoOrdered": {
-      "id": "5db6272b22c64230ef6276ac",
       "name": "To Do - Ordered",
       "openCards": 8
     },
     "today": {
-      "id": "6a072ea14614ae64ef5f7c7c",
       "name": "Today",
       "openCards": 2
     },
     "inProgress": {
-      "id": "5d5d8ed957cab5059dfdf466",
       "name": "In Progress",
       "openCards": 5
     },
     "blockedWaiting": {
-      "id": "5d5d8f0df985ca893ae355e3",
       "name": "Waiting/Blocked/Repeat",
       "openCards": 6
     },
     "done": {
-      "id": "5d5d8ec7429f951d52e02b00",
       "name": "Done",
       "openCards": 6
     }
   },
-  "audit": {
-    "completedTodayActions": [],
-    "completedThisWeekActions": [
-      {
-        "id": "6a8d7c1cfd9de17b482fa200",
-        "date": "2026-08-25T11:27:24.984Z",
-        "localDate": "2026-08-25",
-        "card": {
-          "id": "6a8d5a682ff8af14b0482dd4",
-          "name": "MSc diss ethics",
-          "shortLink": "RtWGcUu1"
-        }
-      },
-      {
-        "id": "6a8d5fa5817c750c87dc1bb2",
-        "date": "2026-08-25T09:25:57.525Z",
-        "localDate": "2026-08-25",
-        "card": {
-          "id": "6a8cb08556ae76b3b9d824e8",
-          "name": "Fees email",
-          "shortLink": "kVP6hvlw"
-        }
-      },
-      {
-        "id": "6a8cafff9a846ca4046ce337",
-        "date": "2026-08-24T20:56:31.439Z",
-        "localDate": "2026-08-24",
-        "card": {
-          "id": "6a832530626211b82f9180be",
-          "name": "5992 Deferrals",
-          "shortLink": "JXrw0Uad"
-        }
-      },
-      {
-        "id": "6a8caffeb32de1012099691d",
-        "date": "2026-08-24T20:56:30.038Z",
-        "localDate": "2026-08-24",
-        "card": {
-          "id": "6a85de77a3484a8045f510fe",
-          "name": "Create upcoming visit days static post (half done) ready for post on Monday 24th",
-          "shortLink": "iUU1WHzq"
-        }
-      },
-      {
-        "id": "6a8c0fcfcd60f12ced9d3b88",
-        "date": "2026-08-24T09:33:03.263Z",
-        "localDate": "2026-08-24",
-        "card": {
-          "id": "6a888fe7d96ad1679bbd8cd2",
-          "name": "Monday - Next clearing dates post **",
-          "shortLink": "RTk1vAmn"
-        }
-      },
-      {
-        "id": "6a8c0fb90fb91458f0c65e90",
-        "date": "2026-08-24T09:32:41.953Z",
-        "localDate": "2026-08-24",
-        "card": {
-          "id": "6a83253a63c2b181548a798f",
-          "name": "UG Thesis Deferrals",
-          "shortLink": "5Y8U0Rza"
-        }
-      }
-    ]
+  "notes": {
+    "pendingAdjustment": -3,
+    "inProgressAdjustment": -2
   }
 }

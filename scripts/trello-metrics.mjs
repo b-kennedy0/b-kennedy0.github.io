@@ -87,6 +87,10 @@ function isMoveToListAction(action, listId) {
   );
 }
 
+function adjustedCount(count, offset) {
+  return Math.max(0, count - offset);
+}
+
 export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZone = "Europe/London" }) {
   const listMap = validateListMap(lists);
   const today = getLocalDateString(generatedAt, timeZone);
@@ -123,10 +127,12 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
     completedToday: completedTodayActions.length,
     completedThisWeek: completedThisWeekActions.length,
     triage: cardsForList(listMap.Triage).length,
-    pending:
+    pending: adjustedCount(
       cardsForList(listMap["To Do - Ordered"]).length +
       cardsForList(listMap.Today).length,
-    inProgress: cardsForList(listMap["In Progress"]).length,
+      3,
+    ),
+    inProgress: adjustedCount(cardsForList(listMap["In Progress"]).length, 2),
     blockedWaiting: cardsForList(listMap["Waiting/Blocked/Repeat"]).length,
   };
 
@@ -152,16 +158,11 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       blockedWaiting: listSummary(listMap["Waiting/Blocked/Repeat"]),
       done: listSummary(listMap.Done),
     },
-    audit: {
-      completedTodayActions,
-      completedThisWeekActions,
-    },
   };
 }
 
 function listSummary(list) {
   return {
-    id: list.id,
     name: list.name,
     openCards: cardsForList(list).length,
   };

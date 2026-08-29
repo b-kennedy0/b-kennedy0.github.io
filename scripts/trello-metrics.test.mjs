@@ -53,9 +53,11 @@ test("builds dashboard counts from cards and Done move actions", () => {
   assert.equal(metrics.counts.completedToday, 1);
   assert.equal(metrics.counts.completedThisWeek, 2);
   assert.equal(metrics.counts.triage, 1);
-  assert.equal(metrics.counts.pending, 3);
-  assert.equal(metrics.counts.inProgress, 2);
+  assert.equal(metrics.counts.pending, 0);
+  assert.equal(metrics.counts.inProgress, 0);
   assert.equal(metrics.counts.blockedWaiting, 1);
+  assert.equal("audit" in metrics, false);
+  assert.equal("id" in metrics.lists.done, false);
   assert.equal(metrics.period.weekStart, "2026-08-24");
   assert.equal(metrics.period.weekEnd, "2026-08-30");
   assert.deepEqual(
@@ -68,6 +70,18 @@ test("builds dashboard counts from cards and Done move actions", () => {
       ["Fri", "2026-08-28", 1],
     ],
   );
+});
+
+test("does not allow organisation-card offsets to create negative counts", () => {
+  const metrics = buildMetrics({
+    lists,
+    generatedAt: new Date("2026-08-28T12:00:00.000Z"),
+    timeZone: "Europe/London",
+    actions: [],
+  });
+
+  assert.equal(metrics.counts.pending, 0);
+  assert.equal(metrics.counts.inProgress, 0);
 });
 
 test("uses Monday as the start of the week", () => {

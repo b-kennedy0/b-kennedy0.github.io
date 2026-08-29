@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "timeZone": "Europe/London",
+  "period": {
+    "today": null,
+    "weekStartsOn": "Monday",
+    "weekStart": null,
+    "weekEnd": null
+  },
+  "counts": {
+    "completedToday": 0,
+    "completedThisWeek": 0,
+    "triage": 0,
+    "pending": 0,
+    "inProgress": 0,
+    "blockedWaiting": 0
+  },
+  "trends": {
+    "completedByDay": [
+      {
+        "date": null,
+        "label": "Mon",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Tue",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Wed",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Thu",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Fri",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Sat",
+        "count": 0
+      },
+      {
+        "date": null,
+        "label": "Sun",
+        "count": 0
+      }
+    ]
+  },
+  "lists": {},
+  "audit": {
+    "completedTodayActions": [],
+    "completedThisWeekActions": []
+  }
+}

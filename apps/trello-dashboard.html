@@ -1,0 +1,630 @@
+---
+title: Trello To-Do Dashboard
+layout: base
+head-extra: noindex.html
+nav-short: true
+show-avatar: false
+---
+
+<style>
+  :root {
+    --dash-bg: #061318;
+    --dash-panel: #0b2028;
+    --dash-line: #2a5661;
+    --dash-ink: #ecfbff;
+    --dash-muted: #8eb1ba;
+    --dash-cyan: #30d5e8;
+    --dash-green: #45e18f;
+    --dash-amber: #ffbd4a;
+    --dash-red: #ff675d;
+    --dash-blue: #62a8ff;
+  }
+
+  .trello-dashboard {
+    background:
+      linear-gradient(rgba(48, 213, 232, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(48, 213, 232, 0.035) 1px, transparent 1px),
+      radial-gradient(circle at top right, rgba(48, 213, 232, 0.16), transparent 34rem),
+      var(--dash-bg);
+    background-size: 28px 28px, 28px 28px, auto, auto;
+    color: var(--dash-ink);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    margin: 0 calc(50% - 50vw);
+    min-height: calc(100vh - 96px);
+    padding: 28px 18px 42px;
+  }
+
+  .dashboard-shell {
+    margin: 0 auto;
+    max-width: 1160px;
+  }
+
+  .dashboard-header {
+    align-items: center;
+    border: 1px solid var(--dash-line);
+    border-left: 8px solid var(--dash-cyan);
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    min-height: 76px;
+    padding: 14px 18px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .dashboard-code {
+    color: var(--dash-muted);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .dashboard-status {
+    color: var(--dash-muted);
+    font-size: 12px;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .status-pill {
+    background: rgba(48, 213, 232, 0.09);
+    border: 1px solid var(--dash-line);
+    color: var(--dash-cyan);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+
+  .status-pill.is-fresh {
+    border-color: rgba(69, 225, 143, 0.7);
+    color: var(--dash-green);
+  }
+
+  .status-pill.is-stale {
+    border-color: rgba(255, 189, 74, 0.7);
+    color: var(--dash-amber);
+  }
+
+  .status-pill.is-error {
+    border-color: rgba(255, 103, 93, 0.7);
+    color: var(--dash-red);
+  }
+
+  .dashboard-instruments {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1.15fr 0.85fr;
+    margin-top: 14px;
+  }
+
+  .gauge-panel,
+  .trend-panel,
+  .metric-card {
+    background: linear-gradient(180deg, rgba(16, 44, 53, 0.94), rgba(8, 26, 32, 0.94));
+    border: 1px solid var(--dash-line);
+    box-shadow: inset 0 0 0 1px rgba(236, 251, 255, 0.03);
+  }
+
+  .gauge-panel {
+    align-items: center;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 176px 1fr;
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .gauge {
+    aspect-ratio: 1;
+    background:
+      radial-gradient(circle at center, var(--dash-panel) 0 50%, transparent 51%),
+      conic-gradient(var(--dash-cyan) var(--gauge-value, 0%), rgba(42, 86, 97, 0.55) 0);
+    border: 1px solid var(--dash-line);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .gauge::before {
+    border: 1px solid rgba(236, 251, 255, 0.14);
+    border-radius: 50%;
+    content: "";
+    inset: 12px;
+    position: absolute;
+  }
+
+  .gauge-value {
+    font-size: 36px;
+    font-weight: 850;
+    line-height: 1;
+    position: relative;
+  }
+
+  .gauge-label {
+    color: var(--dash-muted);
+    font-size: 11px;
+    margin-top: 8px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .bars {
+    display: grid;
+    gap: 13px;
+  }
+
+  .bar-row {
+    display: grid;
+    gap: 8px;
+  }
+
+  .bar-meta {
+    align-items: center;
+    color: var(--dash-muted);
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  .bar-track {
+    background: rgba(42, 86, 97, 0.5);
+    height: 12px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    background: var(--bar-color, var(--dash-cyan));
+    height: 100%;
+    transition: width 180ms ease;
+    width: var(--bar-value, 0%);
+  }
+
+  .trend-panel {
+    margin-top: 14px;
+    padding: 16px 18px 14px;
+  }
+
+  .panel-title {
+    align-items: center;
+    color: var(--dash-muted);
+    display: flex;
+    font-size: 12px;
+    font-weight: 800;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .panel-title strong {
+    color: var(--dash-green);
+    font-size: 18px;
+  }
+
+  .trend-chart {
+    display: block;
+    height: auto;
+    overflow: visible;
+    width: 100%;
+  }
+
+  .trend-grid-line {
+    stroke: rgba(142, 177, 186, 0.18);
+    stroke-width: 1;
+  }
+
+  .trend-area {
+    fill: rgba(69, 225, 143, 0.12);
+  }
+
+  .trend-line {
+    fill: none;
+    stroke: var(--dash-green);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+  }
+
+  .trend-point {
+    fill: var(--dash-panel);
+    stroke: var(--dash-green);
+    stroke-width: 3;
+  }
+
+  .trend-axis {
+    color: var(--dash-muted);
+    display: grid;
+    font-size: 11px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    margin-top: 6px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .metric-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    margin-top: 14px;
+  }
+
+  .metric-card {
+    min-height: 132px;
+    padding: 14px;
+    position: relative;
+  }
+
+  .metric-card::before {
+    background: var(--tone, var(--dash-cyan));
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .metric-card[data-tone="green"] {
+    --tone: var(--dash-green);
+  }
+
+  .metric-card[data-tone="amber"] {
+    --tone: var(--dash-amber);
+  }
+
+  .metric-card[data-tone="blue"] {
+    --tone: var(--dash-blue);
+  }
+
+  .metric-card[data-tone="cyan"] {
+    --tone: var(--dash-cyan);
+  }
+
+  .metric-card[data-tone="red"] {
+    --tone: var(--dash-red);
+  }
+
+  .metric-label {
+    color: var(--dash-muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 28px;
+    text-transform: uppercase;
+  }
+
+  .metric-value {
+    color: var(--tone, var(--dash-cyan));
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 850;
+    line-height: 0.95;
+    margin: 22px 0 0;
+  }
+
+  .metric-code {
+    bottom: 12px;
+    color: rgba(142, 177, 186, 0.72);
+    font-size: 10px;
+    left: 14px;
+    position: absolute;
+    text-transform: uppercase;
+  }
+
+  .dashboard-error {
+    background: rgba(255, 103, 93, 0.12);
+    border: 1px solid rgba(255, 103, 93, 0.7);
+    color: var(--dash-red);
+    display: none;
+    font-size: 13px;
+    margin-top: 14px;
+    padding: 12px 14px;
+  }
+
+  @media (max-width: 1040px) {
+    .metric-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .trello-dashboard {
+      min-height: calc(100vh - 72px);
+      padding: 18px 12px 32px;
+    }
+
+    .dashboard-header,
+    .dashboard-instruments,
+    .gauge-panel {
+      display: block;
+    }
+
+    .dashboard-status {
+      margin-top: 12px;
+      text-align: left;
+      white-space: normal;
+    }
+
+    .gauge {
+      margin: 4px auto 18px;
+      max-width: 172px;
+    }
+
+    .metric-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trend-panel {
+      padding: 14px 12px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .metric-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<main class="trello-dashboard">
+  <div class="dashboard-shell">
+    <header class="dashboard-header">
+      <div>
+        <h1 class="dashboard-title">Trello Ops</h1>
+        <div class="dashboard-code" id="dashboard-period">PERIOD: --</div>
+      </div>
+      <div class="dashboard-status" aria-live="polite">
+        <span class="status-pill" id="dashboard-freshness">Loading</span>
+        <div id="dashboard-updated">SYNC: --</div>
+      </div>
+    </header>
+
+    <section class="dashboard-instruments" aria-label="Trello operating indicators">
+      <article class="gauge-panel">
+        <div class="gauge" id="completion-gauge" style="--gauge-value: 0%">
+          <div>
+            <div class="gauge-value" id="gauge-value">0%</div>
+            <div class="gauge-label">Week Close</div>
+          </div>
+        </div>
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-meta"><span>Pending Load</span><span id="pending-load">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="pending-bar" style="--bar-color: var(--dash-blue)"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Active Flow</span><span id="active-flow">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="active-bar" style="--bar-color: var(--dash-cyan)"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Blocked Signal</span><span id="blocked-signal">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="blocked-bar" style="--bar-color: var(--dash-red)"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="gauge-panel">
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-meta"><span>Done Today</span><span data-metric="completedToday">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="today-bar" style="--bar-color: var(--dash-green)"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Done Week</span><span data-metric="completedThisWeek">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="week-bar" style="--bar-color: var(--dash-green)"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-meta"><span>Triage Queue</span><span data-metric="triage">0</span></div>
+            <div class="bar-track"><div class="bar-fill" id="triage-bar" style="--bar-color: var(--dash-amber)"></div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="trend-panel" aria-label="Tasks completed by day this week">
+      <div class="panel-title">
+        <span>Weekly Completion Trace</span>
+        <strong id="trend-total">0</strong>
+      </div>
+      <svg class="trend-chart" id="completion-trend" viewBox="0 0 700 180" role="img" aria-labelledby="trend-title">
+        <title id="trend-title">Tasks completed each day this week</title>
+        <g id="trend-grid"></g>
+        <path class="trend-area" id="trend-area" d=""></path>
+        <path class="trend-line" id="trend-line" d=""></path>
+        <g id="trend-points"></g>
+      </svg>
+      <div class="trend-axis" id="trend-axis"></div>
+    </section>
+
+    <section class="metric-grid" aria-label="Trello task statistics">
+      <article class="metric-card" data-tone="green">
+        <p class="metric-label">Done<br>Today</p>
+        <p class="metric-value" data-metric="completedToday">0</p>
+        <span class="metric-code">D-24H</span>
+      </article>
+      <article class="metric-card" data-tone="green">
+        <p class="metric-label">Done<br>Week</p>
+        <p class="metric-value" data-metric="completedThisWeek">0</p>
+        <span class="metric-code">D-7D</span>
+      </article>
+      <article class="metric-card" data-tone="amber">
+        <p class="metric-label">Triage</p>
+        <p class="metric-value" data-metric="triage">0</p>
+        <span class="metric-code">QUEUE</span>
+      </article>
+      <article class="metric-card" data-tone="blue">
+        <p class="metric-label">Pending</p>
+        <p class="metric-value" data-metric="pending">0</p>
+        <span class="metric-code">BACKLOG</span>
+      </article>
+      <article class="metric-card" data-tone="cyan">
+        <p class="metric-label">In<br>Progress</p>
+        <p class="metric-value" data-metric="inProgress">0</p>
+        <span class="metric-code">ACTIVE</span>
+      </article>
+      <article class="metric-card" data-tone="red">
+        <p class="metric-label">Blocked<br>Waiting</p>
+        <p class="metric-value" data-metric="blockedWaiting">0</p>
+        <span class="metric-code">HOLD</span>
+      </article>
+    </section>
+
+    <div class="dashboard-error" id="dashboard-error"></div>
+  </div>
+</main>
+
+<script>
+  const metricsUrl = "/data/trello-metrics.json";
+  const freshnessEl = document.getElementById("dashboard-freshness");
+  const updatedEl = document.getElementById("dashboard-updated");
+  const errorEl = document.getElementById("dashboard-error");
+  const periodEl = document.getElementById("dashboard-period");
+
+  function clampPercent(value) {
+    return Math.max(0, Math.min(100, Math.round(value)));
+  }
+
+  function setBar(id, value, max) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.setProperty("--bar-value", `${clampPercent(max ? (value / max) * 100 : 0)}%`);
+  }
+
+  function buildSmoothPath(points) {
+    if (!points.length) return "";
+    if (points.length === 1) return `M ${points[0].x} ${points[0].y}`;
+
+    return points.reduce((path, point, index) => {
+      if (index === 0) {
+        return `M ${point.x} ${point.y}`;
+      }
+
+      const previous = points[index - 1];
+      const controlX = previous.x + (point.x - previous.x) / 2;
+      return `${path} C ${controlX} ${previous.y}, ${controlX} ${point.y}, ${point.x} ${point.y}`;
+    }, "");
+  }
+
+  function renderTrend(series) {
+    const chartWidth = 700;
+    const chartHeight = 180;
+    const padding = { top: 18, right: 24, bottom: 20, left: 24 };
+    const safeSeries = Array.isArray(series) && series.length
+      ? series
+      : ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((label) => ({ label, count: 0 }));
+    const maxCount = Math.max(1, ...safeSeries.map((day) => day.count || 0));
+    const usableWidth = chartWidth - padding.left - padding.right;
+    const usableHeight = chartHeight - padding.top - padding.bottom;
+    const baseline = chartHeight - padding.bottom;
+    const points = safeSeries.map((day, index) => ({
+      label: day.label,
+      count: day.count || 0,
+      x: padding.left + (usableWidth / Math.max(1, safeSeries.length - 1)) * index,
+      y: padding.top + usableHeight - ((day.count || 0) / maxCount) * usableHeight,
+    }));
+    const linePath = buildSmoothPath(points);
+    const areaPath = linePath ? `${linePath} L ${points[points.length - 1].x} ${baseline} L ${points[0].x} ${baseline} Z` : "";
+
+    document.getElementById("trend-total").textContent = safeSeries.reduce((total, day) => total + (day.count || 0), 0);
+    document.getElementById("trend-line").setAttribute("d", linePath);
+    document.getElementById("trend-area").setAttribute("d", areaPath);
+    document.getElementById("trend-grid").innerHTML = [0, 0.5, 1].map((ratio) => {
+      const y = padding.top + usableHeight * ratio;
+      return `<line class="trend-grid-line" x1="${padding.left}" y1="${y}" x2="${chartWidth - padding.right}" y2="${y}"></line>`;
+    }).join("");
+    document.getElementById("trend-points").innerHTML = points.map((point) =>
+      `<circle class="trend-point" cx="${point.x}" cy="${point.y}" r="5"><title>${point.label}: ${point.count}</title></circle>`,
+    ).join("");
+    document.getElementById("trend-axis").innerHTML = safeSeries.map((day) =>
+      `<span>${day.label}</span>`,
+    ).join("");
+  }
+
+  function setFreshness(metrics) {
+    if (!metrics.generatedAt) {
+      freshnessEl.textContent = "Awaiting Sync";
+      freshnessEl.className = "status-pill is-stale";
+      updatedEl.textContent = "SYNC: PENDING";
+      return;
+    }
+
+    const generatedAt = new Date(metrics.generatedAt);
+    const ageHours = (Date.now() - generatedAt.getTime()) / 36e5;
+    freshnessEl.textContent = ageHours > 2 ? "Stale" : "Live";
+    freshnessEl.className = `status-pill ${ageHours > 2 ? "is-stale" : "is-fresh"}`;
+    updatedEl.textContent = `SYNC: ${generatedAt.toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: metrics.timeZone || "Europe/London",
+    }).toUpperCase()}`;
+  }
+
+  function renderMetrics(metrics) {
+    const counts = metrics.counts || {};
+    Object.entries(counts).forEach(([key, value]) => {
+      document.querySelectorAll(`[data-metric="${key}"]`).forEach((metricEl) => {
+        metricEl.textContent = Number.isFinite(value) ? value : 0;
+      });
+    });
+
+    const activeLoad = (counts.pending || 0) + (counts.inProgress || 0) + (counts.blockedWaiting || 0);
+    const completedWeek = counts.completedThisWeek || 0;
+    const weekClose = activeLoad + completedWeek > 0 ? (completedWeek / (activeLoad + completedWeek)) * 100 : 0;
+    const maxBar = Math.max(1, counts.pending || 0, counts.inProgress || 0, counts.blockedWaiting || 0, completedWeek, counts.triage || 0);
+
+    document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${clampPercent(weekClose)}%`);
+    document.getElementById("gauge-value").textContent = `${clampPercent(weekClose)}%`;
+    document.getElementById("pending-load").textContent = counts.pending || 0;
+    document.getElementById("active-flow").textContent = counts.inProgress || 0;
+    document.getElementById("blocked-signal").textContent = counts.blockedWaiting || 0;
+
+    setBar("pending-bar", counts.pending || 0, maxBar);
+    setBar("active-bar", counts.inProgress || 0, maxBar);
+    setBar("blocked-bar", counts.blockedWaiting || 0, maxBar);
+    setBar("today-bar", counts.completedToday || 0, maxBar);
+    setBar("week-bar", completedWeek, maxBar);
+    setBar("triage-bar", counts.triage || 0, maxBar);
+    renderTrend(metrics.trends?.completedByDay);
+
+    if (metrics.period?.weekStart && metrics.period?.weekEnd) {
+      periodEl.textContent = `PERIOD: ${metrics.period.weekStart} / ${metrics.period.weekEnd}`;
+    }
+
+    setFreshness(metrics);
+  }
+
+  async function loadMetrics() {
+    try {
+      const response = await fetch(`${metricsUrl}?cache=${Date.now()}`, {
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Metrics request failed with status ${response.status}.`);
+      }
+
+      renderMetrics(await response.json());
+    } catch (error) {
+      freshnessEl.textContent = "Offline";
+      freshnessEl.className = "status-pill is-error";
+      updatedEl.textContent = "SYNC: ERROR";
+      errorEl.style.display = "block";
+      errorEl.textContent = error instanceof Error ? error.message : "Unknown dashboard error.";
+    }
+  }
+
+  loadMetrics();
+</script>

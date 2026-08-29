@@ -21,7 +21,7 @@ function moveAction(id, date, listAfterId = "done") {
     type: "updateCard",
     data: {
       old: { idList: "todo" },
-      listAfter: { id: listAfterId, name: "DONE" },
+      listAfter: { id: listAfterId, name: "Done" },
       card: { id: `card-${id}`, name: `Completed ${id}`, shortLink: id },
     },
   };
@@ -33,10 +33,10 @@ const lists = [
   list("today", "Today", [card("e")]),
   list("progress", "In Progress", [card("f"), card("g")]),
   list("blocked", "Waiting/Blocked/Repeat", [card("h")]),
-  list("done", "DONE", []),
+  list("done", "Done", []),
 ];
 
-test("builds dashboard counts from cards and DONE move actions", () => {
+test("builds dashboard counts from cards and Done move actions", () => {
   const generatedAt = new Date("2026-08-28T12:00:00.000Z");
   const metrics = buildMetrics({
     lists,
@@ -83,8 +83,8 @@ test("uses Monday as the start of the week", () => {
 
 test("fails when required list names are missing or duplicated", () => {
   assert.throws(
-    () => validateListMap([...lists, list("done2", "DONE")]),
-    /duplicated: DONE/,
+    () => validateListMap([...lists, list("done2", "Done")]),
+    /duplicated: Done/,
   );
   assert.throws(
     () => validateListMap(lists.filter((item) => item.name !== "Triage")),

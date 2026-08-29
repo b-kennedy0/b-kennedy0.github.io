@@ -4,7 +4,7 @@ const REQUIRED_LISTS = [
   "Today",
   "In Progress",
   "Waiting/Blocked/Repeat",
-  "DONE",
+  "Done",
 ];
 
 const OUTPUT_VERSION = 1;
@@ -91,7 +91,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
   const listMap = validateListMap(lists);
   const today = getLocalDateString(generatedAt, timeZone);
   const weekStart = getWeekStartDateString(generatedAt, timeZone);
-  const doneListId = listMap.DONE.id;
+  const doneListId = listMap.Done.id;
 
   const doneActions = actions
     .filter((action) => isMoveToListAction(action, doneListId))
@@ -150,7 +150,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       today: listSummary(listMap.Today),
       inProgress: listSummary(listMap["In Progress"]),
       blockedWaiting: listSummary(listMap["Waiting/Blocked/Repeat"]),
-      done: listSummary(listMap.DONE),
+      done: listSummary(listMap.Done),
     },
     audit: {
       completedTodayActions,

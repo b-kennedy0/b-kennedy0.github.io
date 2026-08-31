@@ -3,7 +3,7 @@ name: Update Trello Dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8-17 * * 1-5"
+  - cron: "17 8-17 * * 1-5"
 
 permissions:
   contents: write
@@ -23,14 +23,13 @@ jobs:
         run: |
           day="$(TZ=Europe/London date +%u)"
           hour="$(TZ=Europe/London date +%H)"
-          minute="$(TZ=Europe/London date +%M)"
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          if [ "$day" -le 5 ] && { [ "$hour" -ge 9 ] && [ "$hour" -lt 17 ] || { [ "$hour" -eq 17 ] && [ "$minute" -eq 00 ]; }; }; then
+          if [ "$day" -le 5 ] && [ "$hour" -ge 9 ] && [ "$hour" -le 17 ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_run=false" >> "$GITHUB_OUTPUT"

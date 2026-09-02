@@ -158,7 +158,7 @@ full-width: true
   }
 
   .gauge-value {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 850;
     line-height: 1;
     position: relative;
@@ -168,6 +168,14 @@ full-width: true
     color: var(--dash-muted);
     font-size: 11px;
     margin-top: 8px;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .gauge-target {
+    color: var(--dash-muted);
+    font-size: 10px;
+    margin-top: 4px;
     position: relative;
     text-transform: uppercase;
   }
@@ -248,8 +256,33 @@ full-width: true
   .metric-grid {
     display: grid;
     gap: 8px;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--metric-columns, 4), minmax(0, 1fr));
     margin-top: 10px;
+  }
+
+  .stat-section {
+    margin-top: 12px;
+  }
+
+  .section-label {
+    color: var(--dash-muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .current-grid {
+    --metric-columns: 4;
+  }
+
+  .week-grid {
+    --metric-columns: 4;
+  }
+
+  .month-grid {
+    --metric-columns: 3;
   }
 
   .metric-card {
@@ -322,6 +355,7 @@ full-width: true
 
   @media (max-width: 560px) {
     .metric-grid {
+      --metric-columns: 2;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -374,31 +408,48 @@ full-width: true
       </div>
     </header>
 
-    <section class="metric-grid" aria-label="Trello task statistics">
-      <article class="metric-card" data-tone="green">
-        <p class="metric-label">Done<br>Week</p>
-        <p class="metric-value" data-metric="completedThisWeek">0</p>
-      </article>
-      <article class="metric-card" data-tone="green">
-        <p class="metric-label">Done<br>Month</p>
-        <p class="metric-value" data-metric="completedThisMonth">0</p>
-      </article>
-      <article class="metric-card" data-tone="blue">
-        <p class="metric-label">Moved<br>Week</p>
-        <p class="metric-value" data-metric="movedForwardThisWeek">0</p>
-      </article>
-      <article class="metric-card" data-tone="blue">
-        <p class="metric-label">Moved<br>Month</p>
-        <p class="metric-value" data-metric="movedForwardThisMonth">0</p>
-      </article>
-      <article class="metric-card" data-tone="amber">
-        <p class="metric-label">Triage<br>Week</p>
-        <p class="metric-value" data-metric="triageClearedThisWeek">0</p>
-      </article>
-      <article class="metric-card" data-tone="amber">
-        <p class="metric-label">Triage<br>Month</p>
-        <p class="metric-value" data-metric="triageClearedThisMonth">0</p>
-      </article>
+    <section class="stat-section" aria-label="Current Trello board status">
+      <p class="section-label">Current Board</p>
+      <div class="metric-grid current-grid">
+        <article class="metric-card" data-tone="amber">
+          <p class="metric-label">Triage</p>
+          <p class="metric-value" data-metric="triage">0</p>
+        </article>
+        <article class="metric-card" data-tone="blue">
+          <p class="metric-label">Pending</p>
+          <p class="metric-value" data-metric="pending">0</p>
+        </article>
+        <article class="metric-card" data-tone="cyan">
+          <p class="metric-label">In<br>Progress</p>
+          <p class="metric-value" data-metric="inProgress">0</p>
+        </article>
+        <article class="metric-card" data-tone="red">
+          <p class="metric-label">Blocked<br>Waiting</p>
+          <p class="metric-value" data-metric="blockedWaiting">0</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stat-section" aria-label="This week Trello activity">
+      <p class="section-label">This Week</p>
+      <div class="metric-grid week-grid">
+        <article class="metric-card" data-tone="green">
+          <p class="metric-label">Done<br>Today</p>
+          <p class="metric-value" data-metric="completedToday">0</p>
+        </article>
+        <article class="metric-card" data-tone="green">
+          <p class="metric-label">Done<br>Week</p>
+          <p class="metric-value" data-metric="completedThisWeek">0</p>
+        </article>
+        <article class="metric-card" data-tone="blue">
+          <p class="metric-label">Moved<br>Week</p>
+          <p class="metric-value" data-metric="movedForwardThisWeek">0</p>
+        </article>
+        <article class="metric-card" data-tone="amber">
+          <p class="metric-label">Triage<br>Week</p>
+          <p class="metric-value" data-metric="triageClearedThisWeek">0</p>
+        </article>
+      </div>
     </section>
 
     <section class="analytics-panel" aria-label="Trello operating indicators">
@@ -406,7 +457,8 @@ full-width: true
         <div class="gauge" id="completion-gauge" style="--gauge-value: 0%">
           <div>
             <div class="gauge-value" id="gauge-value">0</div>
-            <div class="gauge-label">Momentum</div>
+            <div class="gauge-label">Weekly Activity</div>
+            <div class="gauge-target">Target 15</div>
           </div>
         </div>
       </div>
@@ -425,6 +477,24 @@ full-width: true
           <g id="trend-labels"></g>
         </svg>
         <div class="trend-axis" id="trend-axis"></div>
+      </div>
+    </section>
+
+    <section class="stat-section" aria-label="This month Trello activity">
+      <p class="section-label">This Month</p>
+      <div class="metric-grid month-grid">
+        <article class="metric-card" data-tone="green">
+          <p class="metric-label">Done<br>Month</p>
+          <p class="metric-value" data-metric="completedThisMonth">0</p>
+        </article>
+        <article class="metric-card" data-tone="blue">
+          <p class="metric-label">Moved<br>Month</p>
+          <p class="metric-value" data-metric="movedForwardThisMonth">0</p>
+        </article>
+        <article class="metric-card" data-tone="amber">
+          <p class="metric-label">Triage<br>Month</p>
+          <p class="metric-value" data-metric="triageClearedThisMonth">0</p>
+        </article>
       </div>
     </section>
 
@@ -521,6 +591,7 @@ full-width: true
 
   function renderMetrics(metrics) {
     const counts = metrics.counts || {};
+    const weeklyActivityTarget = 15;
     Object.entries(counts).forEach(([key, value]) => {
       document.querySelectorAll(`[data-metric="${key}"]`).forEach((metricEl) => {
         metricEl.textContent = Number.isFinite(value) ? value : 0;
@@ -528,10 +599,10 @@ full-width: true
     });
 
     const momentumScore = counts.momentumScore || 0;
-    const momentumGauge = clampPercent((momentumScore / 15) * 100);
+    const momentumGauge = clampPercent((momentumScore / weeklyActivityTarget) * 100);
 
     document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${momentumGauge}%`);
-    document.getElementById("gauge-value").textContent = momentumScore;
+    document.getElementById("gauge-value").textContent = `${momentumScore}/${weeklyActivityTarget}`;
     renderTrend(metrics.trends?.completedByDay);
 
     if (metrics.period?.weekStart && metrics.period?.weekEnd) {

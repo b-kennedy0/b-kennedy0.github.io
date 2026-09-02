@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: update-trello-dashboard
@@ -31,17 +31,33 @@ jobs:
           TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
           TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
           TRELLO_DASHBOARD_TIMEZONE: Europe/London
-        run: node scripts/update-trello-metrics.mjs data/trello-metrics.json
+        run: node scripts/update-trello-metrics.mjs "$RUNNER_TEMP/trello-metrics.json"
 
-      - name: Commit updated metrics
+      - name: Publish metrics to data repository
+        env:
+          DATA_REPO_TOKEN: ${{ secrets.TRELLO_DASHBOARD_DATA_TOKEN }}
         run: |
-          if git diff --quiet -- data/trello-metrics.json; then
+          if [ -z "$DATA_REPO_TOKEN" ]; then
+            echo "TRELLO_DASHBOARD_DATA_TOKEN is required."
+            exit 1
+          fi
+
+          data_repo_dir="$RUNNER_TEMP/trello-dashboard-data"
+
+          git clone "https://x-access-token:${DATA_REPO_TOKEN}@github.com/b-kennedy0/trello-dashboard-data.git" "$data_repo_dir"
+          cd "$data_repo_dir"
+
+          git checkout main || git checkout -b main
+          cp "$RUNNER_TEMP/trello-metrics.json" trello-metrics.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add trello-metrics.json
+          if git diff --cached --quiet; then
             echo "No Trello metrics changes to commit."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/trello-metrics.json
           git commit -m "Update Trello dashboard metrics"
-          git push
+          git push -u origin main

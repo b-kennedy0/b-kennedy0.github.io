@@ -433,7 +433,8 @@ full-width: true
 </main>
 
 <script>
-  const metricsUrl = "/data/trello-metrics.json";
+  const metricsUrl = "https://raw.githubusercontent.com/b-kennedy0/trello-dashboard-data/main/trello-metrics.json";
+  const fallbackMetricsUrl = "/data/trello-metrics.sample.json";
   const freshnessEl = document.getElementById("dashboard-freshness");
   const updatedEl = document.getElementById("dashboard-updated");
   const errorEl = document.getElementById("dashboard-error");
@@ -543,9 +544,15 @@ full-width: true
 
   async function loadMetrics() {
     try {
-      const response = await fetch(`${metricsUrl}?cache=${Date.now()}`, {
+      let response = await fetch(`${metricsUrl}?cache=${Date.now()}`, {
         headers: { Accept: "application/json" },
       });
+
+      if (!response.ok) {
+        response = await fetch(`${fallbackMetricsUrl}?cache=${Date.now()}`, {
+          headers: { Accept: "application/json" },
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`Metrics request failed with status ${response.status}.`);

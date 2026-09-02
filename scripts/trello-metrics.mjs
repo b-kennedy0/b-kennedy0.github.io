@@ -163,10 +163,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       count: completedThisWeekActions.filter((action) => action.localDate === date).length,
     };
   });
-  const momentumScore =
-    completedThisWeekActions.length +
-    movedForwardThisWeekActions.length +
-    triageClearedThisWeekActions.length;
+  const weeklyActivityScore = completedThisWeekActions.length;
 
   const counts = {
     completedToday: completedTodayActions.length,
@@ -176,7 +173,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
     movedForwardThisMonth: movedForwardThisMonthActions.length,
     triageClearedThisWeek: triageClearedThisWeekActions.length,
     triageClearedThisMonth: triageClearedThisMonthActions.length,
-    momentumScore,
+    momentumScore: weeklyActivityScore,
     triage: cardsForList(listMap.Triage).length,
     pending: adjustedCount(
       cardsForList(listMap["To Do - Ordered"]).length +

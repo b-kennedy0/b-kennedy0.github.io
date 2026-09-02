@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "generatedAt": null,
   "timeZone": "Europe/London",
   "period": {
@@ -49,7 +49,8 @@
         "label": "Fri",
         "count": 0
       }
-    ]
+    ],
+    "completedByMonthDay": []
   },
   "lists": {},
   "notes": {

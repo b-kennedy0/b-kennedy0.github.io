@@ -7,7 +7,7 @@ const REQUIRED_LISTS = [
   "Done",
 ];
 
-const OUTPUT_VERSION = 2;
+const OUTPUT_VERSION = 3;
 const WEEKDAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
 const FORWARD_LIST_ORDER = [
   "Triage",
@@ -116,6 +116,10 @@ function adjustedCount(count, offset) {
   return Math.max(0, count - offset);
 }
 
+function getMonthDayLabel(localDate) {
+  return String(Number(localDate.slice(8, 10)));
+}
+
 export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZone = "Europe/London" }) {
   const listMap = validateListMap(lists);
   const today = getLocalDateString(generatedAt, timeZone);
@@ -163,6 +167,14 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       count: completedThisWeekActions.filter((action) => action.localDate === date).length,
     };
   });
+  const completedByMonthDay = [];
+  for (let date = monthStart; date <= today; date = addDaysToLocalDate(date, 1)) {
+    completedByMonthDay.push({
+      date,
+      label: getMonthDayLabel(date),
+      count: completedThisMonthActions.filter((action) => action.localDate === date).length,
+    });
+  }
   const counts = {
     completedToday: completedTodayActions.length,
     completedThisWeek: completedThisWeekActions.length,
@@ -195,6 +207,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
     counts,
     trends: {
       completedByDay,
+      completedByMonthDay,
     },
     lists: {
       triage: listSummary(listMap.Triage),

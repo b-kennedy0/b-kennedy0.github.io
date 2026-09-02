@@ -179,6 +179,14 @@ full-width: true
     padding: 0;
   }
 
+  .standalone-trend {
+    background: linear-gradient(180deg, rgba(16, 44, 53, 0.94), rgba(8, 26, 32, 0.94));
+    border: 1px solid var(--dash-line);
+    box-shadow: inset 0 0 0 1px rgba(236, 251, 255, 0.03);
+    margin-top: 10px;
+    padding: 12px 14px 10px;
+  }
+
   .panel-title {
     align-items: center;
     color: var(--dash-muted);
@@ -200,6 +208,10 @@ full-width: true
     height: auto;
     overflow: visible;
     width: 100%;
+  }
+
+  .month-trend .trend-chart {
+    max-height: 152px;
   }
 
   .trend-grid-line {
@@ -243,6 +255,10 @@ full-width: true
     margin-top: 6px;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .trend-axis span:empty::before {
+    content: "\00a0";
   }
 
   .metric-grid {
@@ -487,6 +503,22 @@ full-width: true
           <p class="metric-value" data-metric="triageClearedThisMonth">0</p>
         </article>
       </div>
+
+      <div class="trend-panel standalone-trend month-trend" aria-label="Tasks completed by day this month">
+        <div class="panel-title">
+          <span>Monthly Completion Trace</span>
+          <strong id="month-trend-total">0</strong>
+        </div>
+        <svg class="trend-chart" id="month-completion-trend" viewBox="0 0 700 160" role="img" aria-labelledby="month-trend-title">
+          <title id="month-trend-title">Tasks completed each day this month</title>
+          <g id="month-trend-grid"></g>
+          <path class="trend-area" id="month-trend-area" d=""></path>
+          <path class="trend-line" id="month-trend-line" d=""></path>
+          <g id="month-trend-points"></g>
+          <g id="month-trend-labels"></g>
+        </svg>
+        <div class="trend-axis" id="month-trend-axis"></div>
+      </div>
     </section>
 
     <div class="dashboard-error" id="dashboard-error"></div>
@@ -520,13 +552,32 @@ full-width: true
     }, "");
   }
 
-  function renderTrend(series) {
+  function shouldShowMonthTick(day, index, length) {
+    const dayNumber = Number(day.label);
+    return index === 0 || index === length - 1 || dayNumber % 5 === 0;
+  }
+
+  function renderTrend(series, options = {}) {
+    const {
+      chartHeight = 180,
+      fallbackLabels = ["Mon", "Tue", "Wed", "Thu", "Fri"],
+      ids = {
+        total: "trend-total",
+        line: "trend-line",
+        area: "trend-area",
+        grid: "trend-grid",
+        points: "trend-points",
+        labels: "trend-labels",
+        axis: "trend-axis",
+      },
+      showAxisLabel = () => true,
+      showValueLabel = () => true,
+    } = options;
     const chartWidth = 700;
-    const chartHeight = 180;
     const padding = { top: 30, right: 24, bottom: 20, left: 24 };
     const safeSeries = Array.isArray(series) && series.length
       ? series
-      : ["Mon", "Tue", "Wed", "Thu", "Fri"].map((label) => ({ label, count: 0 }));
+      : fallbackLabels.map((label) => ({ label, count: 0 }));
     const maxCount = Math.max(1, ...safeSeries.map((day) => day.count || 0));
     const usableWidth = chartWidth - padding.left - padding.right;
     const usableHeight = chartHeight - padding.top - padding.bottom;
@@ -540,22 +591,24 @@ full-width: true
     const linePath = buildSmoothPath(points);
     const areaPath = linePath ? `${linePath} L ${points[points.length - 1].x} ${baseline} L ${points[0].x} ${baseline} Z` : "";
 
-    document.getElementById("trend-total").textContent = safeSeries.reduce((total, day) => total + (day.count || 0), 0);
-    document.getElementById("trend-line").setAttribute("d", linePath);
-    document.getElementById("trend-area").setAttribute("d", areaPath);
-    document.getElementById("trend-grid").innerHTML = [0, 0.5, 1].map((ratio) => {
+    document.getElementById(ids.total).textContent = safeSeries.reduce((total, day) => total + (day.count || 0), 0);
+    document.getElementById(ids.line).setAttribute("d", linePath);
+    document.getElementById(ids.area).setAttribute("d", areaPath);
+    document.getElementById(ids.grid).innerHTML = [0, 0.5, 1].map((ratio) => {
       const y = padding.top + usableHeight * ratio;
       return `<line class="trend-grid-line" x1="${padding.left}" y1="${y}" x2="${chartWidth - padding.right}" y2="${y}"></line>`;
     }).join("");
-    document.getElementById("trend-points").innerHTML = points.map((point) =>
+    document.getElementById(ids.points).innerHTML = points.map((point) =>
       `<circle class="trend-point" cx="${point.x}" cy="${point.y}" r="5"><title>${point.label}: ${point.count}</title></circle>`,
     ).join("");
-    document.getElementById("trend-labels").innerHTML = points.map((point) =>
-      `<text class="trend-value-label" x="${point.x}" y="${Math.max(14, point.y - 11)}">${point.count}</text>`,
+    document.getElementById(ids.labels).innerHTML = points.map((point, index) =>
+      showValueLabel(point, index, points.length)
+        ? `<text class="trend-value-label" x="${point.x}" y="${Math.max(14, point.y - 11)}">${point.count}</text>`
+        : "",
     ).join("");
-    document.getElementById("trend-axis").style.gridTemplateColumns = `repeat(${safeSeries.length}, minmax(0, 1fr))`;
-    document.getElementById("trend-axis").innerHTML = safeSeries.map((day) =>
-      `<span>${day.label}</span>`,
+    document.getElementById(ids.axis).style.gridTemplateColumns = `repeat(${safeSeries.length}, minmax(0, 1fr))`;
+    document.getElementById(ids.axis).innerHTML = safeSeries.map((day, index) =>
+      `<span>${showAxisLabel(day, index, safeSeries.length) ? day.label : ""}</span>`,
     ).join("");
   }
 
@@ -595,6 +648,21 @@ full-width: true
     document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${momentumGauge}%`);
     document.getElementById("gauge-value").textContent = `${weeklyActivity}/${weeklyActivityTarget}`;
     renderTrend(metrics.trends?.completedByDay);
+    renderTrend(metrics.trends?.completedByMonthDay, {
+      chartHeight: 160,
+      fallbackLabels: Array.from({ length: 5 }, (_, index) => String(index + 1)),
+      ids: {
+        total: "month-trend-total",
+        line: "month-trend-line",
+        area: "month-trend-area",
+        grid: "month-trend-grid",
+        points: "month-trend-points",
+        labels: "month-trend-labels",
+        axis: "month-trend-axis",
+      },
+      showAxisLabel: shouldShowMonthTick,
+      showValueLabel: (point, index, length) => length <= 10 || point.count > 0,
+    });
 
     if (metrics.period?.weekStart && metrics.period?.weekEnd) {
       periodEl.textContent = `PERIOD: ${metrics.period.weekStart} / ${metrics.period.weekEnd}`;

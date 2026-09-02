@@ -92,6 +92,18 @@ test("builds dashboard counts from cards and Done move actions", () => {
       ["Fri", "2026-08-28", 1],
     ],
   );
+  assert.equal(metrics.trends.completedByMonthDay.length, 28);
+  assert.deepEqual(
+    metrics.trends.completedByMonthDay
+      .filter((day) => ["1", "17", "25", "28"].includes(day.label))
+      .map((day) => [day.label, day.date, day.count]),
+    [
+      ["1", "2026-08-01", 0],
+      ["17", "2026-08-17", 1],
+      ["25", "2026-08-25", 1],
+      ["28", "2026-08-28", 1],
+    ],
+  );
 });
 
 test("does not allow organisation-card offsets to create negative counts", () => {

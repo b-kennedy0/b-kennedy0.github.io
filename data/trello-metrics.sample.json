@@ -1,16 +1,23 @@
 {
-  "version": 1,
+  "version": 2,
   "generatedAt": null,
   "timeZone": "Europe/London",
   "period": {
     "today": null,
     "weekStartsOn": "Monday",
     "weekStart": null,
-    "weekEnd": null
+    "weekEnd": null,
+    "monthStart": null
   },
   "counts": {
     "completedToday": 0,
     "completedThisWeek": 0,
+    "completedThisMonth": 0,
+    "movedForwardThisWeek": 0,
+    "movedForwardThisMonth": 0,
+    "triageClearedThisWeek": 0,
+    "triageClearedThisMonth": 0,
+    "momentumScore": 0,
     "triage": 0,
     "pending": 0,
     "inProgress": 0,

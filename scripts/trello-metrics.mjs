@@ -7,7 +7,15 @@ const REQUIRED_LISTS = [
   "Done",
 ];
 
-const OUTPUT_VERSION = 1;
+const OUTPUT_VERSION = 2;
+const WEEKDAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+const FORWARD_LIST_ORDER = [
+  "Triage",
+  "To Do - Ordered",
+  "Today",
+  "In Progress",
+  "Done",
+];
 
 export function getLocalParts(date, timeZone) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -46,6 +54,11 @@ export function getWeekStartDateString(date, timeZone) {
   const dayOfWeek = localNoon.getUTCDay();
   const daysSinceMonday = (dayOfWeek + 6) % 7;
   return addDaysToLocalDate(localDate, -daysSinceMonday);
+}
+
+export function getMonthStartDateString(date, timeZone) {
+  const parts = getLocalParts(date, timeZone);
+  return `${parts.year}-${parts.month}-01`;
 }
 
 export function validateListMap(lists, requiredNames = REQUIRED_LISTS) {
@@ -87,6 +100,18 @@ function isMoveToListAction(action, listId) {
   );
 }
 
+function isMoveAction(action) {
+  return action?.type === "updateCard" && action?.data?.old?.idList && action?.data?.listAfter?.id;
+}
+
+function actionLocalDate(action, timeZone) {
+  return getLocalDateString(new Date(action.date), timeZone);
+}
+
+function actionsInRange(actions, startDate, endDate) {
+  return actions.filter((action) => action.localDate >= startDate && action.localDate <= endDate);
+}
+
 function adjustedCount(count, offset) {
   return Math.max(0, count - offset);
 }
@@ -95,37 +120,63 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
   const listMap = validateListMap(lists);
   const today = getLocalDateString(generatedAt, timeZone);
   const weekStart = getWeekStartDateString(generatedAt, timeZone);
+  const monthStart = getMonthStartDateString(generatedAt, timeZone);
   const doneListId = listMap.Done.id;
+  const triageListId = listMap.Triage.id;
+  const rankByListId = new Map(
+    FORWARD_LIST_ORDER.map((name, index) => [listMap[name].id, index]),
+  );
 
   const doneActions = actions
     .filter((action) => isMoveToListAction(action, doneListId))
     .map((action) => ({
-      id: action.id,
-      date: action.date,
-      localDate: getLocalDateString(new Date(action.date), timeZone),
-      card: {
-        id: action.data?.card?.id,
-        name: action.data?.card?.name,
-        shortLink: action.data?.card?.shortLink,
-      },
+      localDate: actionLocalDate(action, timeZone),
+    }));
+  const forwardActions = actions
+    .filter((action) => {
+      if (!isMoveAction(action) || action.data.listAfter.id === doneListId) return false;
+      const oldRank = rankByListId.get(action.data.old.idList);
+      const newRank = rankByListId.get(action.data.listAfter.id);
+      return oldRank !== undefined && newRank !== undefined && newRank > oldRank;
+    })
+    .map((action) => ({
+      localDate: actionLocalDate(action, timeZone),
+    }));
+  const triageClearedActions = actions
+    .filter((action) => isMoveAction(action) && action.data.old.idList === triageListId)
+    .map((action) => ({
+      localDate: actionLocalDate(action, timeZone),
     }));
 
   const completedTodayActions = doneActions.filter((action) => action.localDate === today);
-  const completedThisWeekActions = doneActions.filter(
-    (action) => action.localDate >= weekStart && action.localDate <= today,
-  );
+  const completedThisWeekActions = actionsInRange(doneActions, weekStart, today);
+  const completedThisMonthActions = actionsInRange(doneActions, monthStart, today);
+  const movedForwardThisWeekActions = actionsInRange(forwardActions, weekStart, today);
+  const movedForwardThisMonthActions = actionsInRange(forwardActions, monthStart, today);
+  const triageClearedThisWeekActions = actionsInRange(triageClearedActions, weekStart, today);
+  const triageClearedThisMonthActions = actionsInRange(triageClearedActions, monthStart, today);
   const completedByDay = Array.from({ length: 5 }, (_, index) => {
     const date = addDaysToLocalDate(weekStart, index);
     return {
       date,
-      label: ["Mon", "Tue", "Wed", "Thu", "Fri"][index],
+      label: WEEKDAY_LABELS[index],
       count: completedThisWeekActions.filter((action) => action.localDate === date).length,
     };
   });
+  const momentumScore =
+    completedThisWeekActions.length +
+    movedForwardThisWeekActions.length +
+    triageClearedThisWeekActions.length;
 
   const counts = {
     completedToday: completedTodayActions.length,
     completedThisWeek: completedThisWeekActions.length,
+    completedThisMonth: completedThisMonthActions.length,
+    movedForwardThisWeek: movedForwardThisWeekActions.length,
+    movedForwardThisMonth: movedForwardThisMonthActions.length,
+    triageClearedThisWeek: triageClearedThisWeekActions.length,
+    triageClearedThisMonth: triageClearedThisMonthActions.length,
+    momentumScore,
     triage: cardsForList(listMap.Triage).length,
     pending: adjustedCount(
       cardsForList(listMap["To Do - Ordered"]).length +
@@ -145,6 +196,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       weekStartsOn: "Monday",
       weekStart,
       weekEnd: addDaysToLocalDate(weekStart, 6),
+      monthStart,
     },
     counts,
     trends: {
@@ -185,7 +237,7 @@ export async function fetchTrelloMetrics({ key, token, boardId, timeZone }) {
     card_fields: "id,name,idList,closed,url,shortLink",
   });
 
-  const since = new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString();
+  const since = new Date(Date.now() - 45 * 24 * 60 * 60 * 1000).toISOString();
   const actionsUrl = new URL(`${boardBase}/actions`);
   actionsUrl.search = new URLSearchParams({
     ...Object.fromEntries(auth),

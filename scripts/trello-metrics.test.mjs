@@ -27,6 +27,18 @@ function moveAction(id, date, listAfterId = "done") {
   };
 }
 
+function listMoveAction(id, date, oldListId, newListId, newListName) {
+  return {
+    id,
+    date,
+    type: "updateCard",
+    data: {
+      old: { idList: oldListId },
+      listAfter: { id: newListId, name: newListName },
+    },
+  };
+}
+
 const lists = [
   list("triage", "Triage", [card("a"), card("b", true)]),
   list("ordered", "To Do - Ordered", [card("c"), card("d")]),
@@ -47,11 +59,21 @@ test("builds dashboard counts from cards and Done move actions", () => {
       moveAction("week", "2026-08-25T14:00:00.000Z"),
       moveAction("old", "2026-08-17T14:00:00.000Z"),
       moveAction("other-list", "2026-08-28T09:30:00.000Z", "progress"),
+      listMoveAction("triage-week", "2026-08-27T11:00:00.000Z", "triage", "ordered", "To Do - Ordered"),
+      listMoveAction("today-week", "2026-08-28T10:00:00.000Z", "ordered", "today", "Today"),
+      listMoveAction("triage-month", "2026-08-03T10:00:00.000Z", "triage", "ordered", "To Do - Ordered"),
+      listMoveAction("backward", "2026-08-28T11:00:00.000Z", "progress", "today", "Today"),
     ],
   });
 
   assert.equal(metrics.counts.completedToday, 1);
   assert.equal(metrics.counts.completedThisWeek, 2);
+  assert.equal(metrics.counts.completedThisMonth, 3);
+  assert.equal(metrics.counts.movedForwardThisWeek, 2);
+  assert.equal(metrics.counts.movedForwardThisMonth, 3);
+  assert.equal(metrics.counts.triageClearedThisWeek, 1);
+  assert.equal(metrics.counts.triageClearedThisMonth, 2);
+  assert.equal(metrics.counts.momentumScore, 5);
   assert.equal(metrics.counts.triage, 1);
   assert.equal(metrics.counts.pending, 0);
   assert.equal(metrics.counts.inProgress, 0);

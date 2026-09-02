@@ -158,7 +158,7 @@ full-width: true
   }
 
   .gauge-value {
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 850;
     line-height: 1;
     position: relative;
@@ -376,28 +376,28 @@ full-width: true
 
     <section class="metric-grid" aria-label="Trello task statistics">
       <article class="metric-card" data-tone="green">
-        <p class="metric-label">Done<br>Today</p>
-        <p class="metric-value" data-metric="completedToday">0</p>
-      </article>
-      <article class="metric-card" data-tone="green">
         <p class="metric-label">Done<br>Week</p>
         <p class="metric-value" data-metric="completedThisWeek">0</p>
       </article>
-      <article class="metric-card" data-tone="amber">
-        <p class="metric-label">Triage</p>
-        <p class="metric-value" data-metric="triage">0</p>
+      <article class="metric-card" data-tone="green">
+        <p class="metric-label">Done<br>Month</p>
+        <p class="metric-value" data-metric="completedThisMonth">0</p>
       </article>
       <article class="metric-card" data-tone="blue">
-        <p class="metric-label">Pending</p>
-        <p class="metric-value" data-metric="pending">0</p>
+        <p class="metric-label">Moved<br>Week</p>
+        <p class="metric-value" data-metric="movedForwardThisWeek">0</p>
       </article>
-      <article class="metric-card" data-tone="cyan">
-        <p class="metric-label">In<br>Progress</p>
-        <p class="metric-value" data-metric="inProgress">0</p>
+      <article class="metric-card" data-tone="blue">
+        <p class="metric-label">Moved<br>Month</p>
+        <p class="metric-value" data-metric="movedForwardThisMonth">0</p>
       </article>
-      <article class="metric-card" data-tone="red">
-        <p class="metric-label">Blocked<br>Waiting</p>
-        <p class="metric-value" data-metric="blockedWaiting">0</p>
+      <article class="metric-card" data-tone="amber">
+        <p class="metric-label">Triage<br>Week</p>
+        <p class="metric-value" data-metric="triageClearedThisWeek">0</p>
+      </article>
+      <article class="metric-card" data-tone="amber">
+        <p class="metric-label">Triage<br>Month</p>
+        <p class="metric-value" data-metric="triageClearedThisMonth">0</p>
       </article>
     </section>
 
@@ -405,8 +405,8 @@ full-width: true
       <div class="gauge-panel">
         <div class="gauge" id="completion-gauge" style="--gauge-value: 0%">
           <div>
-            <div class="gauge-value" id="gauge-value">0%</div>
-            <div class="gauge-label">Week Close</div>
+            <div class="gauge-value" id="gauge-value">0</div>
+            <div class="gauge-label">Momentum</div>
           </div>
         </div>
       </div>
@@ -527,12 +527,11 @@ full-width: true
       });
     });
 
-    const activeLoad = (counts.pending || 0) + (counts.inProgress || 0) + (counts.blockedWaiting || 0);
-    const completedWeek = counts.completedThisWeek || 0;
-    const weekClose = activeLoad + completedWeek > 0 ? (completedWeek / (activeLoad + completedWeek)) * 100 : 0;
+    const momentumScore = counts.momentumScore || 0;
+    const momentumGauge = clampPercent((momentumScore / 15) * 100);
 
-    document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${clampPercent(weekClose)}%`);
-    document.getElementById("gauge-value").textContent = `${clampPercent(weekClose)}%`;
+    document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${momentumGauge}%`);
+    document.getElementById("gauge-value").textContent = momentumScore;
     renderTrend(metrics.trends?.completedByDay);
 
     if (metrics.period?.weekStart && metrics.period?.weekEnd) {

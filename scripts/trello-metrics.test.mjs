@@ -73,7 +73,7 @@ test("builds dashboard counts from cards and Done move actions", () => {
   assert.equal(metrics.counts.movedForwardThisMonth, 3);
   assert.equal(metrics.counts.triageClearedThisWeek, 1);
   assert.equal(metrics.counts.triageClearedThisMonth, 2);
-  assert.equal(metrics.counts.momentumScore, 2);
+  assert.equal("momentumScore" in metrics.counts, false);
   assert.equal(metrics.counts.triage, 1);
   assert.equal(metrics.counts.pending, 0);
   assert.equal(metrics.counts.inProgress, 0);

@@ -589,11 +589,11 @@ full-width: true
       });
     });
 
-    const momentumScore = counts.momentumScore || 0;
-    const momentumGauge = clampPercent((momentumScore / weeklyActivityTarget) * 100);
+    const weeklyActivity = counts.completedThisWeek || 0;
+    const momentumGauge = clampPercent((weeklyActivity / weeklyActivityTarget) * 100);
 
     document.getElementById("completion-gauge").style.setProperty("--gauge-value", `${momentumGauge}%`);
-    document.getElementById("gauge-value").textContent = `${momentumScore}/${weeklyActivityTarget}`;
+    document.getElementById("gauge-value").textContent = `${weeklyActivity}/${weeklyActivityTarget}`;
     renderTrend(metrics.trends?.completedByDay);
 
     if (metrics.period?.weekStart && metrics.period?.weekEnd) {

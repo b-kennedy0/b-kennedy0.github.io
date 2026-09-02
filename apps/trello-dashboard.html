@@ -274,7 +274,7 @@ full-width: true
 
   .section-label {
     color: var(--dash-muted);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: 0;
     margin: 0;
@@ -417,10 +417,9 @@ full-width: true
     </header>
 
     <section class="stat-section" aria-label="Current Trello board status">
-      <p class="section-label">Current Board</p>
       <div class="metric-grid current-grid">
         <article class="metric-card" data-tone="amber">
-          <p class="metric-label">Triage</p>
+          <p class="metric-label">Waiting for<br>Triage</p>
           <p class="metric-value" data-metric="triage">0</p>
         </article>
         <article class="metric-card" data-tone="blue">
@@ -432,7 +431,7 @@ full-width: true
           <p class="metric-value" data-metric="inProgress">0</p>
         </article>
         <article class="metric-card" data-tone="red">
-          <p class="metric-label">Blocked<br>Waiting</p>
+          <p class="metric-label">Blocked/<br>Waiting</p>
           <p class="metric-value" data-metric="blockedWaiting">0</p>
         </article>
       </div>
@@ -446,15 +445,15 @@ full-width: true
           <p class="metric-value" data-metric="completedToday">0</p>
         </article>
         <article class="metric-card" data-tone="green">
-          <p class="metric-label">Done<br>Week</p>
+          <p class="metric-label">Done<br>This Week</p>
           <p class="metric-value" data-metric="completedThisWeek">0</p>
         </article>
         <article class="metric-card" data-tone="blue">
-          <p class="metric-label">Moved<br>Week</p>
+          <p class="metric-label">Progressed<br>This Week</p>
           <p class="metric-value" data-metric="movedForwardThisWeek">0</p>
         </article>
         <article class="metric-card" data-tone="amber">
-          <p class="metric-label">Triage<br>Week</p>
+          <p class="metric-label">Triaged<br>This Week</p>
           <p class="metric-value" data-metric="triageClearedThisWeek">0</p>
         </article>
       </div>
@@ -473,7 +472,6 @@ full-width: true
       <div class="trend-panel" aria-label="Tasks completed by day this week">
         <div class="panel-title">
           <span>Weekly Completion Trace</span>
-          <strong id="trend-total">0</strong>
         </div>
         <svg class="trend-chart" id="completion-trend" viewBox="0 0 700 180" role="img" aria-labelledby="trend-title">
           <title id="trend-title">Tasks completed each day this week</title>
@@ -491,15 +489,15 @@ full-width: true
       <p class="section-label">This Month</p>
       <div class="metric-grid month-grid">
         <article class="metric-card" data-tone="green">
-          <p class="metric-label">Done<br>Month</p>
+          <p class="metric-label">Done<br>This Month</p>
           <p class="metric-value" data-metric="completedThisMonth">0</p>
         </article>
         <article class="metric-card" data-tone="blue">
-          <p class="metric-label">Moved<br>Month</p>
+          <p class="metric-label">Progressed<br>This Month</p>
           <p class="metric-value" data-metric="movedForwardThisMonth">0</p>
         </article>
         <article class="metric-card" data-tone="amber">
-          <p class="metric-label">Triage<br>Month</p>
+          <p class="metric-label">Triaged<br>This Month</p>
           <p class="metric-value" data-metric="triageClearedThisMonth">0</p>
         </article>
       </div>
@@ -507,7 +505,6 @@ full-width: true
       <div class="trend-panel standalone-trend month-trend" aria-label="Tasks completed by day this month">
         <div class="panel-title">
           <span>Monthly Completion Trace</span>
-          <strong id="month-trend-total">0</strong>
         </div>
         <svg class="trend-chart" id="month-completion-trend" viewBox="0 0 700 160" role="img" aria-labelledby="month-trend-title">
           <title id="month-trend-title">Tasks completed each day this month</title>
@@ -562,7 +559,7 @@ full-width: true
       chartHeight = 180,
       fallbackLabels = ["Mon", "Tue", "Wed", "Thu", "Fri"],
       ids = {
-        total: "trend-total",
+        total: null,
         line: "trend-line",
         area: "trend-area",
         grid: "trend-grid",
@@ -591,7 +588,9 @@ full-width: true
     const linePath = buildSmoothPath(points);
     const areaPath = linePath ? `${linePath} L ${points[points.length - 1].x} ${baseline} L ${points[0].x} ${baseline} Z` : "";
 
-    document.getElementById(ids.total).textContent = safeSeries.reduce((total, day) => total + (day.count || 0), 0);
+    if (ids.total) {
+      document.getElementById(ids.total).textContent = safeSeries.reduce((total, day) => total + (day.count || 0), 0);
+    }
     document.getElementById(ids.line).setAttribute("d", linePath);
     document.getElementById(ids.area).setAttribute("d", areaPath);
     document.getElementById(ids.grid).innerHTML = [0, 0.5, 1].map((ratio) => {
@@ -652,7 +651,7 @@ full-width: true
       chartHeight: 160,
       fallbackLabels: Array.from({ length: 5 }, (_, index) => String(index + 1)),
       ids: {
-        total: "month-trend-total",
+        total: null,
         line: "month-trend-line",
         area: "month-trend-area",
         grid: "month-trend-grid",

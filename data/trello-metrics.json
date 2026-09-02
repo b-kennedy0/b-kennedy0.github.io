@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02T14:17:25.144Z",
+  "generatedAt": "2026-09-02T14:30:07.451Z",
   "timeZone": "Europe/London",
   "period": {
     "today": "2026-09-02",
@@ -9,11 +9,11 @@
     "weekEnd": "2026-09-06"
   },
   "counts": {
-    "completedToday": 0,
-    "completedThisWeek": 2,
+    "completedToday": 2,
+    "completedThisWeek": 4,
     "triage": 2,
-    "pending": 16,
-    "inProgress": 2,
+    "pending": 13,
+    "inProgress": 3,
     "blockedWaiting": 6
   },
   "trends": {
@@ -31,7 +31,7 @@
       {
         "date": "2026-09-02",
         "label": "Wed",
-        "count": 0
+        "count": 2
       },
       {
         "date": "2026-09-03",
@@ -52,15 +52,15 @@
     },
     "toDoOrdered": {
       "name": "To Do - Ordered",
-      "openCards": 15
+      "openCards": 13
     },
     "today": {
       "name": "Today",
-      "openCards": 4
+      "openCards": 3
     },
     "inProgress": {
       "name": "In Progress",
-      "openCards": 4
+      "openCards": 5
     },
     "blockedWaiting": {
       "name": "Waiting/Blocked/Repeat",
@@ -68,7 +68,7 @@
     },
     "done": {
       "name": "Done",
-      "openCards": 11
+      "openCards": 13
     }
   }
 }

@@ -1,3 +1,8 @@
+- title: Progress Dashboard
+  description: "A simple metrics dashboard for tracking real-time general productivity across the current week and month."
+  img: trello.png
+  url: /apps/trello-dashboard
+  tags: [fun]
 - title: MarkingDesk App
   description: "MarkingDesk is a marking and moderation tracking tool for Academics."
   img: marking-desk-app.png

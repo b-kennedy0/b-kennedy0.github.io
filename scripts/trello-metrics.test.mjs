@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildMetrics,
+  getMonthEndDateString,
   getWeekStartDateString,
   validateListMap,
 } from "./trello-metrics.mjs";
@@ -82,6 +83,7 @@ test("builds dashboard counts from cards and Done move actions", () => {
   assert.equal("id" in metrics.lists.done, false);
   assert.equal(metrics.period.weekStart, "2026-08-24");
   assert.equal(metrics.period.weekEnd, "2026-08-30");
+  assert.equal(metrics.period.monthEnd, "2026-08-31");
   assert.deepEqual(
     metrics.trends.completedByDay.map((day) => [day.label, day.date, day.count]),
     [
@@ -92,16 +94,18 @@ test("builds dashboard counts from cards and Done move actions", () => {
       ["Fri", "2026-08-28", 1],
     ],
   );
-  assert.equal(metrics.trends.completedByMonthDay.length, 28);
+  assert.equal(metrics.trends.completedByMonthDay.length, 31);
   assert.deepEqual(
     metrics.trends.completedByMonthDay
-      .filter((day) => ["1", "17", "25", "28"].includes(day.label))
+      .filter((day) => ["1", "17", "25", "28", "29", "31"].includes(day.label))
       .map((day) => [day.label, day.date, day.count]),
     [
       ["1", "2026-08-01", 0],
       ["17", "2026-08-17", 1],
       ["25", "2026-08-25", 1],
       ["28", "2026-08-28", 1],
+      ["29", "2026-08-29", 0],
+      ["31", "2026-08-31", 0],
     ],
   );
 });
@@ -126,6 +130,17 @@ test("uses Monday as the start of the week", () => {
   assert.equal(
     getWeekStartDateString(new Date("2026-08-31T12:00:00.000Z"), "Europe/London"),
     "2026-08-31",
+  );
+});
+
+test("finds the end of the local month", () => {
+  assert.equal(
+    getMonthEndDateString(new Date("2026-02-10T12:00:00.000Z"), "Europe/London"),
+    "2026-02-28",
+  );
+  assert.equal(
+    getMonthEndDateString(new Date("2028-02-10T12:00:00.000Z"), "Europe/London"),
+    "2028-02-29",
   );
 });
 

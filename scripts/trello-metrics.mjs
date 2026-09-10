@@ -61,6 +61,12 @@ export function getMonthStartDateString(date, timeZone) {
   return `${parts.year}-${parts.month}-01`;
 }
 
+export function getMonthEndDateString(date, timeZone) {
+  const parts = getLocalParts(date, timeZone);
+  const utcNoon = new Date(Date.UTC(Number(parts.year), Number(parts.month), 0, 12, 0, 0));
+  return utcNoon.toISOString().slice(0, 10);
+}
+
 export function validateListMap(lists, requiredNames = REQUIRED_LISTS) {
   const byName = new Map();
 
@@ -125,6 +131,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
   const today = getLocalDateString(generatedAt, timeZone);
   const weekStart = getWeekStartDateString(generatedAt, timeZone);
   const monthStart = getMonthStartDateString(generatedAt, timeZone);
+  const monthEnd = getMonthEndDateString(generatedAt, timeZone);
   const doneListId = listMap.Done.id;
   const triageListId = listMap.Triage.id;
   const rankByListId = new Map(
@@ -168,7 +175,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
     };
   });
   const completedByMonthDay = [];
-  for (let date = monthStart; date <= today; date = addDaysToLocalDate(date, 1)) {
+  for (let date = monthStart; date <= monthEnd; date = addDaysToLocalDate(date, 1)) {
     completedByMonthDay.push({
       date,
       label: getMonthDayLabel(date),
@@ -203,6 +210,7 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       weekStart,
       weekEnd: addDaysToLocalDate(weekStart, 6),
       monthStart,
+      monthEnd,
     },
     counts,
     trends: {

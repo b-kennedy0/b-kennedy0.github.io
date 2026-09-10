@@ -211,7 +211,8 @@ full-width: true
   }
 
   .month-trend .trend-chart {
-    max-height: 152px;
+    height: auto;
+    max-height: none;
   }
 
   .trend-grid-line {
@@ -513,7 +514,7 @@ full-width: true
         <div class="panel-title">
           <span>Monthly Completion Trace</span>
         </div>
-        <svg class="trend-chart" id="month-completion-trend" viewBox="0 0 700 160" role="img" aria-labelledby="month-trend-title">
+        <svg class="trend-chart" id="month-completion-trend" viewBox="0 0 1200 160" role="img" aria-labelledby="month-trend-title">
           <title id="month-trend-title">Tasks completed each day this month</title>
           <g id="month-trend-grid"></g>
           <path class="trend-area" id="month-trend-area" d=""></path>
@@ -563,6 +564,7 @@ full-width: true
 
   function renderTrend(series, options = {}) {
     const {
+      chartWidth = 700,
       chartHeight = 180,
       fallbackLabels = ["Mon", "Tue", "Wed", "Thu", "Fri"],
       ids = {
@@ -577,7 +579,6 @@ full-width: true
       showAxisLabel = () => true,
       showValueLabel = () => true,
     } = options;
-    const chartWidth = 700;
     const padding = { top: 30, right: 24, bottom: 20, left: 24 };
     const safeSeries = Array.isArray(series) && series.length
       ? series
@@ -655,6 +656,7 @@ full-width: true
     document.getElementById("gauge-value").textContent = `${weeklyActivity}/${weeklyActivityTarget}`;
     renderTrend(metrics.trends?.completedByDay);
     renderTrend(metrics.trends?.completedByMonthDay, {
+      chartWidth: 1200,
       chartHeight: 160,
       fallbackLabels: Array.from({ length: 5 }, (_, index) => String(index + 1)),
       ids: {

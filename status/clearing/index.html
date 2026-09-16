@@ -3,11 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Current status of the Clearing Dashboard Monitor.">
+  <meta name="description" content="Current status of the Clearing Dashboard Monitor.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#082954">
-
   <title>Clearing Dashboard Monitor Status</title>
 
   <style>
@@ -19,11 +17,11 @@
       --border: #dce3eb;
       --background: #f4f7fa;
       --white: #ffffff;
+      --green: #19763b;
+      --red: #b42318;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       min-height: 100vh;
@@ -31,18 +29,14 @@
       display: grid;
       place-items: center;
       padding: 24px;
-      background:
-        radial-gradient(circle at top, #ffffff 0%, var(--background) 55%);
+      background: radial-gradient(circle at top, #ffffff 0%, var(--background) 55%);
       color: var(--text);
-      font-family:
-        Inter, system-ui, -apple-system, BlinkMacSystemFont,
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", sans-serif;
       line-height: 1.55;
     }
 
-    main {
-      width: min(100%, 660px);
-    }
+    main { width: min(100%, 660px); }
 
     .status-card {
       overflow: hidden;
@@ -73,9 +67,7 @@
       line-height: 1.2;
     }
 
-    .content {
-      padding: 30px 32px 32px;
-    }
+    .content { padding: 30px 32px 32px; }
 
     .status-row {
       display: flex;
@@ -126,8 +118,105 @@
       font-size: 0.92rem;
     }
 
-    .details strong {
-      color: var(--text);
+    .details strong { color: var(--text); }
+
+    .activity-controls { margin-top: 24px; }
+
+    .activity-button {
+      width: 100%;
+      padding: 12px 18px;
+      border: 1px solid var(--navy);
+      border-radius: 9px;
+      background: var(--white);
+      color: var(--navy);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .activity-button:hover,
+    .activity-button:focus-visible {
+      background: var(--navy-light);
+    }
+
+    .activity-button:focus-visible {
+      outline: 3px solid rgba(0, 138, 255, 0.35);
+      outline-offset: 2px;
+    }
+
+    .activity-panel {
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .activity-panel[hidden] { display: none; }
+
+    .activity-heading {
+      margin: 0;
+      padding: 16px 18px;
+      background: #fafbfd;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+    }
+
+    .activity-message {
+      margin: 0;
+      padding: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .activity-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .activity-item {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .activity-item:last-child { border-bottom: 0; }
+
+    .event-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      margin-top: 1px;
+      border-radius: 50%;
+      background: var(--navy-light);
+      color: var(--navy);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .activity-item.success .event-icon {
+      background: #e9f7ee;
+      color: var(--green);
+    }
+
+    .activity-item.failure .event-icon {
+      background: #fdf0ef;
+      color: var(--red);
+    }
+
+    .event-title {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .event-meta {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
     }
 
     .refresh {
@@ -137,9 +226,7 @@
     }
 
     @media (max-width: 540px) {
-      body {
-        padding: 14px;
-      }
+      body { padding: 14px; }
 
       .header,
       .content {
@@ -167,9 +254,7 @@
         <div class="status-row">
           <div>
             <p class="status-label">Current monitor status</p>
-            <p class="status-note">
-              Live status supplied by Healthchecks.io
-            </p>
+            <p class="status-note">Live status supplied by Healthchecks.io</p>
           </div>
 
           <a
@@ -196,9 +281,35 @@
 
         <div class="details">
           <strong>What the status means:</strong>
-          a healthy status confirms that the monitoring process is running and
-          reporting to Healthchecks.io. It does not indicate whether there are
-          currently any callback requests.
+          a healthy status confirms that the monitoring process is running correctly. It does not indicate whether there are
+          currently any callback requests, for this you are notified on MS Teams.
+        </div>
+
+        <div class="activity-controls">
+          <button
+            class="activity-button"
+            id="activity-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="activity-panel"
+          >
+            View recent activity
+          </button>
+
+          <section
+            class="activity-panel"
+            id="activity-panel"
+            aria-labelledby="activity-heading"
+            hidden
+          >
+            <h2 class="activity-heading" id="activity-heading">
+              Recent monitor activity
+            </h2>
+            <p class="activity-message" id="activity-message">
+              Loading recent activity…
+            </p>
+            <ol class="activity-list" id="activity-list"></ol>
+          </section>
         </div>
 
         <p class="refresh" id="refresh-note" aria-live="polite">
@@ -206,9 +317,7 @@
         </p>
 
         <noscript>
-          <p class="refresh">
-            Refresh this page manually to retrieve the latest status.
-          </p>
+          <p class="refresh">Refresh this page manually to retrieve the latest status.</p>
         </noscript>
       </div>
     </section>
@@ -216,20 +325,24 @@
 
   <script>
     (function () {
-      const badge = document.getElementById("healthchecks-badge");
-      const note = document.getElementById("refresh-note");
+      const HEALTHCHECKS_BADGE_URL =
+        "https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg";
 
-      const badgeUrl =
-        "https://healthchecks.io/b/3/" +
-        "c724bbdc-7c16-4429-a48b-f831271940dc.svg";
+      const ACTIVITY_API_URL =
+        "https://healthcheck-backend.vercel.app/api/logs";
+
+      const badge = document.getElementById("healthchecks-badge");
+      const refreshNote = document.getElementById("refresh-note");
+      const activityButton = document.getElementById("activity-button");
+      const activityPanel = document.getElementById("activity-panel");
+      const activityMessage = document.getElementById("activity-message");
+      const activityList = document.getElementById("activity-list");
+      let activityLoaded = false;
 
       function refreshBadge() {
         const now = new Date();
-
-        // The timestamp prevents the browser from showing a cached badge.
-        badge.src = badgeUrl + "?t=" + now.getTime();
-
-        note.textContent =
+        badge.src = HEALTHCHECKS_BADGE_URL + "?t=" + now.getTime();
+        refreshNote.textContent =
           "Status refreshed at " +
           new Intl.DateTimeFormat("en-GB", {
             hour: "2-digit",
@@ -239,14 +352,117 @@
           ".";
       }
 
+      function eventPresentation(type) {
+        if (type === "success") {
+          return { title: "Job finished successfully", icon: "✓" };
+        }
+        if (type === "failure") {
+          return { title: "Job reported a failure", icon: "!" };
+        }
+        return { title: "Job started", icon: "○" };
+      }
+
+      function formatEventDate(value) {
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return "Time unavailable";
+
+        return new Intl.DateTimeFormat("en-GB", {
+          dateStyle: "medium",
+          timeStyle: "medium",
+          timeZone: "Europe/London"
+        }).format(date);
+      }
+
+      function formatDuration(seconds) {
+        if (!Number.isFinite(seconds)) return "";
+        if (seconds < 1) return " · Runtime under one second";
+        if (seconds < 60) return " · Runtime " + Math.round(seconds) + " seconds";
+
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.round(seconds % 60);
+        return (
+          " · Runtime " +
+          minutes +
+          " min " +
+          remainingSeconds +
+          " sec"
+        );
+      }
+
+      function renderEvents(events) {
+        activityList.replaceChildren();
+
+        if (!Array.isArray(events) || events.length === 0) {
+          activityMessage.hidden = false;
+          activityMessage.textContent = "No recent activity is available.";
+          return;
+        }
+
+        activityMessage.hidden = true;
+
+        events.forEach(function (event) {
+          const presentation = eventPresentation(event.type);
+          const item = document.createElement("li");
+          const icon = document.createElement("span");
+          const content = document.createElement("div");
+          const title = document.createElement("p");
+          const meta = document.createElement("p");
+
+          item.className = "activity-item " + event.type;
+          icon.className = "event-icon";
+          icon.setAttribute("aria-hidden", "true");
+          icon.textContent = presentation.icon;
+          title.className = "event-title";
+          title.textContent = presentation.title;
+          meta.className = "event-meta";
+          meta.textContent =
+            formatEventDate(event.date) + formatDuration(event.duration);
+
+          content.append(title, meta);
+          item.append(icon, content);
+          activityList.append(item);
+        });
+      }
+
+      async function loadActivity() {
+        activityMessage.hidden = false;
+        activityMessage.textContent = "Loading recent activity…";
+        activityList.replaceChildren();
+
+        try {
+          const response = await fetch(ACTIVITY_API_URL, {
+            headers: { Accept: "application/json" }
+          });
+
+          if (!response.ok) throw new Error("Activity request failed");
+
+          const data = await response.json();
+          renderEvents(data.events);
+          activityLoaded = true;
+        } catch (error) {
+          activityMessage.hidden = false;
+          activityMessage.textContent =
+            "Recent activity could not be loaded. Please try again shortly.";
+        }
+      }
+
+      activityButton.addEventListener("click", function () {
+        const opening = activityPanel.hidden;
+        activityPanel.hidden = !opening;
+        activityButton.setAttribute("aria-expanded", String(opening));
+        activityButton.textContent = opening
+          ? "Hide recent activity"
+          : "View recent activity";
+
+        if (opening && !activityLoaded) loadActivity();
+      });
+
       badge.addEventListener("error", function () {
-        note.textContent =
+        refreshNote.textContent =
           "The live status could not be retrieved. Please try refreshing.";
       });
 
       refreshBadge();
-
-      // Retrieve a fresh badge every minute.
       window.setInterval(refreshBadge, 60000);
     })();
   </script>

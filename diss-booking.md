@@ -3,4 +3,4 @@ layout: super-minimal
 title: Microsoft Bookings
 redirect_to: https://outlook.office.com/book/BradKennedy@outlooklive.chester.ac.uk/?ismsaljsauthenabled
 ---
-<!-- This page is a duplicate of diss-booking.md -->
+<!-- This page is a duplicate of booking.md -->

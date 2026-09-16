@@ -3,503 +3,718 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bake-off Randomiser</title>
+  <meta name="theme-color" content="#7b3f61">
+  <title>Bake Off Group Randomiser</title>
   <style>
-    body {
-      font-family: 'Trebuchet MS', sans-serif;
-      background-color: #fff8f0;
-      text-align: center;
-      padding: 20px;
-      color: #444;
-      overflow-x: hidden;
+    :root {
+      --plum: #713b5c;
+      --plum-dark: #4a263e;
+      --rose: #df7f93;
+      --cream: #fffaf2;
+      --paper: rgba(255, 255, 255, 0.88);
+      --ink: #3f3340;
+      --muted: #71646f;
+      --line: rgba(113, 59, 92, 0.16);
+      --shadow: 0 18px 55px rgba(74, 38, 62, 0.12);
     }
-    
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-rounded, "SF Pro Rounded", "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(255, 214, 165, 0.48), transparent 28rem),
+        radial-gradient(circle at 96% 12%, rgba(202, 255, 191, 0.34), transparent 30rem),
+        linear-gradient(145deg, #fff8ed 0%, #fffdf8 55%, #f9f2f7 100%);
+    }
+
+    button, input, textarea { font: inherit; }
+
     header {
-      background: #ffe3e3;
-      padding: 20px;
-      text-align: center;
       position: relative;
+      overflow: hidden;
+      padding: 34px 20px 48px;
+      color: #fff;
+      text-align: center;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 24px 24px,
+        linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 24px 24px,
+        linear-gradient(135deg, var(--plum-dark), var(--plum));
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #f6d7df;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2em;
-      color: #d17b88;
-      margin-bottom: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -.04em;
     }
-    /* Bunting */
+
+    header p:last-of-type {
+      max-width: 560px;
+      margin: 10px auto 0;
+      color: rgba(255,255,255,.82);
+      font-size: clamp(.95rem, 2vw, 1.08rem);
+    }
+
     .bunting {
       position: absolute;
-      bottom: -10px;
+      right: 0;
+      bottom: 0;
       left: 0;
-      width: 100%;
       display: flex;
       justify-content: center;
       gap: 5px;
+      height: 28px;
     }
-    .bunting div {
+
+    .flag {
       width: 0;
       height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 30px solid;
+      border-right: 24px solid transparent;
+      border-left: 24px solid transparent;
+      border-top: 34px solid var(--flag);
+      filter: drop-shadow(0 3px 1px rgba(45, 21, 37, .12));
     }
-    .bunting div:nth-child(1) { border-top-color: #ffd6a5; }
-    .bunting div:nth-child(2) { border-top-color: #fdffb6; }
-    .bunting div:nth-child(3) { border-top-color: #caffbf; }
-    .bunting div:nth-child(4) { border-top-color: #9bf6ff; }
-    .bunting div:nth-child(5) { border-top-color: #bdb2ff; }
-    .bunting div:nth-child(6) { border-top-color: #ffc6ff; }
-    .bunting div:nth-child(7) { border-top-color: #ffd6a5; }
-    
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 34px auto 60px;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(280px, .78fr) minmax(340px, 1.22fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid rgba(255,255,255,.88);
+      border-radius: 24px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .setup { padding: 24px; }
+
+    .panel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--plum-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+    }
+
+    .count-badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--plum);
+      background: #f8e9ee;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--plum-dark);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
     textarea {
-      display: block;        /* makes it a block element */
-      margin: 10px auto;     /* auto left and right margins centre it */
-      width: 360px;
-      height: 100px;
-      padding: 8px;
-      border: 2px solid #f4c2c2;
-      border-radius: 8px;
-      background: #fffaf7;
+      display: block;
+      width: 100%;
+      min-height: 252px;
+      resize: vertical;
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      outline: none;
+      color: var(--ink);
+      background: rgba(255,255,255,.8);
+      line-height: 1.55;
+      transition: border-color .2s, box-shadow .2s;
     }
-    .controls {
-      margin: 15px 0;
+
+    textarea:focus, input:focus {
+      border-color: var(--rose);
+      box-shadow: 0 0 0 4px rgba(223, 127, 147, .16);
     }
-    input[type=range] {
-      width: 200px;
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
     }
-    button {
-      margin: 5px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 6px;
-      background: #f7c6c7;
-      cursor: pointer;
-      transition: background 0.3s;
+
+    .field-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.58);
     }
-    button:hover {
-      background: #f4a6a8;
-    }
-    #shuffleArea {
-      margin: 20px auto;
-      padding: 15px;
-      border: 2px dashed #f7c6c7;
-      border-radius: 12px;
-      width: 360px;
-      min-height: 180px;
+
+    input[type="number"] {
+      width: 100%;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      outline: none;
+      color: var(--ink);
       background: #fff;
+      font-weight: 800;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin: 8px 0 5px;
+      accent-color: var(--plum);
+    }
+
+    .field-note {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    .actions {
       display: flex;
       flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    button {
+      min-height: 43px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform .18s, box-shadow .18s, background .18s;
+    }
+
+    button:hover { transform: translateY(-2px); }
+    button:focus-visible { outline: 3px solid rgba(223,127,147,.45); outline-offset: 2px; }
+    button:disabled { cursor: wait; opacity: .68; transform: none; }
+
+    .primary {
+      flex: 1 1 155px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--rose), var(--plum));
+      box-shadow: 0 9px 22px rgba(113, 59, 92, .23);
+    }
+
+    .secondary { color: var(--plum); background: #f7e8ed; }
+    .ghost { color: var(--muted); background: transparent; border: 1px solid var(--line); }
+
+    .stage {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 24px;
+    }
+
+    .stage-head p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    #shuffleArea {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      align-content: center;
       justify-content: center;
-      align-items: center;
-      gap: 8px;
+      gap: 9px;
+      min-height: 300px;
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px dashed rgba(113,59,92,.28);
+      border-radius: 18px;
+      background:
+        linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)),
+        repeating-linear-gradient(45deg, #fff7f0 0 12px, #f9edf2 12px 24px);
     }
+
     .name {
-      padding: 6px 10px;
-      background: #fde2e4;
-      border-radius: 8px;
-      transition: transform 0.4s ease, background 0.4s ease;
-      font-weight: bold;
-      color: #a64c59;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.84);
+      border-radius: 999px;
+      color: var(--plum-dark);
+      background: #f9dbe3;
+      box-shadow: 0 5px 12px rgba(74,38,62,.09);
+      font-size: .9rem;
+      font-weight: 800;
+      transition: transform .38s ease, background-color .6s ease;
     }
-    .highlight {
-      background: #ff8f8f;
-    }
-    
-.groups {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.group-box {
-  flex: 1 1 250px;   /* makes them flexible but at least 250px wide */
-  max-width: 300px;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.group-box:hover {
-  transform: translateY(-4px);
-}
-
-.group-box h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 1.3em;   /* slightly larger */
-  font-weight: bold;  /* bold */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;           /* space between cupcake and text */
-}
-
-@media screen and (max-width: 600px) {
-  .groups {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .group-box {
-    width: 100%;
-    max-width: 280px;
-  }
-}
 
     #shuffleCount {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #d17b88;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 700;
+      text-align: center;
     }
+
+    .groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+
+    .group-box {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 20px;
+      background: var(--group-colour);
+      box-shadow: 0 12px 30px rgba(74,38,62,.09);
+      transition: transform .2s ease;
+    }
+
+    .group-box:hover { transform: translateY(-3px); }
+
+    .group-box h3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0;
+      padding: 15px 17px;
+      border-bottom: 1px solid rgba(74,38,62,.09);
+      color: var(--plum-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.05rem;
+    }
+
+    .group-size {
+      color: var(--muted);
+      font-family: Inter, ui-rounded, sans-serif;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .group-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 15px 17px 17px;
+      list-style: none;
+    }
+
+    .group-list li {
+      padding: 7px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.62);
+      font-weight: 700;
+    }
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 10000;
+      max-width: min(360px, calc(100% - 40px));
+      padding: 12px 16px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--plum-dark);
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .toast.show { opacity: 1; transform: translateY(0); }
+
     canvas#confettiCanvas {
       position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
+      inset: 0;
+      z-index: 9999;
       width: 100%;
       height: 100%;
-      z-index: 9999;
+      pointer-events: none;
     }
 
-    /* Mobile responsive design */
-    @media screen and (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
+    @media (max-width: 780px) {
+      main { width: min(100% - 20px, 620px); margin-top: 20px; }
+      .workspace { grid-template-columns: 1fr; }
+      .panel { border-radius: 19px; }
+      .setup, .stage { padding: 18px; }
+      #shuffleArea { min-height: 220px; }
+    }
 
-      header {
-        padding: 15px;
-      }
+    @media (max-width: 430px) {
+      header { padding: 28px 14px 42px; }
+      .field-row { grid-template-columns: 1fr; }
+      .actions button { flex: 1 1 120px; }
+      .groups { grid-template-columns: 1fr; }
+    }
 
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      /* Adjust bunting for mobile */
-      .bunting div {
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 22px solid;
-      }
-      .bunting {
-        gap: 3px;
-      }
-
-      textarea {
-        margin: 5px 0;
-        height: 80px;
-      }
-
-      .controls {
-        margin: 10px 0;
-      }
-
-      input[type=range] {
-        width: 150px;
-      }
-
-      button {
-        margin: 3px;
-        padding: 6px 12px;
-        font-size: 14px;
-      }
-
-      #shuffleArea {
-        width: calc(100% - 20px);
-        max-width: 320px;
-        margin: 15px auto;
-        padding: 10px;
-      }
-
-      #shuffleCount {
-        font-size: 14px;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      canvas { display: none; }
     }
   </style>
 </head>
-<header>
-  <h1>Bake-off Randomiser</h1>
-  <div class="bunting">
-    <div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div>
-  </div>
-</header>
 <body>
-  <textarea id="nameInput">Aaron
-Hassan
-Jessika
+  <header>
+    <p class="eyebrow">Welcome to the tent</p>
+    <h1>Bake Off Group Randomiser</h1>
+    <p>Mix the bakers, divide the tent, and reveal your groups.</p>
+    <div class="bunting" aria-hidden="true">
+      <span class="flag" style="--flag:#ffd6a5"></span>
+      <span class="flag" style="--flag:#fdffb6"></span>
+      <span class="flag" style="--flag:#caffbf"></span>
+      <span class="flag" style="--flag:#9bf6ff"></span>
+      <span class="flag" style="--flag:#bdb2ff"></span>
+      <span class="flag" style="--flag:#ffc6ff"></span>
+      <span class="flag" style="--flag:#ffd6a5"></span>
+    </div>
+  </header>
+
+  <main>
+    <div class="workspace">
+      <section class="panel setup" aria-labelledby="setup-title">
+        <div class="panel-heading">
+          <h2 id="setup-title">Bakers</h2>
+          <span id="nameCount" class="count-badge">12 names</span>
+        </div>
+
+        <label for="nameInput">One name per line</label>
+        <textarea id="nameInput" spellcheck="false">Clara
+Connie
+Danni
+Gabe
+Gary
+Mo
+Molly
+Moyin
+Nikki
+Shannon
 Tom
-Leighton
-Iain
-Jasmine
-Lesley
-Nadia
-Nataliia
-Pui Man
-Toby</textarea><br>
+Yannis</textarea>
 
-  <div class="controls">
-    <label for="shuffleSlider">Shuffles: <span id="shuffleValue">10</span></label><br>
-    <input type="range" id="shuffleSlider" min="1" max="30" value="10"><br>
-    <button onclick="randomise()">Randomise</button>
-    <button onclick="resetNames()">Reset</button>
-    <button onclick="copyGroups()">Copy Groups</button>
-  </div>
+        <div class="field-row">
+          <div class="field-card">
+            <label for="groupCount">Number of groups</label>
+            <input type="number" id="groupCount" min="2" max="12" value="3" inputmode="numeric">
+          </div>
+          <div class="field-card">
+            <label for="shuffleSlider">Mixes: <span id="shuffleValue">8</span></label>
+            <input type="range" id="shuffleSlider" min="1" max="20" value="8">
+            <div class="field-note"><span>Quick</span><span>Thorough</span></div>
+          </div>
+        </div>
 
-  <div id="shuffleArea"></div>
-  <div id="shuffleCount">Shuffles completed: 0</div>
+        <div class="actions">
+          <button id="randomiseButton" class="primary" type="button">🧁 Randomise groups</button>
+          <button id="copyButton" class="secondary" type="button">Copy</button>
+          <button id="resetButton" class="ghost" type="button">Reset</button>
+        </div>
+      </section>
 
-  <div id="groups" class="groups">
-  </div>
+      <section class="panel stage" aria-labelledby="stage-title">
+        <div class="stage-head">
+          <h2 id="stage-title">The mixing bowl</h2>
+          <p id="stageMessage">Ready for the signature challenge.</p>
+        </div>
+        <div id="shuffleArea" aria-live="polite"></div>
+        <div id="shuffleCount">Mixes completed: 0</div>
+      </section>
+    </div>
 
-  <canvas id="confettiCanvas"></canvas>
+    <section id="groups" class="groups" aria-live="polite" aria-label="Randomised groups"></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
   <script>
     const defaultNames = [
-      "Aaron", "Hassan", "Jessika", "Tom",
-      "Leighton", "Iain", "Jasmine", "Lesley",
-      "Nadia", "Nataliia", "Pui Man", "Toby"
+      'Clara', 'Connie', 'Danni', 'Gabe', 'Gary', 'Mo',
+      'Molly', 'Moyin', 'Nikki', 'Shannon', 'Tom', 'Yannis'
     ];
 
-    const pastelColors = ['#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#bdb2ff', '#ffc6ff', '#fde2e4'];
+    const groupColours = [
+      '#d7eff7', '#dff2d6', '#ffe5c7', '#f7dbe4', '#e4def8', '#fff3bd',
+      '#d8f1eb', '#f2dfd2', '#dce7fa', '#eadcf0', '#e6f0cf', '#f9d9d0'
+    ];
+    const confettiColours = ['#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#bdb2ff', '#ffc6ff', '#df7f93'];
 
     const nameInput = document.getElementById('nameInput');
+    const nameCount = document.getElementById('nameCount');
+    const groupCountInput = document.getElementById('groupCount');
     const shuffleSlider = document.getElementById('shuffleSlider');
     const shuffleValue = document.getElementById('shuffleValue');
     const shuffleArea = document.getElementById('shuffleArea');
     const groupsDiv = document.getElementById('groups');
     const shuffleCountDisplay = document.getElementById('shuffleCount');
-    let currentNames = [...defaultNames];
-
+    const stageMessage = document.getElementById('stageMessage');
+    const randomiseButton = document.getElementById('randomiseButton');
+    const copyButton = document.getElementById('copyButton');
+    const resetButton = document.getElementById('resetButton');
+    const toast = document.getElementById('toast');
     const canvas = document.getElementById('confettiCanvas');
     const ctx = canvas.getContext('2d');
+
+    let currentNames = [...defaultNames];
+    let currentGroups = [];
     let confettiParticles = [];
+    let isRandomising = false;
+    let toastTimer;
 
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    function getNames() {
+      return nameInput.value.split(/\r?\n/).map(name => name.trim()).filter(Boolean);
     }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
 
-    shuffleSlider.addEventListener('input', () => {
-      shuffleValue.textContent = shuffleSlider.value;
-    });
-
-  // Display names with absolute positioning for animation
-  function displayNames(names) {
-    shuffleArea.innerHTML = '';
-    names.forEach((n, i) => {
-      const div = document.createElement('div');
-      div.className = 'name';
-      div.textContent = n;
-      shuffleArea.appendChild(div);
-    });
-
-    // Use flex for layout, but switch to absolute positioning when animating
-    const cards = Array.from(shuffleArea.children);
-    cards.forEach(card => {
-      card.style.position = 'relative';
-      card.style.transform = 'translate(0,0)';
-    });
-  }
-
-  function thoroughShuffle(arr) {
-    let newArr;
-    do {
-      newArr = [...arr].sort(() => Math.random() - 0.5);
-    } while (
-      newArr.filter((name, i) => name === arr[i]).length > arr.length * 0.25
-    );
-    return newArr;
-  }
-
-  function animateShuffle(newNames) {
-    const cards = Array.from(shuffleArea.children);
-    const oldPositions = cards.map(card => card.getBoundingClientRect());
-
-    // Update text content order
-    newNames.forEach((name, i) => {
-      cards[i].textContent = name;
-    });
-
-    const newPositions = cards.map(card => card.getBoundingClientRect());
-
-    // Animate each card
-    cards.forEach((card, i) => {
-      const dx = oldPositions[i].left - newPositions[i].left;
-      const dy = oldPositions[i].top - newPositions[i].top;
-      card.style.transform = `translate(${dx}px, ${dy}px)`;
-      requestAnimationFrame(() => {
-        card.style.transition = 'transform 0.6s ease';
-        card.style.transform = 'translate(0,0)';
-      });
-    });
-
-    // After animation, clean up
-    setTimeout(() => {
-      cards.forEach(card => {
-        card.style.transition = '';
-        card.style.transform = 'translate(0,0)';
-      });
-    }, 650);
-  }
-
-  function randomise() {
-    let names = nameInput.value.split(/\r?\n/).map(n => n.trim()).filter(n => n);
-    if (names.length !== 12) {
-      alert("Please enter exactly 12 names.");
-      return;
+    function updateNameCount() {
+      const total = getNames().length;
+      nameCount.textContent = `${total} ${total === 1 ? 'name' : 'names'}`;
+      groupCountInput.max = Math.max(2, total);
     }
-    currentNames = [...names];
-    let shuffleTimes = parseInt(shuffleSlider.value);
-    let i = 0;
-    shuffleCountDisplay.textContent = "Shuffles completed: 0";
-    groupsDiv.style.opacity = 0;
-    groupsDiv.style.display = "none";
-    nameInput.style.display = "none";
 
-    function doShuffle() {
-      if (i < shuffleTimes) {
-        const newNames = thoroughShuffle(currentNames);
-        animateShuffle(newNames);
-        currentNames = newNames;
-        i++;
-        shuffleCountDisplay.textContent = "Shuffles completed: " + i;
+    function showToast(message) {
+      clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add('show');
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+    }
 
-        let delay = 700 - (shuffleTimes * 10);
-        if (delay < 300) delay = 300;
-        setTimeout(doShuffle, delay);
-      } else {
-        allocateGroups();
-        fadeInGroups();
-        startConfetti();
+    function displayNames(names) {
+      shuffleArea.replaceChildren();
+      names.forEach(name => {
+        const chip = document.createElement('div');
+        chip.className = 'name';
+        chip.textContent = name;
+        shuffleArea.appendChild(chip);
+      });
+    }
+
+    function shuffle(names) {
+      const result = [...names];
+      for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
       }
+      return result;
     }
-    doShuffle();
-  }
 
-function allocateGroups() {
-  groupsDiv.innerHTML = '';
+    function animateShuffle(newNames) {
+      const cards = Array.from(shuffleArea.children);
+      cards.forEach((card, index) => {
+        card.textContent = newNames[index];
+        const direction = index % 2 === 0 ? 1 : -1;
+        card.style.transform = `translateY(${direction * 7}px) rotate(${direction * 1.2}deg)`;
+        requestAnimationFrame(() => { card.style.transform = 'translateY(0) rotate(0)'; });
+      });
+    }
 
-  const colours = ["#a8d8f0", "#b9e6b1", "#f9d1a7"]; // pastel blue, green, orange
-  const groups = [[], [], []];
+    function validateSetup() {
+      const names = getNames();
+      const groupCount = Number.parseInt(groupCountInput.value, 10);
 
-  currentNames.forEach((name, i) => {
-    groups[Math.floor(i / 4)].push(name);
-  });
+      if (names.length < 2) {
+        showToast('Add at least two names before randomising.');
+        nameInput.focus();
+        return null;
+      }
+      if (!Number.isInteger(groupCount) || groupCount < 2 || groupCount > names.length) {
+        showToast(`Choose between 2 and ${names.length} groups.`);
+        groupCountInput.focus();
+        return null;
+      }
+      return { names, groupCount };
+    }
 
-  groups.forEach((group, gi) => {
-    const groupBox = document.createElement('div');
-    groupBox.className = 'group-box';
-    groupBox.style.backgroundColor = colours[gi]; // pastel background for box
-    groupBox.innerHTML = `<h3>🧁 Group ${gi + 1}</h3>`;
-    group.forEach(member => {
-      const p = document.createElement('p');
-      p.textContent = member;
-      groupBox.appendChild(p);
-    });
-    groupsDiv.appendChild(groupBox);
-  });
+    async function randomise() {
+      if (isRandomising) return;
+      const setup = validateSetup();
+      if (!setup) return;
 
-  // Colour the shuffle area cards by their group
-  const cards = Array.from(shuffleArea.children);
-  currentNames.forEach((name, i) => {
-    const gi = Math.floor(i / 4); // group index
-    const card = cards[i];
-    card.style.backgroundColor = colours[gi];
-    card.style.transition = 'background-color 0.8s ease';
-  });
-}
+      isRandomising = true;
+      randomiseButton.disabled = true;
+      currentNames = [...setup.names];
+      currentGroups = [];
+      displayNames(currentNames);
+      groupsDiv.replaceChildren();
+      groupsDiv.style.opacity = '0';
+      stageMessage.textContent = 'Mixing the bakers…';
+      shuffleCountDisplay.textContent = 'Mixes completed: 0';
 
-    function fadeInGroups() {
-      groupsDiv.style.display = "flex";
-      setTimeout(() => {
-        groupsDiv.style.opacity = 1;
-      }, 50);
+      const mixes = Number.parseInt(shuffleSlider.value, 10);
+      for (let i = 1; i <= mixes; i++) {
+        currentNames = shuffle(currentNames);
+        animateShuffle(currentNames);
+        shuffleCountDisplay.textContent = `Mixes completed: ${i}`;
+        await new Promise(resolve => setTimeout(resolve, Math.max(85, 240 - mixes * 6)));
+      }
+
+      allocateGroups(setup.groupCount);
+      stageMessage.textContent = `${setup.groupCount} balanced groups, fresh from the tent.`;
+      groupsDiv.style.opacity = '1';
+      randomiseButton.disabled = false;
+      isRandomising = false;
+      startConfetti();
+    }
+
+    function allocateGroups(groupCount) {
+      currentGroups = Array.from({ length: groupCount }, () => []);
+      currentNames.forEach((name, index) => currentGroups[index % groupCount].push(name));
+
+      groupsDiv.replaceChildren();
+      currentGroups.forEach((group, index) => {
+        const groupBox = document.createElement('article');
+        groupBox.className = 'group-box';
+        groupBox.style.setProperty('--group-colour', groupColours[index % groupColours.length]);
+
+        const heading = document.createElement('h3');
+        const title = document.createElement('span');
+        title.textContent = `🧁 Group ${index + 1}`;
+        const size = document.createElement('span');
+        size.className = 'group-size';
+        size.textContent = `${group.length} ${group.length === 1 ? 'baker' : 'bakers'}`;
+        heading.append(title, size);
+
+        const list = document.createElement('ul');
+        list.className = 'group-list';
+        group.forEach(member => {
+          const item = document.createElement('li');
+          item.textContent = member;
+          list.appendChild(item);
+        });
+
+        groupBox.append(heading, list);
+        groupsDiv.appendChild(groupBox);
+      });
+
+      const cards = Array.from(shuffleArea.children);
+      currentNames.forEach((name, index) => {
+        cards[index].style.backgroundColor = groupColours[index % groupCount % groupColours.length];
+      });
     }
 
     function resetNames() {
-      nameInput.value = defaultNames.join("\n");
+      nameInput.value = defaultNames.join('\n');
+      groupCountInput.value = 3;
+      shuffleSlider.value = 8;
+      shuffleValue.textContent = '8';
       currentNames = [...defaultNames];
+      currentGroups = [];
       displayNames(currentNames);
-      groupsDiv.style.display = "none";
-      groupsDiv.style.opacity = 0;
-      shuffleCountDisplay.textContent = "Shuffles completed: 0";
-      nameInput.style.display = "block";
+      groupsDiv.replaceChildren();
+      groupsDiv.style.opacity = '0';
+      shuffleCountDisplay.textContent = 'Mixes completed: 0';
+      stageMessage.textContent = 'Ready for the signature challenge.';
+      updateNameCount();
     }
 
-    function copyGroups() {
-  const groups = document.querySelectorAll(".group-box");
-  if (groups.length === 0) {
-    alert("No groups to copy yet! Please randomise first.");
-    return;
-  }
-
-  let text = "";
-  groups.forEach((group, index) => {
-    const nameItems = Array.from(group.querySelectorAll("p")).map(p => p.textContent);
-    text += `Group ${index + 1}\n` + nameItems.map(name => `- ${name}`).join("\n") + "\n\n";
-  });
-
-  navigator.clipboard.writeText(text.trim()).then(() => {
-    alert("Groups copied to clipboard!");
-  }).catch(err => {
-    console.error("Error copying groups:", err);
-  });
-}
-
-    // Confetti with swirling
-    function startConfetti() {
-      confettiParticles = [];
-      for (let i = 0; i < 100; i++) {
-        confettiParticles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * -canvas.height,
-          r: Math.random() * 6 + 4,
-          d: Math.random() * 20 + 10,
-          color: pastelColors[Math.floor(Math.random() * pastelColors.length)],
-          tilt: Math.random() * 10 - 10,
-          tiltAngleIncrement: Math.random() * 0.07 + 0.05,
-          tiltAngle: Math.random() * Math.PI,
-          angle: Math.random() * 2 * Math.PI,
-          angularSpeed: Math.random() * 0.05 + 0.02
-        });
+    async function copyGroups() {
+      if (currentGroups.length === 0) {
+        showToast('Randomise the groups first.');
+        return;
       }
+
+      const text = currentGroups.map((group, index) =>
+        `Group ${index + 1}\n${group.map(name => `- ${name}`).join('\n')}`
+      ).join('\n\n');
+
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('Groups copied to your clipboard.');
+      } catch (error) {
+        const helper = document.createElement('textarea');
+        helper.value = text;
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand('copy');
+        helper.remove();
+        showToast('Groups copied to your clipboard.');
+      }
+    }
+
+    function resizeCanvas() {
+      const scale = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * scale;
+      canvas.height = window.innerHeight * scale;
+      ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    }
+
+    function startConfetti() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      confettiParticles = Array.from({ length: 80 }, () => ({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * -window.innerHeight,
+        size: Math.random() * 6 + 4,
+        colour: confettiColours[Math.floor(Math.random() * confettiColours.length)],
+        drift: Math.random() * 1.6 - .8,
+        speed: Math.random() * 2.2 + 2,
+        angle: Math.random() * Math.PI,
+        spin: Math.random() * .14 - .07
+      }));
       requestAnimationFrame(updateConfetti);
-      setTimeout(() => confettiParticles = [], 5000);
+      setTimeout(() => { confettiParticles = []; }, 3200);
     }
 
     function updateConfetti() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      confettiParticles.forEach(p => {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      confettiParticles.forEach(piece => {
         ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(Math.sin(p.angle) * Math.PI / 6); // gentle rotation
-        ctx.beginPath();
-        ctx.lineWidth = p.r / 2;
-        ctx.strokeStyle = p.color;
-        ctx.moveTo(0, 0);
-        ctx.lineTo(p.tilt, p.r + p.tilt);
-        ctx.stroke();
+        ctx.translate(piece.x, piece.y);
+        ctx.rotate(piece.angle);
+        ctx.fillStyle = piece.colour;
+        ctx.fillRect(-piece.size / 2, -piece.size / 4, piece.size, piece.size / 2);
         ctx.restore();
-
-        p.angle += p.angularSpeed;
-        p.tiltAngle += p.tiltAngleIncrement;
-        p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
-        p.tilt = Math.sin(p.tiltAngle) * 10;
-        if (p.y > canvas.height) p.y = -10;
+        piece.x += piece.drift;
+        piece.y += piece.speed;
+        piece.angle += piece.spin;
       });
-      if (confettiParticles.length > 0) requestAnimationFrame(updateConfetti);
+      if (confettiParticles.length) requestAnimationFrame(updateConfetti);
+      else ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     }
 
-    // Initialise
+    nameInput.addEventListener('input', updateNameCount);
+    shuffleSlider.addEventListener('input', () => { shuffleValue.textContent = shuffleSlider.value; });
+    randomiseButton.addEventListener('click', randomise);
+    copyButton.addEventListener('click', copyGroups);
+    resetButton.addEventListener('click', resetNames);
+    window.addEventListener('resize', resizeCanvas);
+
+    resizeCanvas();
     resetNames();
   </script>
 </body>

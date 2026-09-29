@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  addMonthsToMonthKey,
   buildMetrics,
   getMonthEndDateString,
   getWeekStartDateString,
@@ -68,6 +69,7 @@ test("builds dashboard counts from cards and Done move actions", () => {
   });
 
   assert.equal(metrics.counts.completedToday, 1);
+  assert.equal(metrics.version, 4);
   assert.equal(metrics.counts.completedThisWeek, 2);
   assert.equal(metrics.counts.completedThisMonth, 3);
   assert.equal(metrics.counts.movedForwardThisWeek, 2);
@@ -84,6 +86,7 @@ test("builds dashboard counts from cards and Done move actions", () => {
   assert.equal(metrics.period.weekStart, "2026-08-24");
   assert.equal(metrics.period.weekEnd, "2026-08-30");
   assert.equal(metrics.period.monthEnd, "2026-08-31");
+  assert.equal(metrics.period.previousMonth, "2026-07");
   assert.deepEqual(
     metrics.trends.completedByDay.map((day) => [day.label, day.date, day.count]),
     [
@@ -108,6 +111,50 @@ test("builds dashboard counts from cards and Done move actions", () => {
       ["31", "2026-08-31", 0],
     ],
   );
+  assert.deepEqual(metrics.history.monthly, [
+    { month: "2026-08", done: 3, progressed: 3, triaged: 2 },
+  ]);
+  assert.equal(metrics.trends.completedByYearMonth.length, 12);
+  assert.deepEqual(metrics.trends.completedByYearMonth[7], {
+    month: "2026-08",
+    label: "Aug",
+    count: 3,
+    state: "current",
+  });
+  assert.equal(metrics.trends.completedByYearMonth[8].state, "future");
+});
+
+test("preserves older totals and refreshes complete months from action history", () => {
+  const metrics = buildMetrics({
+    lists,
+    generatedAt: new Date("2026-09-29T12:00:00.000Z"),
+    timeZone: "Europe/London",
+    historyStartDate: "2026-07-15",
+    previousMetrics: {
+      history: {
+        monthly: [
+          { month: "2026-01", done: 8, progressed: 10, triaged: 6 },
+          { month: "2026-08", done: 99, progressed: 99, triaged: 99 },
+          { month: "2026-10", done: 4, progressed: 4, triaged: 4 },
+        ],
+      },
+    },
+    actions: [
+      moveAction("aug-done", "2026-08-12T10:00:00.000Z"),
+      listMoveAction("aug-progress", "2026-08-14T10:00:00.000Z", "ordered", "today", "Today"),
+      listMoveAction("aug-triage", "2026-08-14T11:00:00.000Z", "triage", "ordered", "To Do - Ordered"),
+      moveAction("sep-done", "2026-09-03T10:00:00.000Z"),
+    ],
+  });
+
+  assert.deepEqual(metrics.history.monthly, [
+    { month: "2026-01", done: 8, progressed: 10, triaged: 6 },
+    { month: "2026-08", done: 1, progressed: 2, triaged: 1 },
+    { month: "2026-09", done: 1, progressed: 0, triaged: 0 },
+  ]);
+  assert.equal(metrics.trends.completedByYearMonth[0].count, 8);
+  assert.equal(metrics.trends.completedByYearMonth[7].count, 1);
+  assert.equal(metrics.trends.completedByYearMonth[8].count, 1);
 });
 
 test("does not allow organisation-card offsets to create negative counts", () => {
@@ -142,6 +189,11 @@ test("finds the end of the local month", () => {
     getMonthEndDateString(new Date("2028-02-10T12:00:00.000Z"), "Europe/London"),
     "2028-02-29",
   );
+});
+
+test("moves across month and year boundaries", () => {
+  assert.equal(addMonthsToMonthKey("2026-01", -1), "2025-12");
+  assert.equal(addMonthsToMonthKey("2026-12", 1), "2027-01");
 });
 
 test("fails when required list names are missing or duplicated", () => {

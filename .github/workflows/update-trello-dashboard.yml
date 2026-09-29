@@ -25,15 +25,7 @@ jobs:
       - name: Test Trello metrics
         run: node --test scripts/trello-metrics.test.mjs
 
-      - name: Fetch Trello metrics
-        env:
-          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
-          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
-          TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
-          TRELLO_DASHBOARD_TIMEZONE: Europe/London
-        run: node scripts/update-trello-metrics.mjs "$RUNNER_TEMP/trello-metrics.json"
-
-      - name: Publish metrics to data repository
+      - name: Check out dashboard data
         env:
           DATA_REPO_TOKEN: ${{ secrets.TRELLO_DASHBOARD_DATA_TOKEN }}
         run: |
@@ -42,9 +34,20 @@ jobs:
             exit 1
           fi
 
+          git clone "https://x-access-token:${DATA_REPO_TOKEN}@github.com/b-kennedy0/trello-dashboard-data.git" "$RUNNER_TEMP/trello-dashboard-data"
+
+      - name: Fetch Trello metrics
+        env:
+          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
+          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+          TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
+          TRELLO_DASHBOARD_TIMEZONE: Europe/London
+        run: node scripts/update-trello-metrics.mjs "$RUNNER_TEMP/trello-metrics.json" "$RUNNER_TEMP/trello-dashboard-data/trello-metrics.json"
+
+      - name: Publish metrics to data repository
+        run: |
           data_repo_dir="$RUNNER_TEMP/trello-dashboard-data"
 
-          git clone "https://x-access-token:${DATA_REPO_TOKEN}@github.com/b-kennedy0/trello-dashboard-data.git" "$data_repo_dir"
           cd "$data_repo_dir"
 
           git checkout main || git checkout -b main

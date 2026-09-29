@@ -7,8 +7,9 @@ const REQUIRED_LISTS = [
   "Done",
 ];
 
-const OUTPUT_VERSION = 3;
+const OUTPUT_VERSION = 4;
 const WEEKDAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const FORWARD_LIST_ORDER = [
   "Triage",
   "To Do - Ordered",
@@ -65,6 +66,12 @@ export function getMonthEndDateString(date, timeZone) {
   const parts = getLocalParts(date, timeZone);
   const utcNoon = new Date(Date.UTC(Number(parts.year), Number(parts.month), 0, 12, 0, 0));
   return utcNoon.toISOString().slice(0, 10);
+}
+
+export function addMonthsToMonthKey(monthKey, months) {
+  const [year, month] = monthKey.split("-").map(Number);
+  const utcNoon = new Date(Date.UTC(year, month - 1 + months, 1, 12, 0, 0));
+  return utcNoon.toISOString().slice(0, 7);
 }
 
 export function validateListMap(lists, requiredNames = REQUIRED_LISTS) {
@@ -126,12 +133,80 @@ function getMonthDayLabel(localDate) {
   return String(Number(localDate.slice(8, 10)));
 }
 
-export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZone = "Europe/London" }) {
+function isMonthlyHistoryEntry(entry) {
+  return (
+    /^\d{4}-\d{2}$/.test(entry?.month || "") &&
+    [entry.done, entry.progressed, entry.triaged].every(Number.isFinite)
+  );
+}
+
+function countActionsInMonth(actions, month) {
+  return actions.filter((action) => action.localDate.startsWith(month)).length;
+}
+
+export function mergeMonthlyHistory({
+  existingMonthly = [],
+  doneActions,
+  forwardActions,
+  triageClearedActions,
+  currentMonth,
+  historyStartDate,
+}) {
+  const historyByMonth = new Map(
+    existingMonthly
+      .filter(isMonthlyHistoryEntry)
+      .filter((entry) => entry.month <= currentMonth)
+      .map((entry) => [entry.month, {
+        month: entry.month,
+        done: entry.done,
+        progressed: entry.progressed,
+        triaged: entry.triaged,
+      }]),
+  );
+  const startMonth = historyStartDate.slice(0, 7);
+  const firstCompleteMonth = historyStartDate.endsWith("-01")
+    ? startMonth
+    : addMonthsToMonthKey(startMonth, 1);
+
+  for (
+    let month = firstCompleteMonth;
+    month <= currentMonth;
+    month = addMonthsToMonthKey(month, 1)
+  ) {
+    historyByMonth.set(month, {
+      month,
+      done: countActionsInMonth(doneActions, month),
+      progressed: countActionsInMonth(forwardActions, month),
+      triaged: countActionsInMonth(triageClearedActions, month),
+    });
+  }
+
+  // The current month is safe to refresh even when the history window began mid-month.
+  historyByMonth.set(currentMonth, {
+    month: currentMonth,
+    done: countActionsInMonth(doneActions, currentMonth),
+    progressed: countActionsInMonth(forwardActions, currentMonth),
+    triaged: countActionsInMonth(triageClearedActions, currentMonth),
+  });
+
+  return [...historyByMonth.values()].sort((a, b) => a.month.localeCompare(b.month));
+}
+
+export function buildMetrics({
+  lists,
+  actions,
+  previousMetrics = null,
+  historyStartDate = null,
+  generatedAt = new Date(),
+  timeZone = "Europe/London",
+}) {
   const listMap = validateListMap(lists);
   const today = getLocalDateString(generatedAt, timeZone);
   const weekStart = getWeekStartDateString(generatedAt, timeZone);
   const monthStart = getMonthStartDateString(generatedAt, timeZone);
   const monthEnd = getMonthEndDateString(generatedAt, timeZone);
+  const currentMonth = monthStart.slice(0, 7);
+  const previousMonth = addMonthsToMonthKey(currentMonth, -1);
   const doneListId = listMap.Done.id;
   const triageListId = listMap.Triage.id;
   const rankByListId = new Map(
@@ -199,6 +274,25 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
     inProgress: adjustedCount(cardsForList(listMap["In Progress"]).length, 2),
     blockedWaiting: cardsForList(listMap["Waiting/Blocked/Repeat"]).length,
   };
+  const monthlyHistory = mergeMonthlyHistory({
+    existingMonthly: previousMetrics?.history?.monthly,
+    doneActions,
+    forwardActions,
+    triageClearedActions,
+    currentMonth,
+    historyStartDate: historyStartDate || monthStart,
+  });
+  const currentYear = currentMonth.slice(0, 4);
+  const monthlyHistoryByKey = new Map(monthlyHistory.map((entry) => [entry.month, entry]));
+  const completedByYearMonth = MONTH_LABELS.map((label, index) => {
+    const month = `${currentYear}-${String(index + 1).padStart(2, "0")}`;
+    return {
+      month,
+      label,
+      count: monthlyHistoryByKey.get(month)?.done || 0,
+      state: month > currentMonth ? "future" : month === currentMonth ? "current" : "past",
+    };
+  });
 
   return {
     version: OUTPUT_VERSION,
@@ -211,11 +305,16 @@ export function buildMetrics({ lists, actions, generatedAt = new Date(), timeZon
       weekEnd: addDaysToLocalDate(weekStart, 6),
       monthStart,
       monthEnd,
+      previousMonth,
     },
     counts,
     trends: {
       completedByDay,
       completedByMonthDay,
+      completedByYearMonth,
+    },
+    history: {
+      monthly: monthlyHistory,
     },
     lists: {
       triage: listSummary(listMap.Triage),
@@ -235,7 +334,37 @@ function listSummary(list) {
   };
 }
 
-export async function fetchTrelloMetrics({ key, token, boardId, timeZone }) {
+async function fetchBoardActions({ boardBase, auth, since }) {
+  const actions = [];
+  let before = null;
+
+  for (;;) {
+    const actionsUrl = new URL(`${boardBase}/actions`);
+    const params = {
+      ...Object.fromEntries(auth),
+      filter: "updateCard:idList",
+      fields: "id,date,type,data",
+      limit: "1000",
+      since: since.toISOString(),
+    };
+    if (before) params.before = before;
+    actionsUrl.search = new URLSearchParams(params);
+
+    const response = await fetch(actionsUrl);
+    if (!response.ok) {
+      throw new Error(`Trello actions request failed: ${response.status} ${response.statusText}`);
+    }
+
+    const page = await response.json();
+    actions.push(...page);
+    if (page.length < 1000) break;
+    before = page.at(-1).id;
+  }
+
+  return actions;
+}
+
+export async function fetchTrelloMetrics({ key, token, boardId, timeZone, previousMetrics = null }) {
   if (!key || !token || !boardId) {
     throw new Error("TRELLO_KEY, TRELLO_TOKEN, and TRELLO_BOARD_ID are required.");
   }
@@ -249,37 +378,30 @@ export async function fetchTrelloMetrics({ key, token, boardId, timeZone }) {
     fields: "id,name,closed",
     filter: "open",
     cards: "open",
-    card_fields: "id,name,idList,closed,url,shortLink",
+    card_fields: "id,idList,closed",
   });
 
-  const since = new Date(Date.now() - 45 * 24 * 60 * 60 * 1000).toISOString();
-  const actionsUrl = new URL(`${boardBase}/actions`);
-  actionsUrl.search = new URLSearchParams({
-    ...Object.fromEntries(auth),
-    filter: "updateCard:idList",
-    fields: "id,date,type,data",
-    limit: "1000",
-    since,
-  });
+  const generatedAt = new Date();
+  const historySince = new Date(generatedAt.getTime() - 400 * 24 * 60 * 60 * 1000);
 
   const [listsResponse, actionsResponse] = await Promise.all([
     fetch(listsUrl),
-    fetch(actionsUrl),
+    fetchBoardActions({ boardBase, auth, since: historySince }),
   ]);
 
   if (!listsResponse.ok) {
     throw new Error(`Trello lists request failed: ${listsResponse.status} ${listsResponse.statusText}`);
   }
-  if (!actionsResponse.ok) {
-    throw new Error(`Trello actions request failed: ${actionsResponse.status} ${actionsResponse.statusText}`);
-  }
+  const lists = await listsResponse.json();
 
-  const [lists, actions] = await Promise.all([
-    listsResponse.json(),
-    actionsResponse.json(),
-  ]);
-
-  return buildMetrics({ lists, actions, generatedAt: new Date(), timeZone });
+  return buildMetrics({
+    lists,
+    actions: actionsResponse,
+    previousMetrics,
+    historyStartDate: getLocalDateString(historySince, timeZone),
+    generatedAt,
+    timeZone,
+  });
 }
 
 export const requiredLists = REQUIRED_LISTS;

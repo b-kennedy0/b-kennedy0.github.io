@@ -294,6 +294,42 @@ full-width: true
     --metric-columns: 3;
   }
 
+  .comparison-heading {
+    align-items: baseline;
+    color: var(--dash-muted);
+    display: flex;
+    font-size: 11px;
+    font-weight: 800;
+    justify-content: space-between;
+    margin: 10px 0 0;
+    text-transform: uppercase;
+  }
+
+  .comparison-period {
+    color: rgba(142, 177, 186, 0.72);
+    font-size: 9px;
+  }
+
+  .comparison-grid {
+    --metric-columns: 3;
+    margin-top: 5px;
+  }
+
+  .metric-card.is-comparison {
+    background: rgba(8, 26, 32, 0.72);
+    min-height: 42px;
+    padding-bottom: 6px;
+    padding-top: 7px;
+  }
+
+  .metric-card.is-comparison .metric-label {
+    font-size: 9px;
+  }
+
+  .metric-card.is-comparison .metric-value {
+    font-size: 25px;
+  }
+
   .metric-card {
     align-items: center;
     display: grid;
@@ -353,6 +389,28 @@ full-width: true
     line-height: 0.95;
     margin: 0;
     text-align: right;
+  }
+
+  .annual-bar {
+    fill: rgba(69, 225, 143, 0.72);
+  }
+
+  .annual-bar.is-current {
+    fill: var(--dash-cyan);
+  }
+
+  .annual-bar.is-future {
+    fill: rgba(142, 177, 186, 0.22);
+  }
+
+  .annual-value-label {
+    fill: var(--dash-ink);
+    font-size: 13px;
+    font-weight: 800;
+    paint-order: stroke;
+    stroke: var(--dash-bg);
+    stroke-width: 5px;
+    text-anchor: middle;
   }
 
   .dashboard-error {
@@ -510,6 +568,25 @@ full-width: true
         </article>
       </div>
 
+      <div class="comparison-heading">
+        <span>Last Month</span>
+        <span class="comparison-period" id="previous-month-period">--</span>
+      </div>
+      <div class="metric-grid comparison-grid">
+        <article class="metric-card is-comparison" data-tone="green">
+          <p class="metric-label">Done</p>
+          <p class="metric-value" data-history-metric="done">--</p>
+        </article>
+        <article class="metric-card is-comparison" data-tone="blue">
+          <p class="metric-label">Progressed</p>
+          <p class="metric-value" data-history-metric="progressed">--</p>
+        </article>
+        <article class="metric-card is-comparison" data-tone="amber">
+          <p class="metric-label">Triaged</p>
+          <p class="metric-value" data-history-metric="triaged">--</p>
+        </article>
+      </div>
+
       <div class="trend-panel standalone-trend month-trend" aria-label="Tasks completed by day this month">
         <div class="panel-title">
           <span>Monthly Completion Trace</span>
@@ -523,6 +600,19 @@ full-width: true
           <g id="month-trend-labels"></g>
         </svg>
         <div class="trend-axis" id="month-trend-axis"></div>
+      </div>
+
+      <div class="trend-panel standalone-trend annual-trend" aria-label="Tasks completed by month this year">
+        <div class="panel-title">
+          <span>Annual Completion Trace</span>
+        </div>
+        <svg class="trend-chart" id="annual-completion-trend" viewBox="0 0 1200 160" role="img" aria-labelledby="annual-trend-title">
+          <title id="annual-trend-title">Tasks completed each month this year</title>
+          <g id="annual-trend-grid"></g>
+          <g id="annual-trend-bars"></g>
+          <g id="annual-trend-labels"></g>
+        </svg>
+        <div class="trend-axis" id="annual-trend-axis"></div>
       </div>
     </section>
 
@@ -619,6 +709,61 @@ full-width: true
     ).join("");
   }
 
+  function renderAnnualBars(series) {
+    const fallbackLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const safeSeries = Array.isArray(series) && series.length === 12
+      ? series
+      : fallbackLabels.map((label) => ({ label, count: 0, state: "future" }));
+    const chartWidth = 1200;
+    const chartHeight = 160;
+    const padding = { top: 28, right: 18, bottom: 12, left: 18 };
+    const usableWidth = chartWidth - padding.left - padding.right;
+    const usableHeight = chartHeight - padding.top - padding.bottom;
+    const baseline = chartHeight - padding.bottom;
+    const maxCount = Math.max(1, ...safeSeries.map((month) => month.count || 0));
+    const slotWidth = usableWidth / safeSeries.length;
+    const barWidth = Math.min(60, slotWidth * 0.62);
+
+    document.getElementById("annual-trend-grid").innerHTML = [0, 0.5, 1].map((ratio) => {
+      const y = padding.top + usableHeight * ratio;
+      return `<line class="trend-grid-line" x1="${padding.left}" y1="${y}" x2="${chartWidth - padding.right}" y2="${y}"></line>`;
+    }).join("");
+    document.getElementById("annual-trend-bars").innerHTML = safeSeries.map((month, index) => {
+      const trueHeight = ((month.count || 0) / maxCount) * usableHeight;
+      const height = Math.max(3, trueHeight);
+      const x = padding.left + slotWidth * index + (slotWidth - barWidth) / 2;
+      const y = baseline - height;
+      return `<rect class="annual-bar is-${month.state || "past"}" x="${x}" y="${y}" width="${barWidth}" height="${height}"><title>${month.label}: ${month.count || 0}</title></rect>`;
+    }).join("");
+    document.getElementById("annual-trend-labels").innerHTML = safeSeries.map((month, index) => {
+      if (!(month.count > 0)) return "";
+      const trueHeight = (month.count / maxCount) * usableHeight;
+      const x = padding.left + slotWidth * index + slotWidth / 2;
+      const y = Math.max(14, baseline - trueHeight - 9);
+      return `<text class="annual-value-label" x="${x}" y="${y}">${month.count}</text>`;
+    }).join("");
+    document.getElementById("annual-trend-axis").style.gridTemplateColumns = "repeat(12, minmax(0, 1fr))";
+    document.getElementById("annual-trend-axis").innerHTML = safeSeries
+      .map((month) => `<span>${month.label}</span>`)
+      .join("");
+  }
+
+  function renderPreviousMonth(metrics) {
+    const previousMonthKey = metrics.period?.previousMonth;
+    const previousMonth = metrics.history?.monthly?.find((entry) => entry.month === previousMonthKey);
+    const periodLabel = previousMonthKey
+      ? new Intl.DateTimeFormat("en-GB", { month: "short", year: "numeric", timeZone: "UTC" })
+        .format(new Date(`${previousMonthKey}-01T12:00:00.000Z`))
+        .toUpperCase()
+      : "--";
+
+    document.getElementById("previous-month-period").textContent = periodLabel;
+    document.querySelectorAll("[data-history-metric]").forEach((metricEl) => {
+      const value = previousMonth?.[metricEl.dataset.historyMetric];
+      metricEl.textContent = Number.isFinite(value) ? value : "--";
+    });
+  }
+
   function setFreshness(metrics) {
     if (!metrics.generatedAt) {
       freshnessEl.textContent = "Awaiting Sync";
@@ -671,6 +816,8 @@ full-width: true
       showAxisLabel: shouldShowMonthTick,
       showValueLabel: (point, index, length) => length <= 10 || point.count > 0,
     });
+    renderPreviousMonth(metrics);
+    renderAnnualBars(metrics.trends?.completedByYearMonth);
 
     if (metrics.period?.weekStart && metrics.period?.weekEnd) {
       periodEl.textContent = `PERIOD: ${metrics.period.weekStart} / ${metrics.period.weekEnd}`;

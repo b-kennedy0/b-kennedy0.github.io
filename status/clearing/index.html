@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en-GB">
+<!--
+  Set data-monitor-active to "true" when Clearing resumes; "false" disables the live page.
+  Update data-shutdown-date (YYYY-MM-DD) each time the checker is shut down.
+-->
+<html lang="en-GB" data-monitor-active="false" data-shutdown-date="2026-10-16">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +26,11 @@
     }
 
     * { box-sizing: border-box; }
+
+    html:not([data-monitor-active="true"]) [data-monitor-state="active"],
+    html[data-monitor-active="true"] [data-monitor-state="inactive"] {
+      display: none;
+    }
 
     body {
       min-height: 100vh;
@@ -102,6 +111,18 @@
       display: block;
       min-width: 120px;
       min-height: 20px;
+    }
+
+    .disabled-badge {
+      display: inline-flex;
+      flex-shrink: 0;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
     }
 
     .explanation {
@@ -256,35 +277,46 @@
             <p class="status-label">Current monitor status</p>
           </div>
 
-          <a
-            class="badge-link"
-            href="https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open the live monitor status badge"
-          >
-            <img
-              id="healthchecks-badge"
-              class="badge"
-              src="https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg"
-              alt="Clearing Dashboard Monitor status"
-            >
-          </a>
+          <div id="live-status" data-monitor-state="active">
+            <!-- Keep the live badge inert until active mode is initialised. -->
+            <template id="live-status-template">
+                <a
+                  class="badge-link"
+                  href="https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the live monitor status badge"
+                >
+                  <img
+                    id="healthchecks-badge"
+                    class="badge"
+                    src="https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg"
+                    alt="Clearing Dashboard Monitor status"
+                  >
+                </a>
+            </template>
+          </div>
+          <span class="disabled-badge" data-monitor-state="inactive">System Disabled</span>
         </div>
 
-        <p class="explanation">
+        <p class="explanation" data-monitor-state="inactive">
+          The automated checker was disabled by Dr Brad Kennedy<span id="shutdown-date-note" hidden> on <time id="shutdown-date"></time></span>.
+          Further checks will not be carried out.
+        </p>
+
+        <p class="explanation" data-monitor-state="active">
           This page shows whether the monitor is
           checking in as expected. The status updates automatically while this
           page remains open.
         </p>
 
-        <div class="details">
+        <div class="details" data-monitor-state="active">
           <strong>What the status means:</strong>
           a healthy status confirms that the monitoring process is running correctly. It does not indicate whether there are
           currently any callback requests, for this you are notified on MS Teams.<br><br><strong>Note:</strong> If the status shows 'late', it is most likely that the monitor is <i>in the middle of an active check</i>, it should return to 'up' within one minute.
         </div>
 
-        <div class="activity-controls">
+        <div class="activity-controls" data-monitor-state="active">
           <button
             class="activity-button"
             id="activity-button"
@@ -311,12 +343,12 @@
           </section>
         </div>
 
-        <p class="refresh" id="refresh-note" aria-live="polite">
+        <p class="refresh" id="refresh-note" aria-live="polite" data-monitor-state="active">
           Loading the latest status…
         </p>
 
         <noscript>
-          <p class="refresh">Refresh this page manually to retrieve the latest status.</p>
+          <p class="refresh" data-monitor-state="active">Refresh this page manually to retrieve the latest status.</p>
         </noscript>
       </div>
     </section>
@@ -324,6 +356,34 @@
 
   <script>
     (function () {
+      const shutdownDateValue = document.documentElement.dataset.shutdownDate;
+      const shutdownDate = new Date(shutdownDateValue + "T00:00:00Z");
+      if (
+        /^\d{4}-\d{2}-\d{2}$/.test(shutdownDateValue) &&
+        !Number.isNaN(shutdownDate.getTime()) &&
+        shutdownDate.toISOString().slice(0, 10) === shutdownDateValue
+      ) {
+        const day = shutdownDate.getUTCDate();
+        const suffix = day % 100 >= 11 && day % 100 <= 13
+          ? "th"
+          : ({ 1: "st", 2: "nd", 3: "rd" }[day % 10] || "th");
+        const dateLabel = document.getElementById("shutdown-date");
+        dateLabel.dateTime = shutdownDateValue;
+        dateLabel.textContent = day + suffix + " " +
+          new Intl.DateTimeFormat("en-GB", {
+            month: "long", year: "numeric", timeZone: "UTC"
+          }).format(shutdownDate);
+        document.getElementById("shutdown-date-note").hidden = false;
+      }
+
+      // This page setting controls presentation and requests.
+      if (document.documentElement.dataset.monitorActive !== "true") return;
+
+      const liveStatusTemplate = document.getElementById("live-status-template");
+      document.getElementById("live-status").append(
+        liveStatusTemplate.content.cloneNode(true)
+      );
+
       const HEALTHCHECKS_BADGE_URL =
         "https://healthchecks.io/b/3/c724bbdc-7c16-4429-a48b-f831271940dc.svg";
 

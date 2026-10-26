@@ -69,6 +69,7 @@ test("builds dashboard counts from cards and Done move actions", () => {
   });
 
   assert.equal(metrics.counts.completedToday, 1);
+  assert.equal(metrics.counts.movedForwardToday, 1);
   assert.equal(metrics.version, 4);
   assert.equal(metrics.counts.completedThisWeek, 2);
   assert.equal(metrics.counts.completedThisMonth, 3);

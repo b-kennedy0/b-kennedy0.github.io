@@ -259,6 +259,7 @@ export function buildMetrics({
   }
   const counts = {
     completedToday: completedTodayActions.length,
+    movedForwardToday: forwardActions.filter((action) => action.localDate === today).length,
     completedThisWeek: completedThisWeekActions.length,
     completedThisMonth: completedThisMonthActions.length,
     movedForwardThisWeek: movedForwardThisWeekActions.length,

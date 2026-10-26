@@ -13,6 +13,7 @@
   },
   "counts": {
     "completedToday": 0,
+    "movedForwardToday": 0,
     "completedThisWeek": 0,
     "completedThisMonth": 0,
     "movedForwardThisWeek": 0,

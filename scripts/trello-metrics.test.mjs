@@ -48,6 +48,7 @@ const lists = [
   list("progress", "In Progress", [card("f"), card("g")]),
   list("blocked", "Waiting/Blocked/Repeat", [card("h")]),
   list("done", "Done", []),
+  list("marking", "Marking Tracker", []),
 ];
 
 test("builds dashboard counts from cards and Done move actions", () => {
@@ -206,4 +207,20 @@ test("fails when required list names are missing or duplicated", () => {
     () => validateListMap(lists.filter((item) => item.name !== "Triage")),
     /missing: Triage/,
   );
+});
+
+test("adds open Marking Tracker cards to the adjusted queue without counting closed cards", () => {
+  const metrics = buildMetrics({
+    lists: lists.map(entry => entry.name === "Marking Tracker"
+      ? list("marking", "Marking Tracker", [card("marking-a"), card("marking-b"), card("marking-closed", true)])
+      : entry.name === "To Do - Ordered"
+        ? list("ordered", "To Do - Ordered", [card("q1"), card("q2"), card("q3"), card("q4")])
+        : entry),
+    actions: [],
+    generatedAt: new Date("2026-08-28T12:00:00.000Z"),
+    timeZone: "Europe/London",
+  });
+  // Four ordered + one Today - three organisation cards + two marking cards.
+  assert.equal(metrics.counts.pending, 4);
+  assert.equal(metrics.counts.inProgress, 0);
 });

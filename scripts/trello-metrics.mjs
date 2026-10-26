@@ -2,6 +2,7 @@ const REQUIRED_LISTS = [
   "Triage",
   "To Do - Ordered",
   "Today",
+  "Marking Tracker",
   "In Progress",
   "Waiting/Blocked/Repeat",
   "Done",
@@ -271,7 +272,7 @@ export function buildMetrics({
       cardsForList(listMap["To Do - Ordered"]).length +
       cardsForList(listMap.Today).length,
       3,
-    ),
+    ) + cardsForList(listMap["Marking Tracker"]).length,
     inProgress: adjustedCount(cardsForList(listMap["In Progress"]).length, 2),
     blockedWaiting: cardsForList(listMap["Waiting/Blocked/Repeat"]).length,
   };

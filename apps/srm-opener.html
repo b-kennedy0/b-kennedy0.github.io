@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Page Title -->
+  <title>SRM Opener</title>
+
+  <!-- Meta Description for SEO -->
+  <meta name="description" content="Open multiple URLs. Paste all URLs in the form below and click 'Open All URLs'.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <!-- Character Encoding -->
+  <meta charset="utf-8">
+
+  <!-- Responsive Design Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Navigation Bar Styling */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #082954;
+    }
+
+    /* Grid Layout Adjustments */
+    .row.content {
+      min-height: 450px;
+    }
+
+    /* Sidebar Styling */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #082954;
+      color: white;
+      padding: 15px;
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+
+    .btn { margin-bottom: 6px; }
+
+    /* Styling for the Well Component */
+    .well {
+      background-color: white;
+      border: none;
+    }
+
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider .emoji {
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      font-size: 20px;
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    input:checked + .slider .emoji {
+      transform: translateX(26px);
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    body.dark-mode {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: #1f1f1f;
+    }
+    
+    .dark-mode .sidenav {
+      background-color: #121212 !important;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .row.content {
+      background-color: #121212 !important;
+    }
+
+    .dark-mode textarea,
+    .dark-mode .form-control {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border-color: #444;
+    }
+
+    .dark-mode .alert-success {
+      background-color: #2e7d32;
+      color: #dcedc8;
+    }
+
+    .dark-mode .alert-danger {
+      background-color: #b71c1c;
+      color: #ffcdd2;
+    }
+
+    .dark-mode .btn-primary,
+    .dark-mode .btn-success,
+    .dark-mode .btn-secondary {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- Collapsible Menu Button for Small Screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://bradleykennedy.co.uk/apps/srm-opener">Brad K - SRM Opener</a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="https://bradleykennedy.co.uk/apps/srm-opener">Home</a></li>
+          <li><a href="https://bradleykennedy.co.uk/apps">App Browser</a></li>
+          <li><a href="https://bradleykennedy.co.uk/contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Future Login Option (Commented Out) -->
+          <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+          <div class="text-right" style="margin-top: 10px;">
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+              <span class="slider round"><span class="emoji">☀️</span></span>
+            </label>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div class="container-fluid text-center">
+    <div class="row content">
+
+      <!-- Left Sidebar (Empty for Layout Purposes) -->
+      <div class="col-sm-2 sidenav"></div>
+
+      <!-- Main Content Area -->
+      <div class="col-sm-8 text-left">
+        <br>
+        <div class="alert alert-danger" role="alert">
+          You must have signed in to SRM in another tab, before using this tool.
+        </div>
+        <h1>SRM Opener - UoC Only</h1>
+        <label for="students">Student numbers or email addresses</label>
+        <textarea class="form-control" rows="18" id="students" aria-describedby="input-help" placeholder="1234567&#10;2345678/1&#10;3456789@chester.ac.uk" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+        <div id="input-status" class="alert" role="status" aria-live="polite" hidden></div>
+        <button type="button" class="btn btn-primary btn-lg" onclick="openStudents()">Open all in SRM</button>
+        <button type="button" class="btn btn-success btn-lg" onclick="emailStudents()">Email all</button>
+        <button type="button" class="btn btn-default btn-lg" onclick="resetStudents()">Reset</button>
+        <br><br>
+
+        <!-- Warning Message for Popup Blockers -->
+        <div class="alert alert-warning">
+          <strong>Note:</strong> Select 'Always allow popups' in your browser settings to open multiple student records.
+        </div>
+        <br>
+
+        <!-- Troubleshooting & Security Information -->
+        <div>
+          <h4>Troubleshooting</h4>
+          <h6>> Only ONE tab opened / No tabs opened?</h6>
+          <p>If you are unable to open multiple student records, please check your browser settings. Most modern browsers have a built-in popup blocker that may prevent multiple tabs from opening at once. You can usually find this setting in the browser's privacy or security settings.</p>
+
+          <h6>&gt; Email window did not open / BCC list is incomplete?</h6>
+          <p>Check that a default email app is set up on your device. Email apps and browsers may limit the length of mailto links, so use smaller batches for long lists. Check the BCC recipients before sending.</p>
+          <h4>Data Security</h4>
+          <p>The student numbers and email addresses you paste into this app are NOT saved or collected by this page. They are processed in your browser only. Opening records sends the student numbers to UoC SRM, where you will need to sign in with your staff account. Selecting Email all passes the student email addresses to your email app in BCC. Only use student details you are authorised to access. If you'd like to verify this for yourself, click to <a href="https://github.com/b-kennedy0/b-kennedy0.github.io/blob/master/apps/srm-opener.html" target="_blank" rel="noopener noreferrer">view the source code</a>.</p>
+        </div>
+
+        <script>
+          function parseStudents(value) {
+            const entries = value.trim().split(/[\s,;]+/).filter(Boolean);
+            const students = new Set();
+            const invalid = [];
+            for (const entry of entries) {
+              const match = entry.match(/^(\d{7,})(?:\/\d|@chester\.ac\.uk)?$/i);
+              if (match) students.add(match[1]);
+              else invalid.push(entry);
+            }
+            return { students: [...students], invalid };
+          }
+
+          function showStatus(message, isError = false) {
+            const status = document.getElementById('input-status');
+            status.textContent = message;
+            status.className = 'alert ' + (isError ? 'alert-danger' : 'alert-success');
+            status.hidden = false;
+          }
+
+          function validatedStudents() {
+            const result = parseStudents(document.getElementById('students').value);
+            if (result.invalid.length) {
+              showStatus('Please correct these entries before continuing: ' + result.invalid.join(', ') + '. Use at least seven digits, optionally followed by a slash and one digit, or @chester.ac.uk.', true);
+              return [];
+            }
+            if (!result.students.length) {
+              showStatus('Please enter at least one student number or student email address.', true);
+            }
+            return result.students;
+          }
+
+          function openStudents() {
+            const students = validatedStudents();
+            if (!students.length) return;
+            for (const student of students) {
+              window.open('https://srm.chester.ac.uk/students/' + student, '_blank', 'noopener,noreferrer');
+            }
+            showStatus('Requested ' + students.length + ' student record(s). If any tabs are missing, allow popups for this site and try again.');
+          }
+
+          function emailStudents() {
+            const students = validatedStudents();
+            if (!students.length) return;
+            const recipients = students.map(student => student + '@chester.ac.uk').join(',');
+            window.location.href = 'mailto:?bcc=' + encodeURIComponent(recipients);
+            showStatus('Requested an email with ' + students.length + ' student(s) in BCC. Check the recipient list in your email app before sending.');
+          }
+
+          function resetStudents() {
+            document.getElementById('students').value = '';
+            document.getElementById('input-status').hidden = true;
+            document.getElementById('students').focus();
+          }
+        </script>
+
+        <br>
+      </div>
+
+      <!-- Right Sidebar (Empty for Layout Purposes) -->
+      <div class="col-sm-2 sidenav">
+        <!-- <div class="well"></div> -->
+        <!-- Future Content (Commented Out) -->
+        <!-- <div class="well"><p>Text on the right side of the screen.</p></div> -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="container-fluid text-center">
+    <font color="#ffffff">© 2026&nbsp;</font>
+    <a href="https://bradleykennedy.co.uk/apps/srm-opener"><font color="#ffffff">Brad K - SRM Opener</font></a>
+    <font color="#ffffff"> | </font>
+    <a href="https://bradleykennedy.co.uk/contact"><font color="#ffffff">Contact</font></a>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+
+            const emojiSpan = document.querySelector(".slider .emoji");
+            emojiSpan.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+          }
+    // Check device for dark mode preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add("dark-mode");
+      const emojiSpan = document.querySelector(".slider .emoji");
+      emojiSpan.textContent = "🌙"; // Change emoji to moon
+      // Set the toggle to checked
+      document.getElementById("darkModeToggle").checked = true;
+    }
+  </script>
+</body>
+
+</html>

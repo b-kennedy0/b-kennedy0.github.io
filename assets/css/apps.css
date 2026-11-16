@@ -1,0 +1,80 @@
+/* Keep the gallery introduction separate from the shared portfolio styles. */
+#portfolio-out {
+  padding-top: 3.5rem;
+}
+
+.apps-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1060px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  text-align: left;
+  text-shadow: none;
+}
+
+.apps-intro h1 {
+  margin: 0 0 0.75rem;
+  color: #3d3852;
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.apps-intro-copy p {
+  max-width: 62ch;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.apps-support {
+  padding-left: 2.5rem;
+  border-left: 1px solid #dcd9e1;
+  text-align: center;
+}
+
+.apps-support p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.apps-support-link {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.apps-support-link img {
+  display: block;
+  width: 218px;
+  max-width: 100%;
+  height: auto;
+}
+
+.apps-support-link:focus-visible {
+  outline: 3px solid #082954;
+  outline-offset: 5px;
+}
+
+.apps-support .apps-support-thanks {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+  .apps-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .apps-support {
+    padding: 1.25rem 0 0;
+    border-top: 1px solid #dcd9e1;
+    border-left: 0;
+    text-align: left;
+  }
+}

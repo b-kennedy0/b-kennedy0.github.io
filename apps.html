@@ -7,20 +7,24 @@ show-avatar: false
 css:
   - /assets/css/portfolio.css
   - /assets/css/blogtags.css
+  - /assets/css/apps.css
 ---
 <div id="main-sections">
   <div id="portfolio-out" class="page-section grey-section">
     <div id="portfolio">
-    <div class="section-title">
-      My Apps
-    </div>
-    <h3 style="text-align: center;">If you like these, feel free to:</h3>
-    <p style="text-align: center;">
-      <a href="https://monzo.me/bradleykennedy5/5?d=Support%20for%20Apps" target="_blank" rel="noopener">
-        <img src="/assets/img/bmc-button.png" alt="Buy me a coffee via Monzo" style="width: 218px; max-width: 100%; height: auto;" />
-      </a>
-    </p>
-<h3 style="text-align: center;">Thank you!</h3>
+      <section class="apps-intro" aria-labelledby="apps-intro-title">
+        <div class="apps-intro-copy">
+          <h1 id="apps-intro-title">Welcome to my App Gallery.</h1>
+          <p>You'll find a selection of the apps and tools I've created over the years. Some just for fun, others to solve tiny admin headaches and to make efficiencies!</p>
+        </div>
+        <div class="apps-support">
+          <p>If you like these, feel free to:</p>
+          <a class="apps-support-link" href="https://monzo.me/bradleykennedy5/5?d=Support%20for%20Apps" target="_blank" rel="noopener">
+            <img src="/assets/img/bmc-button.png" alt="Buy me a coffee via Monzo" width="218" />
+          </a>
+          <p class="apps-support-thanks">Thank you!</p>
+        </div>
+      </section>
 <div class="list-filters" id="app-filters">
     <a class="list-filter filter-selected" data-filter="all">All Apps</a>
     <a class="list-filter" data-filter="academia">Academia Tools</a>
